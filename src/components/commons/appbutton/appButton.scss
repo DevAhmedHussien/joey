@@ -1,0 +1,21 @@
+.custom-button {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition with a cubic-bezier */
+    text-transform: none;
+  
+    .arrow-icon {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Extend duration for smoother effect */
+    }
+  
+    &:hover .arrow-icon {
+      transform: scale(1.1);
+      margin-left: 5px; /* Moves the icon smoothly to the right */
+    }
+  }
+  

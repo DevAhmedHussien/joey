@@ -1,0 +1,27 @@
+// styles.scss
+.how-it-works {
+    padding: 2rem;
+    background-color: #f8f8f8;
+    
+    .step-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
+      img {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+  
+      h6 {
+        color: teal;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  

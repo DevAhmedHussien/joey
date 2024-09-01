@@ -1,0 +1,33 @@
+.blog-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover .blog-image {
+      transform: scale(1.1);
+  }
+
+  &:hover .arrow-icon {
+      transform: scale(1.2) translateX(5px);
+  }
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-content {
+  padding: 16px;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease-in-out;
+}

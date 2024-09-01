@@ -1,0 +1,146 @@
+.medwork-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .medwork-title {
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .medwork-subtitle {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .medwork-stepper-container {
+    width: 100%;
+    // margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 10px;
+  }
+  
+  .medwork-stepper {
+    width: 100%;
+  }
+  
+  .medwork-step {
+    margin-top: 10px;
+  }
+  
+  .medwork-step-label {
+    // font-size: 23px;
+  }
+  
+  .medwork-step-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    // background: linear-gradient(
+    //   to top right,
+    //   rgba(235, 245, 255, 0.3) 40%,
+    //   rgba(243, 246, 249, 0.2) 100%
+    // );
+    transition: 170ms;
+    border: 1px solid #e5eaf299;
+    // border-radius: 20px;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px;
+      // border: 1px solid #3399ff;
+    }
+  }
+  
+ 
+  .medwork-step-image {
+    width: 200px;
+    height: 200px;
+    // border-radius: 10px;
+  }
+  
+  .medwork-buttons-container {
+    display: flex;
+    gap:5px;
+
+    margin-top:10px;
+  }
+  circle {
+    color:#e58a81; 
+    .css-1unoysk-MuiStepIcon-text  {
+      fill: white  !important;
+    }
+  }
+  .medwork-button-next {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: black;
+    // background: linear-gradient(
+    //   to right bottom,
+    //   #007fff,
+    //   #3399ff 140%
+    // );
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px;
+    display: block;
+    text-transform: capitalize;
+    width: 150px;
+    color: black;
+    font-weight: 600;
+    transition: 170ms;
+    &:hover {
+      background-color: white !important;
+      color: #001d4a;
+    }
+    &:active {
+      box-shadow: none;
+      background-color: black;
+    }
+  }
+  
+  .medwork-button-back {
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px;
+    display: block;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: 170ms;
+    &:hover {
+      background-color: #e5eaf299;
+    }
+    &:active {
+      box-shadow: none;
+      background-color: black;
+    }
+  }
+  
+  .medwork-paper {
+    margin: 20px auto;
+    padding: 50px;
+    height: 100%;
+    background: linear-gradient(
+      to top right,
+      rgba(235, 245, 255, 0.3) 40%,
+      rgba(243, 246, 249, 0.2) 100%
+    );
+    transition: 170ms;
+    border: 1px solid #e5eaf299;
+    // border-radius: 20px;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px;
+      border: 1px solid #3399ff;
+    }
+  }
+  
+  .medwork-button-reset {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  

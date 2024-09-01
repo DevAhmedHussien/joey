@@ -1,0 +1,285 @@
+/* SCSS styles for ResponsiveAppBar */
+
+.responsive-appbar-icon-large {
+  display: none;
+
+
+  @media (min-width: 960px) {
+    display: flex;
+    margin-right: 1rem;
+  }
+}
+
+.responsive-appbar-title {
+  display: none;
+
+  @media (min-width: 960px) {
+    display: flex;
+    margin-right: 2rem;
+    font-family: 'monospace';
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.responsive-appbar-nav-icon {
+  flex-grow: 1;
+  display: flex;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.responsive-appbar-menu {
+  display: block;
+
+  @media (min-width: 960px) {
+    // display: none;
+  }
+}
+
+.responsive-appbar-icon-small {
+  display: flex;
+  margin-right: 1rem;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.continer-icon{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 5px;
+}
+.responsive-appbar-title-small {
+  display: flex;
+  flex-grow: 1;
+  font-family: 'monospace';
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.responsive-appbar-links {
+  flex-grow: 1;
+  display: none;
+
+  @media (min-width: 960px) {
+    display: flex;
+  }
+}
+
+.responsive-appbar-link {
+  position: relative;
+  display: inline-block;
+}
+
+.responsive-appbar-button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 5px;
+
+  // .heartbeat-line {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   height: 5px; /* Adjust the height if necessary */
+  //   width: 100%;
+  //   background-color: #00A6FB; /* Primary color */
+  //   z-index: 10; /* Ensure the line is above other elements */
+  //   animation: heartbeat 1.5s linear infinite;
+  // }
+  
+  // @keyframes heartbeat {
+  //   0% {
+  //     transform: scaleX(0);
+  //   }
+  //   10% {
+  //     transform: scaleX(1.2);
+  //   }
+  //   30% {
+  //     transform: scaleX(0.8);
+  //   }
+  //   50% {
+  //     transform: scaleX(1.1);
+  //   }
+  //   70% {
+  //     transform: scaleX(0.9);
+  //   }
+  //   100% {
+  //     transform: scaleX(1);
+  //   }
+  // }
+
+  
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    left: -100%;
+    // background: #007fff;
+    // background-color:#00d8ff;
+    // background-color:  #001d4a;
+    background-color:  #e48a81;
+
+
+
+    z-index: 0;
+    transition: left 0.3s ease;
+  }
+
+  &:hover::after {
+    left: 0;
+  }
+
+  & span {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+.responsive-appbar-product-box {
+  position: fixed;
+  top: 52px; 
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  padding: 0 1rem; 
+  overflow: hidden; 
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+}
+
+.responsive-appbar-product-box.open {
+  animation: rollOpen 0.6s forwards; 
+}
+
+.responsive-appbar-product-box.closed {
+  animation: rollClose 0.6s forwards; 
+}
+
+@keyframes rollOpen {
+  from {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 1rem;
+  }
+  to {
+    max-height: 400px;
+    opacity: 1;
+    padding: 20px 80px;
+  }
+}
+
+@keyframes rollClose {
+  from {
+    max-height: 400px;
+    opacity: 1;
+    padding: 20px 80px;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 1rem;
+  }
+}
+
+.type-of-peoducts{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+// 
+// 
+.container{
+	margin: 0 auto;
+	text-align: center;
+}
+.content{
+  margin-top: -20px;
+  height: 64px;
+}
+.heart-rate{
+	width: 150px;
+	height: 73px;
+	position: relative;
+	margin: 20px auto;
+}
+.fade-in{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color:white; //#000;
+top: 0;
+right: 0;
+animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out{
+position: absolute;
+width: 120%;
+height: 100%;
+background-color: white;//#000;
+top: 0;
+right: -120%;
+animation: heartRateOut 2.5s linear infinite;
+background: white; // rgba(0, 0, 0, 1);
+// background: linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,1)80%,rgba(0,0,0,0)100%);
+}
+
+@keyframes heartRateIn{
+	0%{
+		width: 100%;
+	}
+	50%{
+		width: 0;
+	}
+	100%{
+		width: 0;
+	}
+}
+@keyframes heartRateOut{
+	0%{
+		left: -120%;
+	}
+	30%{
+		left: -120%;
+	}
+	100%{
+		left: 0;
+	}
+
+}
+
+
+.MuiPaper-root{
+  width: 100%;
+}
+
+
+.css-kc02vp-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+  background-color: transparent !important;
+}
