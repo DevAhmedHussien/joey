@@ -122,17 +122,18 @@
 //     </Box>
 //   );
 // };
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Box, CircularProgress } from '@mui/material';
-
+import './image.scss'
 const ImageWithSpinner = ({ src, alt, ...props }) => {
   const [loading, setLoading] = useState(true);
 
   const handleImageLoad = () => {
     setTimeout(()=>{
       setLoading(false);
-    },1000)
+    },1500)
   };
 
   return (
@@ -152,7 +153,8 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
             backgroundColor: '#f0f0f0',
           }}
         >
-          <CircularProgress />
+          {/* <CircularProgress /> */}
+          <span class="loader"></span>
         </Box>
       )}
       <Image
@@ -165,7 +167,7 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
         onLoad={handleImageLoad}
         style={{
           borderRadius: 2,
-          transition: 'opacity 0.5s ease-in-out',
+          transition: 'transform 0.3s ease-in-out',
           opacity: loading ? 0 : 1, // Image fades in when loaded
         }}
         {...props}
