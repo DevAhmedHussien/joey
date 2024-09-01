@@ -122,27 +122,17 @@
 //     </Box>
 //   );
 // };
-
-// export default ImageWithSpinner;
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Box, CircularProgress } from '@mui/material';
 
 const ImageWithSpinner = ({ src, alt, ...props }) => {
   const [loading, setLoading] = useState(true);
-  const [imageUrl, setImageUrl] = useState(null);
 
-  const handleImageLoad = async () => {
-    try {
-      const response = await fetch(src);
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      setImageUrl(url);
+  const handleImageLoad = () => {
+    setTimeout(()=>{
       setLoading(false);
-    } catch (error) {
-      console.error('Failed to load image:', error);
-      setLoading(false);
-    }
+    },1000)
   };
 
   return (
@@ -165,23 +155,21 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
           <CircularProgress />
         </Box>
       )}
-      {imageUrl && (
-        <Image
-          src={imageUrl}
-          alt={alt}
-          layout="fill"
-          objectFit="cover"
-          loading="lazy"
-          quality={100}
-          onLoad={() => setLoading(false)}
-          style={{
-            borderRadius: 2,
-            transition: 'transform 0.3s ease-in-out',
-            display: loading ? 'none' : 'block',
-          }}
-          {...props}
-        />
-      )}
+      <Image
+        src={src}
+        alt={alt}
+        layout="fill"
+        objectFit="cover"
+        loading="lazy"
+        quality={100}
+        onLoad={handleImageLoad}
+        style={{
+          borderRadius: 2,
+          transition: 'opacity 0.5s ease-in-out',
+          opacity: loading ? 0 : 1, // Image fades in when loaded
+        }}
+        {...props}
+      />
     </Box>
   );
 };
