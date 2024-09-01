@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import { Box, Paper, Typography, IconButton } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -35,10 +35,31 @@ export default function CardSlider({cards = [], type}) {
         onSwipedRight: () => handlePrev(),
         trackMouse: true,
     });
+  
+      // Keyboard navigation
+      useEffect(() => {
+        const handleKeyDown = (event) => {
+          if (event.key === 'ArrowRight') {
+            handleNext();
+          } else if (event.key === 'ArrowLeft') {
+            handlePrev();
+          }
+        };
+    
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+          window.removeEventListener('keydown', handleKeyDown);
+        };
+      }, []);
 
     return (
         <Box className="slider-container" {...handlers} sx={{p:5}}>
-            <Box className="slider-track" sx={{ transform: `translateX(-${currentIndex * 20}%)` }}>
+            <Box className="slider-track"  
+        sx={{
+          width: `${(cards.length / visibleCards) * 100}%`,
+          transform: `translateX(-${(currentIndex * 100) / cards.length}%)`,
+        }}
+      >
                 {cards.map((card, index) => (
                     <Box key={index} sx={{marginLeft:4}}>
                         {type == 'product' 

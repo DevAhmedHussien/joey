@@ -59,6 +59,7 @@ const Profile = () => {
               src={'/images/logo.png'}
               width={120}
               height={65}
+              	loading="lazy"
               alt="Joeymed logo"
               style={{ width: collapsed && !hovered ? '100%' : '100%', transform: collapsed && !hovered ? 'scale(0.6)' : 'scale(1.3)', transformOrigin: 'center' }}
             />

@@ -14,10 +14,7 @@ import Questions from '@/components/layout/frequentlyquestions/Questions';
 import Video from '@/components/commons/video/Video';
 import { questions } from '@/utility/data';
 // ** Animation styles
-import { titleAnimation,
-  
-  cardAnimation,
-  iconAnimation } from '../../utility/animationSyles';
+import { titleAnimation, cardAnimation, iconAnimation } from '../../utility/animationSyles';
 
 
 const AboutUs = () => {
@@ -44,6 +41,7 @@ const AboutUs = () => {
           alt="About Joey Med"
           layout="fill"
           // objectFit="cover"
+          	loading="lazy"
           style={{ filter: 'brightness(0.7)' }}
         />
         <Box
@@ -120,6 +118,7 @@ const AboutUs = () => {
                   width={500}
                   height={400}
                   style={{ borderRadius: '8px' }}
+                  	loading="lazy"
                 />
               </motion.div>
             </Grid>

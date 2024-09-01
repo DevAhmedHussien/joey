@@ -9,7 +9,6 @@ const VideoRolling = ({ title, description, src}) => {
       {/* Background Video */}
       <Box
         component="video"
-        
         src={src}
         autoPlay
         loop
@@ -28,7 +27,7 @@ const VideoRolling = ({ title, description, src}) => {
       />
       {/* Content Overlay */}
       <Box 
-        sx={{ position: 'relative', width: '100%', minHeight: 600,display:'flex',alignItems:'center',justifyContent:'space-around'}}>
+        sx={{ position: 'relative', zIndex:2, width: '100%', minHeight: 600,display:'flex',alignItems:'center',justifyContent:'space-around'}}>
         <Box>
           <Typography variant="h2" sx={{ color: 'white', mb: 2 }}>
             {title}

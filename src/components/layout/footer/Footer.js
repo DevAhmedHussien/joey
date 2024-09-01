@@ -44,6 +44,7 @@ export default function Footer() {
             src={imgLogo}
             quality={100}
             height={65}
+            	loading="lazy"
             alt="Joeymed logo"
             style={{ transform: 'scale(1.7)', transformOrigin: 'center' }}
           />

@@ -75,6 +75,7 @@ function MainNavBar() {
                             src={imgLogo}
                             width={120}
                             height={65}
+                            	loading="lazy"
                             alt="Joeymed logo"
                             style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
                         />
@@ -165,6 +166,7 @@ function MainNavBar() {
                                                             quality={100}
                                                             height={130}
                                                             style={{ borderRadius: 8 }}
+                                                            	loading="lazy"
                                                         />
                                                         : page == 'weight-loss'
                                                             ? <Image
@@ -173,6 +175,7 @@ function MainNavBar() {
                                                                 quality={100}
                                                                 width={100}
                                                                 height={130}
+                                                                	loading="lazy"
                                                                 style={{ borderRadius: 8 }}
                                                             />
                                                             : page == 'hair-growth'
@@ -182,6 +185,7 @@ function MainNavBar() {
                                                                     alt="Fertility"
                                                                     width={100}
                                                                     height={130}
+                                                                    	loading="lazy"
                                                                     style={{ borderRadius: 8 }}
                                                                 />
                                                                 : null
@@ -209,6 +213,7 @@ function MainNavBar() {
                             width={100}
                             height={70}
                             alt="Joeymed logo"
+                            	loading="lazy"
                         />
                     </Typography>
 
@@ -271,6 +276,7 @@ function MainNavBar() {
                                                     width={100}
                                                     height={130}
                                                     style={{ borderRadius: 8 }}
+                                                    	loading="lazy"
                                                 />
                                                 : page == 'weight-loss'
                                                     ? <Image
@@ -280,6 +286,7 @@ function MainNavBar() {
                                                         width={100}
                                                         height={130}
                                                         style={{ borderRadius: 8 }}
+                                                        	loading="lazy"
                                                     />
                                                     : page == 'hair-growth'
                                                         ? <Image
@@ -289,6 +296,7 @@ function MainNavBar() {
                                                             width={100}
                                                             height={130}
                                                             style={{ borderRadius: 8 }}
+                                                            	loading="lazy"
                                                         />
                                                         : null
                                             }

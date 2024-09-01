@@ -105,6 +105,7 @@ function LoginForm() {
         {/* <GoogleIcon style={{ color: '#4285F4'  }}  />  */}
         
           <Image
+          	loading="lazy"
               src={googleImg}
               width={32}
               height={32}

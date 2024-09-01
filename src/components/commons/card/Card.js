@@ -55,6 +55,7 @@ const Card = ({
           alt={alt}
           layout="fill"
           objectFit="cover"  
+          	loading="lazy"
           quality={100}
           style={{
             width: '100%',

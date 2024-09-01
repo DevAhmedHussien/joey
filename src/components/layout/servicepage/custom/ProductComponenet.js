@@ -34,6 +34,7 @@ export default function ProductComponent({name, description ,images , questions,
               width={500}
               height={500}
               quality={100}
+              	loading="lazy"
               style={{ borderRadius: "8px" ,width:'100%' ,height:'100%'}}
             />
             <Box display="flex" justifyContent="start" gap={1} >
@@ -41,6 +42,7 @@ export default function ProductComponent({name, description ,images , questions,
                 <Image
                   key={index}
                   src={img}
+                  	loading="lazy"
                   alt={`Thumbnail ${index + 1}`}
                   width={100}
                   height={100}

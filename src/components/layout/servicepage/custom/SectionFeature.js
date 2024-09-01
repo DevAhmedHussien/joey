@@ -33,6 +33,7 @@ export default function SectionFeature({images}) {
               height={500}
               objectFit="cover"
               quality={100}
+              	loading="lazy"
               style={{ width:'100%' ,height:'100%'}} // Remove margin between images
             />
           </Box>

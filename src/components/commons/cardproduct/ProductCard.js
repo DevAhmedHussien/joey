@@ -47,6 +47,7 @@ const ProductCard = ({ width = 400, height = 400, name, description, href }) => 
           objectFit="cover"
           quality={100}
           className="product-image"
+          	loading="lazy"
         />
       </Box>
 

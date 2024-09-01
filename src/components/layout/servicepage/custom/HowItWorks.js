@@ -45,6 +45,7 @@ export default function HowItWorks() {
               width={300}
               height={200}
               style={{ borderRadius: "8px", marginBottom: "16px" }}
+              	loading="lazy"
             />
             <Typography variant="h6" color="primary">
               {step.stepNumber}
