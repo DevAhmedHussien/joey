@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Box, LinearProgress, Typography } from '@mui/material';
 
@@ -6,25 +6,56 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [imageUrl, setImageUrl] = useState(null);
 
-  const handleImageLoad = () => {
-    setLoading(false);
-    setProgress(100); // Set progress to 100% when the image is fully loaded
-  };
+  useEffect(() => {
+    const loadImage = async () => {
+      try {
+        const response = await fetch(src);
+        const contentLength = response.headers.get('content-length');
+        const total = contentLength ? parseInt(contentLength, 10) : null;
+        let loaded = 0;
 
-  const handleImageError = () => {
-    setLoading(false);
-    setError(true);
-  };
+        if (!total) {
+          // If content length is not available, show a spinner instead of progress
+          setLoading(false);
+          setImageUrl(src);
+          return;
+        }
 
-  const handleImageProgress = (event) => {
-    if (event.target.complete) {
-      handleImageLoad();
-    } else if (event.target.naturalWidth) {
-      // Calculate the progress based on the natural width of the image
-      setProgress((event.target.currentSrc.length / event.target.naturalWidth) * 100);
-    }
-  };
+        const reader = response.body.getReader();
+        const stream = new ReadableStream({
+          start(controller) {
+            function push() {
+              reader.read().then(({ done, value }) => {
+                if (done) {
+                  controller.close();
+                  setLoading(false);
+                  return;
+                }
+                loaded += value.length;
+                const newProgress = Math.round((loaded / total) * 100);
+                setProgress(newProgress);
+                controller.enqueue(value);
+                push();
+              });
+            }
+            push();
+          }
+        });
+
+        const newResponse = new Response(stream);
+        const blob = await newResponse.blob();
+        const imageUrl = URL.createObjectURL(blob);
+        setImageUrl(imageUrl);
+      } catch (err) {
+        setError(true);
+        setLoading(false);
+      }
+    };
+
+    loadImage();
+  }, [src]);
 
   return (
     <Box sx={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
@@ -47,9 +78,9 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
           <LinearProgress
             variant="determinate"
             value={progress}
-            sx={{ width: '50%', mb: 1 }}
+            sx={{ width: '40%', mb: 1 }}
           />
-          <Typography variant="body2">{Math.round(progress)}%</Typography>
+          <Typography variant="body2">{!isNaN(progress) ? `${progress}%` : ''}</Typography>
         </Box>
       )}
       {error ? (
@@ -71,27 +102,25 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
           <Typography variant="body2">Image failed to load</Typography>
         </Box>
       ) : (
-        <Image
-          src={src}
-          alt={alt}
-          layout="fill"
-          objectFit="cover"
-          loading="lazy"
-          quality={100}
-          onLoadingComplete={handleImageLoad}
-          onError={handleImageError}
-          onLoad={handleImageProgress}
-          style={{
-            borderRadius: 2,
-            transition: 'transform 0.3s ease-in-out',
-            display: loading ? 'none' : 'block', // Hide image until it's loaded
-          }}
-          {...props}
-        />
+        imageUrl && (
+          <Image
+            src={imageUrl}
+            alt={alt}
+            layout="fill"
+            objectFit="cover"
+            loading="lazy"
+            quality={100}
+            style={{
+              borderRadius: 2,
+              transition: 'transform 0.3s ease-in-out',
+              display: loading ? 'none' : 'block',
+            }}
+            {...props}
+          />
+        )
       )}
     </Box>
   );
 };
 
 export default ImageWithSpinner;
-
