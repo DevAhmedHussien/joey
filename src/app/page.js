@@ -202,7 +202,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} md={4}>
             <motion.div 
-                  variants={cardVariantsLeft} 
+                  variants={cardVariantsSmall} 
                   initial="hidden"
                   animate="visible"
                 >
@@ -211,7 +211,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} md={4}>
             <motion.div 
-                  variants={cardVariantsSmall} 
+                  variants={cardVariantsLeft} 
                   initial="hidden"
                   animate="visible"
                 >

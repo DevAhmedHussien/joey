@@ -6,6 +6,7 @@ import NavigationButton from '../navigatiobutton/NavigationButton';
 //** Theme part */
 import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
+import ImageWithSpinner from '../image/ImageWithSpinner';
 
 const Card = ({
   width,
@@ -50,12 +51,14 @@ const Card = ({
           transition: 'transform 0.3s ease-in-out', /* Smooth scaling transition */
         }}
       >
-        <Image
+        <ImageWithSpinner src={src}
+          alt={alt} />
+        {/* <Image
           src={src}
           alt={alt}
           layout="fill"
           objectFit="cover"  
-          	loading="lazy"
+          loading="lazy"
           quality={100}
           style={{
             width: '100%',
@@ -63,7 +66,7 @@ const Card = ({
             borderRadius: 2,
             transition: 'transform 0.3s ease-in-out',
           }}
-        />
+        /> */}
       </Box>
       <Box position={'absolute'} bottom={5} right={5} zIndex={6}> 
         {size ? 
