@@ -191,7 +191,7 @@ function MainNavBar() {
                                                                 : null
                                                     }
 
-                                                    <AppButton title='start now' color='black' />
+                                                    <AppButton title='start now' color='black' href={`/form/${page}`} />
                                                 </Box>
                                             </Box>
                                         )}
@@ -301,7 +301,7 @@ function MainNavBar() {
                                                         : null
                                             }
 
-                                            <AppButton title='start now' color='black' />
+                                            <AppButton title='start now' color='black'  href={`/form/${page}`} />
                                         </Box>
                                     </Box>
                                 )}

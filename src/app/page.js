@@ -197,7 +197,7 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                 >
-                <Card height={400} title={'Weight Loss'} src={imgWeightloss} alt={'Weight Loss'} widthImg={400} heighImg={400} size={true} href={'/'}/>
+              <Card height={400} title={'Weight Loss'} src={imgWeightloss} alt={'Weight Loss'} widthImg={400} heighImg={400} size={true} href={'/form/weight-loss'}/>
               </motion.div>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -206,7 +206,7 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                 >
-                <Card height={400}title={'Sexual Health'} src={imgSexual} alt={'Sexual Health'} widthImg={200} heighImg={200} size={true} href={'/'}/>
+              <Card height={400}title={'Sexual Health'} src={imgSexual} alt={'Sexual Health'} widthImg={200} heighImg={200} size={true} href={'/form/sexual-health'}/>
               </motion.div>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -215,8 +215,7 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                 >
-                  <Card height={400} title={'Hair Growth'}
-                  src={imgProducts} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={true} href={'/'}/>
+              <Card height={400} title={'Hair Growth'} src={imgProducts} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={true} href={'/form/hair-growth'}/>
               </motion.div>
             </Grid>
             {/* <Grid item xs={12} md={4}>
