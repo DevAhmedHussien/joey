@@ -1,3 +1,4 @@
+import Video from '@/components/commons/video/Video';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 
@@ -17,28 +18,42 @@ export default function SectionFeature({images}) {
       {/* Image Row */}
       <Box
         sx={{
+          position:'relative',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           width: '100%',
         }}
-      >
-        {images.map((image, index) => (
-          <Box key={index} width={'33.5%'} height={'100%'}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              layout="responsive"
-              width={500}
-              height={500}
-              objectFit="cover"
-              quality={100}
-              	loading="lazy"
-              style={{ width:'100%' ,height:'100%'}} // Remove margin between images
-            />
-          </Box>
-        ))}
-      </Box>
+>
+  {images.map((image, index) => (
+    <Box key={index} width={'33.5%'} height={'100%'} >
+      {image.type === 'img' ? (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          layout="responsive"
+          width={500}
+          height={500}
+          objectFit="cover"
+          quality={100}
+          loading="lazy"
+          style={{ width: '100%', height: '100%' }} // Ensures image takes full width and height
+        />
+      ) : (
+        <Video
+          className="video-thumbnail"
+          // src={image.src} 
+          src='/videos/bottle.mp4' 
+          type="video/mp4"
+          alt="A description of the video content"
+          autoPlay={true}
+          loop
+        />
+      )}
+    </Box>
+  ))}
+</Box>
+
 
       {/* Features Row */}
       <Box

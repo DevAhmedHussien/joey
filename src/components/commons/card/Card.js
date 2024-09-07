@@ -7,6 +7,7 @@ import NavigationButton from '../navigatiobutton/NavigationButton';
 import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 import ImageWithSpinner from '../image/ImageWithSpinner';
+import Video from '../video/Video';
 
 const Card = ({
   width,
@@ -17,7 +18,8 @@ const Card = ({
   alt,
   widthImg,
   heighImg,
-  href
+  href,
+  video = false
 }) => {
 
   const theme = useTheme();
@@ -39,7 +41,7 @@ const Card = ({
         },
       }}
     >
-      <Typography variant="h4" gutterBottom position={'absolute'} p={2} zIndex={2} color={colors.primary[200]}>
+      <Typography variant="h3" component='h3'gutterBottom position={'absolute'} p={2} zIndex={2} color={colors.primary[200]}>
        {title}
       </Typography>
       <Box
@@ -51,8 +53,22 @@ const Card = ({
           transition: 'transform 0.3s ease-in-out', /* Smooth scaling transition */
         }}
       >
+        {video 
+        ?  
+        <Video
+          className="video-thumbnail"
+          src='/videos/bottle.mp4' 
+          type="video/mp4"
+          alt="A description of the video content"
+          // controls
+          autoPlay={true}
+          loop
+        />
+        :
         <ImageWithSpinner src={src}
-          alt={alt} />
+        alt={alt} />
+        }
+       
         {/* <Image
           src={src}
           alt={alt}

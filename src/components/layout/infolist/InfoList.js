@@ -117,7 +117,7 @@ const InfoList = () => {
     const nextIcon = (currentIcon + 1) % icons.length;
     const morph = interpolate(icons[currentIcon].path, icons[nextIcon].path, { maxSegmentLength: 0.1 });
     let frame = 0;
-    const duration = 60; // 1 second
+    const duration = 20; // 1 second
     const interval = setInterval(() => {
       frame++;
       setCurrentPath(morph(frame / duration));

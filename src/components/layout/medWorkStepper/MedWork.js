@@ -136,7 +136,7 @@ export default function MedWork({ steps }) {
                             No
                         </Button>
                         <Link href="./form">
-                            <AppButton title='start now' color='white' />
+                            <AppButton title='start now' color='white' href='/form' />
                         </Link>
                     </Box>
                 </Drawer>

@@ -12,7 +12,7 @@ import { ColorModeContext, tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 import './responsiveAppBar.scss'; 
 import Image from 'next/image';
-import imgLogo from '../../../../public/images/logo.png';
+import imgLogo from '../../../../public/images/logo2.png';
 import { CustomPersonIconSVG, SearchIconSVG } from '@/components/commons/icons/Icons';
 import AppButton from '@/components/commons/appbutton/AppButton';
 import { productCategories } from '@/utility/data';
@@ -213,7 +213,7 @@ function MainNavBar() {
                             width={100}
                             height={70}
                             alt="Joeymed logo"
-                            	loading="lazy"
+                            loading="lazy"
                         />
                     </Typography>
 

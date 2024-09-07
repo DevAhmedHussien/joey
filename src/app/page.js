@@ -27,7 +27,7 @@ import imgSexual from '../../public/images/homePage/sexual.png'
 import imgHairMan from '../../public/images/homePage/man.png'
 import imgHairWomen from '../../public/images/homePage/women.png'
 import imgProducts from '../../public/images/homePage/products.png'
-
+import imgLogo from '../../public/images/joey.png';
 // ** data 
 import { stepsHomePage, productCategories,questions,  } from '@/utility/data';
 
@@ -146,9 +146,19 @@ export default function Home() {
               exit={{ opacity: 0, transition: { duration: 1 } }}
               variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
             >
-              <motion.div variants={cardVariantsSmall}>
+              <motion.div variants={cardVariantsSmall} >
                   <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]} >
-                    Welcome to Joey Med 
+                    Welcome to 
+                    <span style={{color:colors.primary[200], fontWeight:500}} className='element'> joey med  </span> 
+                    
+                        {/* <Image
+                            src={imgLogo}
+                            width={120}
+                            height={65}
+                            	loading="lazy"
+                            alt="Joeymed logo"
+                            style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
+                        /> */}
                   </Typography>
                 </motion.div>
                 <motion.div variants={cardVariantsSmall}>
@@ -169,6 +179,7 @@ export default function Home() {
                   component="h1" 
 
                   sx={{
+                    mt:'10px',
                     position: 'absolute',
                     transition: 'transform 0.5s ease, opacity 0.5s ease',
                     transform: fadeOut ? 'translateY(-30px)' : 'translateY(0)',
@@ -189,15 +200,15 @@ export default function Home() {
         </Grid>
 
         {/* Services Section */}
-        <Box sx={{ p: 5 }}>
-          <Grid container spacing={4}>
+        <Box sx={{ p: 5 }} display={'flex'} flexWrap={'wrap'}>
+          <Grid container spacing={4}  >
             <Grid item xs={12} md={4}>
               <motion.div 
                   variants={cardVariantsRight}
                   initial="hidden"
                   animate="visible"
                 >
-              <Card height={400} title={'Weight Loss'} src={imgWeightloss} alt={'Weight Loss'} widthImg={400} heighImg={400} size={true} href={'/form/weight-loss'}/>
+              <Card height={400} title={'Weight Loss'} src={imgWeightloss} alt={'Weight Loss'} widthImg={400} heighImg={400} size={true} href={'/form/weight-loss'} video={true}/>
               </motion.div>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -206,7 +217,7 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                 >
-              <Card height={400}title={'Sexual Health'} src={imgSexual} alt={'Sexual Health'} widthImg={200} heighImg={200} size={true} href={'/form/sexual-health'}/>
+              <Card height={400}title={'Sexual Health'} src={imgSexual} alt={'Sexual Health'} widthImg={200} heighImg={200} size={true} href={'/form/sexual-health'} video={true}/>
               </motion.div>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -215,7 +226,7 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                 >
-              <Card height={400} title={'Hair Growth'} src={imgProducts} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={true} href={'/form/hair-growth'}/>
+              <Card height={400} title={'Hair Growth'} src={imgProducts} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={true} href={'/form/hair-growth'} video={true}/>
               </motion.div>
             </Grid>
             {/* <Grid item xs={12} md={4}>
@@ -238,7 +249,7 @@ export default function Home() {
                   src={imgHairWomen} alt={'Hair Growth For Women'} widthImg={100} heighImg={100} size={false} href={'/'}/>
               </motion.div>
             </Grid> */}
-            <Grid item xs={12} md={12}>
+            {/* <Grid item xs={12} md={12}>
             <motion.div 
                   variants={cardVariantsSmall} 
                   initial="hidden"
@@ -247,7 +258,7 @@ export default function Home() {
                   <Card height={300} title={'Hair Growth'}
                   src={imgProducts} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={false} href={'/'}/>
               </motion.div>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
 

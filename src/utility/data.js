@@ -991,7 +991,7 @@ export const cardData = [
 ];
 
 export const imagesSexualHomePage = [
-  { src: "/images/homePage/man.png", alt: "Image 1" },
-  { src: "/images/homePage/women.png", alt: "Image 2" },
-  { src: "/images/homePage/products.png", alt: "Image 3" }
+  { src: "/images/homePage/man.png", alt: "Image 1", type:'img' },
+  { src: "/videos/Sexual health.mp4", alt: "Sexual", type:'video' },
+  { src: "/images/homePage/products.png", alt: "Image 3" ,    type:'img'}
 ];
