@@ -37,7 +37,8 @@ const VideoRolling = ({ title, description, src}) => {
           </Typography>
           <AppButton title="start now" color="white" />
         </Box>
-        <Box sx={{ width: 200, height: 200, background: 'red', opacity: '0.6', borderRadius: 10 }}>
+
+        <Box sx={{ width: 200, height: 200, background: 'transparent', opacity: '0.6', borderRadius: 10 }}>
           {/* <video src="/videos/weightVideo.mp4" controls style={{ width: '100%', height: '100%', borderRadius: 10 }}>
             Your browser does not support the video tag.
           </video> */}

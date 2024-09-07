@@ -45,7 +45,7 @@ export default function GreetingComponent({ title, description }) {
           </Box>
         </Box>
         <Box>
-          <InfoList />
+          {/* <InfoList /> */}
         </Box>
       </Box>
     </motion.div>

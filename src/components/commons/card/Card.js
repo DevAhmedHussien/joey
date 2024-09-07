@@ -68,21 +68,7 @@ const Card = ({
         <ImageWithSpinner src={src}
         alt={alt} />
         }
-       
-        {/* <Image
-          src={src}
-          alt={alt}
-          layout="fill"
-          objectFit="cover"  
-          loading="lazy"
-          quality={100}
-          style={{
-            width: '100%',
-            // height: height,
-            borderRadius: 2,
-            transition: 'transform 0.3s ease-in-out',
-          }}
-        /> */}
+        
       </Box>
       <Box position={'absolute'} bottom={5} right={5} zIndex={6}> 
         {size ? 

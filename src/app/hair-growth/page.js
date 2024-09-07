@@ -12,7 +12,7 @@ import TestimonialsSection from '@/components/layout/testimationsection/Testimon
 import Head from 'next/head';
 
 // ** data 
-import { stepsHomePage, productCategories, questions } from '@/utility/data';
+import { stepsHomePage, productCategories, questions ,imagesSexualHomePage } from '@/utility/data';
 
 const cardData = [
   {
@@ -91,7 +91,7 @@ export default function HairGrowth() {
 
       <Container maxWidth="xl">
         <GreetingComponent title="weigh loss Services at Joey Medweigh loss weigh loss" description="weigh loss  weigh loss at your fingertips" />
-        <SectionFeature images={images}/>
+        <SectionFeature images={imagesSexualHomePage}/>
 
         <Box >
           <WeightLossComponent />

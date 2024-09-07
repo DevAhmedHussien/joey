@@ -277,7 +277,7 @@ export default function Home() {
         </Box>
 
         <Box className="greeting">
-          <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/sexualVideo.mp4"/>
+          <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/ss.mp4"/>
           <CardSlider cards={cards} type='appear' />
         </Box>
 

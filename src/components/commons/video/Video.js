@@ -31,6 +31,7 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
         overflow: 'hidden',
         '&:hover': {
           transform: 'scale(1.1)', 
+          borderRadius:3,
           transition: 'transform 0.3s ease-in-out',
         },
         transition: 'transform 0.3s ease-in-out', 
@@ -59,20 +60,19 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
       <video
         ref={videoRef}
         src={src}
+        onError={() => console.error('Error loading video:', src)}  // Add error handler
         poster={poster}
         controls={controls}
         loop={loop}
         muted={muted}
         autoPlay={autoPlay}
         style={{
-          
           width: '101%',
           height: 'auto',
           visibility: isLoaded ? 'visible' : 'hidden',
           borderRadius: 2,
-          opacity: isLoaded ? 1 : 0, 
-          transition: 'opacity 0.3s ease-in-out', 
-          borderRadius: 2,
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out',
         }}
         {...props}
       >

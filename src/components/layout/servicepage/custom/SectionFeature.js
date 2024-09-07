@@ -2,7 +2,7 @@ import Video from '@/components/commons/video/Video';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 
-export default function SectionFeature({images}) {
+export default function SectionFeature({ images }) {
   return (
     <Box
       sx={{
@@ -12,53 +12,78 @@ export default function SectionFeature({images}) {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#f5f5f5',
-
+        padding: '40px 20px', // Added padding for better spacing
       }}
     >
-      {/* Image Row */}
+      {/* Image and Video Row */}
       <Box
         sx={{
-          position:'relative',
+          position: 'relative',
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
+          // maxWidth: '1200px', // Set a max-width for better responsiveness
+          gap: '20px', // Adds space between images/videos
         }}
->
-  {images.map((image, index) => (
-    <Box key={index} width={'33.5%'} height={'100%'} >
-      {image.type === 'img' ? (
-        <Image
-          src={image.src}
-          alt={image.alt}
-          layout="responsive"
-          width={500}
-          height={500}
-          objectFit="cover"
-          quality={100}
-          loading="lazy"
-          style={{ width: '100%', height: '100%' }} // Ensures image takes full width and height
-        />
-      ) : (
-        <Video
-          // className="video-thumbnail"
-          // src={image.src} 
-          src='/videos/Sexual health.mp4' 
-          type="video/mp4"
-          alt="A description of the video content"
-          autoPlay={true}
-          loop
-        />
-      )}
-    </Box>
-  ))}
-</Box>
+      >
+        {images.map((image, index) => (
+          <Box
+            key={index}
+            // width={'40%'}
+            // height={'100%'}
+            position={'relative'}
+            sx={{
+              overflow: 'hidden',
+                  // boxShadow: '0px 1px 7px 0px #e58a81',
 
+
+            }}
+          >
+            {image.type === 'img' ? (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                layout="responsive"
+                width={500}
+                height={500}
+                objectFit="cover"
+                quality={100}
+                loading="lazy"
+                style={{ width: '100%', height: '100%'}}
+              />
+            ) : (
+              <Box 
+                sx={{
+                  width:450,
+                  // height:400,
+                  transform: 'scale(1.02)',
+                  borderRadius:5,
+                //   display:'flex',
+                //   justifyContent:'center' ,alignItems:'center',
+                //   boxShadow: '0px 1px 7px 0px #black'
+                }} 
+                >
+                <Video
+                  src={image.src}
+                  type="video/mp4"
+                  alt="A description of the video content"
+                  autoPlay={true}
+                  loop
+                  muted
+                  // style={{boxShadow: '0px 1px 7px 0px #e58a81'}}
+               
+                />
+              </Box>
+            )}
+          </Box>
+        ))}
+      </Box>
 
       {/* Features Row */}
       <Box
         sx={{
-          minHeight: 250,
+          marginTop: '40px',
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
@@ -68,8 +93,6 @@ export default function SectionFeature({images}) {
           padding: '20px',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           borderRadius: '8px',
-          position: 'absolute',
-          top: 350,
         }}
       >
         <Box sx={{ textAlign: 'center', padding: '0 20px' }}>
