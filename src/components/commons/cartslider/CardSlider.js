@@ -68,7 +68,7 @@ export default function CardSlider({cards = [], type}) {
                         : type == 'blog'  
                         ? <CardBlog  imageSrc={card.image} imageAlt={card.title} title={card.title} readTime={'Read 5 min ago'} height={400} width={400}/>
                         : type == 'appear' 
-                        ?<Card height={400} width={400}  title={card.title || 'Star tNow'} src={'/images/homePage/man.png'} alt={card.title} widthImg={200} heighImg={200} size={true}/>
+                        ? <Card height={400} width={400}  title={card.title || 'Star tNow'} src={'/images/homePage/man.png'} alt={card.title} widthImg={200} heighImg={200} size={true}/>
                         :null
                         } 
                     </Box>

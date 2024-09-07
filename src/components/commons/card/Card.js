@@ -53,8 +53,8 @@ const Card = ({
           transition: 'transform 0.3s ease-in-out', /* Smooth scaling transition */
         }}
       >
-        {video 
-        ?  
+        {/* {video 
+        ?   */}
         <Video
           // className="video-thumbnail"
           src={src}
@@ -64,10 +64,10 @@ const Card = ({
           autoPlay={true}
           loop
         />
-        :
-        <ImageWithSpinner src={src}
-        alt={alt} />
-        }
+        {/* // :
+        // <ImageWithSpinner src={src}
+        // alt={alt} />
+        // } */}
         
       </Box>
       <Box position={'absolute'} bottom={5} right={5} zIndex={6}> 
