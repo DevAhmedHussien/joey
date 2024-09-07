@@ -367,11 +367,13 @@ function MainNavBar() {
                                 <SearchIconSVG width={30} height={30} color={colors.primary[200]} />
                             </Box>
                         </Link>
-                        <Link href={'/sign-in'}>
+                        <a //href={'/sign-in'}
+                            href={'/https://joeymed.intakeq.com/portal'}
+                        >
                             <Box>
                                 <CustomPersonIconSVG width={35} height={35} color= {colors.primary[200]} />
                             </Box>
-                        </Link>
+                        </a>
                     </Box>
 
                     {/* once admin log in 

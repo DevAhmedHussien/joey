@@ -60,7 +60,7 @@ const Card = ({
           src={src}
           type="video/mp4"
           alt="A description of the video content"
-          // controls
+          controls={false}
           autoPlay={true}
           loop
         />
