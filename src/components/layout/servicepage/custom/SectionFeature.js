@@ -41,9 +41,9 @@ export default function SectionFeature({images}) {
         />
       ) : (
         <Video
-          className="video-thumbnail"
+          // className="video-thumbnail"
           // src={image.src} 
-          src='/videos/bottle.mp4' 
+          src='/videos/Sexual health.mp4' 
           type="video/mp4"
           alt="A description of the video content"
           autoPlay={true}
