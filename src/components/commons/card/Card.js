@@ -57,7 +57,7 @@ const Card = ({
         ?  
         <Video
           // className="video-thumbnail"
-          src='/videos/bottle.mp4' 
+          src={src}
           type="video/mp4"
           alt="A description of the video content"
           // controls

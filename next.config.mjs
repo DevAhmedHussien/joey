@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-        // basePath: '/yourBasePath', // Set your base path here
+        // basePath: '/joeymed'
 };
 
 export default nextConfig;
