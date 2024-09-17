@@ -20,7 +20,10 @@ import sexualImg from '../../../../public/images/navbar/sexual.png';
 import weighImg from '../../../../public/images/navbar/weight.png';
 import hairImg from '../../../../public/images/navbar/hair.png';
 import { PersonPinCircleOutlined } from '@mui/icons-material';
-
+import ResponsiveNavLink from './ResponsiveNavLink';
+import { useRef } from 'react';
+import { useCycle } from 'framer-motion';
+import MotionNavBar from './MotionNavBar';
 const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'contact-us', 'about-us', 'blogs'];
 
 function MainNavBar() {
@@ -31,7 +34,6 @@ function MainNavBar() {
     const colors = tokens(theme.palette.mode);
 
     const { toggleColorMode, mode } = useContext(ColorModeContext);
-
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -80,7 +82,10 @@ function MainNavBar() {
                             style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
                         />
                     </Typography>
+                    {/* <ResponsiveNavLink /> */}
                     <Box className="responsive-appbar-nav-icon">
+                    {/* <MotionNavBar/> */}
+
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -102,6 +107,7 @@ function MainNavBar() {
                             className="responsive-appbar-menu"
                             sx={{ width: '100%' }}
                         >
+                            {/* Menu Small */}
                             <Box sx={{boxShadow: mode =='dark'?  '0px 10px 20px #cce0e7':''}}>
                                 {pages.map((page) => (
                                     <Box
@@ -117,7 +123,7 @@ function MainNavBar() {
                                             href={(page == 'about-us' || page == 'contact-us' ||  page == 'blogs')? `/${page}` : null }
                                             sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 20 }}
                                         >
-                                           {page.replace('-', ' ')}
+                                           {page.replace('-', ' ')} 
                                         </Button>
                                         {hoveredCategory === page && subCategories && (
                                             <Box
@@ -198,8 +204,9 @@ function MainNavBar() {
                                     </Box>
                                 ))}
                             </Box>
-                        </Menu>
+                        </Menu> 
                     </Box>
+                
                     <Typography
                         variant="h5"
                         noWrap
@@ -216,7 +223,7 @@ function MainNavBar() {
                             loading="lazy"
                         />
                     </Typography>
-
+                    {/* for big scree */}
                     <Box className="responsive-appbar-links" padding={'0 20px'}>
                         {pages.map((page) => (
                             <Box
@@ -367,13 +374,14 @@ function MainNavBar() {
                                 <SearchIconSVG width={30} height={30} color={colors.primary[200]} />
                             </Box>
                         </Link>
-                        <a //href={'/sign-in'}
-                            href={'/https://joeymed.intakeq.com/portal'}
+                        <Link 
+                        // href={'/sign-in'}
+                            href={'https://joeymed.intakeq.com/portal'}
                         >
                             <Box>
                                 <CustomPersonIconSVG width={35} height={35} color= {colors.primary[200]} />
                             </Box>
-                        </a>
+                        </Link>
                     </Box>
 
                     {/* once admin log in 
@@ -395,13 +403,3 @@ function MainNavBar() {
 
 export default MainNavBar;
 
-
-{/* <Box 
-sx={{ ml: 1, opacity: mode === "dark" ? 1 : 0.5, cursor: 'pointer' }}
-onClick={() => toggleColorMode()}
->   
-{mode === "dark" 
-    ? <WbSunnyOutlinedIcon sx={{ fontSize: '26px', color: colors.primary[200] }} />
-    : <NightsStayOutlinedIcon sx={{ fontSize: '26px', color: colors.primary[200] }} />
-}
-</Box> */}

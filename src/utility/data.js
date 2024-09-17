@@ -10,48 +10,59 @@ export const productCategories = {
                 SKU: "JM-SMG-P-003",
                 description: "Semaglutide pills for weight loss.",
                 category: "Weight Loss",
+                ingredient: 'A glucagon-like peptide-1 (GLP-1) receptor agonist that helps regulate blood sugar levels and supports weight loss by reducing appetite and food intake when taken orally.',
                 additionalCategories: "",
                 SEOTitle: "Semaglutide Pills for Weight Loss",
                 SEODescription: "Convenient and effective Semaglutide pills for weight management.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 299,
-                onlineSalePrice: 279,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                price: `$249 (first month at $149)`,
+                ProductDescription:"Oral Semaglutide prescribed online for weight loss, regulating appetite and blood sugar levels.",
+                Benefits: [
+                  {
+                    'Convenient Oral Administration': 'Semaglutide Pills offer the convenience of oral administration, eliminating the need for injections while providing similar weight loss and blood sugar control benefits.'
+                  },
+                  {
+                    'Appetite Suppression': 'Semaglutide reduces hunger and food cravings, making it easier to follow a lower-calorie diet and support long-term weight management.'
+                  },
+                  {
+                    'Effective for Weight Loss': 'It has been shown to promote significant weight loss by regulating appetite and food intake.'
+                  },
+                  {
+                    'Improves Blood Sugar Control': 'Semaglutide helps lower blood sugar levels in people with type 2 diabetes, improving overall glycemic control.'
+                  },
+                  {
+                    'Once-Daily Dosing': 'The pills are taken once a day, making it easier to incorporate into daily routines.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
+                    // "/images/homePage/women.png",
                   ],
-                  questions : [{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Spaasdasdrks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro sadasda?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'weight-loss/semaglutide-pills'
+                  questions : [
+                    {
+                      question: 'How are Semaglutide Pills taken?',
+                      answer: 'One pill is taken daily with water.'
+                    },
+                    {
+                      question: 'What are the side effects?',
+                      answer: 'Side effects include nausea, vomiting, and dizziness.'
+                    },
+                    {
+                      question: 'Can I eat normally while taking Semaglutide Pills?',
+                      answer: 'A balanced, reduced-calorie diet is recommended.'
+                    },
+                    {
+                      question: 'Will I regain weight after stopping the pills?',
+                      answer: 'Some patients may regain weight without lifestyle changes.'
+                    },
+                    {
+                      question: 'Can I use this pill with other weight loss medications?',
+                      answer: 'Consult your doctor before combining it with other weight loss medications.'
+                    }
+                  ],
+                href:'weight-loss/semaglutide-pills',
+                safety:'Use under medical supervision, especially if you have underlying health conditions.'
             },
             {
                 referenceHandle: "tirzepatide-pills",
@@ -61,48 +72,59 @@ export const productCategories = {
                 SKU: "JM-TRZ-P-004",
                 description: "Tirzepatide pills for weight loss.",
                 category: "Weight Loss",
+                ingredient: 'A glucagon-like peptide-1 (GLP-1) receptor agonist that helps regulate blood sugar levels and supports weight loss by reducing appetite and food intake when taken orally.',
                 additionalCategories: "",
                 SEOTitle: "Tirzepatide Pills for Weight Loss",
                 SEODescription: "Convenient and highly effective Tirzepatide pills for managing weight.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 349,
-                onlineSalePrice: 329,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                price: '$349 (first month at $249)',
+                ProductDescription:"Oral Tirzepatide prescribed for weight loss, supporting appetite control and blood sugar management.",
+                Benefits: [
+                  {
+                    'Dual Hormone Action': 'Tirzepatide Pills target both GLP-1 and GIP receptors, enhancing their ability to regulate blood sugar and suppress appetite, leading to more effective weight loss.'
+                  },
+                  {
+                    'Convenient Oral Administration': 'Unlike injectable forms, Tirzepatide Pills provide the convenience of oral dosing, making it easier to incorporate into daily routines.'
+                  },
+                  {
+                    'Effective Weight Loss': 'Tirzepatide has been clinically proven to support significant weight loss by reducing hunger and calorie intake.'
+                  },
+                  {
+                    'Improves Blood Sugar Control': 'Helps lower blood sugar levels in individuals with type 2 diabetes, promoting better overall glycemic control.'
+                  },
+                  {
+                    'Reduces Cardiovascular Risk': 'Tirzepatide has been shown to improve cholesterol levels and reduce inflammation, contributing to better heart health.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro ahmed?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro karim?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'weight-loss/tirzepatide-pills'
+                    // "/images/homePage/women.png",
+                ],
+                questions :[
+                    {
+                      question: 'How are Tirzepatide Pills taken?',
+                      answer: 'One pill is taken daily with water.'
+                    },
+                    {
+                      question: 'What are the side effects?',
+                      answer: 'Common side effects include nausea, upset stomach, and dizziness.'
+                    },
+                    {
+                      question: 'How soon can I expect weight loss results?',
+                      answer: 'Many patients report weight loss within the first few weeks.'
+                    },
+                    {
+                      question: 'Can I use this with other weight loss medications?',
+                      answer: 'Consult your healthcare provider before combining treatments.'
+                    },
+                    {
+                      question: 'Will I regain weight after stopping Tirzepatide?',
+                      answer: 'Weight regain is possible without maintaining lifestyle changes like a healthy diet and exercise.'
+                    }
+                ],
+                href:'weight-loss/tirzepatide-pills',
+                safety:' Always consult a healthcare provider before use, especially if you have a history of thyroid cancer or other medical conditions.'
 
             },
         ],
@@ -113,50 +135,63 @@ export const productCategories = {
                 itemName: "Semaglutide Injection",
                 variationName: "",
                 SKU: "JM-SMG-I-001",
-                description: "Semaglutide injection for weight loss.",
+                description: "An injectable solution designed to promote weight loss by regulating appetite through Semaglutide.",
                 category: "Weight Loss",
                 additionalCategories: "",
                 SEOTitle: "Semaglutide Injection for Weight Loss",
-                SEODescription: "Effective Semaglutide injection to support your weight loss journey.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 299,
-                onlineSalePrice: 279,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-                questions : [{
-                    question:'What are Ro amer?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro ali?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
+                SEODescription: ":An injectable solution designed to promote weight loss by regulating appetite through Semaglutide.",
+                price: `Pricing by Dosage:
+                        0.25mg - $199, 0.50mg - $199, 1.0mg - $225
+                        12-week Kickstart Program - $539`,
+                    
+                ingredient:'Semaglutide: A glucagon-like peptide-1 (GLP-1) receptor agonist, which helps regulate blood sugar levels and supports weight loss by reducing appetite and food intake.',
+                ProductDescription:"An injectable solution designed to promote weight loss by regulating appetite through Semaglutide.",
+                Benefits:[
+                  {
+                    'Effective Weight Loss': 'Semaglutide injection helps promote significant weight loss by regulating appetite and reducing calorie intake.'
+                  },
+                  {
+                    'Appetite Suppression': 'It reduces hunger and food cravings, making it easier for users to follow a lower-calorie diet.'
+                  },
+                  {
+                    'Long-Acting Formula': 'A once-weekly injection ensures steady and consistent results without the need for daily medication.'
+                  },
+                  {
+                    'Clinically Proven': 'Semaglutide has been clinically proven to aid in weight management and reduce the risk of obesity-related health conditions.'
+                  },
+                  {
+                    'Improved Blood Sugar Control': 'In addition to weight loss, Semaglutide also helps improve glycemic control in people with type 2 diabetes.'
+                  }
+                ],
+                questions : [
+                  {
+                    question: 'How is Semaglutide administered?',
+                    answer: 'It is injected subcutaneously once a week.'
+                  },
+                  {
+                    question: 'What are the common side effects?',
+                    answer: 'Side effects include nausea, vomiting, and dizziness.'
+                  },
+                  {
+                    question: 'How long will it take to see weight loss results?',
+                    answer: 'Weight loss typically begins after 2-3 weeks of consistent use.'
+                  },
+                  {
+                    question: 'Can I eat normally while using Semaglutide?',
+                    answer: 'A reduced-calorie diet is recommended alongside the injections.'
+                  },
+                  {
+                    question: 'Will I gain weight back after stopping Semaglutide?',
+                    answer: 'Some users may regain weight if dietary changes are not maintained.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
                   ],
-                href:'weight-loss/semaglutide-injection'
+                href:'weight-loss/semaglutide-injection',
+                safety:'Consult a healthcare provider before using Semaglutide. Common side effects include nausea, vomiting, and dizziness.'
 
             },
             {
@@ -165,419 +200,455 @@ export const productCategories = {
                 itemName: "Tirzepatide Injection",
                 variationName: "",
                 SKU: "JM-TRZ-I-002",
-                description: "Tirzepatide injection for weight loss.",
+                description: "A weight loss injection that regulates blood sugar and appetite using Tirzepatide.",
                 category: "Weight Loss",
                 additionalCategories: "",
                 SEOTitle: "Tirzepatide Injection for Weight Loss",
                 SEODescription: "Highly effective Tirzepatide injection for managing weight.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 349,
-                onlineSalePrice: 329,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                ingredient:'tirzepatide: A glucagon-like peptide-1 (GLP-1) receptor agonist, which helps regulate blood sugar levels and supports weight loss by reducing appetite and food intake.',
+                price: `Pricing by Dosage:
+                        2.5mg - $299, 5.0mg - $299, 7.5mg - $299
+                        12-week Kickstart Program - $809`,
+                ProductDescription:"A weight loss injection that regulates blood sugar and appetite using Tirzepatide.",
+                Benefits: [
+                  {
+                    'Dual Action for Weight Loss': 'Tirzepatide works by mimicking two key hormones, GLP-1 and GIP, which help regulate appetite and control blood sugar, leading to significant weight loss.'
+                  },
+                  {
+                    'Improved Blood Sugar Control': 'It effectively lowers blood glucose levels, making it a powerful treatment for individuals with type 2 diabetes.'
+                  },
+                  {
+                    'Once-Weekly Dosing': 'Tirzepatide is administered once a week, offering a convenient option for long-term use without the need for daily injections.'
+                  },
+                  {
+                    'Cardiovascular Health Benefits': 'Tirzepatide has been shown to reduce the risk of cardiovascular complications by improving cholesterol levels and reducing inflammation.'
+                  },
+                  {
+                    'Reduces Appetite': 'It helps reduce hunger, making it easier to follow a calorie-controlled diet and achieve long-term weight management.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
+                    // "/images/homePage/women.png",
                   ],
-                  questions : [{
-                    question:'What are Ro afada?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro ser?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro sadasd?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'weight-loss/tirzepatide-injection'
+                  questions : [
+                    {
+                      question: 'How often should I take Tirzepatide?',
+                      answer: 'Administer once weekly via injection.'
+                    },
+                    {
+                      question: 'Are there side effects?',
+                      answer: 'Common side effects include nausea, upset stomach, and diarrhea.'
+                    },
+                    {
+                      question: 'How soon will I see weight loss results?',
+                      answer: 'Results vary, but many patients report weight loss within the first few weeks.'
+                    },
+                    {
+                      question: 'Can I continue to eat normally?',
+                      answer: 'A reduced-calorie diet may improve the results of Tirzepatide.'
+                    },
+                    {
+                      question: 'Will my weight loss be sustained after stopping the injection?',
+                      answer: 'Lifestyle changes are important to maintain weight loss after stopping Tirzepatide.'
+                    }
+                  ],
+                href:'weight-loss/tirzepatide-injection',
+                safety:"Tirzepatide may cause nausea and vomiting. Seek medical advice if side effects persist."
             },
         ],
     },
     'sexual-health': {
-        vitaly:[
-            {
-            referenceHandle: "vitalitymax-high",
-            token: "vitalitymax",
-            itemName: "VitalityMax High",
-            variationName: "",
-            SKU: "JM-VM-H-001",
-            description: "High strength ED solution with APO 3mg, Sildenafil 80mg, and Tadalafil 22mg.",
-            category: "Sexual Health",
-            additionalCategories: "",
-            SEOTitle: "VitalityMax High - ED Pill",
-            SEODescription: "Effective high strength ED solution for consistent results, containing APO, Sildenafil, and Tadalafil.",
-            permalink: "",
-            GTIN: "",
-            visibility: "Visible",
-            itemType: "Physical",
-            weight: 0.1,
-            shippingEnabled: true,
-            selfServeOrderingEnabled: true,
-            deliveryEnabled: true,
-            pickupEnabled: true,
-            price: 20,
-            onlineSalePrice: 20,
-            sellable: true,
-            stockable: true,
-            skipDetailScreenInPOS: false,
-            optionName1: "",
-            optionValue1: "",
-            currentQuantity: 100,
-            newQuantity: "",
-            stockAlertEnabled: true,
-            stockAlertCount: 10,
-            ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-            Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-            images:[
-                "/images/homePage/sexual.png",
-                "/images/homePage/weight.png",
-                "/images/homePage/man.png",
-                "/images/homePage/women.png",
-              ],
-              questions : [{
-                question:'What are Ro rrrrr?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro tttttt?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro bbbbb?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              }],
-            href:'sexual-health/vitalitymax-high'
-            
-             
-            
-        },
-        {
-            referenceHandle: "vitalitymax-ultra",
-            token: "vitalitymax",
-            itemName: "VitalityMax Ultra",
-            variationName: "",
-            SKU: "JM-VM-U-002",
-            description: "Max strength ED solution with APO 3mg, Sildenafil 110mg, and Tadalafil 22mg.",
-            category: "Sexual Health",
-            additionalCategories: "",
-            SEOTitle: "VitalityMax Ultra - ED Pill",
-            SEODescription: "Effective max strength ED solution for potent results, containing APO, Sildenafil, and Tadalafil.",
-            permalink: "",
-            GTIN: "",
-            visibility: "Visible",
-            itemType: "Physical",
-            weight: 0.1,
-            shippingEnabled: true,
-            selfServeOrderingEnabled: true,
-            deliveryEnabled: true,
-            pickupEnabled: true,
-            price: 24,
-            onlineSalePrice: 24,
-            sellable: true,
-            stockable: true,
-            skipDetailScreenInPOS: false,
-            optionName1: "",
-            optionValue1: "",
-            currentQuantity: 100,
-            newQuantity: "",
-            stockAlertEnabled: true,
-            stockAlertCount: 10,
-            ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-            Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-            images:[
-                "/images/homePage/sexual.png",
-                "/images/homePage/weight.png",
-                "/images/homePage/man.png",
-                "/images/homePage/women.png",
-              ],
-              questions : [{
-                question:'What are Ro aaaaaa?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro aaaa?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro aaaaa?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              }],
-            href:'sexual-health/vitalitymax-ultra'
-        },
-        {
-            referenceHandle: "vitalitymax-medium",
-            token: "vitalitymax",
-            itemName: "VitalityMax Medium",
-            variationName: "",
-            SKU: "JM-VM-M-003",
-            description: "Medium strength ED solution with APO 2mg, Sildenafil 65mg, and Tadalafil 22mg.",
-            category: "Sexual Health",
-            additionalCategories: "",
-            SEOTitle: "VitalityMax Medium - ED Pill",
-            SEODescription: "Effective medium strength ED solution for balanced results, containing APO, Sildenafil, and Tadalafil.",
-            permalink: "",
-            GTIN: "",
-            visibility: "Visible",
-            itemType: "Physical",
-            weight: 0.1,
-            shippingEnabled: true,
-            selfServeOrderingEnabled: true,
-            deliveryEnabled: true,
-            pickupEnabled: true,
-            price: 17,
-            onlineSalePrice: 17,
-            sellable: true,
-            stockable: true,
-            skipDetailScreenInPOS: false,
-            optionName1: "",
-            optionValue1: "",
-            currentQuantity: 100,
-            newQuantity: "",
-            stockAlertEnabled: true,
-            stockAlertCount: 10,
-            ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-            Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-            images:[
-                "/images/homePage/sexual.png",
-                "/images/homePage/weight.png",
-                "/images/homePage/man.png",
-                "/images/homePage/women.png",
-              ],
-              questions : [{
-                question:'What are Ro Spaaaaarks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro Spaaaarks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro aaaaa?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              }],
-            href:'sexual-health/vitalitymax-medium'
-        },
-        {
-            referenceHandle: "vitalitymax-low",
-            token: "vitalitymax",
-            itemName: "VitalityMax Low",
-            variationName: "",
-            SKU: "JM-VM-L-004",
-            description: "Low strength ED solution with APO 2mg, Sildenafil 40mg, and Tadalafil 14mg.",
-            category: "Sexual Health",
-            additionalCategories: "",
-            SEOTitle: "VitalityMax Low - ED Pill",
-            SEODescription: "Effective low strength ED solution for fast and consistent results, containing APO, Sildenafil, and Tadalafil.",
-            permalink: "",
-            GTIN: "",
-            visibility: "Visible",
-            itemType: "Physical",
-            weight: 0.1,
-            shippingEnabled: true,
-            selfServeOrderingEnabled: true,
-            deliveryEnabled: true,
-            pickupEnabled: true,
-            price: 14,
-            onlineSalePrice: 14,
-            sellable: true,
-            stockable: true,
-            skipDetailScreenInPOS: false,
-            optionName1: "",
-            optionValue1: "",
-            currentQuantity: 100,
-            newQuantity: "",
-            stockAlertEnabled: true,
-            stockAlertCount: 10,
-            ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-            Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-            images:[
-                "/images/homePage/sexual.png",
-                "/images/homePage/weight.png",
-                "/images/homePage/man.png",
-                "/images/homePage/women.png",
-              ],
-              questions : [{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              },{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              }],
-            href:'sexual-health/vitalitymax-low'
-        }],
-        sidenafil :
-        [  
-            {
-            referenceHandle: "sildenafil-pill",
-            token: "sildenafil",
+        pills:[
+          {
+            referenceHandle: "Sildenafil-Pill",
+            token: "Sildenafil",
             itemName: "Sildenafil",
-            variationName: "",
+            variationName: "Pill",
             SKU: "JM-SLD-001",
-            description: "Sildenafil-based product for treating erectile dysfunction.",
+            description: "A pill used to treat erectile dysfunction by increasing blood flow to the penis.",
             category: "Sexual Health",
+            ingredient:'Sildenafil',
             additionalCategories: "",
-            SEOTitle: "Sildenafil Product - ED Treatment",
-            SEODescription: "Effective Sildenafil product for treating erectile dysfunction.",
-            permalink: "",
-            GTIN: "",
-            visibility: "Visible",
-            itemType: "Physical",
-            weight: 0.1,
-            shippingEnabled: true,
-            selfServeOrderingEnabled: true,
-            deliveryEnabled: true,
-            pickupEnabled: true,
-            price: 14,
-            onlineSalePrice: 14,
-            sellable: true,
-            stockable: true,
-            skipDetailScreenInPOS: false,
-            optionName1: "",
-            optionValue1: "",
-            currentQuantity: 100,
-            newQuantity: "",
-            stockAlertEnabled: true,
-            stockAlertCount: 10,
-            ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-            Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+            SEOTitle: "Sildenafil",
+            SEODescription: "Sildenafil sexuall healthA pill used to treat erectile dysfunction by increasing blood flow to the penis.",
+            price: '14.00$',
+            ProductDescription:" pill used to treat erectile dysfunction by increasing blood flow to the penis.",
+            Benefits:
+            [
+              {
+              'Fast-Acting':'Sildenafil typically works within 30-60 minutes, making it a quick option for spontaneous sexual activity.'
+              },
+              {
+              'Shorter Duration':'Its effects last around 4-6 hours, which is beneficial for those looking for a short-term solution to ED.'
+              },
+              {
+              'Cost-Effective':'Sildenafil is often more affordable than other ED medications due to its wide availability and various generic options.'
+              }
+            ],
             images:[
                 "/images/homePage/sexual.png",
                 "/images/homePage/weight.png",
                 "/images/homePage/man.png",
-                "/images/homePage/women.png",
               ],
               questions : [{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
+                question:'How long before Sildenafil takes effect?',
+                answer:'It typically works within 30-60 minutes.'
               },{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
+                question:'Can I take Sildenafil with other medications?',
+                answer:'Consult a doctor before combining Sildenafil with other treatments.'
               },{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-              }],
-            href:'sexual-health/sildenafil-pill'
-        }],
-        tadalafil :[{
-            referenceHandle: "tadalafil-pill",
-            token: "tadalafil",
+                question:' How long do the effects last?',
+                answer:'Moderate alcohol consumption is generally safe, but consult your doctor.'
+              },
+              {
+                question:'Can I take it daily? ',
+                answer: 'Consult your healthcare provider about daily use.'
+              },
+            ],
+            safety:'Not suitable for individuals with heart conditions or those taking nitrates',
+            href:'sexual-health/Sildenafil-Pill'
+          },
+          {
+            referenceHandle: "Tadalafil-Pill",
+            token: "Tadalafil",
             itemName: "Tadalafil",
-            variationName: "",
+            variationName: "Pill",
             SKU: "JM-TDL-002",
-            description: "Tadalafil-based product for treating erectile dysfunction.",
+            description: "A medication used to treat erectile dysfunction, with longer-lasting effects compared to Sildenafil.",
             category: "Sexual Health",
+            ingredient:'Tadalafil',
             additionalCategories: "",
-            SEOTitle: "Tadalafil Product - ED Treatment",
-            SEODescription: "Effective Tadalafil product for treating erectile dysfunction.",
-            permalink: "",
-            GTIN: "",
-            visibility: "Visible",
-            itemType: "Physical",
-            weight: 0.1,
-            shippingEnabled: true,
-            selfServeOrderingEnabled: true,
-            deliveryEnabled: true,
-            pickupEnabled: true,
-            price: 14,
-            onlineSalePrice: 14,
-            sellable: true,
-            stockable: true,
-            skipDetailScreenInPOS: false,
-            optionName1: "",
-            optionValue1: "",
-            currentQuantity: 100,
-            newQuantity: "",
-            stockAlertEnabled: true,
-            stockAlertCount: 10,
-            ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-            Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+            SEOTitle: "Tadalafil",
+            SEODescription: "Tadalafil A medication used to treat erectile dysfunction, with longer-lasting effects compared to Sildenafil.",
+            price: '14.00$',
+            ProductDescription:"A medication used to treat erectile dysfunction, with longer-lasting effects compared to Sildenafil.",
+            Benefits:[
+              {
+              'Longer Duration':'Tadalafil can last up to 36 hours, earning it the nickname "the weekend pill." This provides greater flexibility and spontaneity for sexual activity over an extended period.'
+              },
+              {
+              'Lower Daily Dose Option':'Tadalafil can be taken in lower daily doses, allowing for more consistent and natural sexual activity without needing to plan ahead.'
+              },
+              {
+              'Treatment of Other Conditions':'In addition to ED, Tadalafil is sometimes prescribed to treat benign prostatic hyperplasia (BPH) and pulmonary arterial hypertension, offering added benefits for men with these conditions.'
+              }
+            ],
             images:[
                 "/images/homePage/sexual.png",
                 "/images/homePage/weight.png",
                 "/images/homePage/man.png",
-                "/images/homePage/women.png",
               ],
               questions : [{
-                question:'How quickly will I see results with Semaglutide Injection??',
-                answer:'  While individual results may vary, many users begin to see weight loss within the first few weeks of treatment...'
+                question:'How long does Tadalafil last?',
+                answer:'Its effects can last up to 36 hours.'
               },{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
+                question:'Can I take it with food?',
+                answer:' Yes, Tadalafil can be taken with or without food.'
               },{
-                question:'What are Ro Sparks?',
-                answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
+                question:'Can I drink alcohol while taking this?',
+                answer:'Consult your doctor, as alcohol may increase the risk of side effects.'
+              },
+              {
+                question:'Can I take it daily? ',
+                answer: 'Consult your healthcare provider about daily use.'
+              },
+            ],
+            safety:'Not suitable for individuals taking nitrates or with severe heart conditions.',
+            href:'sexual-health/Tadalafil-Pill'
+          },
+          {
+            referenceHandle: "Vitality-Max",
+            token: "Vitality Max",
+            itemName: "VitalityMax",
+            variationName: "Pill",
+            SKU: "JM-SH-P-001 to JM-SH-P-004",
+            description: "The VitalityMax line offers various strength solutions for erectile dysfunction, combining APO, Sildenafil, and Tadalafil.",
+            category: "Sexual Health",
+            ingredient:'APO, Sildenafil, Tadalafil',
+            additionalCategories: "",
+            SEOTitle: "Tadalafil",
+            SEODescription: " vitallyMax The VitalityMax line offers various strength solutions for erectile dysfunction, combining APO, Sildenafil, and Tadalafil.",
+            price: 'Varies by dosage',
+            ProductDescription:" The VitalityMax line offers various strength solutions for erectile dysfunction, combining APO, Sildenafil, and Tadalafil",
+            Benefits:[
+              {
+              'Longer Duration':'Tadalafil can last up to 36 hours, earning it the nickname "the weekend pill." This provides greater flexibility and spontaneity for sexual activity over an extended period.'
+              },
+              {
+              'Lower Daily Dose Option':'Tadalafil can be taken in lower daily doses, allowing for more consistent and natural sexual activity without needing to plan ahead.'
+              },
+              {
+              'Treatment of Other Conditions':'In addition to ED, Tadalafil is sometimes prescribed to treat benign prostatic hyperplasia (BPH) and pulmonary arterial hypertension, offering added benefits for men with these conditions.'
+              }
+            ],
+            images:[
+                "/images/homePage/sexual.png",
+                "/images/homePage/weight.png",
+                "/images/homePage/man.png",
+              ],
+              questions : [{
+                question:'How long before it takes effect?',
+                answer:'The pill usually takes effect within 30-60 minutes.'
+              },{
+                question:'Can I take it daily?',
+                answer:'Consult your healthcare provider to determine the proper dosage for daily use.'
+              },{
+                question:' What are the side effects?',
+                answer:'Common side effects include headaches, flushing, and dizziness.'
+              },
+              {
+                question:'Can I take it with food? ',
+                answer: 'Heavy meals may delay the effect'
+              },
+              {
+                question:'Can I drink alcohol while taking VitalityMax?',
+                answer: 'Moderate alcohol consumption is generally safe, but consult your doctor.'
+              },
+              {
+                question:'How long do the effects last? ',
+                answer: ' Effects can last up to 36 hours, depending on the dosage.'
               }],
-            href:'sexual-health/tadalafil-pill'
-        }]
+            safety:'Avoid use with nitrates or heart condition treatments.',
+            href:'sexual-health/Vitality-Max'
+          }],
+          Capsules :
+          [{
+              referenceHandle: "FemLibido-Boost",
+              token: "FemLibido Boost",
+              itemName: "FemLibido Boost",
+              variationName: "FemLibidoBoost",
+              SKU: "JM-FS-C-001",
+              description: " A capsule designed to enhance female libido and energy using a natural blend of Tribulus, Maca, and Ginseng.",
+              category: "Sexual Health",
+              ingredient:'Tribulus Terrestris, Maca Root, L-Arginine, Ginseng',
+              additionalCategories: "",
+              SEOTitle: "Sildenafil",
+              SEODescription: " A capsule designed to enhance female libido and energy using a natural blend of Tribulus, Maca, and Ginseng.",
+              price: '14.00$',
+              ProductDescription:"A capsule designed to enhance female libido and energy using a natural blend of Tribulus, Maca, and Ginseng",
+              Benefits:[
+                {
+                'Combination of Ingredients':'VitalityMax combines APO, Sildenafil, and Tadalafil, offering a powerful solution for erectile dysfunction by enhancing blood flow and maintaining longer-lasting effects.'
+                },
+                {
+                'Customizable Strengths':'Available in various strengths (high, medium, and low), the VitalityMax line caters to different levels of erectile dysfunction, allowing users to choose the appropriate dosage for their needs.'
+                },
+                {
+                'Quick and Long-Lasting:':'While Sildenafil provides fast action within 30-60 minutes, Tadalafil offers effects that can last up to 36 hours, making VitalityMax suitable for both short-term and long-term needs.'
+                }
+              ],
+              images:[
+                  "/images/homePage/sexual.png",
+                  "/images/homePage/weight.png",
+                  "/images/homePage/man.png",
+                  // "/images/homePage/women.png",
+                ],
+                questions : [{
+                  question:'How long before Sildenafil takes effect?',
+                  answer:'It typically works within 30-60 minutes.'
+                },{
+                  question:'Can I take Sildenafil with other medications?',
+                  answer:'Consult a doctor before combining Sildenafil with other treatments.'
+                },{
+                  question:' How long do the effects last?',
+                  answer:'Moderate alcohol consumption is generally safe, but consult your doctor.'
+                },
+                {
+                  question:'Can I take it daily? ',
+                  answer: 'Consult your healthcare provider about daily use.'
+                },
+              ],
+              Benefits:[{
+                'Fast-Acting':'Sildenafil typically works within 30-60 minutes, making it a quick option for spontaneous sexual activity.'
+                },
+                {
+                'Shorter Duration':'Its effects last around 4-6 hours, which is beneficial for those looking for a short-term solution to ED.'
+                },
+                {
+                'Cost-Effective':'Sildenafil is often more affordable than other ED medications due to its wide availability and various generic options.'
+                }
+              ],
+              safety:'Not suitable for individuals with heart conditions or those taking nitrates',
+              href:'sexual-health/Sildenafil-Pill'
+          }],
+          Creams :[{
+              referenceHandle: "Estro-Balance",
+              token: "EstroBalance",
+              itemName: "EstroBalance",
+              variationName: "",
+              SKU: "JM-TDL-002",
+              description: "A cream designed to balance female hormones using Estriol and Progesterone, applied topically.",
+              category: "Sexual Health",
+              additionalCategories: "",
+              SEOTitle: " EstroBalance - ED Treatment - female ",
+              SEODescription: "A cream designed to balance female hormones using Estriol and Progesterone, applied topically.",
+              price: '35.00$ per tube',
+              ProductDescription:"A cream designed to balance female hormones using Estriol and Progesterone, applied topically.",
+              ingredient:'Estriol 0.5%, Progesterone 0.2%',
+              Benefits: [
+                {
+                  'Hormonal Balance': 'EstroBalance helps balance female hormones by using Estriol and Progesterone, supporting overall hormonal health.'
+                },
+                {
+                  'Topical Application': 'Applied directly to the skin, this cream allows for localized absorption without the need for oral medication.'
+                },
+                {
+                  'Supports Menopausal Symptoms': 'EstroBalance may help alleviate symptoms related to menopause, such as hot flashes, mood swings, and night sweats.'
+                },
+                {
+                  'Gentle on the Body': 'The formulation is designed to be gentle, reducing the risk of side effects compared to stronger hormone treatments.'
+                }
+              ],
+              images:[
+                  "/images/homePage/sexual.png",
+                  "/images/homePage/weight.png",
+                  "/images/homePage/man.png",
+                  // "/images/homePage/women.png",
+                ],
+                questions : [{
+                  question:'How often should I apply EstroBalance?',
+                  answer:'Apply the cream once daily, as directed.'
+                },{
+                  question:'Can I use it with other hormone treatments?',
+                  answer:' Consult your doctor before combining with other hormonal therapies.'
+                },{
+                  question:'Are there side effects?',
+                  answer:'Side effects may include mild skin irritation or hormonal imbalances if overused.'
+                }],
+              href:'sexual-health/Estro-Balance',
+              safety:' Not suitable for individuals taking nitrates or with severe heart conditions.'
+          }]
     },
     'hair-growth': {
         men: [
             {
                 referenceHandle: "maxhair-men",
                 token: "maxhair",
-                itemName: "MaxHair for Men",
+                itemName: "MaxHair for Men (Pill)",
                 variationName: "",
                 SKU: "JM-MAX-M-001",
                 description: "Men's hair growth solution with Minoxidil 8% and Dutasteride 0.3%.",
                 category: "Hair Growth",
+                ingredient:'Dutasteride 0.5 mg',
                 additionalCategories: "",
                 SEOTitle: "MaxHair for Men - Hair Growth Solution",
-                SEODescription: "Effective hair growth solution for men, containing Minoxidil and Dutasteride.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
+                SEODescription: "A daily pill designed to reduce hair loss in men by inhibiting DHT production using Dutasteride",
                 price: 20,
-                onlineSalePrice: 20,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                ProductDescription:"A daily pill designed to reduce hair loss in men by inhibiting DHT production using Dutasteride",
+                Benefits: [
+                  {
+                    'Promotes Hair Growth': 'MaxHair for Men contains active ingredients that stimulate hair follicles and promote thicker, fuller hair.'
+                  },
+                  {
+                    'Reduces Hair Loss': 'The formula helps slow down hair thinning and loss, supporting the maintenance of healthy hair.'
+                  },
+                  {
+                    'Convenient Oral Administration': 'MaxHair for Men comes in pill form, making it easy to incorporate into daily routines without the need for topical treatments.'
+                  },
+                  {
+                    'Supports Scalp Health': 'The pill contains ingredients that improve scalp circulation and nourishment, creating a healthy environment for hair growth.'
+                  },
+                  {
+                    'Clinically Proven Ingredients': 'The active ingredients in MaxHair for Men are backed by clinical studies, showing effectiveness in reducing hair loss and promoting growth.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro rtrtrreter?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'hair-growth/maxhair-men'
+                ],
+                questions : [
+                    {
+                      question: 'How long does it take to see results?',
+                      answer: 'It may take 3-6 months of regular use to see noticeable results.'
+                    },
+                    {
+                      question: 'What are the side effects?',
+                      answer: 'Side effects include reduced libido and possible hormonal imbalances.'
+                    },
+                    {
+                      question: 'Can I use this pill with topical hair treatments?',
+                      answer: 'Consult your doctor before combining treatments.'
+                    },
+                    {
+                      question: 'Can I take it if I’m planning to have children?',
+                      answer: 'Dutasteride may affect fertility, so consult your doctor if you are planning to have children.'
+                    },
+                    {
+                      question: 'Will hair loss return if I stop taking the pill?',
+                      answer: 'Yes, hair loss may resume after stopping the medication.'
+                    }
+                ],
+                href:'hair-growth/maxhair-men',
+                safety:' Avoid use if allergic to Dutasteride. Consult a healthcare provider before '
+            },
+            {
+              referenceHandle: "maxhair-foam",
+              token: "maxhairFoam",
+              itemName: "MaxHair for Men (Foam)",
+              variationName: "",
+              SKU: "JM-MAX-M-001",
+              description: "A foam designed to treat male pattern baldness and promote hair regrowth using a combination of Minoxidil and Dutasteride.",
+              category: "Hair Growth",
+              ingredient:'Minoxidil 8%, Dutasteride 0.3%, 50 ml',
+              additionalCategories: "",
+              SEOTitle: "MaxHair for Men - foam - Hair Growth Solution",
+              SEODescription: "A foam designed to treat male pattern baldness and promote hair regrowth using a combination of Minoxidil and Dutasteride.",
+              price: '75$',
+              ProductDescription:"A foam designed to treat male pattern baldness and promote hair regrowth using a combination of Minoxidil and Dutasteride.",
+              Benefits: [
+                {
+                  'Easy Topical Application': 'MaxHair Foam is applied directly to the scalp, allowing for targeted treatment of hair thinning and hair loss.'
+                },
+                {
+                  'Promotes Hair Growth': 'Formulated to stimulate hair follicles, MaxHair Foam helps encourage new hair growth and reduce hair shedding.'
+                },
+                {
+                  'Non-Greasy Formula': 'The lightweight foam absorbs quickly without leaving a greasy residue, making it convenient for daily use.'
+                },
+                {
+                  'Supports Scalp Health': 'MaxHair Foam improves scalp health by enhancing blood circulation and providing nourishment to the hair follicles.'
+                },
+                {
+                  'Clinically Proven Results': 'The active ingredients in MaxHair Foam are clinically proven to help reduce hair loss and promote thicker, fuller hair.'
+                }
+              ],
+              images:[
+                  "/images/homePage/sexual.png",
+                  "/images/homePage/weight.png",
+                  "/images/homePage/man.png",
+              ],
+              questions : [
+                {
+                  question: 'How often should I use MaxHair for Men (Foam)?',
+                  answer: 'Apply twice daily to the scalp.'
+                },
+                {
+                  question: 'When can I expect to see results?',
+                  answer: 'Hair regrowth may begin after 3-4 months of consistent use.'
+                },
+                {
+                  question: 'Can I use this product if I have a sensitive scalp?',
+                  answer: 'Yes, but monitor for irritation and discontinue use if discomfort occurs.'
+                },
+                {
+                  question: 'How long do I need to continue treatment?',
+                  answer: 'To maintain results, continued use is recommended.'
+                },
+                {
+                  question: 'Will hair regrow in bald areas?',
+                  answer: 'It can promote regrowth in thinning areas, but it may not be as effective for completely bald spots.'
+                },
+                {
+                  question: 'Can I combine this foam with other treatments?',
+                  answer: 'Consult a healthcare provider before combining treatments.'
+                }
+              ],
+              href:'hair-growth/maxhair-foam',
+              safety:'  Avoid use if allergic to Minoxidil or Dutasteride. Side effects may include scalp irritation.'
             },
             {
                 referenceHandle: "scalpsoothe-package",
@@ -587,261 +658,195 @@ export const productCategories = {
                 SKU: "JM-SSP-003",
                 description: "Package for scalp inflammation and dandruff, containing Ketoconazole 2% and Hydrocortisone 1%.",
                 category: "Hair Growth",
+                ingredient:' Ketoconazole 2%, Hydrocortisone 1%',
                 additionalCategories: "",
                 SEOTitle: "ScalpSoothe - Package for Scalp Care",
-                SEODescription: "Effective package for treating scalp inflammation and dandruff, including Ketoconazole and Hydrocortisone.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 20,
-                onlineSalePrice: 20,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                SEODescription: "A solution to relieve scalp inflammation and reduce dandruff using Ketoconazole and Hydrocortisone",
+                price: '15$',
+                ProductDescription:"A solution to relieve scalp inflammation and reduce dandruff using Ketoconazole and Hydrocortisone",
+                Benefits: [
+                  {
+                    'Reduces Scalp Irritation': 'The ScalpSoothe Package is designed to alleviate itching, redness, and discomfort caused by scalp conditions like dandruff and psoriasis.'
+                  },
+                  {
+                    'Promotes Healthy Scalp': 'By improving scalp health, the ScalpSoothe Package creates an optimal environment for hair growth and prevents further irritation.'
+                  },
+                  {
+                    'Anti-Inflammatory Properties': 'Contains ingredients that help reduce inflammation and calm the scalp, reducing irritation and flaking.'
+                  },
+                  {
+                    'Moisturizes and Hydrates': 'Provides deep hydration to the scalp, preventing dryness and flakiness that can lead to itching and discomfort.'
+                  },
+                  {
+                    'Easy Topical Application': 'The products in the ScalpSoothe Package are easy to apply directly to the scalp for fast relief and long-lasting comfort.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro fafafafa?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'hair-growth/scalpsoothe-package'
+                ],
+                questions :[
+                    {
+                      question: 'How often should I use ScalpSoothe?',
+                      answer: 'Use daily or as directed by a healthcare professional.'
+                    },
+                    {
+                      question: 'What are the side effects?',
+                      answer: 'Mild itching and redness may occur initially.'
+                    },
+                    {
+                      question: 'How soon can I expect relief?',
+                      answer: 'Relief from itching and dandruff may be seen within a few days of consistent use.'
+                    },
+                    {
+                      question: 'Can I use this product if I have sensitive skin?',
+                      answer: 'It is generally safe, but if irritation occurs, discontinue use.'
+                    },
+                    {
+                      question: 'Will it help with hair growth?',
+                      answer: 'No, it is designed to treat scalp conditions, not promote hair growth.'
+                    }
+                ],
+                href:'hair-growth/scalpsoothe-package',
+                safety:' Avoid prolonged use. If symptoms persist, discontinue use and consult a doctor.'
             },
         ],
         women: [
             {
-                referenceHandle: "hairrevive-women",
-                token: "hairrevive",
-                itemName: "HairRevive for Women",
+                referenceHandle: "YouthLocks-women",
+                token: "YouthLocks",
+                itemName: "YouthLocks for Women Under 45 (Pill)",
                 variationName: "",
                 SKU: "JM-HRV-W-002",
                 description: "Women's hair growth solution with Minoxidil 8% and Dutasteride 0.3%.",
                 category: "Hair Growth",
+                ingredient:'Minoxidil, Spironolactone',
                 additionalCategories: "",
                 SEOTitle: "HairRevive for Women - Hair Growth Solution",
                 SEODescription: "Effective hair growth solution for women, containing Minoxidil and Dutasteride.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
                 price: 20,
-                onlineSalePrice: 20,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                ProductDescription:"A hair growth pill formulated for women under 45 to promote thicker, youthful hair using Minoxidil and Spironolactone.",
+                Benefits: [
+                  {
+                    'Supports Hair Growth': 'YouthLocks for Women helps stimulate hair follicles to encourage new hair growth and reduce hair thinning.'
+                  },
+                  {
+                    'Improves Hair Thickness': 'Formulated to enhance hair density, making hair appear fuller and healthier.'
+                  },
+                  {
+                    'Prevents Hair Breakage': 'The ingredients in YouthLocks help strengthen hair strands, reducing breakage and split ends.'
+                  },
+                  {
+                    'Hormone Balance Support': 'Contains ingredients that help balance hormones, which can be a factor in hair thinning and loss in women.'
+                  },
+                  {
+                    'Gentle Formula': 'Designed specifically for women, YouthLocks offers a gentle yet effective treatment for maintaining healthy hair.'
+                  },
+                  {
+                    'Convenient Oral Solution': 'YouthLocks comes in a pill form, providing an easy-to-use solution for daily hair care without the need for topical applications.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'hair-growth/hairrevive-women'
+                ],
+                questions : [
+                  {
+                    question: 'How long before I see results?',
+                    answer: 'Hair regrowth may take 3-6 months of consistent use.'
+                  },
+                  {
+                    question: 'Are there any side effects?',
+                    answer: 'Side effects include dizziness, dry skin, and irregular periods.'
+                  },
+                  {
+                    question: 'Can I use it if I’m pregnant?',
+                    answer: 'No, it’s not recommended for pregnant women.'
+                  },
+                  {
+                    question: 'How long should I continue the treatment?',
+                    answer: 'Long-term use is required to maintain hair growth.'
+                  },
+                  {
+                    question: 'Will hair loss return if I stop the pills?',
+                    answer: 'Yes, stopping the treatment may cause hair loss to resume.'
+                  }
+                ],
+                href:'hair-growth/YouthLocks-women',
+                safety:'Consult your healthcare provider before use, especially if taking other medications.'
 
             },
             {
-                referenceHandle: "hairrenew-women-1mg",
+                referenceHandle: "HairRevive-women-foam",
                 token: "hairrenew",
-                itemName: "HairRenew (1 mg) - For Women Over 45",
+                itemName: "HairRevive for Women (Foam)",
                 variationName: "",
                 SKU: "JM-HRW-1-004",
                 description: "Pill for women over 45 containing Minoxidil 1 mg and Dutasteride 0.4 mg.",
                 category: "Hair Growth",
+                ingredient:' Minoxidil 8%, Dutasteride 0.3%, 50 ml',
                 additionalCategories: "",
                 SEOTitle: "HairRenew - Pill for Women Over 45 (1 mg)",
-                SEODescription: "Effective hair growth pill for women over 45, containing Minoxidil and Dutasteride.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
+                SEODescription: "Effective hair growth Foam for women over 45, containing Minoxidil and Dutasteride.",
                 price: 20,
-                onlineSalePrice: 20,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
+                ProductDescription:" A foam formulated for women to reduce hair thinning and promote fuller hair using Minoxidil and Dutasteride.",
+                Benefits: [
+                  {
+                    'Stimulates Hair Growth': 'HairRevive Foam is formulated to target hair follicles, promoting the growth of new, healthy hair.'
+                  },
+                  {
+                    'Reduces Hair Thinning': 'The foam helps to reduce hair thinning and shedding, supporting thicker and fuller hair over time.'
+                  },
+                  {
+                    'Easy to Apply': 'The lightweight foam is easy to apply directly to the scalp, providing targeted treatment without the mess of creams or oils.'
+                  },
+                  {
+                    'Quick Absorption': 'HairRevive Foam absorbs quickly into the scalp, delivering active ingredients efficiently and without leaving a greasy residue.'
+                  },
+                  {
+                    'Improves Scalp Health': 'Contains nourishing ingredients that improve scalp circulation and hydration, creating a healthy environment for hair growth.'
+                  },
+                  {
+                    'Suitable for Daily Use': 'The gentle formula is suitable for daily use, making it convenient to incorporate into a regular hair care routine.'
+                  }
+                ],
                 images:[
                     "/images/homePage/sexual.png",
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro x?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
+                ],
+                questions : [{
+                    question:'How do I apply HairRevive for Women?',
+                    answer:'Apply directly to the affected scalp areas twice daily.'
                   },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
+                    question:'Are there any side effects?',
+                    answer:'Scalp irritation and dryness are common but usually mild.'
                   },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'hair-growth/hairrenew-women-1mg'
+                    question:'How long does it take to see results?',
+                    answer:'You may begin to see results after 3-4 months.'
+                  },
+                  {
+                    question:'Can I use this product if I am pregnant?',
+                    answer:' No, it is not recommended for use during pregnancy.'
+                  },{
+                    question:' What should I do if I experience irritation?',
+                    answer:' Stop using the product and consult your doctor.'
+                  },
+                  {
+                    question:' Can I color my hair while using this product? ',
+                    answer:'Yes, but wait at least 24 hours after applying the foam.'
+                  },
+                ],
+                href:'hair-growth/hairrenew-women-1mg',
+                safety:'Avoid contact with eyes. Consult a healthcare professional if irritation persists.'
             },
-            {
-                referenceHandle: "hairrenewplus-women-2mg",
-                token: "hairrenewplus",
-                itemName: "HairRenew Plus (2 mg) - For Women Over 45",
-                variationName: "",
-                SKU: "JM-HRP-2-005",
-                description: "Pill for women over 45 containing Minoxidil 2 mg and Dutasteride 0.4 mg.",
-                category: "Hair Growth",
-                additionalCategories: "",
-                SEOTitle: "HairRenew Plus - Pill for Women Over 45 (2 mg)",
-                SEODescription: "Effective hair growth pill for women over 45, containing Minoxidil and Dutasteride.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 20,
-                onlineSalePrice: 20,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-                images:[
-                    "/images/homePage/sexual.png",
-                    "/images/homePage/weight.png",
-                    "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro rrr?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'hair-growth/hairrenewplus-women-2mg'
-            },
-            {
-                referenceHandle: "youthlocks-women",
-                token: "youthlocks",
-                itemName: "YouthLocks - For Women Under 45",
-                variationName: "",
-                SKU: "JM-YL-006",
-                description: "Pill for women under 45 containing Minoxidil 1 mg and Spironolactone 60 mg.",
-                category: "Hair Growth",
-                additionalCategories: "",
-                SEOTitle: "YouthLocks - Pill for Women Under 45",
-                SEODescription: "Effective hair growth pill for women under 45, containing Minoxidil and Spironolactone.",
-                permalink: "",
-                GTIN: "",
-                visibility: "Visible",
-                itemType: "Physical",
-                weight: 0.1,
-                shippingEnabled: true,
-                selfServeOrderingEnabled: true,
-                deliveryEnabled: true,
-                pickupEnabled: true,
-                price: 20,
-                onlineSalePrice: 20,
-                sellable: true,
-                stockable: true,
-                skipDetailScreenInPOS: false,
-                optionName1: "",
-                optionValue1: "",
-                currentQuantity: 100,
-                newQuantity: "",
-                stockAlertEnabled: true,
-                stockAlertCount: 10,
-                ProductDescription:"Semaglutide Injection is a once-weekly injectable medication that mimics the action of GLP-1 (glucagon-like peptide-1), a naturally occurring hormone that regulates appetite and food intake...",
-                Benefits:"Significant Weight Loss: Clinical trials have shown that Semaglutide can help users lose 15-20% of their body weight...",
-                images:[
-                    "/images/homePage/sexual.png",
-                    "/images/homePage/weight.png",
-                    "/images/homePage/man.png",
-                    "/images/homePage/women.png",
-                  ],
-                  questions : [{
-                    question:'What are Ro dsfdsf?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  },{
-                    question:'What are Ro Sparks?',
-                    answer:'  Ro Sparks are a 2-in-1 ED treatment that combines the active ingredients in Viagra and Cialis...'
-                  }],
-                href:'hair-growth/youthlocks-women'
-            },
+           
         ],
     }
 };
 
-// steps 
 // steps for home page 
 export const stepsHomePage = [
     {
@@ -993,7 +998,5 @@ export const cardData = [
 export const imagesSexualHomePage = [
   { src: "/images/homePage/man.png", alt: "Image 1", type:'img' },
   { src: "/videos/SexualHealth.mp4", alt: "Video", type:'video' },
-  // { src: "/videos/AS.jpg", alt: "Image sa" ,  type:'video'},
-
-  { src: "/images/homePage/products.png", alt: "Image 3" ,    type:'img'}
+  { src: "/images/homePage/products.png", alt: "Image 3" , type:'img'}
 ];

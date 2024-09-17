@@ -50,16 +50,41 @@ function LoginForm() {
   const { register, handleSubmit, formState: { errors }, setFocus } = useForm();
   const [showPassword, setShowPassword] = useState(false);
 
-  const onSubmit = data => {
+  // onSubmit function that sends login details to the backend API
+  const onSubmit = async data => {
     if (!showPassword) {
       setShowPassword(true);
       setFocus('password');
     } else {
-      // Proceed with login
-      console.log('Login Data:', data);
+      try {
+        const response = await fetch('/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: data.email,
+            password: data.password,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Login failed. Check your credentials.');
+        }
+
+        const result = await response.json();
+        
+        if (result.token) {
+          console.log('Login successful', result.token);
+          localStorage.setItem('authToken', result.token); // Securely store token (you may want to use httpOnly cookies for production)
+          // Redirect user after successful login
+          window.location.href = '/dashboard'; // Adjust according to your app
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
     }
   };
-
   return (
     <> 
     <StyledForm component="form" onSubmit={handleSubmit(onSubmit)} noValidate>

@@ -22,12 +22,7 @@ import InfoList from '@/components/layout/infolist/InfoList';
 import AnimatedText from '@/components/commons/animatedtext/AnimatedText';
 import Card from '@/components/commons/card/Card';
 import TestimonialsSection from '@/components/layout/testimationsection/TestimonialsSection';
-import imgWeightloss from '../../public/images/homePage/weight.png'
-import imgSexual from '../../public/images/homePage/sexual.png'
-import imgHairMan from '../../public/images/homePage/man.png'
-import imgHairWomen from '../../public/images/homePage/women.png'
-import imgProducts from '../../public/images/homePage/products.png'
-import imgLogo from '../../public/images/joey.png';
+
 // ** data 
 import { stepsHomePage, productCategories,questions,  } from '@/utility/data';
 
@@ -54,7 +49,7 @@ export default function Home() {
   ];
 
   const cards1 = [...productCategories['weight-loss'].pills,...productCategories['weight-loss'].injections]
-  const cards2 = [...productCategories['sexual-health'].vitaly,...productCategories['sexual-health'].tadalafil, ...productCategories['sexual-health'].sidenafil]
+  const cards2 = [...productCategories['sexual-health'].pills,...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams]
   const cards3 = [...productCategories['hair-growth'].men,...productCategories['hair-growth'].women]
 
   const cards = [

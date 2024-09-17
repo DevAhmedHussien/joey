@@ -17,7 +17,7 @@ import Head from 'next/head';
 import { stepsHomePage, productCategories, questions, cardData, imagesSexualHomePage } from '@/utility/data';
 
 export default function SexualHealth() {
-  const cards2 = [...productCategories['sexual-health'].vitaly,...productCategories['sexual-health'].tadalafil, ...productCategories['sexual-health'].sidenafil]
+  const cards2 = [...productCategories['sexual-health'].pills,...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams]
   return (
     <>
       <Head>

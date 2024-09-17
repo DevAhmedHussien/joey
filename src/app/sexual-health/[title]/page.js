@@ -49,17 +49,15 @@ export default function ProductsPage(props) {
 
   // Combine all products from the sexual_health category into a single array
   let allSexualHealthProducts = [
-    ...productCategories['sexual-health'].vitaly,
-    ...productCategories['sexual-health'].sidenafil,
-    ...productCategories['sexual-health'].tadalafil
+    ...productCategories['sexual-health'].pills,
+    ...productCategories['sexual-health'].Capsules,
+    ...productCategories['sexual-health'].Creams
   ];
 
   // Filter the specific product based on the referenceHandle
   let specificProduct = allSexualHealthProducts.filter(
     (p) => props.params.title === p.referenceHandle
   );
-
-
 
   return (
     <>
@@ -102,6 +100,8 @@ export default function ProductsPage(props) {
           questions={specificProduct[0]?.questions}
           productDescription={specificProduct[0]?.ProductDescription}
           benefit={specificProduct[0]?.Benefits}
+          ingredient={specificProduct[0]?.ingredient}
+          safety={specificProduct[0]?.safety}
         />
         <Box mt={15}>
           <Typography variant='h3' sx={{textAlign:'center'}} >

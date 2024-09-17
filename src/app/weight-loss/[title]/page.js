@@ -125,6 +125,8 @@ export default function ProductsPage(props) {
           questions={specificProduct[0]?.questions}
           productDescription={specificProduct[0]?.ProductDescription}
           benefit={specificProduct[0]?.Benefits}
+          ingredient={specificProduct[0]?.ingredient}
+          safety={specificProduct[0]?.safety}
         />
 
         <Box mt={6}>
