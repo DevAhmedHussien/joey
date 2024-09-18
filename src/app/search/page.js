@@ -3,7 +3,7 @@ import Head from 'next/head';
 import SearchPageProduct from '@/components/layout/searchproducts/SearchPageProduct';
 import { productCategories } from '@/utility/data';
 
-const products = [...productCategories['weight-loss'].pills,...productCategories['weight-loss'].injections,...productCategories['sexual-health'].vitaly,...productCategories['sexual-health'].tadalafil, ...productCategories['sexual-health'].sidenafil,...productCategories['hair-growth'].men,...productCategories['hair-growth'].women]
+const products = [...productCategories['weight-loss'].pills,...productCategories['weight-loss'].injections,...productCategories['sexual-health'].pills,...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams,...productCategories['hair-growth'].men,...productCategories['hair-growth'].women]
 
 function SearchPage() {
   return (
