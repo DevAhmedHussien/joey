@@ -20,28 +20,17 @@ import sexualImg from '../../../../public/images/navbar/sexual.png';
 import weighImg from '../../../../public/images/navbar/weight.png';
 import hairImg from '../../../../public/images/navbar/hair.png';
 import { PersonPinCircleOutlined } from '@mui/icons-material';
-import ResponsiveNavLink from './ResponsiveNavLink';
-import { useRef } from 'react';
-import { useCycle } from 'framer-motion';
-import MotionNavBar from './MotionNavBar';
+import MotionBar from'./MotionBar'
 const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'contact-us', 'about-us', 'blogs'];
 
 function MainNavBar() {
-    const [anchorElNav, setAnchorElNav] = useState(null);
     const [hoveredCategory, setHoveredCategory] = useState(null);
     const [subCategories, setSubCategories] = useState([]);
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
     const { toggleColorMode, mode } = useContext(ColorModeContext);
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
+   
     const handleMouseEnter = (page) => {
         setHoveredCategory(page);
         fetchCategoryData(page);
@@ -82,129 +71,9 @@ function MainNavBar() {
                             style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
                         />
                     </Typography>
-                    {/* <ResponsiveNavLink /> */}
                     <Box className="responsive-appbar-nav-icon">
-                    {/* <MotionNavBar/> */}
-
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            {anchorElNav ? <ClearOutlinedIcon /> : <NotesOutlinedIcon />}
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-                            keepMounted
-                            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            className="responsive-appbar-menu"
-                            sx={{ width: '100%' }}
-                        >
-                            {/* Menu Small */}
-                            <Box sx={{boxShadow: mode =='dark'?  '0px 10px 20px #cce0e7':''}}>
-                                {pages.map((page) => (
-                                    <Box
-                                        key={page}
-                                        className="responsive-appbar-link"
-                                        onMouseEnter={() => handleMouseEnter(page)}
-                                        onMouseLeave={handleMouseLeave}
-                                        sx={{background: colors.primary[100],  display: 'flex', flexDirection: 'column',
-                                            }}
-                                    >
-                                        <Button
-                                            className='responsive-appbar-button'
-                                            href={(page == 'about-us' || page == 'contact-us' ||  page == 'blogs')? `/${page}` : null }
-                                            sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 20 }}
-                                        >
-                                           {page.replace('-', ' ')} 
-                                        </Button>
-                                        {hoveredCategory === page && subCategories && (
-                                            <Box
-                                                sx={{ background: colors.primary[100], padding: '20px', width: '100%',height: '100%' ,
-                                                     display:'flex',
-                                                     flexDirection:'column',
-                                                      justifyContent:'center',alignItems:'center',
-
-
-                                                    }}
-                                                className={`${hoveredCategory === page ? 'open' : 'close'}`}
-                                                onMouseEnter={() => setHoveredCategory(page)}
-                                                onMouseLeave={handleMouseLeave}
-                                            >
-                                                <Button className="responsive-appbar-button" component={Link} href={`/${page}`}
-                                                    sx={{ color: colors.primary[200], textTransform: 'capitalize', fontSize: 15 }} >
-                                                    See all {page.replace('-', ' ')}
-                                                </Button> 
-                                                {Object.keys(subCategories).map((subCategoryKey) => (
-                                                    <Box key={subCategoryKey} className='type-of-products'>
-                                                        <Typography variant="h3" component='h3' textAlign='center' sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 900, fontSize: 20, padding: '10px 5px' }}>
-                                                            {subCategoryKey.replace('-', ' ')}
-                                                        </Typography>
-                                                        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                                                            {subCategories[subCategoryKey].map((product) => (
-                                                                <Button
-                                                                    key={product.SKU}
-                                                                    className="responsive-appbar-button"
-                                                                    component={Link}
-                                                                    href={`/${page}/${product.referenceHandle}`}
-                                                                    sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 15 }}
-                                                                >
-                                                                    {product.itemName}
-                                                                </Button>
-                                                            ))}
-                                                        </Box>
-                                                        <span className="heartbeat-line"></span>
-                                                    </Box>
-                                                ))}
-                                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
-                                                    {page == 'sexual-health'
-                                                        ? <Image
-                                                            src={sexualImg}
-                                                            alt="Fertility"
-                                                            width={100}
-                                                            quality={100}
-                                                            height={130}
-                                                            style={{ borderRadius: 8 }}
-                                                            	loading="lazy"
-                                                        />
-                                                        : page == 'weight-loss'
-                                                            ? <Image
-                                                                src={weighImg}
-                                                                alt="Fertility"
-                                                                quality={100}
-                                                                width={100}
-                                                                height={130}
-                                                                	loading="lazy"
-                                                                style={{ borderRadius: 8 }}
-                                                            />
-                                                            : page == 'hair-growth'
-                                                                ? <Image
-                                                                    src={hairImg}
-                                                                    quality={100}
-                                                                    alt="Fertility"
-                                                                    width={100}
-                                                                    height={130}
-                                                                    	loading="lazy"
-                                                                    style={{ borderRadius: 8 }}
-                                                                />
-                                                                : null
-                                                    }
-
-                                                    <AppButton title='start now' color='black' href={`/form/${page}`} />
-                                                </Box>
-                                            </Box>
-                                        )}
-                                    </Box>
-                                ))}
-                            </Box>
-                        </Menu> 
+                        <MotionBar/>
+                    
                     </Box>
                 
                     <Typography

@@ -53,7 +53,7 @@ export default function CardSlider({cards = [], type}) {
       }, []);
 
     return (
-        <Box className="slider-container" {...handlers} sx={{p:5}}>
+        <Box className="slider-container" {...handlers} sx={{p:3}}>
             <Box className="slider-track"  
         sx={{
           width: `${(cards.length / visibleCards) * 100}%`,
