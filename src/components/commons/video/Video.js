@@ -2,7 +2,7 @@
 import { Box, CircularProgress } from '@mui/material';
 import React, { useRef, useEffect, useState } from 'react';
 
-const Video = ({ src, poster, alt, controls = false, loop = false, muted = true, autoPlay = false, ...props }) => {
+const Video = ({ src, poster, alt, controls = false, loop = false, muted = true, autoPlay = false, needTransform = true, ...props }) => {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -30,7 +30,7 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
         height: 'auto',
         overflow: 'hidden',
         '&:hover': {
-          transform: 'scale(1.1)', 
+          transform: needTransform ? '' :'scale(1.1)', 
           borderRadius:3,
           transition: 'transform 0.3s ease-in-out',
         },

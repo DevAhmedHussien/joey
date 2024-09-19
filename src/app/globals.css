@@ -79,6 +79,12 @@ button,a{
     animation-delay: 0.4s;
   }
 
+  img, video {
+    display: block; /* Ensure it doesn't add extra space */
+    margin: 0;      /* Remove any default margins */
+    padding: 0;     /* Remove any default padding */
+    border: none;   /* Ensure there's no border causing the line */
+  }
   @keyframes spinner-spin {
     100% { transform: rotate(360deg)}
   }

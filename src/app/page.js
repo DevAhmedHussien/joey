@@ -84,7 +84,34 @@ export default function Home() {
       description: 'Get a treatment plan tailored to your needs.',
     },
   ];
-  
+
+  const homeCards=[{
+    animate:cardVariantsRight,
+    title:'Weight Loss',
+    src:'/videos/bottle.mp4',
+    alt:'Weight Loss',
+    size:true,
+    video:true,
+    href:'/form/weight-loss'
+
+  },{
+    animate:cardVariantsSmall,
+    title:'Sexual health',
+    src:'/videos/bottle.mp4',
+    alt:'Sexual health',
+    size:true,
+    video:true,
+    href:'/form/weight-loss'
+
+  },{
+    animate:cardVariantsLeft,
+    title:'Hair growth',
+    src:'/videos/bottle.mp4',
+    alt:'Hair growth',
+    size:true,
+    video:true,
+    href:'/form/weight-loss'
+  }]
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -133,7 +160,7 @@ export default function Home() {
         />
       </Head>
       <div maxWidth="lg" style={{ background :colors.primary[100]}}>
-        <Grid container spacing={4} sx={{ p: 5 }}>
+        <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 }}}>
           <Grid item xs={12} md={6}>
           <motion.article
               initial="hidden"
@@ -194,73 +221,24 @@ export default function Home() {
           </Grid>
         </Grid>
 
-        {/* Services Section */}
-        <Box sx={{ p: 5 }} display={'flex'} flexWrap={'wrap'}>
-          <Grid container spacing={4}  >
-            <Grid item xs={12} md={4}>
-              <motion.div 
-                  variants={cardVariantsRight}
+       {/* Services Section */}
+        <Box sx={{ p: { xs: 2, md: 5 } }} display={'flex'} flexWrap={'wrap'}>
+          <Grid container spacing={4}>
+            {homeCards.map((c, i) => (
+              <Grid item xs={12} md={4} key={i}>
+                <motion.div 
+                  variants={c.animate}
                   initial="hidden"
                   animate="visible"
                 >
-              <Card height={400} title={'Weight Loss'} src={'/videos/bottle.mp4'} alt={'Weight Loss'} widthImg={400} heighImg={400} size={true} href={'/form/weight-loss'} video={true}/>
-              </motion.div>
-            </Grid>
-            <Grid item xs={12} md={4}>
-            <motion.div 
-                  variants={cardVariantsSmall} 
-                  initial="hidden"
-                  animate="visible"
-                >
-              <Card height={400}title={'Sexual Health'} src={'/videos/bottle.mp4'} alt={'Sexual Health'} widthImg={200} heighImg={200} size={true} href={'/form/sexual-health'} video={true}/>
-              </motion.div>
-            </Grid>
-            <Grid item xs={12} md={4}>
-            <motion.div 
-                  variants={cardVariantsLeft} 
-                  initial="hidden"
-                  animate="visible"
-                >
-              <Card height={400} title={'Hair Growth'} src={'/videos/bottle.mp4'} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={true} href={'/form/hair-growth'} video={true}/>
-              </motion.div>
-            </Grid>
-            {/* <Grid item xs={12} md={4}>
-              <motion.div 
-                  variants={cardVariantsSmall} 
-                  initial="hidden"
-                  animate="visible"
-                >
-                  <Card height={200} //title={'Hair Growth For Men'}
-                  src={imgHairMan} alt={'Hair Growth For Men'} widthImg={100} heighImg={100} size={false} href={'/'}/>
-              </motion.div>
-            </Grid> */}
-            {/* <Grid item xs={12} md={4}>
-            <motion.div 
-                  variants={cardVariantsSmall} 
-                  initial="hidden"
-                  animate="visible"
-                >
-                 <Card height={200} //title={'Hair Growth For Women'}
-                  src={imgHairWomen} alt={'Hair Growth For Women'} widthImg={100} heighImg={100} size={false} href={'/'}/>
-              </motion.div>
-            </Grid> */}
-            {/* <Grid item xs={12} md={12}>
-            <motion.div 
-                  variants={cardVariantsSmall} 
-                  initial="hidden"
-                  animate="visible"
-                >
-                  <Card height={300} title={'Hair Growth'}
-                  src={imgProducts} alt={'Best Seller From Our Pharmacy'} widthImg={100} heighImg={100} size={false} href={'/'}/>
-              </motion.div>
-            </Grid> */}
+                  <Card title={c.title} src={c.src} alt={c.alt} size={c.size} href={c.href} video={c.video} />
+                </motion.div>
+              </Grid>
+            ))}
           </Grid>
         </Box>
 
-        <Box mt={5}>
-          <MedWork steps={stepsHomePage}/>
-        </Box>
-
+       
         <Box className="weightloss">
           <VideoRolling title='Lose weight and keep it off with GLP-1s' description='Keep it off with GLP-1s' src="/videos/weightVideo.mp4"/>
           <CardSlider cards={cards1} type='product'/>
@@ -275,6 +253,10 @@ export default function Home() {
           <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/ss.mp4"/>
           <CardSlider cards={cards} type='appear' />
         </Box>
+        
+        <Box mt={5}>
+          <MedWork steps={stepsHomePage}/>
+        </Box>
 
         <TestimonialsSection/>
 
@@ -283,6 +265,7 @@ export default function Home() {
           <Typography variant="h3" paddingLeft={7}>Health guide</Typography>
           <CardSlider cards={cards} type='blog'/>
         </Box>
+        
 
         <Questions questions={questions} />
       </div>
