@@ -54,7 +54,7 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
             },
           }}
         >
-          <Typography variant="p" sx={{ fontWeight: 'bold', marginRight: '8px', textTransform: 'capitalize' }}>
+          <Typography variant="p" sx={{ fontWeight: 'bold', marginRight: '8px', textTransform: 'capitalize', whiteSpace: 'nowrap' }}>
             {title}
           </Typography>
           {(title === 'start now') && <EastOutlinedIcon className="arrow-icon" />}

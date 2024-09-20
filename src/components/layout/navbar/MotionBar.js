@@ -12,6 +12,7 @@ import AppButton from "@/components/commons/appbutton/AppButton";
 import sexualImg from '../../../../public/images/navbar/sexual.png';
 import weighImg from '../../../../public/images/navbar/weight.png';
 import hairImg from '../../../../public/images/navbar/hair.png';
+import imgLogo from '../../../../public/images/logo2.png';
 // useDimensions hook to get the dimensions of the sidebar
 export const useDimensions = (ref) => {
   const dimensions = useRef({ width: 0, height: 0 });
@@ -30,83 +31,88 @@ export const useDimensions = (ref) => {
   }, [ref]);
 
   return dimensions.current;
-};
+  };
 
-// Define the animation for opening and closing the sidebar
-const sidebarVariants = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 13 + 200}px at 40px 40px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2,
+  // Define the animation for opening and closing the sidebar
+  const sidebarVariants = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 10 + 200}px at 40px 40px)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2,
+      },
+    }),
+    closed: {
+      clipPath: "circle(20px at 40px 40px)",
+      transition: {
+        delay: 0.5,
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
     },
-  }),
-  closed: {
-    clipPath: "circle(20px at 40px 40px)",
-    transition: {
-      delay: 0.5,
-      type: "spring",
-      stiffness: 400,
-      damping: 40,
+  };
+
+  const variants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 }
+      }
     },
-  },
-};
-
-const variants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 }
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 }
+      }
     }
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 }
-    }
-  }
-};
+  };
 
+  const Path = props => (
+    <motion.path
+      fill="transparent"
+      strokeWidth="3"
+      stroke="hsl(0, 0%, 18%)"
+      strokeLinecap="round"
+      {...props}
+    />
+  );
 
-const Path = props => (
-  <motion.path
-    fill="transparent"
-    strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
-    strokeLinecap="round"
-    {...props}
-  />
-);
-
- const MenuToggle = ({ toggle }) => (
-  <button className="buttonIcon" onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 23 23">
-      <Path
-        variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" }
-        }}
-      />
-      <Path
-        d="M 2 9.423 L 20 9.423"
-        variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 }
-        }}
-        transition={{ duration: 0.1 }}
-      />
-      <Path
-        variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" }
-        }}
-      />
-    </svg>
-  </button>
-);
+  const MenuToggle = ({ toggle }) => (
+    <button className="buttonIcon" onClick={toggle}>
+      <svg width="23" height="23" viewBox="0 0 24 24">
+        <Path
+          strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
+          stroke="currentColor" // Set the stroke color to current text color or customize
+          variants={{
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 3 16.5 L 17 2.5" }
+          }}
+        />
+        <Path
+          strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
+          stroke="currentColor"
+          d="M 2 9.423 L 20 9.423"
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 }
+          }}
+          transition={{ duration: 0.1 }}
+        />
+        <Path
+          strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
+          stroke="currentColor"
+          variants={{
+            closed: { d: "M 2 16.346 L 20 16.346" },
+            open: { d: "M 3 2.5 L 17 16.346" }
+          }}
+        />
+      </svg>
+    </button>
+  );
 
 // Navigation component
 const Navigation = ({ isOpen }) => {
@@ -117,10 +123,10 @@ const Navigation = ({ isOpen }) => {
 
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [subCategories, setSubCategories] = useState([]);
-const handleMouseEnter = (page) => {
-      setHoveredCategory(page);
-      fetchCategoryData(page);
-  };
+  const handleMouseEnter = (page) => {
+        setHoveredCategory(page);
+        fetchCategoryData(page);
+    };
 
   const handleMouseLeave = () => {
       setHoveredCategory(null);
@@ -138,10 +144,19 @@ const handleMouseEnter = (page) => {
         animate={isOpen ? "open" : "closed"}
         exit="closed"
       >
+        <Image
+          quality={100}
+          src={imgLogo}
+          // width={100}
+          height={70}
+          alt="Joeymed logo"
+          loading="lazy"
+          style={{scale:1.5 , margin :'5px auto '}}
+      />
         {pages.map((page) => (
             <Box
                 key={page}
-                // className="responsive-appbar-link"
+                className="responsive-appbar-link"
                 onMouseEnter={() => handleMouseEnter(page)}
                 onMouseLeave={handleMouseLeave}
                 sx={{background: colors.primary[100],  display: 'flex', flexDirection: 'column',
@@ -163,7 +178,7 @@ const handleMouseEnter = (page) => {
              
                 {hoveredCategory === page && subCategories && (
                     <Box
-                        sx={{  padding: '20px', width: '100%',height: '100%' ,
+                        sx={{  padding: '20px', width: '100%',//height: '100%' ,
                              display:'flex',
                              flexDirection:'column',
                               justifyContent:'center',alignItems:'center',
@@ -240,9 +255,9 @@ const handleMouseEnter = (page) => {
                                                   <AppButton title='start now' color='black' href={`/form/${page}`} />
                                               </Box>
                     </Box>
-                        )}
-                    </Box>
-                ))}
+                )}
+                </Box>
+        ))}
       </motion.ul>
     )
   );
@@ -276,7 +291,7 @@ const MotionBar = () => {
           top: 0,
           left: 0,
           bottom: 0,
-          width: "90vw",
+          width: "78vw",
           background: "white",
           boxShadow: '1px 1px 8px 2px #bdbdbd'
         }}
@@ -290,65 +305,3 @@ const MotionBar = () => {
 };
 
 export default MotionBar;
-
-// CSS Styling
-const styles = `
-
-
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height:100vh;
-}
-
-.buttonIcon {
-  outline: none;
-  border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: pointer;
-  position: absolute;
-  top: 13px;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: transparent;
- 
-}
-
-ul {
-  padding: 50px;
-  position: absolute;
-  top: 10px;
-  width: 100%;
-}
-
-.refresh {
-  padding: 10px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-  .css-15s59wr {
-    background: transparent !important;
-`;
-
-// Inject CSS styles into the document
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);

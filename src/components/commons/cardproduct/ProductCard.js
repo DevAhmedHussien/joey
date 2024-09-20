@@ -3,7 +3,7 @@ import { Box, Typography, Chip, Link } from '@mui/material';
 import Image from 'next/image'; // Next.js image optimization
 import AppButton from '../appbutton/AppButton';
 
-const ProductCard = ({ width = 400, height = 400, name, description, href }) => {
+const ProductCard = ({ width = 360, height = 400, name, description, href }) => {
   return (
     <Box
       sx={{
@@ -109,32 +109,37 @@ const ProductCard = ({ width = 400, height = 400, name, description, href }) => 
 
 export default ProductCard;
 
+
 // import React from 'react';
 // import { Box, Typography, Chip, Link } from '@mui/material';
 // import Image from 'next/image'; // Next.js image optimization
 // import AppButton from '../appbutton/AppButton';
-// import { motion } from 'framer-motion';
 
-// const ProductCard = ({ width = 400, height = 400, name, description, href }) => {
+// const ProductCard = ({ name, description, href }) => {
 //   return (
-//     <motion.div
-//       whileHover={{
-//         scale: 1.05,
-//         transition: { duration: 0.3 },
-//         boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)',
-//       }}
-//       style={{
+//     <Box
+//       sx={{
 //         position: 'relative',
-//         borderRadius: '16px',
-//         boxShadow: '0px 5px 15px rgba(0,0,0,0.1)',
-//         width: `${width}px`,
-//         height: `${height}px`,
+//         textAlign: 'center',
+//         p: 2,
+//         borderRadius: 2,
+//         boxShadow: 3,
+//         width: '350px',
+//         maxWidth: '400px', // Ensure it doesn't grow too large
+//         height: 'auto',
 //         backgroundColor: '#fff',
 //         overflow: 'hidden',
 //         display: 'flex',
 //         flexDirection: 'column',
 //         justifyContent: 'space-between',
-//         margin: '20px auto',
+//         '&:hover .product-image': {
+//           transform: 'scale(1.05)',
+//         },
+//         transition: 'transform 0.5s ease-in-out',
+//         margin: '0 auto', // Center the card
+//         '@media (max-width: 600px)': {
+//           maxWidth: '100%', // On smaller screens, make the card take full width
+//         },
 //       }}
 //     >
 //       {/* Product Image */}
@@ -143,9 +148,9 @@ export default ProductCard;
 //         sx={{
 //           position: 'relative',
 //           width: '100%',
-//           height: '60%',
+//           height: '300px', // Set fixed height for images
 //           overflow: 'hidden',
-//           borderRadius: '16px 16px 0 0',
+//           borderRadius: '8px',
 //           transition: 'transform 0.5s ease-in-out',
 //           zIndex: 1,
 //         }}
@@ -156,59 +161,77 @@ export default ProductCard;
 //           layout="fill"
 //           objectFit="cover"
 //           quality={100}
-//           className="product-image"
 //           loading="lazy"
 //         />
 //       </Box>
 
 //       {/* Product Info */}
-//       <Box sx={{ p: 2, textAlign: 'center', zIndex: 2 }}>
-//         <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold', color: '#333' }}>
-//           {name}{' '}
-//           <Typography component="span" sx={{ fontSize: '0.875rem', verticalAlign: 'super', color: '#ff5722' }}>
+//       <Box sx={{ zIndex: 2, mt: 2 }}>
+//         <Typography variant="h6" sx={{ mb: 1, color: '#000' }}>
+//           {name}
+//           <Typography
+//             component="span"
+//             sx={{ fontSize: '0.875rem', verticalAlign: 'super', color: '#ff5722', ml: 1 }}
+//           >
 //             Joey
 //           </Typography>
 //         </Typography>
 
-//         <Typography variant="body2" sx={{ mb: 2, color: '#666' }}>
+//         <Typography variant="body2" sx={{ color: '#666' }}>
 //           {description}
 //         </Typography>
 
 //         {/* Stock Status Label */}
-//         <Chip
-//           label="In stock via Joey Med"
+//         <Box
 //           sx={{
-//             transform: 'rotate(10deg)',
-//             backgroundColor: '#00acc1',
-//             color: '#ffffff',
-//             fontWeight: 'bold',
-//             position: 'absolute',
-//             top: '10px',
-//             left: '10px',
-//             fontSize: '0.75rem',
+//             display: 'flex',
+//             alignItems: 'center',
+//             justifyContent: 'center',
+//             mt: 1,
+//             position: 'relative',
 //           }}
-//         />
+//         >
+//           {/* <Chip
+//             label="In stock via Joey med"
+//             sx={{
+//               position: 'absolute',
+//               right: 0,
+//               top: '10px',
+//               transform: 'rotate(15deg)',
+//               backgroundColor: '#E0F2F1',
+//               color: '#004D40',
+//               fontWeight: 'bold',
+//               fontSize: '0.75rem',
+//             }}
+//           /> */}
+//         </Box>
 //       </Box>
 
-//       {/* Action Buttons */}
+//       {/* Action Buttons at the Bottom */}
 //       <Box
 //         sx={{
+//           width: '100%',
 //           display: 'flex',
-//           justifyContent: 'center',
+//           justifyContent: 'space-between',
+//           alignItems: 'center',
 //           gap: 2,
+//           mt: 2,
 //           paddingBottom: 2,
-//           zIndex: 2,
 //         }}
 //       >
-//         <AppButton title="Start Now" color="primary" />
+//         <AppButton title="start now" color="primary" />
 //         <AppButton title="Learn More" color="white" href={href} />
 //       </Box>
 
 //       {/* Safety Information Link */}
-//       <Link href="#" underline="hover" sx={{ mt: 1, fontSize: '0.875rem', color: '#00796b', zIndex: 2, display: 'block', textAlign: 'center' }}>
+//       <Link
+//         href="#"
+//         underline="hover"
+//         sx={{ display: 'block', mt: 2, fontSize: '0.875rem', color: '#00796b', zIndex: 2, position: 'relative' }}
+//       >
 //         Important safety information
 //       </Link>
-//     </motion.div>
+//     </Box>
 //   );
 // };
 

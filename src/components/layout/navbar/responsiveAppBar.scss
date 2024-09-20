@@ -288,6 +288,59 @@ background: white; // rgba(0, 0, 0, 1);
 }
 
 
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  // width: 100vw;
+  height:120vh;
+  overflow: scroll;
+}
+
+.buttonIcon {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+ 
+}
+
+ul {
+  padding: 50px;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+  .css-15s59wr {
+    background: transparent !important; }
+    
 
 
 
