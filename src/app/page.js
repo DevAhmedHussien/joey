@@ -28,6 +28,7 @@ import {itemVariants, cardVariantsRight, cardVariantsLeft, cardVariantsSmall} fr
 import HeroSection from './HeroSection';
 
 import dynamic from 'next/dynamic';
+import ServicesSection from './ServicesSection';
 
 // const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), { ssr: false });
 
@@ -134,39 +135,23 @@ export default function Home() {
       // style={{ background :colors.primary[100]}}
       >
         <HeroSection/>
+       
        {/* Services Section */}
-        <Box sx={{ p: { xs: 2, md: 5 } }} display={'flex'} flexWrap={'wrap'}>
-          <Grid container spacing={4}>
-            {homeCards.map((c, i) => (
-              <Grid item xs={12} md={4} key={i}>
-                {/* <motion.div 
-                  variants={c.animate}
-                  initial="hidden"
-                  animate="visible"
-                > */}
-               {/* <MotionDiv> */}
-                  <Card title={c.title} src={c.src} alt={c.alt} size={c.size} href={c.href} video={c.video} />
-
-                {/* </MotionDiv> */}
-                {/* </motion.div> */}
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        <ServicesSection  homeCards={homeCards}/>
 
         <Box className="weightloss">
-          <VideoRolling title='Lose weight and keep it off with GLP-1s' description='Keep it off with GLP-1s' src="/videos/weightVideo.mp4"/>
+          <VideoRolling title='Lose weight and keep it off with GLP-1s' description='Keep it off with GLP-1s' src="/videos/weightVideo.mp4" alt='Keep it off with GLP-1s'/>
           <CardSlider cards={cards1} type='product'/>
         </Box>
 
         <Box className="sexualHealth">
-          <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/sexualVideo.mp4"/>
+          <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/sexualVideo.mp4" alt='Keep it off with GLP-1s'/>
           <CardSlider cards={cards2} type='product'/>
         </Box>
 
-        <Box className="greeting">
-          <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/ss.mp4"/>
-          <CardSlider cards={cards} type='appear' />
+        <Box className="Hair Growth">
+          <VideoRolling title='Sexual health and keep it off with Cialis' description='Keep it off with Cialis' src="/videos/ss.mp4" alt='Keep it off with GLP-1s's/>
+          <CardSlider cards={cards3} type='product' />
         </Box>
         
         <Box mt={5}>

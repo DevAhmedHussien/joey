@@ -14,6 +14,7 @@ import weighImg from '../../../../public/images/navbar/weight.png';
 import hairImg from '../../../../public/images/navbar/hair.png';
 import imgLogo from '../../../../public/images/logo2.png';
 // useDimensions hook to get the dimensions of the sidebar
+
 export const useDimensions = (ref) => {
   const dimensions = useRef({ width: 0, height: 0 });
 
@@ -115,7 +116,7 @@ export const useDimensions = (ref) => {
   );
 
 // Navigation component
-const Navigation = ({ isOpen }) => {
+const Navigation = ({ isOpen, close }) => {
   const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'contact-us', 'about-us', 'blogs'];
 
   const theme = useTheme();
@@ -137,22 +138,30 @@ const Navigation = ({ isOpen }) => {
       const data = productCategories[category];
       setSubCategories(data);
   };
+    const handleClose = ()=>{
+      close()
+  }
   return (
     isOpen && (
       <motion.ul
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
+        style={{background:colors.primary[100]}}
       >
-        <Image
-          quality={100}
-          src={imgLogo}
-          // width={100}
-          height={70}
-          alt="Joeymed logo"
-          loading="lazy"
-          style={{scale:1.5 , margin :'5px auto '}}
-      />
+        <Link href='/'>
+          <Image
+            quality={100}
+            src={imgLogo}
+            // width={100}
+            height={70}
+            alt="Joeymed logo"
+            loading="lazy"
+            style={{scale:1.2 , margin :'5px auto'}}
+            onClick={handleClose}
+          />
+        </Link>
+        
         {pages.map((page) => (
             <Box
                 key={page}
@@ -181,13 +190,16 @@ const Navigation = ({ isOpen }) => {
                         sx={{  padding: '20px', width: '100%',//height: '100%' ,
                              display:'flex',
                              flexDirection:'column',
-                              justifyContent:'center',alignItems:'center',
+                              justifyContent:'center',
+                              alignItems:'center',
                                     }}
                                 className={`${hoveredCategory === page ? 'open' : 'close'}`}
                                 onMouseEnter={() => setHoveredCategory(page)}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <Button className="responsive-appbar-button" component={Link} href={`/${page}`}
+                                <Button className="responsive-appbar-button" 
+                                component={Link} href={`/${page}`}
+                                onClick={handleClose}
                                     sx={{ color: colors.primary[200], textTransform: 'capitalize', fontSize: 15 }} >
                                     See all {page.replace('-', ' ')}
                                 </Button> 
@@ -207,6 +219,7 @@ const Navigation = ({ isOpen }) => {
                                                     key={product.SKU}
                                                     className="responsive-appbar-button"
                                                     component={Link}
+                                                    onClick={handleClose}
                                                     href={`/${page}/${product.referenceHandle}`}
                                                     sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 15 }}
                                                 >
@@ -268,6 +281,9 @@ const MotionBar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);  
 
 
   return (
@@ -291,14 +307,15 @@ const MotionBar = () => {
           top: 0,
           left: 0,
           bottom: 0,
-          width: "78vw",
-          background: "white",
+          width: "100%",
+
+          background: isOpen ? "white" : "transparent",
           boxShadow: '1px 1px 8px 2px #bdbdbd'
         }}
         variants={sidebarVariants}
         custom={height}
       />
-      <Navigation isOpen={isOpen} />
+      <Navigation isOpen={isOpen} close={toggleOpen} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

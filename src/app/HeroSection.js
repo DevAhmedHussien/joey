@@ -39,7 +39,7 @@ export default function HeroSection() {
         <motion.article initial="hidden" animate="visible" exit={{ opacity: 0, transition: { duration: 1 } }} variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
           <motion.div>
             <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]}>
-              Welcome to <span style={{ color: colors.primary[200], fontWeight: 500 }}>JoeyMed</span>
+              Welcome to <span style={{ color: colors.primary[200], fontWeight: 500 }}>joey med</span>
             </Typography>
           </motion.div>
           <motion.div>

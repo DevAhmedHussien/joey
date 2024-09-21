@@ -66,29 +66,25 @@ const icons = [
   {
     path:  "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z", // Group of people
     label: 'Over 2 million people served',
-    // color: '#001D4A' // Dark Blue
-    color: '#FF6F61' // Coral
-
+    // color: '#001d4a' 
+    color: '#ecb4ad' 
   },
   {
     path: 'M12 2C8.13 2 5 5.13 5 9c0 3.86 7 13 7 13s7-9.14 7-13c0-3.87-3.13-7-7-7zm0 9.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z',
-    // path:  "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z", // Checklist or document with lines
     label: '100% Online Process',
-    // color: '#00A6FB' // Teal
-    // color: '#001D4A' // Dark Blue
-    color: '#FF6F61' // Coral
-
-
+    color: '#ecb4ad' 
   },
   {
     path: 'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z', // Heart shape
     label: 'Trusted by millions',
-    color: '#FF6F61' // Coral
+    // color: '#001d4a' 
+    color: '#ecb4ad' 
+
   },
   {
     path:  "M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z", // Paper airplane
     label: 'Free & Fast Shipping',
-    color: '#E48A81' // Coral
+    color: '#ecb4ad' 
   }
 ];
 
@@ -140,9 +136,9 @@ const InfoList = () => {
         </Typography>
       </motion.div>
       <motion.svg
-        width="120"
-        height="120"
-        viewBox="0 0 24 24"
+        width="100"
+        height="100"
+        viewBox="0 0 22 22"
         fill={currentColor}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

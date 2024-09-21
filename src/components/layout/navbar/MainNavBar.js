@@ -63,9 +63,10 @@ function MainNavBar() {
                         sx={{ fontSize: 30 }}
                     >
                         <Image
+                            quality={100}
                             src={imgLogo}
-                            width={120}
-                            height={65}
+                            // width={120}
+                            height={60}
                             	loading="lazy"
                             alt="Joeymed logo"
                             style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
@@ -83,14 +84,15 @@ function MainNavBar() {
                         href="/"
                         className="responsive-appbar-title-small"
                     >
-                        <Image
+                        {/* <Image
                             quality={100}
                             src={imgLogo}
-                            width={100}
-                            height={70}
+                            // width={100}
+                            height={60}
                             alt="Joeymed logo"
                             loading="lazy"
-                        />
+                            style={{ transform: 'scale(1.2)', transformOrigin: 'center', marginLeft: '55px' }}
+                        /> */}
                     </Typography>
                     {/* for big scree */}
                     <Box className="responsive-appbar-links" padding={'0 20px'}>
@@ -188,7 +190,6 @@ function MainNavBar() {
                     {/* Center Bottom Dark/Light Mode Toggle */}
                     <Box
                         sx={{
-                            // width:'100%',
                             height:'100%',
                             position: 'absolute',
                             display: 'flex',
@@ -196,7 +197,7 @@ function MainNavBar() {
                             alignItems: 'center',
                             cursor: 'pointer',
                             top:40,
-                            right:'50%'
+                            right:'0.5%'
                         }}
                         onClick={toggleColorMode}
                         >
@@ -213,6 +214,7 @@ function MainNavBar() {
                         <Box
                             sx={{
                             position: 'absolute',
+                            zIndex:0,
                             bottom: -33,
                             width: 50,
                             height: 50,
