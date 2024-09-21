@@ -37,7 +37,7 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
       >
         <Button
           variant="contained"
-          className="custom-button"
+          // className="custom-button"
           sx={{
             height: '35px',
             display: 'flex',

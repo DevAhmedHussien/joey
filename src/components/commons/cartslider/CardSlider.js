@@ -13,68 +13,53 @@ import CardBlog from '../cardblog/CardBlog';
 import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 
+import { scroll } from 'framer-motion/dom';
 export default function CardSlider({cards = [], type}) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-
-    const visibleCards = 1; // Number of cards visible at once
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
-    };
-
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, cards.length - visibleCards));
-    };
-
-    const handlers = useSwipeable({
-        onSwipedLeft: () => handleNext(),
-        onSwipedRight: () => handlePrev(),
-        trackMouse: true,
-    });
   
-      // Keyboard navigation
-      useEffect(() => {
-        const handleKeyDown = (event) => {
-          if (event.key === 'ArrowRight') {
-            handleNext();
-          } else if (event.key === 'ArrowLeft') {
-            handlePrev();
-          }
-        };
-    
-        window.addEventListener('keydown', handleKeyDown);
-        return () => {
-          window.removeEventListener('keydown', handleKeyDown);
-        };
-      }, []);
 
+  useEffect(() => {
+    const progressWheel = document.querySelector('.indicator');
+
+    scroll(
+      (progress) => {
+        if (progressWheel) {
+          progressWheel.style.strokeDasharray = `${progress}, 1`;
+        }
+      },
+      {
+        source: document.querySelector('ul'),
+        axis: 'x',
+      }
+    );
+  }, []);
     return (
-        <Box className="slider-container" {...handlers} sx={{p:2}}>
-            <Box className="slider-track"  
-        sx={{
-          width: `${(cards.length / visibleCards) * 100}%`,
-          transform: `translateX(-${(currentIndex * 50) / cards.length}%)`,
-        }}
-      >
-                {cards.map((card, index) => (
-                    <Box key={index} sx={{marginLeft:4}}>
-                        {type == 'product' 
-                        ? <ProductCard name={card.itemName} //description={card.description}
-                         image={card.images[0]} href={card.href}/>  
-                        : type == 'blog'  
-                        ? <CardBlog  imageSrc={card.image} imageAlt={card.title} title={card.title} readTime={'Read 5 min ago'} height={400} width={400}/>
-                        : type == 'appear' 
-                        ? <Card height={400} width={400}  title={card.title || 'Star Now'} src={'/images/homePage/man.png'} alt={card.title} widthImg={200} heighImg={200} size={true}/>
-                        :null
-                        } 
-                    </Box>
-                ))}
+        <Box className="slider-container" sx={{p:2}}>
+            <Box className="slider-track">
+         <div>
+          {/* <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="30" pathLength="1" className={'bg'} />
+            <circle cx="50" cy="50" r="30" pathLength="1" className={'indicator'} />
+          </svg> */}
+          <ul className={'scrollList'}>
+          {cards.map((card, index) => (
+            <li key={index} sx={{marginLeft:4}}>
+                {type == 'product' 
+                ? <ProductCard name={card.itemName} //description={card.description}
+                image={card.images[0]} href={card.href}/>  
+                : type == 'blog'  
+                ? <CardBlog  imageSrc={card.image} imageAlt={card.title} title={card.title} readTime={'Read 5 min ago'} height={400} width={400}/>
+                : type == 'appear' 
+                ? <Card height={400} width={400}  title={card.title || 'Star Now'} src={'/images/homePage/man.png'} alt={card.title} widthImg={200} heighImg={200} size={true}/>
+                :null
+                } 
+            </li>
+        ))}
+          </ul>
+      </div>
+              
             </Box>
 
-            <Box className="slider-controls">
+            {/* <Box className="slider-controls">
                 <Box className="progress-bar">
                     <Box
                         className="progress"
@@ -119,7 +104,7 @@ export default function CardSlider({cards = [], type}) {
                 </IconButton>
             
   
-            </Box>
+            </Box> */}
         </Box>
     );
 }

@@ -91,8 +91,8 @@ const ProductCard = ({ width = 360, height = 400, name, description, href }) => 
           alignItems:'center',
           gap:2,
           bottom: '8px',
-          right: '62px',
-          zIndex:30
+          right: '50px',
+          zIndex:5
         }}
       >
         <AppButton title="start now" color="primary" />

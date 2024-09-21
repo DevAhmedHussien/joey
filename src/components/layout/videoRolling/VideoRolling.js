@@ -33,9 +33,12 @@ const VideoRolling = ({ title, description, src, alt }) => {
           position: 'sticky',
           top: 0,
           width: '100%',
-          minHeight: { xs: '50vh', md: '65vh' }, // Set a responsive minHeight for smaller and larger screens
-          overflow: 'hidden', // Ensure no overflow on small screens
-          zIndex: 10,
+          height: { xs: '50vh', md: showContent ? '50vh' : '65vh' }, // Set a fixed responsive height for the sticky video
+          zIndex: 40,
+          overflow: 'hidden', // Ensure the video and overlay remain contained
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center', // Center the video content
         }}
       >
         {/* Background Video */}
@@ -52,10 +55,10 @@ const VideoRolling = ({ title, description, src, alt }) => {
             top: 0,
             left: 0,
             width: '100%',
-            height: '100%',
+            height: '100%', // Ensure the video covers the sticky container
             objectFit: 'cover',
             zIndex: 1,
-            filter: 'brightness(0.5)', // Darkens the video to enhance text readability
+            filter: 'brightness(0.5)', // Darken the video for text readability
           }}
         />
 
@@ -64,14 +67,12 @@ const VideoRolling = ({ title, description, src, alt }) => {
           sx={{
             position: 'relative',
             zIndex: 2,
-            width: '100%',
-            minHeight: { xs: '50vh', md: '65vh' },
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            textAlign: 'center', // Center content in smaller screens
-            p: { xs: 2, md: 4 }, // Add responsive padding
+            textAlign: 'center',
+            p: { xs: 2, md: 4 }, // Responsive padding for smaller/larger screens
           }}
         >
           <Typography
@@ -79,9 +80,9 @@ const VideoRolling = ({ title, description, src, alt }) => {
             sx={{
               color: 'white',
               mb: 2,
-              fontSize: { xs: '2.2rem', md: '3.5rem' }, // Adjust font size for responsiveness
-              fontWeight: 700, // Use bold text for professional appearance
-              textShadow: '0px 4px 8px rgba(0, 0, 0, 0.6)', // Add a stronger text shadow for readability
+              fontSize: { xs: '2rem', md: '3rem' }, // Adjust font size for responsiveness
+              fontWeight: 700, // Bold text for a professional appearance
+              textShadow: '0px 4px 8px rgba(0, 0, 0, 0.6)', // Strong text shadow for readability
             }}
           >
             {title}
@@ -102,7 +103,7 @@ const VideoRolling = ({ title, description, src, alt }) => {
           </Typography>
 
           <AppButton
-            title="start now"
+            title="Start Now"
             color="white"
             sx={{
               fontSize: { xs: '1rem', md: '1.3rem' }, // Responsive font size
@@ -126,6 +127,7 @@ const VideoRolling = ({ title, description, src, alt }) => {
             padding: { xs: '20px', md: '40px' },
             backgroundColor: '#f5f5f5',
             textAlign: 'center',
+            mt: 0, // Ensure no margin between video and content
           }}
         >
           <Typography

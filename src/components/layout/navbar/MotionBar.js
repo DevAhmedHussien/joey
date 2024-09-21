@@ -304,12 +304,11 @@ const MotionBar = () => {
         className="background"
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          bottom: 0,
+          left:isOpen ? 0 : '-21px',
+          top :isOpen ? 0:'-10px',
           width: "100%",
 
-          background: isOpen ? "white" : "transparent",
+          background:colors.primary[100],
           boxShadow: '1px 1px 8px 2px #bdbdbd'
         }}
         variants={sidebarVariants}
