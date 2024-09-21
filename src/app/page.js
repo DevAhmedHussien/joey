@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import { useTheme } from '@mui/material';
 
 //** Third part Mui */
 import { Typography, Box, Grid } from '@mui/material';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 // ** Common Components */
 import AppButton from '@/components/commons/appbutton/AppButton';
@@ -29,24 +29,9 @@ import { stepsHomePage, productCategories,questions,  } from '@/utility/data';
 // ** animation
 import { motion } from "framer-motion";
 import {itemVariants, cardVariantsRight, cardVariantsLeft, cardVariantsSmall} from'@/utility/animationSyles'
+import HeroSection from './HeroSection';
 
 export default function Home() {
-
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
-  // State to manage the current text
-  const [currentText, setCurrentText] = useState('Weight Loss');
-  const [fadeOut, setFadeOut] = useState(false);
-
-  // Array of texts to cycle through
-  const texts = [
-    'Weight Loss',
-    'Sexual Health',
-    'Hair Growth',
-    'Better Health',
-    'Improved Confidence',
-  ];
 
   const cards1 = [...productCategories['weight-loss'].pills,...productCategories['weight-loss'].injections]
   const cards2 = [...productCategories['sexual-health'].pills,...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams]
@@ -113,21 +98,7 @@ export default function Home() {
     href:'/form/weight-loss'
   }]
   
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeOut(true);
-      setTimeout(() => {
-        setCurrentText((prevText) => {
-          const currentIndex = texts.indexOf(prevText);
-          const nextIndex = (currentIndex + 1) % texts.length;
-          return texts[nextIndex];
-        });
-        setFadeOut(false);
-      }, 500); // Delay between fading out and fading in
-    }, 2000); // Change text every 2 seconds
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
 
   return (
     <>
@@ -159,86 +130,27 @@ export default function Home() {
           }}
         />
       </Head>
-      <div maxWidth="lg" style={{ background :colors.primary[100]}}>
-        <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 }}}>
-          <Grid item xs={12} md={6}>
-          <motion.article
-              initial="hidden"
-              animate="visible"
-              exit={{ opacity: 0, transition: { duration: 1 } }}
-              variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-            >
-              <motion.div variants={cardVariantsSmall} >
-                  <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]} >
-                    Welcome to 
-                    <span style={{color:colors.primary[200], fontWeight:500}} className='element'> joey med  </span> 
-                    
-                        {/* <Image
-                            src={imgLogo}
-                            width={120}
-                            height={65}
-                            	loading="lazy"
-                            alt="Joeymed logo"
-                            style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
-                        /> */}
-                  </Typography>
-                </motion.div>
-                <motion.div variants={cardVariantsSmall}>
-                  <Typography variant="h2" component="h2" gutterBottom color={colors.primary[200]}>
-                    We got you
-                  </Typography>
-                </motion.div>
-              </motion.article>
-              <Box 
-                sx={{ 
-                  position: 'relative', 
-                  overflow: 'hidden', 
-                  height: '60px' 
-                }}
-              >
-                <Typography 
-                  variant="h1" 
-                  component="h1" 
-
-                  sx={{
-                    mt:'10px',
-                    position: 'absolute',
-                    transition: 'transform 0.5s ease, opacity 0.5s ease',
-                    transform: fadeOut ? 'translateY(-30px)' : 'translateY(0)',
-                    opacity: fadeOut ? 0 : 1,
-                    top: 0,
-                    color:colors.primary[1600],
-                    fontWeight:300
-                  }}
-                >
-                  {currentText}
-                </Typography>
-              </Box>
-            
-          </Grid>
-          <Grid item xs={12} md={6} display="flex" alignItems="start" justifyContent="end">
-            <InfoList/>
-          </Grid>
-        </Grid>
-
+      <div maxWidth="lg" 
+      // style={{ background :colors.primary[100]}}
+      >
+        <HeroSection/>
        {/* Services Section */}
         <Box sx={{ p: { xs: 2, md: 5 } }} display={'flex'} flexWrap={'wrap'}>
           <Grid container spacing={4}>
             {homeCards.map((c, i) => (
               <Grid item xs={12} md={4} key={i}>
-                <motion.div 
+                {/* <motion.div 
                   variants={c.animate}
                   initial="hidden"
                   animate="visible"
-                >
+                > */}
                   <Card title={c.title} src={c.src} alt={c.alt} size={c.size} href={c.href} video={c.video} />
-                </motion.div>
+                {/* </motion.div> */}
               </Grid>
             ))}
           </Grid>
         </Box>
 
-       
         <Box className="weightloss">
           <VideoRolling title='Lose weight and keep it off with GLP-1s' description='Keep it off with GLP-1s' src="/videos/weightVideo.mp4"/>
           <CardSlider cards={cards1} type='product'/>
