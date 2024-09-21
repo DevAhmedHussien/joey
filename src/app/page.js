@@ -1,7 +1,4 @@
-// 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import Head from 'next/head';
 
 //** Theme part */
@@ -22,7 +19,6 @@ import InfoList from '@/components/layout/infolist/InfoList';
 import AnimatedText from '@/components/commons/animatedtext/AnimatedText';
 import Card from '@/components/commons/card/Card';
 import TestimonialsSection from '@/components/layout/testimationsection/TestimonialsSection';
-
 // ** data 
 import { stepsHomePage, productCategories,questions,  } from '@/utility/data';
 
@@ -30,6 +26,10 @@ import { stepsHomePage, productCategories,questions,  } from '@/utility/data';
 import { motion } from "framer-motion";
 import {itemVariants, cardVariantsRight, cardVariantsLeft, cardVariantsSmall} from'@/utility/animationSyles'
 import HeroSection from './HeroSection';
+
+import dynamic from 'next/dynamic';
+
+// const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), { ssr: false });
 
 export default function Home() {
 
@@ -144,7 +144,10 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                 > */}
+               {/* <MotionDiv> */}
                   <Card title={c.title} src={c.src} alt={c.alt} size={c.size} href={c.href} video={c.video} />
+
+                {/* </MotionDiv> */}
                 {/* </motion.div> */}
               </Grid>
             ))}
