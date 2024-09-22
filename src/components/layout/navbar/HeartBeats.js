@@ -9,7 +9,7 @@ export default function HeartBeats() {
                             x="0px"
                             y="0px"
                             width="100%"
-                            height="auto"
+                            // height="auto"
                             viewBox="0 0 150 73"
                             enableBackground="new 0 0 150 73"
                             xmlSpace="preserve"
