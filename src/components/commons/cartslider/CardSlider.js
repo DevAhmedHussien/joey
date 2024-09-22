@@ -40,21 +40,21 @@ export default function CardSlider({cards = [], type}) {
             <circle cx="50" cy="50" r="30" pathLength="1" className={'bg'} />
             <circle cx="50" cy="50" r="30" pathLength="1" className={'indicator'} />
           </svg> */}
-          <ul className={'scrollList'}>
+          <div className={'scrollList'}>
           {cards.map((card, index) => (
-            <li key={index} sx={{marginLeft:4}}>
+            <div key={index} sx={{marginLeft:4}}>
                 {type == 'product' 
                 ? <ProductCard name={card.itemName} //description={card.description}
                 image={card.images[0]} href={card.href}/>  
                 : type == 'blog'  
-                ? <CardBlog  imageSrc={card.image} imageAlt={card.title} title={card.title} readTime={'Read 5 min ago'} height={400} width={400}/>
+                ? <CardBlog  imageSrc={card.image} imageAlt={card.title} title={card.title} readTime={'Read 5 min ago'} />
                 : type == 'appear' 
                 ? <Card height={400} width={400}  title={card.title || 'Star Now'} src={'/images/homePage/man.png'} alt={card.title} widthImg={200} heighImg={200} size={true}/>
                 :null
                 } 
-            </li>
+            </div>
         ))}
-          </ul>
+          </div>
       </div>
               
             </Box>

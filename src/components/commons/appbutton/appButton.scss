@@ -1,10 +1,11 @@
 .custom-button {
-    // .arrow-icon {
-    //   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Extend duration for smoother effect */
-    // }
-    // &:hover .arrow-icon {
-    //   transform: scale(1.1);
-    //   margin-left: 5px; 
-    // }
+ .arrow-icon {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Extend duration for smoother effect */
+    }
+    &:hover .arrow-icon  {
+      transform: scale(1.1);
+      margin-left: 5px; 
+    }
+
   }
   

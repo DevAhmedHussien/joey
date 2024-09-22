@@ -4,10 +4,12 @@ import Image from 'next/image';
 import './cardBlog.scss';
 import AppButton from '../appbutton/AppButton';
 import NavigationButton from '../navigatiobutton/NavigationButton';
+//** Theme part */
+import { tokens } from '../../../theme/theme';
+import { useTheme } from '@mui/material';
 
 const BlogCard = ({
-    width = 500, 
-    height = 300, 
+  width = 300, height = 350,
     imageSrc = '/images/homePage/products.png',  // Ensure the path is correct
     profilePicSrc = '/images/profilePic.png', // Path to the profile picture
     imageAlt = 'Blog Image',
@@ -16,6 +18,8 @@ const BlogCard = ({
     comments = "ay haryharyharyharyharyhary ",
     size
 }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <Box 
       className="blog-card" 
@@ -26,7 +30,6 @@ const BlogCard = ({
         height: height,
         borderRadius: '8px', 
         overflow: 'hidden',
-        color: '#fff',
         '&:hover .image-container': {
           transform: 'scale(1.1)',
         }
@@ -56,9 +59,9 @@ const BlogCard = ({
       <Box 
         sx={{ 
           position: 'relative',
-          backgroundColor: '#f5f5f5',
+          backgroundColor:colors.primary[400],
           borderRadius: '0 0 8px 8px',
-          padding: 2,
+          padding: 1,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -73,7 +76,7 @@ const BlogCard = ({
             sx={{ width: 40, height: 40 }}
           />
           <Box position='relative'>
-            <Typography variant="h6" component="h6" color='black'//{colors.primary[200]}
+            <Typography variant="h6" component="h6" color={colors.primary[200]}
              >
               ahmed 
             </Typography>
@@ -83,14 +86,14 @@ const BlogCard = ({
           </Box>
          
         </Box>
-        <Box sx={{ padding:'0 10px' ,mt: 2, width: '100%', display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'space-between' }}>
-          <Typography variant="body2" textAlign={'left'} color={'black'} sx={{ width: '70%' }}>
+        <Box sx={{ padding:'0 5px' ,mt: 2, width: '100%', display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'space-between' }}>
+          <Typography variant="body2" textAlign={'left'} color={colors.primary[200]} >
             "{comments}"
           </Typography>
 
           {/* Action Button in the bottom left */}
           <Box sx={{ position: 'absolute', bottom: 8, right: 8 }}>
-            {size ? <AppButton title="start now" color="black" /> : <NavigationButton />}
+            {size ? <AppButton title="start now" /> : <NavigationButton />}
           </Box>
         </Box>
       </Box>

@@ -91,7 +91,7 @@
 
 circle {
   stroke-dashoffset: 0;
-  stroke-width: 10%;
+  stroke-width: 7%;
   fill: none;
   // stroke: #edb3ad !important; 
   stroke: #001d4a  !important; 
@@ -113,25 +113,16 @@ circle {
 .scrollList {
   display: flex;
   list-style: none;
-  height: 450px;
+  height: 400px;
   overflow-x: scroll;
-  padding: 20px 0;
   flex: 0 0 600px;
   margin: 0 auto;
+  justify-content: start;
+  gap: 30px;
 }
 
-.scrollList li {
-  flex: 0 0 200px;
-  background: var(--accent);
-  margin: 0 20px 0 0;
-}
 
 .scrollList li:last-of-type {
   margin: 0;
 }
-#progress {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  transform: rotate(-90deg);
-}
+

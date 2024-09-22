@@ -82,12 +82,12 @@ export const useDimensions = (ref) => {
     />
   );
 
-  const MenuToggle = ({ toggle }) => (
+  const MenuToggle = ({ toggle , isOpen}) => (
     <button className="buttonIcon" onClick={toggle}>
       <svg width="23" height="23" viewBox="0 0 24 24">
         <Path
-          strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
-          stroke="currentColor" // Set the stroke color to current text color or customize
+          strokeWidth="2.5" // Set the stroke width to 1 for thinner lines
+          stroke= {!isOpen ? "currentColor" :"#ecb4ad" }// Set the stroke color to current text color or customize
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
             open: { d: "M 3 16.5 L 17 2.5" }
@@ -95,7 +95,7 @@ export const useDimensions = (ref) => {
         />
         <Path
           strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
-          stroke="currentColor"
+          stroke="currentColor" //"#ecb4ad"
           d="M 2 9.423 L 20 9.423"
           variants={{
             closed: { opacity: 1 },
@@ -105,7 +105,7 @@ export const useDimensions = (ref) => {
         />
         <Path
           strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
-          stroke="currentColor"
+          stroke= {!isOpen ? "currentColor" :"#ecb4ad" }
           variants={{
             closed: { d: "M 2 16.346 L 20 16.346" },
             open: { d: "M 3 2.5 L 17 16.346" }
@@ -304,8 +304,8 @@ const MotionBar = () => {
         className="background"
         style={{
           position: "absolute",
-          left:isOpen ? 0 : '-21px',
-          top :isOpen ? 0:'-10px',
+          // left:-17 ,//'-21px',
+          top :isOpen ? 0: '-10px' ,//'-10px',
           width: "100%",
 
           background:colors.primary[100],
@@ -315,7 +315,7 @@ const MotionBar = () => {
         custom={height}
       />
       <Navigation isOpen={isOpen} close={toggleOpen} />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <MenuToggle toggle={() => toggleOpen()}  isOpen={isOpen}  />
     </motion.nav>
   );
 };

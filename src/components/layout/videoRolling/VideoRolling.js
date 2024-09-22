@@ -103,7 +103,7 @@ const VideoRolling = ({ title, description, src, alt }) => {
           </Typography>
 
           <AppButton
-            title="Start Now"
+            title="start now"
             color="white"
             sx={{
               fontSize: { xs: '1rem', md: '1.3rem' }, // Responsive font size

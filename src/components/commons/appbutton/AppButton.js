@@ -48,16 +48,24 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
             color: colors.primary[200],
             backgroundColor: colors.primary[1500],
             boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+            transition:' all 1s ease-out',
             '&:hover': {
-              backgroundColor: 'silver',
+              backgroundColor: colors.primary[200],
               boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.2)',
+              color: colors.primary[100]
+            },
+            '&:hover .main': {
+              transform: 'scale(1.6)',
+              paddingLeft:'5px',
+              color:'#ecb4ad',
+              opacity:1,
             },
           }}
         >
           <Typography variant="p" sx={{ fontWeight: 'bold', marginRight: '8px', textTransform: 'capitalize', whiteSpace: 'nowrap' }}>
             {title}
           </Typography>
-          {(title === 'start now') && <EastOutlinedIcon className="arrow-icon" />}
+          {(title === 'start now') && <EastOutlinedIcon className= "main" sx={{fontSize:20, opacity:0.5 ,  transition:' all 1s ease-out'}}/>}
         </Button>
       </motion.div>
     </Link>

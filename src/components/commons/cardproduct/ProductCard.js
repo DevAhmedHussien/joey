@@ -2,8 +2,9 @@ import React from 'react';
 import { Box, Typography, Chip, Link } from '@mui/material';
 import Image from 'next/image'; // Next.js image optimization
 import AppButton from '../appbutton/AppButton';
+import ImageWithSpinner from '../image/ImageWithSpinner';
 
-const ProductCard = ({ width = 360, height = 400, name, description, href }) => {
+const ProductCard = ({ width = 300, height = 350, name, description, href }) => {
   return (
     <Box
       sx={{
@@ -40,7 +41,10 @@ const ProductCard = ({ width = 360, height = 400, name, description, href }) => 
           zIndex: 1,
         }}
       >
-        <Image
+        <ImageWithSpinner  
+          src="/images/navbar/sexual.png" // Ensure this path is correct
+          alt={name} />
+        {/* <Image 
           src="/images/navbar/sexual.png" // Ensure this path is correct
           alt={name}
           layout="fill"
@@ -48,7 +52,7 @@ const ProductCard = ({ width = 360, height = 400, name, description, href }) => 
           quality={100}
           className="product-image"
           	loading="lazy"
-        />
+        /> */}
       </Box>
 
       {/* Product Info */}
@@ -91,7 +95,7 @@ const ProductCard = ({ width = 360, height = 400, name, description, href }) => 
           alignItems:'center',
           gap:2,
           bottom: '8px',
-          right: '50px',
+          right: '40px',
           zIndex:5
         }}
       >
