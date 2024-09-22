@@ -77,7 +77,7 @@ export default function InstructionCard({ title, content }) {
             </IconButton>
           </Box>
           {content.map((paragraph, index) => (
-            <Typography variant="body2" sx={{ marginTop: 2 }} key={index}>
+            <Typography key={index} variant="body2" sx={{ marginTop: 2 }} >
               {paragraph}
             </Typography>
           ))}

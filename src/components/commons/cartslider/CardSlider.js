@@ -42,7 +42,7 @@ export default function CardSlider({cards = [], type}) {
           </svg> */}
           <div className={'scrollList'}>
           {cards.map((card, index) => (
-            <div key={index} sx={{marginLeft:4}}>
+            <ul key={index} sx={{marginLeft:4}}>
                 {type == 'product' 
                 ? <ProductCard name={card.itemName} //description={card.description}
                 image={card.images[0]} href={card.href}/>  
@@ -52,7 +52,7 @@ export default function CardSlider({cards = [], type}) {
                 ? <Card height={400} width={400}  title={card.title || 'Star Now'} src={'/images/homePage/man.png'} alt={card.title} widthImg={200} heighImg={200} size={true}/>
                 :null
                 } 
-            </div>
+            </ul>
         ))}
           </div>
       </div>

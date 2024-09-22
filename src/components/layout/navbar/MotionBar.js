@@ -210,13 +210,13 @@ const Navigation = ({ isOpen, close }) => {
                                         </Typography>
                                         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                             {subCategories[subCategoryKey].map((product) => (
-                                                <motion.li
+                                                <motion.li key={product.SKU}
                                                 variants={variants}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.95 }}
                                               >
                                                <Button
-                                                    key={product.SKU}
+                                                    // key={product.SKU}
                                                     className="responsive-appbar-button"
                                                     component={Link}
                                                     onClick={handleClose}

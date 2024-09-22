@@ -7,8 +7,8 @@ export default function ServicesSection({ homeCards }) {
   return (
     <Box sx={{ p: { xs: 2, md: 5 } }} display="flex" flexWrap="wrap" >
       <Grid container spacing={4}>
-        {homeCards.map((c, i) => (
-          <Grid item xs={12} md={4} key={i}>
+        {homeCards.map((c, index) => (
+          <Grid item xs={12} md={4} key={index}>
             <motion.div 
               variants={c.animate}
               initial="hidden"
