@@ -13,7 +13,7 @@ const BlogCard = ({
   width = 300, 
   height = 350,
     imageSrc = '/images/homePage/products.png',  // Ensure the path is correct
-    // profilePicSrc = '/images/profilePic.png', // Path to the profile picture
+    profilePicSrc = '/images/homePage/products.png', // Path to the profile picture
     imageAlt = 'Blog Image',
     readTime,
     title,
