@@ -74,7 +74,7 @@ export default function Home() {
   const homeCards=[{
     animate:cardVariantsRight,
     title:'Weight Loss',
-    src:'/videos/bottle.mp4',
+    src:'/videos/Bottle.mp4',
     alt:'Weight Loss',
     size:true,
     video:true,
@@ -83,7 +83,7 @@ export default function Home() {
   },{
     animate:cardVariantsSmall,
     title:'Sexual health',
-    src:'/videos/bottle.mp4',
+    src:'/videos/Bottle.mp4',
     alt:'Sexual health',
     size:true,
     video:true,
@@ -92,7 +92,7 @@ export default function Home() {
   },{
     animate:cardVariantsLeft,
     title:'Hair growth',
-    src:'/videos/bottle.mp4',
+    src:'/videos/Bottle.mp4',
     alt:'Hair growth',
     size:true,
     video:true,
