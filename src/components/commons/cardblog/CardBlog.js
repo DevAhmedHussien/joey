@@ -9,7 +9,8 @@ import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 
 const BlogCard = ({
-  width = 300, height = 350,
+  width = 300, 
+  height = 350,
     imageSrc = '/images/homePage/products.png',  // Ensure the path is correct
     profilePicSrc = '/images/profilePic.png', // Path to the profile picture
     imageAlt = 'Blog Image',

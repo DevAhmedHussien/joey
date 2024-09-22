@@ -28,6 +28,7 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
     <Link href={href}>
+    
       {/* Wrap Button in motion.div for animation */}
       <motion.div
         variants={buttonVariants}
@@ -37,7 +38,6 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
       >
         <Button
           variant="contained"
-          // className="custom-button"
           sx={{
             height: '35px',
             display: 'flex',

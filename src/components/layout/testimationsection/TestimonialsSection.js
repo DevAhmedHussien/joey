@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Box, Grid, Typography, Drawer } from '@mui/material';
 import './testimoation.scss';
 import { PlayButtonIcon } from '@/components/commons/icons/Icons';
+
+//** Theme part */
 import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 import Video from '@/components/commons/video/Video';
@@ -19,6 +21,7 @@ const TestimonialsSection = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  // Array of texts to cycle through
   const texts = [{
     words:"'Weight loss' For years, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
     persone:"Karim"
@@ -36,6 +39,7 @@ const TestimonialsSection = () => {
     persone:"Ahmed"
   }];
 
+  // Array of video paths
   const videoPaths = [
     '/videos/sexualVideo.mp4',
     '/videos/weightVideo.mp4',
@@ -84,19 +88,17 @@ const TestimonialsSection = () => {
           return texts[nextIndex];
         });
         setFadeOut(false);
-      }, 500);
-    }, 2500);
+      }, 500); // Delay between fading out and fading in
+    }, 2500); // Change text every 2.5 seconds
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
-    <Grid container sx={{ height: '100vh', backgroundColor: '#f5f5f5', padding: 5 }}>
+    <Grid container sx={{ height: '100vh', backgroundColor: '#f5f5f5', padding:5 }}>
+
       {/* Left Side */}
-      <Grid 
-        item xs={12} md={6} 
-        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p:{sm:2,md:4} }}
-      >
+      <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: 4 }}>
         <Box>
           <Typography variant="h5" component='h5' mb={3} color={colors.primary[1600]}>
             95% love their experience
@@ -109,8 +111,7 @@ const TestimonialsSection = () => {
               position: 'relative',
               mt: 5, 
               overflow: 'hidden', 
-              height: '400px',
-              [theme.breakpoints.down('sm')]: { height: '250px' } // Adjust height for small screens
+              height: '400px' 
             }}
           >
             <Typography 
@@ -123,25 +124,18 @@ const TestimonialsSection = () => {
                 transform: fadeOut ? 'translateY(-30px)' : 'translateY(0)',
                 opacity: fadeOut ? 0 : 1,
                 top: 0,
-                [theme.breakpoints.down('sm')]: { fontSize: '1.5rem' } // Adjust font size for small screens
               }}
             >
               {currentText.words}
             </Typography>
-            <Typography 
-              variant="h6" 
-              component="h6" 
-              color={colors.primary[1600]}
-              sx={{ 
-                mt: 23,
+            <Typography variant="h6" component="h6" color={colors.primary[1600]}
+              sx={{ mt: 23,
                 position: 'absolute',
                 transition: 'transform 0.5s ease, opacity 0.5s ease',
                 transform: fadeOut ? 'translateX(-60px)' : 'translateX(0)',
                 opacity: fadeOut ? 0 : 1,
                 top: 0,
-                [theme.breakpoints.down('sm')]: { mt: 15 } // Adjust margin for small screens
-              }}
-            >
+              }}>
               <strong>{currentText.persone}</strong> Joey Med member
             </Typography>
           </Box>
@@ -149,48 +143,34 @@ const TestimonialsSection = () => {
       </Grid>
 
       {/* Right Side */}
-      <Grid 
-        item xs={12} md={6} 
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-      >
-        <Grid container spacing={0} sx={{ height: '100%' //{sm:'100%',md:'150%'}
-      }}>
+      <Grid item xs={12} md={6} sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
+        <Grid container spacing={0} sx={{ height: '100%' }}>
           {videoPaths.map((videoSrc, colIndex) => (
             <Grid
               key={colIndex}
-              item xs={4} sm={12} 
+              item
+              xs={4}
               className="video-column"
-              sx={{ 
-                overflow: 'hidden', 
-                height: '100%', 
-                [theme.breakpoints.down('sm')]: { height: '50%' } // Adjust height for small screens
-              }}
+              sx={{ overflow: 'hidden', height: '100%' }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <Box className="video-wrapper" sx={{ transform: 'translateY(0%)' }}>
                 {videoPaths.map((src, index) => (
-                  <Box 
-                    key={index} 
-                    sx={{ 
-                      position: 'relative', 
-                      height: 300, 
-                      mt: 1, 
-                      background: 'black',
-                      [theme.breakpoints.down('sm')]: { height: 150 } // Adjust video height for small screens
-                    }}
-                  >
-                    <Video
-                      className="video-thumbnail"
-                      src={src}
-                      type="video/mp4"
-                      alt="A description of the video content"
-                      onClick={() => handleVideoClick(src)}
-                      autoPlay={false}
-                      loop
-                    />
+                  <Box key={index} sx={{ position: 'relative' , height:300 , mt:1 ,background:'black' }}>
+                      <Video
+                       className="video-thumbnail"
+                       src={src}
+                       type="video/mp4"
+                        alt="A description of the video content"
+                        // controls
+                        onClick={() => handleVideoClick(src)}
+                        autoPlay={false}
+                        loop
+                      />
+                   
                     <Box onClick={() => handleVideoClick(src)}> 
-                      <PlayButtonIcon />
+                      <PlayButtonIcon/>
                     </Box>
                   </Box>
                 ))}
@@ -207,16 +187,15 @@ const TestimonialsSection = () => {
         onClose={closeDrawer}
         PaperProps={{ sx: { backgroundColor: 'black', height: '100vh' } }}
       >
-        <span onClick={closeDrawer}>x</span>
+        <span onClick={closeDrawer}>CLOSE</span>
         <Video
-          className="video-thumbnail"
-          src={currentVideo} 
-          type="video/mp4"
-          alt="A description of the video content"
-          controls
-          autoPlay={false}
-          loop
-        />
+            className="video-thumbnail"
+            src={currentVideo} type="video/mp4"
+            alt="A description of the video content"
+            controls
+            autoPlay={false}
+            loop
+          />
       </Drawer>
     </Grid>
   );
