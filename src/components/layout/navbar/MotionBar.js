@@ -76,7 +76,7 @@ export const useDimensions = (ref) => {
     <motion.path
       fill="transparent"
       strokeWidth="3"
-      stroke="hsl(0, 0%, 18%)"
+      stroke={props.stroke}
       strokeLinecap="round"
       {...props}
     />
@@ -144,6 +144,7 @@ const Navigation = ({ isOpen, close }) => {
   return (
     isOpen && (
       <motion.ul
+        className="motionUl"
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
@@ -168,9 +169,7 @@ const Navigation = ({ isOpen, close }) => {
                 className="responsive-appbar-link"
                 onMouseEnter={() => handleMouseEnter(page)}
                 onMouseLeave={handleMouseLeave}
-                sx={{background: colors.primary[100],  display: 'flex', flexDirection: 'column',
-                    }}
-            >
+                sx={{background: colors.primary[100],  display: 'flex', flexDirection: 'column'}}>
               <motion.li
                   variants={variants}
                   whileHover={{ scale: 1.1 }}

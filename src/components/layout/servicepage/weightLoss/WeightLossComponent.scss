@@ -1,0 +1,109 @@
+.weight-loss-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 160px 30px 0 30px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4rem;
+  
+    @media (max-width: 768px) {
+      padding: 100px 20px 0 20px;
+    }
+  
+    @media (max-width: 480px) {
+      padding: 50px 10px 0 10px;
+      flex-direction: column;
+      
+    }
+    
+  }
+  
+  .left-section {
+    width: 40%;
+  
+    h1 {
+      font-size: 250px;
+      color: #00d8ff;
+  
+      @media (max-width: 768px) {
+        font-size: 150px;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 100px;
+      }
+    }
+  
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+      color: #f5f5f5;
+  
+      @media (max-width: 480px) {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+  .right-section {
+    width: 40%;
+  
+    .slider-box {
+      padding: 20px;
+      background-color: #001d4a;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 30px;
+  
+      .slider-title {
+        margin-bottom: 20px;
+        color: #e48a81;
+      }
+  
+      .slider-value {
+        margin-bottom: 20px;
+        font-size: 3rem;
+        color: #00d8ff;
+      }
+  
+      .slider-element {
+        margin-bottom: 20px;
+        color: #e48a81;
+  
+        .MuiSlider-thumb {
+          background-color: #e48a81;
+          box-shadow: 0 0 0 8px rgba(228, 138, 129, 0.2);
+        }
+  
+        .MuiSlider-track {
+          background-color: #e48a81;
+        }
+  
+        .MuiSlider-rail {
+          opacity: 0.5;
+          background-color: #f5f5f5;
+        }
+      }
+  
+      .weight-loss-result {
+        font-size: 3rem;
+        color: #00d8ff;
+      }
+    }
+  
+    .disclaimer {
+      font-size: 0.875rem;
+      color: #e4e4e4;
+      margin-bottom: 40px;
+  
+      @media (max-width: 480px) {
+        font-size: 0.75rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  

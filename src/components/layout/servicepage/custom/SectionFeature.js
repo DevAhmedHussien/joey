@@ -20,6 +20,7 @@ export default function SectionFeature({ images }) {
         sx={{
           position: 'relative',
           display: 'flex',
+          flexWrap:"wrap",
           justifyContent: 'center',
           alignItems: 'center',
           width: '100%',

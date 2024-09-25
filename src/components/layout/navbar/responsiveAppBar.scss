@@ -257,20 +257,24 @@ background: white; // rgba(0, 0, 0, 1);
 }
 
 .buttonIcon {
-  outline: none;
-  border: none;
+  // outline: none;
+  // border: none;
   cursor: pointer;
+  background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
   position: absolute;
   top: 13px;
   left: 0;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background: transparent;
+  // border-radius: 50%;
+  // background: transparent;
  
 }
 
-ul {
+.motionUl {
   padding: 30px;
   position: absolute;
   top: 10px;

@@ -11,7 +11,7 @@ const VideoRolling = ({ title, description, src, alt }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerHeight = window.innerHeight * 0.5; // Show content when scrolled 50% of the window height
+      const triggerHeight = window.innerHeight * 1; // Show content when scrolled 50% of the window height
       if (scrollPosition > triggerHeight) {
         setShowContent(true);
       } else {

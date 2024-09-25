@@ -1,86 +1,8 @@
 .slider-container {
   position: relative;
-  // width: 100%;
   overflow: hidden;
   height: 500px;
 
-  // .slider-track {
-  //   display: flex;
-  //   transition: transform 0.5s ease;
-  //   max-width: fit-content;
-  // }
-
-  // .slider-card {
-  //   box-sizing: border-box;
-  //   // padding: 0 1rem;
-  //   // min-width: 100%; 
-  // }
-
-  // .slider-controls {
-  //   position: absolute;
-  //   bottom: 20px;
-  //   right: 20px;
-  //   display: flex;
-  //   align-items: center;
-  //   gap:10px;
-  //   .progress-bar {
-  //     width: 100px;
-  //     height: 4px;
-  //     background-color: #e0e0e0;
-  //     border-radius: 2px;
-  //     margin-right: 1rem;
-
-  //     .progress {
-  //       background-color: #001d4a;;
-  //       height: 100%;
-  //       transition: width 0.3s ease;
-  //     }
-  //   }
-
-  //   .nav-button {
-  //     font-size: 15px;
-  //     background-color: #f0f0f0;
-  //     border-radius: 50%;
-  //     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  //   }
-  // }
-}
-
-*{
-  --black: #000000;
-  --ash-black: #222;
-  --white: #fafafa;
-  --sky: #00ccff;
-  --green: #22dddd;
-  --blue: #1300ff;
-  --dusk: #6600ff;
-  --purple: #9900ff;
-  --pink: #ff0066;
-  --red: #fe0222;
-  --orange: #fd7702;
-  --yellow: #ffbb00;
-
-  --background: var(--blue);
-  --accent: var(--white);
-  -webkit-font-smoothing: antialiased;
-
-}
-
-::-webkit-scrollbar {
-  height: 5px;
-  width: 5px;
-  background: #001d4a9e;
-  -webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-thumb {
-  background:  #edb3ad;
-  -webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-corner {
-  background: #fff3;
-}
 
 #progress {
   position: relative;
@@ -102,21 +24,24 @@ circle {
 }
 
 .bg {
-  stroke: var(--accent);
+  stroke: #fafafa;
   opacity: 0.3;
 }
 
 .indicator {
-  stroke: var(--accent);
+  stroke: #fafafa;
 }
 
 .scrollList {
   display: flex;
-  list-style: none;
+  // list-style: none;
+  padding: 0;
   height: 400px;
   overflow-x: scroll;
-  flex: 0 0 600px;
-  margin: 0 auto;
+  // overflow-y: none !important;
+
+  // flex: 0 0 600px;
+  // margin: 0 auto;
   justify-content: start;
   gap: 30px;
 }
@@ -124,5 +49,7 @@ circle {
 
 .scrollList li:last-of-type {
   margin: 0;
+}
+
 }
 

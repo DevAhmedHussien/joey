@@ -52,11 +52,11 @@ export default function SexualHealth() {
         />
       </Head>
 
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{padding:' 0 !important'}}>
         <GreetingComponent title="Sexual Health Services at Joey Med Sexual HealthSexual Health" description="Personalized care at your fingertips" />
         <SectionFeature images={imagesSexualHomePage}/>
-        <Box >
-          <WeightLossComponent />
+        <Box margin='20px 0 20px'>
+          {/* <WeightLossComponent /> */}
         </Box>
 
         <Box >
@@ -81,7 +81,7 @@ export default function SexualHealth() {
           <Typography variant="h5" component='h5' sx={{ textAlign: 'center', mt: 1 }}>
             here you can see Instruction
           </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
+          <Box sx={{ mt:2, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 7, flexWrap: 'wrap' }}>
             {cardData.map((card, index) => (
               <InstructionCard key={index} title={card.title} content={card.content} />
             ))}
@@ -89,7 +89,7 @@ export default function SexualHealth() {
         </Box>
 
         <Box mt={5}>
-          <TestimonialsSection />
+          {/* <TestimonialsSection /> */}
         </Box>
 
         <Box>

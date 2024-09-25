@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-button,a{
+button,
+a{
   font-family: lato !important;
   text-decoration: none;
 
@@ -95,4 +96,19 @@ button,a{
   }
       
 
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #001d4a9e;
+    -webkit-border-radius: 1ex;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:  #edb3ad;
+    -webkit-border-radius: 1ex;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: #fff3;
+  }
   
