@@ -14,18 +14,14 @@
   }
   
   .video-thumbnail {
-    background: black;
     width: 100%;
-    height: 40vh; /* Adjust height to fit four videos per column */
-    opacity: 0.7; /* Set the video opacity */
-    background-size: cover;
+    height: 100vh;
+    opacity: 0.7;
+    background-size:cover;
     background-position: center;
-    margin-bottom: 0; /* Ensure no gap between videos */
-    position: relative; /* Ensure positioning context for overlay */
-    
+
 
 }
-
 .video-thumbnail::before {
     content: "";
     position: absolute;
@@ -33,15 +29,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Slight black overlay */
     z-index: 2;
-
 }
 
 .video-thumbnail video {
-    width: 100%;
-    height: 100%;
-    object-fit: auto;
+  width: 100%;
+  height: 100vh;
+    object-fit: contain;
 }
 
 .play-button-icon {
@@ -50,9 +44,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    color: rgba(255, 255, 255, 0.746); /* Ensure the play button is visible */
+ 
 }
-  
   @keyframes scroll {
     0% {
       transform: translateY(0);
@@ -62,3 +55,10 @@
     }
   }
   
+
+
+  .x{
+    width: 100%;
+    height: 105%;
+    object-fit: cover;
+  }

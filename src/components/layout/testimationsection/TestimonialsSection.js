@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { Box, Grid, Typography, Drawer } from '@mui/material';
-import './testimoation.scss';
+import './testimonials.scss';
 import { PlayButtonIcon } from '@/components/commons/icons/Icons';
 
 //** Theme part */
@@ -41,10 +41,12 @@ const TestimonialsSection = () => {
 
   // Array of video paths
   const videoPaths = [
-    '/videos/sexualVideo.mp4',
-    '/videos/weightVideo.mp4',
-    '/videos/sexualVideo.mp4',
-    '/videos/sexualVideo.mp4',
+    '/videos/ss.mp4',
+    '/videos/aa.mp4',
+    '/videos/22.mp4',
+    '/videos/Bottle.mp4',
+    '/videos/Bottle.mp4',
+    '/videos/Bottle.mp4',
   ];
 
   useEffect(() => {
@@ -95,10 +97,10 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <Grid container sx={{ height: '100vh', backgroundColor: '#f5f5f5', padding:5 }}>
+    <Grid container sx={{backgroundColor: '#f5f5f5', padding:5 ,display:'flex',flexWrap:'wrap' }}>
 
       {/* Left Side */}
-      <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: 4 }}>
+      <Grid item xs={12} md={6} sx={{ p: {sm:2, md:4} }}>
         <Box>
           <Typography variant="h5" component='h5' mb={3} color={colors.primary[1600]}>
             95% love their experience
@@ -111,7 +113,7 @@ const TestimonialsSection = () => {
               position: 'relative',
               mt: 5, 
               overflow: 'hidden', 
-              height: '400px' 
+              // height: {sm:'200px',md:'500px'} 
             }}
           >
             <Typography 
@@ -119,7 +121,7 @@ const TestimonialsSection = () => {
               component="h2" 
               color={colors.primary[200]}
               sx={{
-                position: 'absolute',
+                // position: 'absolute',
                 transition: 'transform 0.5s ease, opacity 0.5s ease',
                 transform: fadeOut ? 'translateY(-30px)' : 'translateY(0)',
                 opacity: fadeOut ? 0 : 1,
@@ -129,8 +131,9 @@ const TestimonialsSection = () => {
               {currentText.words}
             </Typography>
             <Typography variant="h6" component="h6" color={colors.primary[1600]}
-              sx={{ mt: 23,
-                position: 'absolute',
+              sx={{ 
+                mt: 5,
+                // position: 'absolute',
                 transition: 'transform 0.5s ease, opacity 0.5s ease',
                 transform: fadeOut ? 'translateX(-60px)' : 'translateX(0)',
                 opacity: fadeOut ? 0 : 1,
@@ -143,7 +146,7 @@ const TestimonialsSection = () => {
       </Grid>
 
       {/* Right Side */}
-      <Grid item xs={12} md={6} sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
+      <Grid item xs={12} md={6} sx={{mt:3, height:'400px', background:colors.primary[200], overflow: 'hidden'}}>
         <Grid container spacing={0} sx={{ height: '100%' }}>
           {videoPaths.map((videoSrc, colIndex) => (
             <Grid
@@ -155,15 +158,15 @@ const TestimonialsSection = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <Box className="video-wrapper" sx={{ transform: 'translateY(0%)' }}>
+              <Box className="video-wrapper"
+               sx={{ transform: 'translateY(0%)' }}>
                 {videoPaths.map((src, index) => (
-                  <Box key={index} sx={{ position: 'relative' , height:300 , mt:1 ,background:'black' }}>
+                  <Box key={index} sx={{ position: 'relative' , height:300 , mt:1 }}>
                       <Video
-                       className="video-thumbnail"
+                      className="x"
                        src={src}
                        type="video/mp4"
                         alt="A description of the video content"
-                        // controls
                         onClick={() => handleVideoClick(src)}
                         autoPlay={false}
                         loop
@@ -185,12 +188,13 @@ const TestimonialsSection = () => {
         anchor="bottom"
         open={openDrawer}
         onClose={closeDrawer}
-        PaperProps={{ sx: { backgroundColor: 'black', height: '100vh' } }}
+        PaperProps={{ sx: { backgroundColor: colors.primary[200], height:'100vh'} }}
       >
-        <span onClick={closeDrawer}>CLOSE</span>
+        <span onClick={closeDrawer} style={{color:colors.primary[1600],cursor :'pointer'}}>Close</span>
         <Video
-            className="video-thumbnail"
-            src={currentVideo} type="video/mp4"
+            // className="video-thumbnail"
+            src={currentVideo} 
+            type="video/mp4"
             alt="A description of the video content"
             controls
             autoPlay={false}

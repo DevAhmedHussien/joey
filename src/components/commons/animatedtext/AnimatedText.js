@@ -8,7 +8,7 @@ const AnimatedText = ({ texts }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFadeOut(true); // Start fade-out
+      setFadeOut(true); 
 
       setTimeout(() => {
         setCurrentText((prevText) => {
@@ -16,9 +16,9 @@ const AnimatedText = ({ texts }) => {
           const nextIndex = (currentIndex + 1) % texts.length;
           return texts[nextIndex];
         });
-        setFadeOut(false); // Start fade-in
-      }, 500); // Wait for fade-out transition to complete
-    }, 2500); // Interval duration
+        setFadeOut(false); 
+      }, 500);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [texts]);

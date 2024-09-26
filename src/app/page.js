@@ -10,21 +10,17 @@ import { Typography, Box, Grid } from '@mui/material';
 // import { useState, useEffect } from 'react';
 
 // ** Common Components */
-import AppButton from '@/components/commons/appbutton/AppButton';
 import MedWork from '@/components/layout/medWorkStepper/MedWork';
 import Questions from '@/components/layout/frequentlyquestions/Questions';
 import CardSlider from '@/components/commons/cartslider/CardSlider';
 import VideoRolling from '@/components/layout/videoRolling/VideoRolling';
-import InfoList from '@/components/layout/infolist/InfoList';
-import AnimatedText from '@/components/commons/animatedtext/AnimatedText';
-import Card from '@/components/commons/card/Card';
 import TestimonialsSection from '@/components/layout/testimationsection/TestimonialsSection';
+
 // ** data 
-import { stepsHomePage, productCategories,questions,  } from '@/utility/data';
+import { stepsHomePage, productCategories,questions } from '@/utility/data';
 
 // ** animation
-import { motion } from "framer-motion";
-import {itemVariants, cardVariantsRight, cardVariantsLeft, cardVariantsSmall} from'@/utility/animationSyles'
+import { cardVariantsRight, cardVariantsLeft, cardVariantsSmall} from'@/utility/animationSyles'
 import HeroSection from './HeroSection';
 
 import dynamic from 'next/dynamic';

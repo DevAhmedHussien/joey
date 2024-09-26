@@ -1,7 +1,7 @@
 'use client'
-import { Box, CircularProgress } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useRef, useEffect, useState } from 'react';
-
+import './video.scss'
 const Video = ({ src, poster, alt, controls = false, loop = false, muted = true, autoPlay = false, needTransform = true, ...props }) => {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,9 +11,7 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
       const handleCanPlay = () => {
         setIsLoaded(true); 
       };
-
       videoRef.current.addEventListener('canplay', handleCanPlay);
-
       return () => {
         if (videoRef.current) {
           videoRef.current.removeEventListener('canplay', handleCanPlay);
@@ -23,43 +21,17 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
   }, []);
 
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        width: '100%',
-        height: 'auto',
-        overflow: 'hidden',
-        '&:hover': {
-          transform: needTransform ? '' :'scale(1.1)', 
-          borderRadius:3,
-          transition: 'transform 0.3s ease-in-out',
-        },
-        transition: 'transform 0.3s ease-in-out', 
-      }}
-    >
+    <Box className="bigBox">
       {!isLoaded && (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-            backgroundColor: '#f0f0f0',
-          }}
-        >
-          {/* Uncomment this if you want to use Material-UI's CircularProgress */}
-          {/* <CircularProgress /> */}
+        <Box className="boxVideo">
+         
           <span className="loader"></span> {/* Custom loader */}
         </Box>
       )}
-      <video
+      <video className='video'
         ref={videoRef}
         src={src}
+        loading= "lazy"
         onError={() => console.error('Error loading video:', src)}  // Add error handler
         poster={poster}
         controls={controls}
@@ -67,12 +39,8 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
         muted={muted}
         autoPlay={autoPlay}
         style={{
-          width: '101%',
-          height: 'auto',
           visibility: isLoaded ? 'visible' : 'hidden',
-          borderRadius: 2,
           opacity: isLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in-out',
         }}
         {...props}
       >

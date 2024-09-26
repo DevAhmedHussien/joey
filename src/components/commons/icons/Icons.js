@@ -20,7 +20,7 @@ export const PlayButtonIcon = () => {
         transition: 'background-color 0.3s ease-in-out',
         cursor:'pointer',
         '&:hover': {
-          backgroundColor: 'red',
+          backgroundColor:'#e48a81',
         },
       }}
     >

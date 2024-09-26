@@ -86,7 +86,7 @@ export const useDimensions = (ref) => {
     <button className="buttonIcon" onClick={toggle}>
       <svg width="23" height="23" viewBox="0 0 24 24">
         <Path
-          strokeWidth="2.5" // Set the stroke width to 1 for thinner lines
+          strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
           stroke= {!isOpen ? "currentColor" :"#ecb4ad" }// Set the stroke color to current text color or customize
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
