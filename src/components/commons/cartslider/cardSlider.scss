@@ -3,53 +3,28 @@
   overflow: hidden;
   height: 500px;
 
-
-#progress {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  transform: rotate(-90deg);
-}
-
 circle {
   stroke-dashoffset: 0;
   stroke-width: 7%;
   fill: none;
-  // stroke: #edb3ad !important; 
   stroke: #001d4a  !important; 
-
-  
   // stroke: linear-gradient(to right, #001d4a 10%, #e58a81) !important;
-  
 }
-
 .bg {
   stroke: #fafafa;
   opacity: 0.3;
 }
-
-.indicator {
-  stroke: #fafafa;
-}
-
 .scrollList {
   display: flex;
   // list-style: none;
   padding: 0;
   height: 400px;
   overflow-x: scroll;
-  // overflow-y: none !important;
-
-  // flex: 0 0 600px;
-  // margin: 0 auto;
   justify-content: start;
   gap: 30px;
 }
-
-
 .scrollList li:last-of-type {
   margin: 0;
 }
-
 }
 

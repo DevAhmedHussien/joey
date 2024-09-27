@@ -39,6 +39,9 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
         muted={muted}
         autoPlay={autoPlay}
         style={{
+          width: '101%',
+    height: '100%',
+
           visibility: isLoaded ? 'visible' : 'hidden',
           opacity: isLoaded ? 1 : 0,
         }}

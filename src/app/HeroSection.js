@@ -1,4 +1,4 @@
-'use client'; // If state or useEffect hooks are used
+'use client';
 
 import { Box, Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
@@ -36,7 +36,12 @@ export default function HeroSection() {
   return (
     <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
       <Grid item xs={12} md={6}>
-        <motion.article initial="hidden" animate="visible" exit={{ opacity: 0, transition: { duration: 1 } }} variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
+        <motion.article
+          initial="hidden"
+          animate="visible"
+          exit={{ opacity: 0, transition: { duration: 1 } }}
+          variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+        >
           <motion.div>
             <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]}>
               Welcome to <span style={{ color: colors.primary[200], fontWeight: 500 }}>joey med</span>

@@ -156,9 +156,9 @@ export default function Home() {
 
         <TestimonialsSection/>
 
-        <Box className="weightloss">
-          <Typography variant="h2" padding={7}>JoeyMed Online 100%</Typography>
-          <Typography variant="h3" paddingLeft={7}>Health guide</Typography>
+        <Box sx={{p:3}}>
+          <Typography variant="h1" paddingTop={5}>joey med Online 100%</Typography>
+          <Typography variant="h2"paddingTop={3} >Health guide</Typography>
           <CardSlider cards={cards} type='blog'/>
         </Box>
         
