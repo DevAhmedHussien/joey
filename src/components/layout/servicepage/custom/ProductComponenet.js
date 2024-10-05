@@ -159,7 +159,6 @@ export default function ProductComponent({ name, description, images, questions,
               <Tab 
                 label="Ingredient" 
                 sx={{ 
-                 
                   // textTransform:'capitalize',
                   color: tabValue === 0 ? colors.primary[200] : colors.primary[200],  // Change to black when selected
                   backgroundColor: tabValue === 0 ? colors.primary[1600] : 'transparent'  // Change to red background when selected
@@ -189,6 +188,7 @@ export default function ProductComponent({ name, description, images, questions,
             <SectionWithBackground 
               content={ingredient} 
               backgroundColor="#e48a81" 
+              // backgroundColor="#001d4a" 
             />
           )}
           {tabValue === 1 && (
@@ -198,14 +198,17 @@ export default function ProductComponent({ name, description, images, questions,
                   <strong>{Object.keys(b)[0]}:</strong> {Object.values(b)[0]}<br />
                 </React.Fragment>
               ))} 
-              backgroundColor="#001d4a" 
+              backgroundColor="#e48a81" 
+
 
             />
           )}
           {tabValue === 2 && (
             <SectionWithBackground 
               content={safety} 
-              backgroundColor="silver" 
+              backgroundColor="#e48a81" 
+              // backgroundColor="#001d4a" 
+
 
             />
           )}

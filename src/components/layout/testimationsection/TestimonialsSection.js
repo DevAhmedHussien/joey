@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Grid, Typography, Drawer } from '@mui/material';
 import './testimonials.scss';
 import { PlayButtonIcon } from '@/components/commons/icons/Icons';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 //** Theme part */
 import { tokens } from '../../../theme/theme';
@@ -190,7 +191,8 @@ const TestimonialsSection = () => {
         onClose={closeDrawer}
         PaperProps={{ sx: { backgroundColor: colors.primary[200], height:'100vh'} }}
       >
-        <span onClick={closeDrawer} style={{color:colors.primary[1600],cursor :'pointer'}}>Close</span>
+        <CloseOutlinedIcon onClick={closeDrawer} style={{color:colors.primary[1600],cursor :'pointer'}}/>
+        {/* <span >Close</span> */}
         <Video
             // className="video-thumbnail"
             src={currentVideo} 

@@ -142,7 +142,7 @@ export default function ProductsPage(props) {
         <HowItWorks />
 
         <Box>
-          <VideoRolling title='Sexual health and keeping it with Cialis' description='Explore the benefits of using Cialis for sexual health.' />
+          {/* <VideoRolling title='Sexual health and keeping it with Cialis' description='Explore the benefits of using Cialis for sexual health.' /> */}
           <Typography variant="h2" textAlign='start' padding={3}>Patient reviews</Typography>
           <CardSlider cards={cards} type='blog'/>
         </Box>

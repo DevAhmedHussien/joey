@@ -13,8 +13,6 @@ export default function ServicesSection({ homeCards }) {
               variants={c.animate}
               initial="hidden"
               animate="visible"
-              // whileHover={{ scale: 1.05 }} // Optional hover animation
-              // transition={{ duration: 0.5 }}
             >
               <Card 
                 title={c.title} 

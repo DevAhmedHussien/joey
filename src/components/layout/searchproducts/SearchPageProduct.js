@@ -1,11 +1,14 @@
 'use client'
 import React, { useState } from 'react';
-import { Box, Typography, TextField, InputAdornment, Card, CardContent, CardMedia, IconButton } from '@mui/material';
+import { Box, Typography, TextField, InputAdornment, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './searchPage.scss';
 import ProductCard from '@/components/commons/cardproduct/ProductCard';
+import ServicesSection from '@/app/ServicesSection';
+import { cardVariantsRight, cardVariantsLeft, cardVariantsSmall} from'@/utility/animationSyles'
+
 
 const defaultProducts = [
   {
@@ -27,6 +30,35 @@ const defaultProducts = [
     image: "path_to_hair_growth_image", // Replace with actual image path
   },
 ];
+
+const homeCards=[{
+  animate:cardVariantsRight,
+  title:'Weight Loss',
+  src:'/videos/Bottle.mp4',
+  alt:'Weight Loss',
+  size:true,
+  video:true,
+  href:'/form/weight-loss'
+
+},{
+  animate:cardVariantsSmall,
+  title:'Sexual health',
+  src:'/videos/Bottle.mp4',
+  alt:'Sexual health',
+  size:true,
+  video:true,
+  href:'/form/weight-loss'
+
+},{
+  animate:cardVariantsLeft,
+  title:'Hair growth',
+  src:'/videos/Bottle.mp4',
+  alt:'Hair growth',
+  size:true,
+  video:true,
+  href:'/form/weight-loss'
+}]
+
 
 function SearchPageProduct({ products }) {
   const [searchValue, setSearchValue] = useState('');
@@ -91,7 +123,7 @@ function SearchPageProduct({ products }) {
               searchValue && (
                 <InputAdornment position="end">
                   <IconButton onClick={handleClearInput}>
-                    <CloseIcon sx={{ color: colors.textPrimary }} />
+                    <CloseOutlinedIcon sx={{ color: colors.textPrimary }} />
                   </IconButton>
                 </InputAdornment>
               )
@@ -102,36 +134,35 @@ function SearchPageProduct({ products }) {
       <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: '20px', color: colors.textPrimary }}>
       {searchValue.length > 0 ? `Showing results for '${searchValue}'` : 'Explore Our Categories'}
       </Typography>
-      <Box sx={{ 
-        minHeight:400,
-        p:10,
-        display:'flex',
-        flexWrap:'wrap',
-        justifyContent: 'start',
-        alignItems: 'center',
-        gap: 15
-  
- }}>
-        <TransitionGroup component={null}>
-          {productsToDisplay.map((product, index) => (
-            <CSSTransition key={index} timeout={500} classNames="fade">
-              <Box
-                key={index}
-                sx={{
-                  // flex: '1 1 calc(33.333% - 20px)',
-                  maxWidth: '300px',
-                  minWidth: '280px',
-                  marginBottom: '20px',
-                }}
-              >
-                <ProductCard height={500} name={product.itemName} 
-                // description={product.description} 
-                />
-              </Box>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
-      </Box>
+      {searchValue.length > 0 
+                ? 
+                <Box 
+                sx={{ mt:2, display: 'flex', justifyContent: 'center', 
+                  alignItems: 'center', gap: 7, flexWrap: 'wrap' }}
+                >
+                  <TransitionGroup component={null}>
+                    {productsToDisplay.map((product, index) => (
+                      <CSSTransition key={index} timeout={500} classNames="fade">
+                        <Box
+                          key={index}
+                          sx={{
+                            maxWidth: '300px',
+                            minWidth: '280px',
+                            // marginBottom: '20px',
+                          }}
+                        >
+                          <ProductCard height={500} name={product.itemName} 
+                          // description={product.description} 
+                          />  
+                        </Box>
+                      </CSSTransition>
+                    ))}
+                  </TransitionGroup>
+                </Box>
+   :
+                <ServicesSection  homeCards={homeCards}/>
+               }
+     
     </Box>
   );
 }

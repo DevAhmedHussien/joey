@@ -96,7 +96,7 @@ export default function weightLoss() {
           <WeightLossComponent />
         </Box>
 
-        <Box  >
+        <Box>
           <VideoRolling title='weigh lossand keep it off with weigh loss' description='Keep it off with GLp1' src="/videos/weightVideo.mp4"/>
           <CardSlider cards={cards2} type='product'/>
         </Box>
@@ -118,7 +118,7 @@ export default function weightLoss() {
           <Typography variant="h5" component='h5' sx={{ textAlign: 'center', mt: 1 }}>
             here you can see Instruction
           </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
+          <Box sx={{ mt:2, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 7, flexWrap: 'wrap' }}>
             {cardData.map((card, index) => (
               <InstructionCard key={index} title={card.title} content={card.content} />
             ))}
