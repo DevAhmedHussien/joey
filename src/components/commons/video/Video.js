@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import React, { useRef, useEffect, useState } from 'react';
 import './video.scss'
 
-const Video = ({ src, poster, alt, controls = false, loop = false, muted = true, autoPlay = false, needTransform = true, ...props }) => {
+const Video = ({ src, poster, alt, controls = false, loop = true, muted = true, autoPlay = true, needTransform = true, ...props }) => {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -41,7 +41,7 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
         autoPlay={autoPlay}
         style={{
           width: '101%',
-    height: '100%',
+        height: '100%',
 
           visibility: isLoaded ? 'visible' : 'hidden',
           opacity: isLoaded ? 1 : 0,
