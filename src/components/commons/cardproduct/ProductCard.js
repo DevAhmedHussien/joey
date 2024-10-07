@@ -72,7 +72,7 @@ const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weig
   return (
     <Card
       component={motion.div}
-      animate={{ width: 320, height: 'auto' }} // Keep card dimensions constant
+      animate={{ width: 300, height: 350 }} // Keep card dimensions constant
       transition={{ duration: 0.5 }}
       sx={{
         borderRadius: '16px',

@@ -1,19 +1,19 @@
 /* Import fonts from Google Fonts or other sources */
-/* @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap'); */
 
 /* Apply global styles */
-/* body {
+ /* body {
   font-family: 'Myriad Pro', 'Roboto', 'sans-serif';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-family: 'Myriad Pro', 'Roboto', 'sans-serif';
   font-weight: 600;
   text-transform: capitalize;
-} */ 
+}   */
 
 :root{
   box-sizing: border-box;
@@ -23,9 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 button,
 a{
-  font-family: lato !important;
   text-decoration: none;
-
 }
 .css-pcphf9-MuiContainer-root {
   width: 100% !important;

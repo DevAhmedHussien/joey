@@ -1,22 +1,82 @@
+// Animation styles for CSSTransition
 .fade-enter {
-    opacity: 0;
-    transform: translateX(100%);
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(500%);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+// Custom MUI styles
+.searchPage {
+  margin-top: 8rem;
+  padding: 20px;
+
+  .searchBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .MuiTextField-root {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 50px;
+      background-color: #fff;
+
+      .MuiOutlinedInput-root {
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-color: #e4e4e4;
+
+        &:hover fieldset {
+          border-color: #00d8ff; // Bright Teal
+        }
+      }
+
+      .MuiInputAdornment-root {
+        .MuiSvgIcon-root {
+          color: #001d4a; // Dark Blue for icons
+        }
+      }
+    }
+
+    .clearIcon {
+      color: #001d4a;
+    }
   }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #001d4a; // Dark Blue
   }
-  
-  .fade-exit {
-    opacity: 1;
-    transform: translateX(0);
+
+  .productGrid {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    flex-wrap: wrap;
   }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transform: translateY(500%);
-    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+
+  .productCard {
+    max-width: 300px;
+    min-width: 280px;
   }
-  
+}

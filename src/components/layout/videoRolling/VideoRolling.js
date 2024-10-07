@@ -33,7 +33,7 @@ const VideoRolling = ({ title, description, src, alt }) => {
           position: 'sticky',
           top: 0,
           width: '100%',
-          height: { xs: '50vh', md: showContent ? '50vh' : '65vh' }, // Set a fixed responsive height for the sticky video
+          height: { xs:  showContent ? '40vh' : '60vh' , md: showContent ? '40vh' : '60vh' }, // Set a fixed responsive height for the sticky video
           zIndex: 40,
           overflow: 'hidden', // Ensure the video and overlay remain contained
           display: 'flex',

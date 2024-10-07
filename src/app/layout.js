@@ -3,6 +3,7 @@ import '../styles/globals.scss';
 import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProviderWrapper from "../theme/ThemeProviderWrapper";
 import "./globals.css";
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Joey Med',
@@ -15,12 +16,20 @@ const ConditionalNavbarAndFooter = dynamic(() => import('../components/layout/co
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+        {/* <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+          rel="stylesheet"
+        />
+      </Head> */}
       <body>
         <ThemeProviderWrapper>
           <CssBaseline />
           <ConditionalNavbarAndFooter>
             <main //className={inter.className}
-            >{children}</main>
+            > 
+             {children}
+            </main>
           </ConditionalNavbarAndFooter>
         </ThemeProviderWrapper>
       </body>

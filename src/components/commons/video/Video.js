@@ -1,7 +1,9 @@
 'use client'
+
 import { Box } from '@mui/material';
 import React, { useRef, useEffect, useState } from 'react';
 import './video.scss'
+
 const Video = ({ src, poster, alt, controls = false, loop = false, muted = true, autoPlay = false, needTransform = true, ...props }) => {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +26,6 @@ const Video = ({ src, poster, alt, controls = false, loop = false, muted = true,
     <Box className="bigBox">
       {!isLoaded && (
         <Box className="boxVideo">
-         
           <span className="loader"></span> {/* Custom loader */}
         </Box>
       )}

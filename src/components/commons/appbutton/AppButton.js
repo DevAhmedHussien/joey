@@ -57,7 +57,9 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
             '&:hover .main': {
               transform: 'scale(1.6)',
               paddingLeft:'5px',
-              color:'#ecb4ad',
+              // color:'#ecb4ad',
+              color: colors.primary[100],
+
               opacity:1,
             },
           }}
@@ -65,7 +67,7 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
           <Typography variant="p" sx={{ fontWeight: 'bold', marginRight: '8px', textTransform: 'capitalize', whiteSpace: 'nowrap' }}>
             {title}
           </Typography>
-          {(title === 'start now') && <EastOutlinedIcon className= "main" sx={{fontSize:20, opacity:0.5 ,  transition:' all 1s ease-out'}}/>}
+          {(title === 'start now') && <EastOutlinedIcon className= "main" sx={{fontSize:20 ,  color: colors.primary[200],transition:' all 1s ease-out'}}/>}
         </Button>
       </motion.div>
     </Link>

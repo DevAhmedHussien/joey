@@ -77,36 +77,36 @@ export const themeSettings = (mode) => {
           }),
     },
     typography: {
-      fontFamily: ['Lato'],
+        fontFamily: 'Italiana, serif',
       fontWeightLight: 500,
       fontSize: 15,
       h1: {
-        fontFamily: ['Lato'],
+          fontFamily: 'Italiana, serif',
         fontWeight: 400,
         fontSize: 43,
       },
       h2: {
-        fontFamily: ['Lato'],
+          fontFamily: 'Italiana, serif',
         fontWeight: 500,
         fontSize: 35,
       },
       h3: {
-        fontFamily: ['Lato'],
+          fontFamily: 'Italiana, serif',
         fontWeight: 400,
         fontSize: 27,
       },
       h4: {
-        fontFamily: ['Lato'],
+          fontFamily: 'Italiana, serif',
         fontWeight: 300,
         fontSize: 23,
       },
       h5: {
-        fontFamily: ['Lato'],
+          fontFamily: 'Italiana, serif',
         fontWeight: 300,
         fontSize: 19,
       },
       h6: {
-        fontFamily: ['Lato'],
+          fontFamily: 'Italiana, serif',
         fontWeight: 100,
         fontSize: 17,
       },
