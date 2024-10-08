@@ -1,0 +1,60 @@
+.termsContainer {
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: #001D4A;
+  
+    @media (max-width: 600px) {
+      padding: 1rem;
+    }
+  
+    .heading {
+      text-align: center;
+      font-weight: bold;
+      color: #001D4A;
+      margin-bottom: 1.5rem;
+    }
+  
+    .updatedDate {
+      text-align: center;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+  
+    .divider {
+      background-color: #E48A81; // Coral divider
+      margin: 1.5rem 0;
+    }
+  
+    .subHeading {
+      font-size: 1.5rem;
+      color: #E48A81; // Coral color for subheadings
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+  
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  
+    .section {
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .subHeading {
+        font-size: 1.3rem;
+      }
+  
+      .section {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  

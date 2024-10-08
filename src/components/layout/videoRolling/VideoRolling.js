@@ -3,15 +3,18 @@
 import { Box, Typography, Slide } from '@mui/material';
 import AppButton from '../../commons/appbutton/AppButton';
 import { useEffect, useState } from 'react';
-
-const VideoRolling = ({ title, description, src, alt }) => {
+import { tokens } from '../../../theme/theme';
+import { useTheme } from '@mui/material';
+const VideoRolling = ({ title, description, src, alt , additionalInformation = ''}) => {
   const [showContent, setShowContent] = useState(false);
-
+ 
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
   // Track scroll position to trigger content display
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerHeight = window.innerHeight * 1; // Show content when scrolled 50% of the window height
+      const triggerHeight = window.innerHeight * 1; 
       if (scrollPosition > triggerHeight) {
         setShowContent(true);
       } else {
@@ -50,6 +53,8 @@ const VideoRolling = ({ title, description, src, alt }) => {
           loop
           muted
           playsInline
+        loading= "lazy"
+
           sx={{
             position: 'absolute',
             top: 0,
@@ -136,6 +141,7 @@ const VideoRolling = ({ title, description, src, alt }) => {
               fontSize: { xs: '1.5rem', md: '2.5rem' },
               fontWeight: 600,
               mb: 2,
+              color: colors.primary[200],
             }}
           >
             Additional Information
@@ -144,11 +150,10 @@ const VideoRolling = ({ title, description, src, alt }) => {
             variant="body1"
             sx={{
               fontSize: { xs: '1rem', md: '1.2rem' },
-              color: '#333',
+              color: colors.primary[200],
             }}
           >
-            Discover more about how our platform can help you achieve your health goals.
-            With personalized plans and expert guidance, we’re here to support you.
+            {additionalInformation}
           </Typography>
         </Box>
       </Slide>

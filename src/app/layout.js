@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import '../styles/globals.scss';
 import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProviderWrapper from "../theme/ThemeProviderWrapper";
-import "./globals.css";
+import "./globals.scss";
 import Head from 'next/head';
 
 export const metadata = {

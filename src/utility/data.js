@@ -527,7 +527,7 @@ export const productCategories = {
             {
                 referenceHandle: "maxhair-men",
                 token: "maxhair",
-                itemName: "MaxHair for Men (Pill)",
+                itemName: "MaxHair (Pill)",//for Men 
                 variationName: "",
                 SKU: "JM-MAX-M-001",
                 description: "Men's hair growth solution with Minoxidil 8% and Dutasteride 0.3%.",
@@ -588,7 +588,7 @@ export const productCategories = {
             {
               referenceHandle: "maxhair-foam",
               token: "maxhairFoam",
-              itemName: "MaxHair for Men (Foam)",
+              itemName: "MaxHair (Foam)",//for Men 
               variationName: "",
               SKU: "JM-MAX-M-001",
               description: "A foam designed to treat male pattern baldness and promote hair regrowth using a combination of Minoxidil and Dutasteride.",
@@ -716,10 +716,10 @@ export const productCategories = {
             {
                 referenceHandle: "YouthLocks-women",
                 token: "YouthLocks",
-                itemName: "YouthLocks for Women Under 45 (Pill)",
+                itemName: "YouthLocks 45 (Pill)",//for Women under 45
                 variationName: "",
                 SKU: "JM-HRV-W-002",
-                description: "Women's hair growth solution with Minoxidil 8% and Dutasteride 0.3%.",
+                description: "Women's Under 45 hair growth solution with Minoxidil 8% and Dutasteride 0.3%.",
                 category: "Hair Growth",
                 ingredient:'Minoxidil, Spironolactone',
                 additionalCategories: "",
@@ -781,7 +781,7 @@ export const productCategories = {
             {
                 referenceHandle: "HairRevive-women-foam",
                 token: "hairrenew",
-                itemName: "HairRevive for Women (Foam)",
+                itemName: "HairRevive (Foam)",// for Women 
                 variationName: "",
                 SKU: "JM-HRW-1-004",
                 description: "Pill for women over 45 containing Minoxidil 1 mg and Dutasteride 0.4 mg.",
