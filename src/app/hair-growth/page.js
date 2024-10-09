@@ -12,46 +12,8 @@ import TestimonialsSection from '@/components/layout/testimationsection/Testimon
 import Head from 'next/head';
 
 // ** data 
-import { stepsHomePage, productCategories, questions ,imagesSexualHomePage } from '@/utility/data';
+import { stepsHomePage, productCategories, questions ,imagesSexualHomePage,cardData } from '@/utility/data';
 
-const cardData = [
-  {
-    title: 'Which GLP-1 is right for you?',
-    content: [
-      'There are a number of GLP-1 medications on the market, but they all work by slowing down gastric emptying, making you feel full faster and longer.',
-      'Selecting a GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-    ],
-  },
-  {
-    title: 'How GLP-1 Medications Work',
-    content: [
-      'GLP-1 medications mimic the effects of a naturally occurring hormone that slows down how quickly your stomach empties food.',
-      'This can help you feel full sooner and longer after eating, which can lead to weight loss.',
-      'These medications are usually taken as a once-weekly injection. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      ' help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'GLP-1 is the best fit for you.'
-    ],
-  },
-  {
-    title: 'Benefits of GLP-1 Medications',
-    content: [
-      'GLP-1 medications have been shown to help people lose weight and improve blood sugar levels.',
-      'They can also reduce the risk of heart attack and stroke in people with type 2 diabetes.',
-      'Your provider will work with you to determine the best medication and dosage for your needs. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you.'
-    ],
-  }
-];
-const images = [
-  { src: "/images/homePage/man.png", alt: "Image 1" },
-  { src: "/images/homePage/women.png", alt: "Image 2" },
-  { src: "/images/homePage/products.png", alt: "Image 3" }
-];
 const cards2 = [...productCategories['hair-growth'].men,...productCategories['hair-growth'].women]
 
 export default function HairGrowth() {
@@ -89,8 +51,10 @@ export default function HairGrowth() {
         />
       </Head>
 
-      <Container maxWidth="xl">
-        <GreetingComponent title="weigh loss Services at Joey Medweigh loss weigh loss" description="weigh loss  weigh loss at your fingertips" />
+      <Container maxWidth="xl" sx={{padding:' 0 !important'}}>
+        <GreetingComponent 
+          title="Restore and Revitalize Your Hair with Effective Treatments" 
+          description="Experience the power of science-backed treatments designed to combat hair loss and promote fuller, healthier hair. " />
         <SectionFeature images={imagesSexualHomePage}/>
 
         {/* <Box >
@@ -120,7 +84,7 @@ export default function HairGrowth() {
             here you can see Instruction
           </Typography>
           <Box sx={{ mt:2, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 7, flexWrap: 'wrap' }}>
-            {cardData.map((card, index) => (
+            {cardData.hairGrowth.map((card, index) => (
               <InstructionCard key={index} title={card.title} content={card.content} />
             ))}
           </Box>

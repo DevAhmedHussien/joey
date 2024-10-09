@@ -108,7 +108,7 @@ export default function ProductsPage(props) {
             Ro Body Program members taking branded GLP-1 medications were paid for their testimonials.
           </Typography>
           <Box sx={{mt:2, display:'flex', justifyContent:'center', alignItems:'center', gap:1, flexWrap:'wrap'}}>
-            {cardData.map((card, index) => (
+            {cardData.sexualHealth.map((card, index) => (
               <InstructionCard key={index} title={card.title} content={card.content} />
             ))}
           </Box>

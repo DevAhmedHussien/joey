@@ -150,21 +150,63 @@ const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weig
           // pointerEvents: expanded ? 'auto' : 'auto', // Allow interaction only when expanded
         }}
       >
-        <Box
-          sx={{
-            padding: '16px',
-            color: '#555',
-            height: '100%',
-            // pointerEvents: 'auto', // Ensure inner content is interactive
-          }}
-        >
-          <Typography variant="body2" sx={{ color: '#2E384D', fontSize: '0.875rem' }}>
-            Description :  {description || "Please follow dosage instructions provided by your healthcare professional."}
-          </Typography>
-          <Typography variant="body2" sx={{ color: '#2E384D', fontSize: '0.875rem' }}>
-            Safety Information :  {safety || "Please follow dosage instructions provided by your healthcare professional."}
-          </Typography>
-        </Box>
+  <Box
+  sx={{
+    padding: '16px',
+    color: '#555',
+    height: '100%',
+  }}
+>
+      <Typography
+         variant="h5" component='h5'
+        sx={{
+          color: '#2E384D',
+          lineHeight: 1.6,
+          letterSpacing: '0.02rem',
+          textAlign: 'justify',
+        }}
+      >
+        Description:
+      </Typography>
+      
+      <Typography
+       variant="h6" component='h6'
+        sx={{
+          color: '#2E384D',
+          lineHeight: 1.5,
+          letterSpacing: '0.01rem',
+          marginBottom: '16px',
+          textAlign: 'justify',
+        }}
+      >
+        {description || "Please follow dosage instructions provided by your healthcare professional."}
+      </Typography>
+      
+  <Typography
+     variant="h5" component='h5'
+    sx={{
+      color: '#2E384D',
+      lineHeight: 1.4,
+      letterSpacing: '0.02rem',
+      textAlign: 'justify',
+    }}
+  >
+    Safety Information:
+  </Typography>
+  
+  <Typography
+    variant="h6" component='h6'
+    sx={{
+      color: '#2E384D',
+      lineHeight: 1.4,
+      letterSpacing: '0.015rem',
+      textAlign: 'justify',
+    }}
+  >
+    {safety || "Please follow dosage instructions provided by your healthcare professional."}
+  </Typography>
+</Box>
+
       </motion.div>
     </Card>
   );

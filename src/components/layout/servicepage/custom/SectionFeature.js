@@ -75,6 +75,20 @@ export default function SectionFeature({ images }) {
                   // style={{boxShadow: '0px 1px 7px 0px #e58a81'}}
                
                 />
+                 {/* <iframe
+                style={{height:400, scale:1}}
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/11FQ66MuLF8?controls=0&autoplay=1&loop=1&playlist=11FQ66MuLF8"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  controls={0}
+                  autoplay= {1}
+                  loop={1}
+                  muted
+                ></iframe> */}
               </Box>
             )}
           </Box>
@@ -86,32 +100,42 @@ export default function SectionFeature({ images }) {
         sx={{
           marginTop: '40px',
           display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'center',
+          justifyContent:  {xs:'start', md:'space-between'},
+          flexDirection: {xs:'column', md:'row'},
+          alignItems: 'start',
           width: '100%',
           maxWidth: '1200px',
           backgroundColor: '#fff',
           padding: '20px',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           borderRadius: '8px',
+          gap: {xs:1, md:10},
         }}
       >
-        <Box sx={{ textAlign: 'center', padding: '0 20px' }}>
+      <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
+        <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🩺</Box>
           <Typography variant="h6" component="div" gutterBottom>
-            <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🧴</Box>
-            Spray, serum, and oral meds available
+           
+            Receive professional consultations 
           </Typography>
         </Box>
-        <Box sx={{ textAlign: 'center', padding: '0 20px' }}>
+        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
+          <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>💊 </Box>
           <Typography variant="h6" component="div" gutterBottom>
-            <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>📦</Box>
-            Free shipping in discreet packaging
+            tailored treatment plans
           </Typography>
         </Box>
-        <Box sx={{ textAlign: 'center', padding: '0 20px' }}>
+        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
+          <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>📦</Box>
           <Typography variant="h6" component="div" gutterBottom>
-            <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>💬</Box>
-            Unlimited messaging with a provider
+            discreet delivery safely
+          </Typography>
+         
+        </Box>
+        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
+          <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🏡</Box>
+          <Typography variant="h6" component="div" gutterBottom>
+           all from the comfort of your homee.
           </Typography>
         </Box>
       </Box>

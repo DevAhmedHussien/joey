@@ -60,7 +60,6 @@ function MainNavBar() {
                         component="a"
                         href="/"
                         className="responsive-appbar-title"
-                        sx={{ fontSize: 30 }}
                     >
                         <Image
                             quality={100}
@@ -69,7 +68,7 @@ function MainNavBar() {
                             height={60}
                             	loading="lazy"
                             alt="Joeymed logo"
-                            style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
+                            style={{ width: '100%', transform: 'scale(1.1)', transformOrigin: 'center' }}
                         />
                     </Typography>
                     <Box className="responsive-appbar-nav-icon">

@@ -123,3 +123,8 @@
         max-width: 1637px !important;
     }
 }
+@media (max-width: 900px) and (min-width: 600px) {
+  .card {
+    max-width: 350px !important;
+  }
+}

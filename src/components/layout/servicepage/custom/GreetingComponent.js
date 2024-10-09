@@ -2,7 +2,6 @@
 
 import AppButton from '@/components/commons/appbutton/AppButton';
 import { Box, Typography } from '@mui/material';
-import InfoList from '../../infolist/InfoList';
 
 // ** theme 
 import { tokens } from '../../../../theme/theme';
@@ -35,10 +34,18 @@ export default function GreetingComponent({ title, description }) {
         }}
       >
         <Box>
-          <Typography variant="h2" component="h2" color={colors.primary[200]}>
+          <Typography variant="h2" component="h2" color={colors.primary[200]} 
+          // sx={{
+          //     width: { xs: '100%', md: '80%' }
+          //   }}
+            >
             {title}
           </Typography>
-          <Typography variant="h5" component="h5" color={colors.primary[200]} mt={2}>
+          <Typography variant="h5" component="h5" color={colors.primary[200]}  mt={2}
+          // sx={{
+          //     width: { xs: '100%', md: '60%' }
+          //   }}
+            >
             {description}
           </Typography>
          

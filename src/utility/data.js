@@ -1,3 +1,6 @@
+import SexualHealth from '@/app/sexual-health/page';
+import { cardVariantsRight, cardVariantsLeft, cardVariantsSmall} from'@/utility/animationSyles'
+
 
 export const productCategories = {
     'weight-loss': {
@@ -847,6 +850,107 @@ export const productCategories = {
     }
 };
 
+//main pages instruction product 
+export const cardData = {
+  sexualHealth: [
+    {
+      title: 'Which Tadalafil right for you?',
+      content: [
+        'Tadalafil is a prescription medication used to treat erectile dysfunction (ED).',
+        'It works by increasing blood flow to the penis during sexual stimulation, helping to achieve and maintain an erection.',
+        'Tadalafil is known for its long duration of action, lasting up to 36 hours, which allows for greater spontaneity.',
+        'It can be taken as needed or daily, depending on your doctor’s recommendation. The typical starting dose is 10 mg, taken at least 30 minutes before sexual activity.',
+        'Avoid taking Tadalafil with excessive alcohol or grapefruit juice, as these can interfere with the effectiveness of the medication.',
+      ],
+    },
+    {
+      title: 'Instruction for Sildenafil',
+      content: [
+        'Sildenafil is another medication used to treat erectile dysfunction (ED).',
+        'It works similarly to Tadalafil by increasing blood flow to the penis during sexual stimulation.',
+        'Sildenafil has a shorter duration of action, typically lasting 4 to 6 hours, and is usually taken about 30 minutes to 1 hour before sexual activity.',
+        'The standard starting dose is 50 mg, but your doctor may adjust it based on your response and tolerance.',
+        'Avoid taking Sildenafil with a high-fat meal, as it can delay the onset of effects. Excessive alcohol and grapefruit juice should also be avoided.'
+      ],
+    },
+    {
+      title: 'Amazing choice VitalityMax',
+      content: [
+        'VitalityMax is a compounded erectile dysfunction (ED) treatment that combines APO, Sildenafil, and Tadalafil for maximum effectiveness.',
+        'It is designed to offer a more potent solution for individuals who require stronger or longer-lasting results.',
+        'VitalityMax is available in different strengths, allowing you to choose the best option based on your needs and medical guidance.',
+        'The "High" strength contains APO 3mg, Sildenafil 80mg, and Tadalafil 22mg, providing a balanced and highly effective ED solution.',
+        'Take VitalityMax at least 30 minutes before sexual activity, and do not exceed the recommended dose. Like other ED medications, avoid combining it with excessive alcohol or nitrates.'
+      ],
+    }
+  ]
+,  
+weightLoss: [
+  {
+    title: 'Which Semaglutide Pills right for you?',
+    content: [
+      'Semaglutide is a GLP-1 receptor agonist used for weight management by regulating appetite and reducing calorie intake.',
+      'These pills work by mimicking the hormone GLP-1, which slows down the movement of food through the stomach, helping you feel full sooner and longer.',
+      'Semaglutide pills are typically taken once daily with or without food, as directed by your healthcare provider.',
+      'This medication is intended to be used alongside a reduced-calorie diet and increased physical activity.',
+      'Avoid taking Semaglutide with other weight-loss products without consulting your healthcare provider.'
+    ],
+  },
+  {
+    title: 'Which Tirzepatide Pills right for you?',
+    content: [
+      'Tirzepatide is a dual-action GLP-1 and GIP receptor agonist that helps with weight management by enhancing insulin sensitivity and controlling appetite.',
+      'These pills work by slowing digestion and helping you feel fuller for longer periods after eating, supporting a lower calorie intake.',
+      'Tirzepatide pills are usually taken once daily, as directed by your healthcare provider, and can be taken with or without food.',
+      'This medication should be used in combination with a reduced-calorie diet and increased physical activity.',
+      'Avoid using Tirzepatide with other weight-loss medications unless advised by your doctor.'
+    ],
+  },
+  {
+    title: 'Instruction for Semaglutide Injection ',
+    content: [
+      'Semaglutide injections are used for weight management in adults with obesity or overweight individuals who have weight-related medical problems.',
+      'The medication works by mimicking the GLP-1 hormone, which regulates appetite and helps reduce food intake by making you feel full faster and longer.',
+      'Semaglutide injections are typically administered once a week, as directed by your healthcare provider.',
+      'This treatment is part of a comprehensive weight loss plan that includes a healthy diet and regular exercise.',
+      'It is important to follow your healthcare provider’s instructions carefully when administering the injections and to not exceed the recommended dosage.'
+    ],
+  }],
+  hairGrowth:[
+    {
+      title: 'Which GLP-1 is right for you?',
+      content: [
+        'There are a number of GLP-1 medications on the market, but they all work by slowing down gastric emptying, making you feel full faster and longer.',
+        'Selecting a GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+      ],
+    },
+    {
+      title: 'How GLP-1 Medications Work',
+      content: [
+        'GLP-1 medications mimic the effects of a naturally occurring hormone that slows down how quickly your stomach empties food.',
+        'This can help you feel full sooner and longer after eating, which can lead to weight loss.',
+        'These medications are usually taken as a once-weekly injection. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        ' help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'GLP-1 is the best fit for you.'
+      ],
+    },
+    {
+      title: 'Benefits of GLP-1 Medications',
+      content: [
+        'GLP-1 medications have been shown to help people lose weight and improve blood sugar levels.',
+        'They can also reduce the risk of heart attack and stroke in people with type 2 diabetes.',
+        'Your provider will work with you to determine the best medication and dosage for your needs. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
+        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you.'
+      ],
+    }
+  ],
+}
+
 // steps for home page 
 export const stepsHomePage = [
     {
@@ -961,42 +1065,70 @@ export const questions = [
   }
 ];
 
-export const cardData = [
-  {
-    title: 'Which GLP-1 is right for you?',
-    content: [
-      'There are a number of GLP-1 medications on the market, but they all work by slowing down gastric emptying, making you feel full faster and longer.',
-      'Selecting a GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-    ],
-  },
-  {
-    title: 'How GLP-1 Medications Work',
-    content: [
-      'GLP-1 medications mimic the effects of a naturally occurring hormone that slows down how quickly your stomach empties food.',
-      'This can help you feel full sooner and longer after eating, which can lead to weight loss.',
-      'These medications are usually taken as a once-weekly injection. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      ' help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'GLP-1 is the best fit for you.'
-    ],
-  },
-  {
-    title: 'Benefits of GLP-1 Medications',
-    content: [
-      'GLP-1 medications have been shown to help people lose weight and improve blood sugar levels.',
-      'They can also reduce the risk of heart attack and stroke in people with type 2 diabetes.',
-      'Your provider will work with you to determine the best medication and dosage for your needs. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you. GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-      'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you.'
-    ],
-  }
-];
 
 export const imagesSexualHomePage = [
   { src: "/images/homePage/man.png", alt: "Image 1", type:'img' },
   { src: "/videos/SexualHealth.mp4", alt: "Video", type:'video' },
   { src: "/images/homePage/products.png", alt: "Image 3" , type:'img'}
+];
+
+export const homeCards=[{
+  animate:cardVariantsRight,
+  title:'Weight Loss',
+  src:'/videos/Bottle.mp4',
+  alt:'Weight Loss',
+  size:true,
+  video:true,
+  href:'/form/weight-loss'
+
+},{
+  animate:cardVariantsSmall,
+  title:'Sexual health',
+  src:'/videos/Bottle.mp4',
+  alt:'Sexual health',
+  size:true,
+  video:true,
+  href:'/form/weight-loss'
+
+},{
+  animate:cardVariantsLeft,
+  title:'Hair growth',
+  src:'/videos/Bottle.mp4',
+  alt:'Hair growth',
+  size:true,
+  video:true,
+  href:'/form/weight-loss'
+}]
+
+export const blogCards = [
+  {
+    title: 'Chat with a provider 24/7',
+    image: '/images/chat-provider.png',
+    description: 'Get real-time support from our providers anytime, anywhere.',
+  },
+  {
+    title: 'Manage goals in one place',
+    image: '/images/manage-goals.png',
+    description: 'Track your progress and make adjustments easily.',
+  },
+  {
+    title: 'Clinically proven ingredients',
+    image: '/images/clinically-proven.png',
+    description: 'Access treatments that are FDA-approved and proven to work.',
+  },
+  {
+    title: 'Fast, discreet shipping',
+    image: '/images/discreet-shipping.png',
+    description: 'Receive your treatment quickly and privately.',
+  },
+  {
+    title: 'Convenient online care',
+    image: '/images/online-care.png',
+    description: 'Experience healthcare at your fingertips.',
+  },
+  {
+    title: 'Personalized treatment plans',
+    image: '/images/treatment-plans.png',
+    description: 'Get a treatment plan tailored to your needs.',
+  },
 ];
