@@ -1,53 +1,41 @@
 'use client'
-import React from 'react';
-import { Box, Typography, Avatar } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Avatar, Drawer, IconButton } from '@mui/material';
 import Image from 'next/image';
 import './cardBlog.scss';
 import AppButton from '../appbutton/AppButton';
 import NavigationButton from '../navigatiobutton/NavigationButton';
-//** Theme part */
 import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close'; // Icon for closing the drawer
 
 const BlogCard = ({
   width = 300, 
   height = 350,
-    imageSrc = '/images/homePage/products.png',  // Ensure the path is correct
-    profilePicSrc = '/images/homePage/products.png', // Path to the profile picture
-    imageAlt = 'Blog Image',
-    readTime,
-    title,
-    comments = "ay haryharyharyharyharyhary ",
-    size
+  imageSrc = '/images/homePage/products.png',
+  profilePicSrc = '/images/homePage/products.png',
+  imageAlt = 'Blog Image',
+  readTime,
+  title,
+  comments = "Sample comments here",
+  size
 }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  // State to manage Drawer open/close
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // Function to toggle the Drawer
+  const toggleDrawer = (open) => () => {
+    setDrawerOpen(open);
+  };
+
   return (
-    <Box 
-      className="blog-card" 
-      sx={{ 
-        position: 'relative',
-        cursor: 'pointer', 
-        width: width, 
-        height: height,
-        borderRadius: '8px', 
-        overflow: 'hidden',
-        '&:hover .image-container': {
-          transform: 'scale(1.1)',
-        }
-      }}
-    >
-      {/* Image container for scaling effect */}
-      <Box 
-        className="image-container"
-        sx={{ 
-          position: 'relative',
-          width: '100%', 
-          height: '70%', 
-          overflow: 'hidden',
-          transition: 'transform 0.3s ease-in-out',  
-        }}
-      >
+    <>
+      {/* Blog Card */}
+      <Box className="blog-card" onClick={toggleDrawer(true)}>
+        <Box className="image-container">
         <Image
           src="/images/homePage/appear.jpg" 
           alt={imageAlt}
@@ -55,51 +43,85 @@ const BlogCard = ({
           objectFit="cover"  
           quality={100}
         />
+        </Box>
+
+        {/* Profile picture and comments */}
+        <Box className="blog-content">
+          <Box className="blog-info">
+            <Avatar 
+              alt="Profile Picture" 
+              src={profilePicSrc}
+              className="profile-pic"
+            />
+            <Box className="profile-details">
+              <Typography variant="h6" component="h6" className="profile-name">
+                ahmed
+              </Typography>
+              <Typography variant="body2" className="profile-role">
+                Joey Member
+              </Typography>
+            </Box>
+          </Box>
+
+          <Box className="blog-footer">
+            <Typography variant="body2" className="comments">
+              "{comments}"
+            </Typography>
+            <Box className="button-wrapper" >
+              {size ? <AppButton title="start now" /> : <NavigationButton />}
+            </Box>
+          </Box>
+        </Box>
       </Box>
 
-      {/* Profile picture and comments */}
-      <Box 
-        sx={{ 
-          position: 'relative',
-          backgroundColor:colors.primary[400],
-          borderRadius: '0 0 8px 8px',
-          padding: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'start',
-          height: '30%',
-        }}
-      >
-        <Box sx={{ display: 'flex', gap: 2, alignItems: 'start', justifyContent: 'start', width: '100%' }}>
-          <Avatar 
-            alt="Profile Picture" 
-            src={profilePicSrc}
-            sx={{ width: 40, height: 40 }}
-          />
-          <Box position='relative'>
-            <Typography variant="h6" component="h6" color={colors.primary[200]}
-             >
-              ahmed 
-            </Typography>
-            <Typography sx={{position:'absolute', top: '15px', width: '100px'}} variant="body2" component='body2' color={'purple'} mt={1} fontSize={10}>
-             Joey Member
-            </Typography>
-          </Box>
-         
-        </Box>
-        <Box sx={{ padding:'0 5px' ,mt: 2, width: '100%', display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'space-between' }}>
-          <Typography variant="body2" textAlign={'left'} color={colors.primary[200]} >
-            "{comments}"
+      {/* Drawer Component */}
+     {/* Drawer Component */}
+<Drawer 
+  anchor="bottom" 
+  open={drawerOpen} 
+  onClose={toggleDrawer(false)} 
+  PaperProps={{ 
+    sx: { 
+      width: '100%', 
+      height: '300px' 
+    } 
+  }}
+>
+  <Box className="drawer-content" role="presentation">
+    <IconButton onClick={toggleDrawer(false)} className="close-button">
+      <CloseIcon />
+    </IconButton>
+
+    <Box className="drawer-details">
+      <Box className="blog-info">
+        <Avatar 
+          alt="Profile Picture" 
+          src={profilePicSrc}
+          className="profile-pic"
+        />
+        <Box className="profile-details">
+          <Typography variant="h6" component="h6" className="profile-name">
+            ahmed
           </Typography>
-
-          {/* Action Button in the bottom left */}
-          <Box sx={{ position: 'absolute', bottom: 8, right: 8 }}>
-            {size ? <AppButton title="start now" /> : <NavigationButton />}
-          </Box>
+          <Typography variant="body2" className="profile-role">
+            Joey Member
+          </Typography>
         </Box>
       </Box>
+      <Typography variant="h4" component="h4">
+        {title}
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Read time: {readTime}
+      </Typography>
+      <Typography variant="body2" paragraph>
+        Comments: {comments}
+      </Typography>
     </Box>
+  </Box>
+</Drawer>
+
+    </>
   );
 };
 

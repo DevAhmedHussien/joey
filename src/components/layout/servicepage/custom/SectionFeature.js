@@ -46,8 +46,8 @@ export default function SectionFeature({ images }) {
                 src={image.src}
                 alt={image.alt}
                 layout="responsive"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 objectFit="cover"
                 quality={100}
                 loading="lazy"
@@ -56,7 +56,7 @@ export default function SectionFeature({ images }) {
             ) : (
               <Box 
                 sx={{
-                  width:450,
+                  maxWidth:450,
                   // height:400,
                   transform: 'scale(1.02)',
                   borderRadius:5,

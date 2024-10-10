@@ -6,7 +6,6 @@ import SectionFeature from '@/components/layout/servicepage/custom/SectionFeatur
 import MedWork from '@/components/layout/medWorkStepper/MedWork';
 import VideoRolling from '@/components/layout/videoRolling/VideoRolling';
 import Questions from '@/components/layout/frequentlyquestions/Questions';
-import InstructionCard from '@/components/commons/instructioncard/InstructionsCard';
 import TestimonialsSection from '@/components/layout/testimationsection/TestimonialsSection';
 
 import Head from 'next/head';

@@ -6,7 +6,7 @@ import AppButton from '../appbutton/AppButton'; // Custom button component
 import ImageWithSpinner from '../image/ImageWithSpinner';
 import InfoIcon from '@mui/icons-material/Info'; // Icon for toggle
 
-const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weight loss solution.", safety, href }) => {
+const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effective weight loss solution.", safety, href }) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -84,8 +84,9 @@ const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weig
           </Typography>
         </Typography>
         {/* Stock Status */}
+        <Box sx={{display:'flex',justifyContent:'center',alignItems:'center' ,gap:1, flexDirection:'column'}}>
         <Chip
-          label="In stock via Joey Med"
+          label="In stock via joey med"
           sx={{
             backgroundColor: '#E0F2F1',
             color: '#004D40',
@@ -96,6 +97,11 @@ const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weig
             borderRadius: '8px',
           }}
         />
+
+      <Typography variant="h4" component='h4' textAlign='center'> {price} </Typography>
+
+        </Box>
+        
 
 
       </CardContent>
@@ -137,7 +143,7 @@ const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weig
       <motion.div
         onClick={toggleExpand}
         initial={{ height: 0, opacity: 0, y: '-100%' }}
-        animate={expanded ? { height: '100%', opacity: 0.8, y: 0 } : { height: 0, opacity: 0, y: '-100%' }}
+        animate={expanded ? { height: '100%', opacity: 0.9, y: 0 } : { height: 0, opacity: 0, y: '-100%' }}
         transition={{ duration: 0.5 }}
         style={{ 
           position: 'absolute', 
@@ -150,62 +156,18 @@ const ProductCard = ({ name = "Tirzepatide Pills", description = "Effective weig
           // pointerEvents: expanded ? 'auto' : 'auto', // Allow interaction only when expanded
         }}
       >
-  <Box
-  sx={{
-    padding: '16px',
-    color: '#555',
-    height: '100%',
-  }}
->
-      <Typography
-         variant="h5" component='h5'
+        <Box
         sx={{
-          color: '#2E384D',
-          lineHeight: 1.6,
-          letterSpacing: '0.02rem',
-          textAlign: 'justify',
+          padding: '16px',
+          color: '#555',
+          height: '100%',
         }}
       >
-        Description:
-      </Typography>
-      
-      <Typography
-       variant="h6" component='h6'
-        sx={{
-          color: '#2E384D',
-          lineHeight: 1.5,
-          letterSpacing: '0.01rem',
-          marginBottom: '16px',
-          textAlign: 'justify',
-        }}
-      >
-        {description || "Please follow dosage instructions provided by your healthcare professional."}
-      </Typography>
-      
-  <Typography
-     variant="h5" component='h5'
-    sx={{
-      color: '#2E384D',
-      lineHeight: 1.4,
-      letterSpacing: '0.02rem',
-      textAlign: 'justify',
-    }}
-  >
-    Safety Information:
-  </Typography>
-  
-  <Typography
-    variant="h6" component='h6'
-    sx={{
-      color: '#2E384D',
-      lineHeight: 1.4,
-      letterSpacing: '0.015rem',
-      textAlign: 'justify',
-    }}
-  >
-    {safety || "Please follow dosage instructions provided by your healthcare professional."}
-  </Typography>
-</Box>
+            <Typography variant="h5" component='h5' textAlign='center'> Description: </Typography>
+            <Typography variant="h6" component='h6'textAlign='center'> {description}</Typography>
+            <Typography variant="h5" component='h5'textAlign='center'  mt={2}>Safety Information: </Typography>
+            <Typography variant="h6" component='h6' textAlign='center'> {safety } </Typography>
+      </Box>
 
       </motion.div>
     </Card>

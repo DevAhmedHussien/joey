@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 
-const NavigationButton = ({ href='/' }) => {
+const NavigationButton = ({ href='' }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (

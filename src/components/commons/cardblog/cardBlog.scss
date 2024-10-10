@@ -4,30 +4,100 @@
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  width: 300px;
+  height: 350px;
 
   &:hover {
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-  &:hover .blog-image {
-      transform: scale(1.1);
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    transition: transform 0.3s ease-in-out;
   }
 
-  &:hover .arrow-icon {
-      transform: scale(1.2) translateX(5px);
+  .blog-image {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .blog-content {
+    position: relative;
+    background-color: #e0e0e0; // Adjust as needed
+    border-radius: 0 0 8px 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+  }
+
+  .blog-info {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+
+    .profile-name {
+      color: #000; // Adjust as needed
+    }
+
+    .profile-role {
+      color: purple;
+      font-size: 10px;
+      margin-top: 4px;
+    }
+  }
+
+  .blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    .comments {
+      flex: 1;
+      color: #000;
+    }
+
+    .button-wrapper {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+    }
   }
 }
 
-.blog-image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.blog-content {
+.drawer-content {
+  width: 300px;
   padding: 16px;
-}
+  display: flex;
+  flex-direction: column;
 
-.arrow-icon {
-  transition: transform 0.3s ease-in-out;
+  .close-button {
+    align-self: flex-end;
+  }
+
+  .drawer-details {
+    margin-top: 16px;
+
+    h4 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+  }
 }

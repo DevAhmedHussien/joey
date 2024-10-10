@@ -6,7 +6,7 @@ import "./globals.scss";
 import Head from 'next/head';
 
 export const metadata = {
-  title: 'Joey Med',
+  title: 'joey med',
   description: 'Telehealth Platform',
 };
 

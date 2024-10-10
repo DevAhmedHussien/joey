@@ -16,7 +16,7 @@ const buttonVariants = {
   pressed: { scale: 0.95 }
 };
 
-const AppButton = ({ title, color = 'white', href = '/' }) => {
+const AppButton = ({ title, color = 'white', href = '' }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -27,7 +27,7 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
-    <Link href={href}>
+    {/* <Link href={href}> */}
     
       {/* Wrap Button in motion.div for animation */}
       <motion.div
@@ -59,7 +59,6 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
               paddingLeft:'5px',
               // color:'#ecb4ad',
               color: colors.primary[100],
-
               opacity:1,
             },
           }}
@@ -70,7 +69,7 @@ const AppButton = ({ title, color = 'white', href = '/' }) => {
           {(title === 'start now') && <EastOutlinedIcon className= "main" sx={{fontSize:20 ,  color: colors.primary[200],transition:' all 1s ease-out'}}/>}
         </Button>
       </motion.div>
-    </Link>
+    {/* </Link> */}
     </motion.div>
   );
 };

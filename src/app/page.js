@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>JoeyMed - Telehealth Services for Weight Loss, Sexual Health, Hair Growth, and More</title>
+        <title>joey med - Telehealth Services for Weight Loss, Sexual Health, Hair Growth, and More</title>
         <meta name="description" content="JoeyMed provides convenient, online telehealth services for weight loss, sexual health, hair growth, and more. Access personalized treatment plans, chat with providers, and manage your health goals from anywhere." />
         <link rel="canonical" href="https://www.joeymed.com/" />
         <meta property="og:title" content="JoeyMed - Online Telehealth Services" />

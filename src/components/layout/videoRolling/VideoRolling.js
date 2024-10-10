@@ -5,7 +5,7 @@ import AppButton from '../../commons/appbutton/AppButton';
 import { useEffect, useState } from 'react';
 import './videoRolling.scss';
 
-const VideoRolling = ({ title, description, src, alt, additionalInformation = '' }) => {
+const VideoRolling = ({ title, description, src, alt, additionalInformation = '', type }) => {
   const [showContent, setShowContent] = useState(false);
 
   // Track scroll position to trigger content display
@@ -68,12 +68,13 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
       </Box>
 
       {/* Additional content that appears after scrolling */}
+
       <Slide direction="up" in={showContent} mountOnEnter unmountOnExit>
-        <Box className={'additionalContent'}>
-          <Typography variant="h4" className='additionalTitle'>
+        <Box className='additionalContent'>
+          <Typography variant="h2" component="h2">
             Additional Information
           </Typography>
-          <Typography variant="body1" className='additionalText'>
+          <Typography variant="p" component="p" mt={1}>
             {additionalInformation}
           </Typography>
         </Box>

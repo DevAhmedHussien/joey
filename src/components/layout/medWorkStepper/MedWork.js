@@ -32,11 +32,11 @@ export default function MedWork({ steps }) {
     };
 
     const stepIcons = {
-        1: completed[0] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#00d8ff', fontSize: '20px' }} /> : <MedicalServicesOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
-        2: completed[1] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#00d8ff', fontSize: '20px' }} /> : <LocalPharmacyOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
-        3: completed[2] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#00d8ff', fontSize: '20px' }} /> : <HealingOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
-        4: completed[3] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#00d8ff', fontSize: '20px' }} /> : <AssignmentOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
-        5: completed[4] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#00d8ff', fontSize: '20px' }} /> : <CheckCircleOutlineOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
+        1: completed[0] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#001d4a', fontSize: '20px' }} /> : <MedicalServicesOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
+        2: completed[1] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#001d4a', fontSize: '20px' }} /> : <LocalPharmacyOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
+        3: completed[2] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#001d4a', fontSize: '20px' }} /> : <HealingOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
+        4: completed[3] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#001d4a', fontSize: '20px' }} /> : <AssignmentOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
+        5: completed[4] ? <CheckCircleOutlineOutlinedIcon sx={{ color: '#001d4a', fontSize: '20px' }} /> : <CheckCircleOutlineOutlinedIcon sx={{ color: '#e48a81', fontSize: '22px' }} />,
     };
 
     const stepVariants = {
@@ -48,10 +48,10 @@ export default function MedWork({ steps }) {
     return (
         <Box className="medwork-container" sx={{ p: 4, backgroundColor: '#f5f5f5', borderRadius: '12px' }}>
             <Typography variant="h2" className="medwork-title" sx={{ color: '#001d4a', mb: 2 }}>
-                How Joey Med Works
+                How joey med Works
             </Typography>
             <Typography variant="h5" className="medwork-subtitle" sx={{ color: '#001d4a', mb: 4 }}>
-                Joey Med makes it easy to get started with no insurance required
+                joey med makes it easy to get started with no insurance required
             </Typography>
             <Box className="medwork-stepper-container">
                 <Stepper activeStep={activeStep} orientation="vertical" className="medwork-stepper">
@@ -86,14 +86,14 @@ export default function MedWork({ steps }) {
                                                 src={step.image}
                                                 alt=""
                                                 className="medwork-step-image"
-                                                style={{ width: '100%', borderRadius: '8px', marginTop: '20px' ,background:'red',opacity:0.6}}
+                                                style={{ width: '100%', borderRadius: '8px', marginTop: '20px' ,background:'black',opacity:0.6}}
                                             />
                                         </Box>
                                     </motion.div>
                                 </AnimatePresence>
                                 <Box className="medwork-buttons-container" sx={{ mt: 2 }}>
                                     <Button
-                                        sx={{ color: '#ffffff', background: '#e48a81', textTransform: 'capitalize', mr: 2, borderRadius: '8px', padding: '8px 16px' }}
+                                        sx={{ color: '#ffffff', background: '#001d4a', textTransform: 'capitalize', mr: 2, borderRadius: '8px', padding: '8px 16px' }}
                                         variant="contained"
                                         onClick={index === steps.length - 1 ? () => setDrawerOpen(true) : handleNext}  // Open Drawer on Finish
                                         className="medwork-button-next"

@@ -87,7 +87,7 @@ export default function SexualHealth() {
           <MedWork steps={stepsHomePage} /> 
         </Box>
 
-        <Box mt={5}>
+        <Box>
           {/* <TestimonialsSection /> */}
         </Box>
 
