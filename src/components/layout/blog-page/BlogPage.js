@@ -1,17 +1,14 @@
-// components/layout/BlogPage.js
 import React from 'react';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { tokens } from '../../../theme/theme';
 import { motion } from 'framer-motion';
 import Questions from '@/components/layout/frequentlyquestions/Questions';
-import { imagesSexualHomePage, questions } from '@/utility/data';
-import { titleAnimation, iconAnimation, cardVariantsSmall } from '@/utility/animationSyles';
-import Image from 'next/image';
-import VideoRolling from '../videoRolling/VideoRolling';
-import CardSlider from '@/components/commons/cartslider/CardSlider';
+import { titleAnimation, cardVariantsSmall } from '@/utility/animationSyles';
+import ImageWithSpinner from '@/components/commons/image/ImageWithSpinner';
 import GreetingComponent from '../servicepage/custom/GreetingComponent';
-import SectionFeature from '../servicepage/custom/SectionFeature';
+import CardSlider from '@/components/commons/cartslider/CardSlider';
+import './blogPage.scss'; // Import the new SCSS file
+import { questions } from '@/utility/data';
 
 const blogPosts = [
   {
@@ -72,46 +69,46 @@ const blogPosts = [
 
 const BlogPage = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   return (
     <>
-    <GreetingComponent         title='Welcome to Our Blog' 
-          description=' Stay informed with the latest insights on telehealth, online pharmacy services, and healthcare tips from the experts at joey med.'  />
-        <Box className="sexu">
-        <SectionFeature images={imagesSexualHomePage} /> 
-           <CardSlider cards={blogPosts} type='blog'/> 
+      <GreetingComponent
+        title="Welcome to Our Blog"
+        description="Stay informed with the latest insights on telehealth, online pharmacy services, and healthcare tips from the experts at Joey Med."
+      />
+      <Box className="sexu">
+        <Box className="image-container">
+          <ImageWithSpinner alt="about us" src="/images/blogs.png" />
         </Box>
+        <CardSlider cards={blogPosts} type="blog" />
+      </Box>
 
-        {/* Video Section */}
-        <Box sx={{}}>
-          <motion.div initial="hidden" animate="visible" variants={titleAnimation}>
-            <Typography variant="h2" align="center" gutterBottom sx={{ color: colors.primary[200] }}>
-              Learn More About Telehealth
-            </Typography>
-          </motion.div>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <motion.div initial="hidden" animate="visible" variants={cardVariantsSmall}>
-              <Box sx={{ maxWidth: '800px', width: '100%', borderRadius: 2, overflow: 'hidden' }}>
-                <iframe
-                  width="100%"
-                  height="450"
-                  src="https://www.youtube.com/watch?v=SI1EhswdgR8"
-                  title="Telehealth Insights"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </Box>
-            </motion.div>
+      {/* Video Section */}
+      <Box className="video-section">
+        <motion.div initial="hidden" animate="visible" variants={titleAnimation}>
+          <Typography variant="h2" className="title" gutterBottom>
+            Learn More About Telehealth
+          </Typography>
+        </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={cardVariantsSmall}>
+          <Box className="video-container">
+            <iframe
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/watch?v=SI1EhswdgR8"
+              title="Telehealth Insights"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </Box>
-        </Box>
+        </motion.div>
+      </Box>
 
-        {/* Frequently Asked Questions */}
-        <Box sx={{ marginTop: 8, backgroundColor: 'rgba(255, 255, 255, 0.9)', padding: 4, borderRadius: 2, backdropFilter: 'blur(10px)' }}>
-          <Questions questions={questions} />
-        </Box>
-      {/* </Container> */}
+      {/* Frequently Asked Questions */}
+      <Box className="faq-section">
+        <Questions questions={questions} />
+      </Box>
     </>
   );
 };

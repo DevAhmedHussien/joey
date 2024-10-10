@@ -117,7 +117,7 @@ export const useDimensions = (ref) => {
 
 // Navigation component
 const Navigation = ({ isOpen, close }) => {
-  const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'contact-us', 'about-us', 'blogs'];
+  const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'blogs',  'about-us', 'contact-us'];
 
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);  

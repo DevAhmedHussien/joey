@@ -77,12 +77,12 @@ const BlogCard = ({
       {/* Drawer Component */}
      {/* Drawer Component */}
 <Drawer 
-  anchor="bottom" 
+  anchor="left" 
   open={drawerOpen} 
   onClose={toggleDrawer(false)} 
   PaperProps={{ 
     sx: { 
-      width: '100%', 
+      width: '70%', 
       height: '300px' 
     } 
   }}
@@ -93,7 +93,7 @@ const BlogCard = ({
     </IconButton>
 
     <Box className="drawer-details">
-      <Box className="blog-info">
+      <Box className="blog-info" sx={{display:'flex', alignItems:'start',gap:1 }}>
         <Avatar 
           alt="Profile Picture" 
           src={profilePicSrc}

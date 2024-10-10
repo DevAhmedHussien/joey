@@ -21,7 +21,7 @@ import weighImg from '../../../../public/images/navbar/weight.png';
 import hairImg from '../../../../public/images/navbar/hair.png';
 import { PersonPinCircleOutlined } from '@mui/icons-material';
 import MotionBar from'./MotionBar'
-const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'contact-us', 'about-us', 'blogs'];
+const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'blogs',  'about-us', 'contact-us'];
 
 function MainNavBar() {
     const [hoveredCategory, setHoveredCategory] = useState(null);

@@ -34,33 +34,17 @@ export default function GreetingComponent({ title, description }) {
         }}
       >
         <Box>
-          <Typography variant="h2" component="h2" color={colors.primary[200]} 
-          // sx={{
-          //     width: { xs: '100%', md: '80%' }
-          //   }}
-            >
+          <Typography variant="h2" component="h2" color={colors.primary[200]} >
             {title}
           </Typography>
-          <Typography variant="h5" component="h5" color={colors.primary[200]}  mt={2}
-          // sx={{
-          //     width: { xs: '100%', md: '60%' }
-          //   }}
-            >
+          <Typography variant="h5" component="h5" color={colors.primary[200]}  mt={2} >
             {description}
           </Typography>
-         
-        </Box>
-        <Box>
-          {/* <InfoList /> */}
         </Box>
         <Box mt={2}>
-        {/* <ImageWithSpinner
-            src={'/images/homePage/man.png'}
-            alt={'man foto'}
-            sx={{width: '100%', // Full width for responsiveness
-              height: '100%', // Full height for responsiveness
-              objectFit: 'cover', // Ensures image fills the container
-            }}
+          {/* <ImageWithSpinner
+            src='/images/homePage/women.png'
+            alt='man foto'
           /> */}
           <AppButton title="start now" color="primary" />
         </Box>
