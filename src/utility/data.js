@@ -143,9 +143,9 @@ export const productCategories = {
                 additionalCategories: "",
                 SEOTitle: "Semaglutide Injection for Weight Loss",
                 SEODescription: ":An injectable solution designed to promote weight loss by regulating appetite through Semaglutide.",
-                price: `Pricing by Dosage:
-                        0.25mg - $199, 0.50mg - $199, 1.0mg - $225
-                        12-week Kickstart Program - $539`,
+                price: `Pricing by Dosage`,
+                //  0.25mg - $199, 0.50mg - $199, 1.0mg - $225
+                        // 12-week Kickstart Program - $539
                     
                 ingredient:'Semaglutide: A glucagon-like peptide-1 (GLP-1) receptor agonist, which helps regulate blood sugar levels and supports weight loss by reducing appetite and food intake.',
                 ProductDescription:"An injectable solution designed to promote weight loss by regulating appetite through Semaglutide.",
@@ -209,9 +209,11 @@ export const productCategories = {
                 SEOTitle: "Tirzepatide Injection for Weight Loss",
                 SEODescription: "Highly effective Tirzepatide injection for managing weight.",
                 ingredient:'tirzepatide: A glucagon-like peptide-1 (GLP-1) receptor agonist, which helps regulate blood sugar levels and supports weight loss by reducing appetite and food intake.',
-                price: `Pricing by Dosage:
-                        2.5mg - $299, 5.0mg - $299, 7.5mg - $299
-                        12-week Kickstart Program - $809`,
+                
+                price: `Pricing by Dosage`,
+                // price: `Pricing by Dosage:
+                //         2.5mg - $299, 5.0mg - $299, 7.5mg - $299
+                //         12-week Kickstart Program - $809`,
                 ProductDescription:"A weight loss injection that regulates blood sugar and appetite using Tirzepatide.",
                 Benefits: [
                   {
@@ -539,7 +541,7 @@ export const productCategories = {
                 additionalCategories: "",
                 SEOTitle: "MaxHair for Men - Hair Growth Solution",
                 SEODescription: "A daily pill designed to reduce hair loss in men by inhibiting DHT production using Dutasteride",
-                price: 20,
+                price: '20$',
                 ProductDescription:"A daily pill designed to reduce hair loss in men by inhibiting DHT production using Dutasteride",
                 Benefits: [
                   {
@@ -728,7 +730,7 @@ export const productCategories = {
                 additionalCategories: "",
                 SEOTitle: "HairRevive for Women - Hair Growth Solution",
                 SEODescription: "Effective hair growth solution for women, containing Minoxidil and Dutasteride.",
-                price: 20,
+                price: '20$',
                 ProductDescription:"A hair growth pill formulated for women under 45 to promote thicker, youthful hair using Minoxidil and Spironolactone.",
                 Benefits: [
                   {
@@ -793,7 +795,7 @@ export const productCategories = {
                 additionalCategories: "",
                 SEOTitle: "HairRenew - Pill for Women Over 45 (1 mg)",
                 SEODescription: "Effective hair growth Foam for women over 45, containing Minoxidil and Dutasteride.",
-                price: 20,
+                price: '20$',
                 ProductDescription:" A foam formulated for women to reduce hair thinning and promote fuller hair using Minoxidil and Dutasteride.",
                 Benefits: [
                   {

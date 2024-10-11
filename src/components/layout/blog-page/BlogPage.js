@@ -7,7 +7,7 @@ import { titleAnimation, cardVariantsSmall } from '@/utility/animationSyles';
 import ImageWithSpinner from '@/components/commons/image/ImageWithSpinner';
 import GreetingComponent from '../servicepage/custom/GreetingComponent';
 import CardSlider from '@/components/commons/cartslider/CardSlider';
-import './blogPage.scss'; // Import the new SCSS file
+import './blogPage.scss';
 import { questions } from '@/utility/data';
 
 const blogPosts = [

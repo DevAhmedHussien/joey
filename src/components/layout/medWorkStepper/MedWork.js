@@ -46,7 +46,7 @@ export default function MedWork({ steps }) {
     };
 
     return (
-        <Box className="medwork-container" sx={{ p: 4, backgroundColor: '#f5f5f5', borderRadius: '12px' }}>
+        <Box className="medwork-container" sx={{ p: 4,  borderRadius: '12px' }}>
             <Typography variant="h2" className="medwork-title" sx={{ color: '#001d4a', mb: 2 }}>
                 How joey med Works
             </Typography>

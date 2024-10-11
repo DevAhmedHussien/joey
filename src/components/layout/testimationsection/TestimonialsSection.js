@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <Grid container sx={{backgroundColor: '#f5f5f5', padding:5 ,display:'flex',flexWrap:'wrap' }}>
+    <Grid container sx={{ padding:5 ,display:'flex',flexWrap:'wrap' }}>
 
       {/* Left Side */}
       <Grid item xs={12} md={6} sx={{ p: {sm:2, md:4} }}>

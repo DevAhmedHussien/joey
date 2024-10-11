@@ -17,6 +17,8 @@ import { stepsHomePage, productCategories,questions, homeCards, blogCards } from
 
 // ** animation
 import HeroSection from './HeroSection';
+import MeetTheTeam from '@/components/commons/meetteam/MeetTheTeam';
+import WhyChooseUs from '@/components/commons/whychooseus/WhyChooseUs';
 
 export default function Home() {
 
@@ -93,15 +95,18 @@ export default function Home() {
           />
           <CardSlider cards={cards3} type='product' />
         </Box>
+        <WhyChooseUs/>
+        <TestimonialsSection/>
         
         <Box mt={5}>
           <MedWork steps={stepsHomePage}/>
         </Box>
-
-        <TestimonialsSection/>
-
+        <MeetTheTeam/>
+        
+        
+        
         <Box sx={{p:3}}>
-          <Typography variant="h1" paddingTop={5}>joey med Online 100%</Typography>
+          {/* <Typography variant="h1" paddingTop={5}>joey med Online 100%</Typography> */}
           <Typography variant="h2"paddingTop={3} >Health guide</Typography>
           <CardSlider cards={blogCards} type='blog'/>
         </Box>

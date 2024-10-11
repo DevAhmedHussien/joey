@@ -77,38 +77,86 @@ export const themeSettings = (mode) => {
           }),
     },
     typography: {
-        fontFamily: 'Italiana, serif',
+      fontFamily: 'Italiana, serif',
       fontWeightLight: 500,
       fontSize: 15,
       h1: {
-          fontFamily: 'Italiana, serif',
-        fontWeight: 400,
-        fontSize: 43,
+        fontFamily: 'Italiana, serif',
+        fontWeight: 500,
+        fontSize: '3rem', // Responsive size for h1
+        lineHeight: 1.1,  // Compact line height
+        letterSpacing: '0.02em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '2.2rem',
+        },
       },
       h2: {
-          fontFamily: 'Italiana, serif',
-        fontWeight: 500,
-        fontSize: 35,
+        fontFamily: 'Italiana, serif',
+        fontWeight: 400,
+        fontSize: '2.5rem',
+        lineHeight: 1.15,
+        letterSpacing: '0.02em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '1.7rem',
+        },
       },
       h3: {
-          fontFamily: 'Italiana, serif',
-        fontWeight: 400,
-        fontSize: 27,
+        fontFamily: 'Italiana, serif',
+        fontWeight: 300,
+        fontSize: '2rem',
+        lineHeight: 1.2,
+        letterSpacing: '0.01em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '1.5rem',
+        },
       },
       h4: {
-          fontFamily: 'Italiana, serif',
-        fontWeight: 300,
-        fontSize: 23,
+        fontFamily: 'Italiana, serif',
+        fontWeight: 200,
+        fontSize: '1.5rem',
+        lineHeight: 1.25,
+        letterSpacing: '0.01em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '1.3rem',
+        },
       },
       h5: {
-          fontFamily: 'Italiana, serif',
-        fontWeight: 300,
-        fontSize: 19,
+        fontFamily: 'Italiana, serif',
+        fontWeight: 100,
+        fontSize: '1.25rem',
+        lineHeight: 1.3,
+        letterSpacing: '0.01em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '1.2rem',
+        },
       },
       h6: {
-          fontFamily: 'Italiana, serif',
+        fontFamily: 'Italiana, serif',
         fontWeight: 100,
-        fontSize: 17,
+        fontSize: '1.1rem',
+        lineHeight: 1.35,
+        letterSpacing: '0.01em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '1rem',
+        },
+      },
+      body1: {
+        fontFamily: 'Italiana, serif',
+        fontSize: '1rem',
+        lineHeight: 1.5,  // Compact line height for body text
+        letterSpacing: '0.02em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '0.9rem',
+        },
+      },
+      body2: {
+        fontFamily: 'Italiana, serif',
+        fontSize: '0.875rem',
+        lineHeight: 1.45,
+        letterSpacing: '0.02em',
+        '@media (max-width:600px)': { // Mobile adjustments
+          fontSize: '0.8rem',
+        },
       },
     },
   };
