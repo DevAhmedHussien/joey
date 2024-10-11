@@ -87,11 +87,11 @@ export default function Home() {
 
         <Box className="Hair Growth">
           <VideoRolling 
-          title='Say goodbye to thinning and hello to vibrant' 
-          description='with our powerful hair growth solutions.' 
-          src="/videos/ss.mp4" 
-          alt='Keep it off '
-          additionalInformation="Learn more about how our personalized hair growth treatments can help you achieve lasting results. With expert guidance and customized plans, we’re here to support your journey to healthier, fuller hair. Discover the confidence that comes with a revitalized look!"
+            title='Say goodbye to thinning and hello to vibrant' 
+            description='with our powerful hair growth solutions.' 
+            src="/videos/ss.mp4" 
+            alt='Keep it off '
+            additionalInformation="Learn more about how our personalized hair growth treatments can help you achieve lasting results. With expert guidance and customized plans, we’re here to support your journey to healthier, fuller hair. Discover the confidence that comes with a revitalized look!"
           />
           <CardSlider cards={cards3} type='product' />
         </Box>
@@ -102,8 +102,6 @@ export default function Home() {
           <MedWork steps={stepsHomePage}/>
         </Box>
         <MeetTheTeam/>
-        
-        
         
         <Box sx={{p:3}}>
           {/* <Typography variant="h1" paddingTop={5}>joey med Online 100%</Typography> */}

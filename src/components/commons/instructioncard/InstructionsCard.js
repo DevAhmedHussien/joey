@@ -14,10 +14,11 @@ export default function InstructionCard({ title, content }) {
   };
 
   return (
-    <Box className="instruction-card-container">
+    <Box className="instruction-card-container"> 
+    
       {/* Header with title and Info icon */}
       <Box className="card-header">
-        <Typography variant="h5">{title}</Typography>
+        <Typography variant="h5" component="h5">{title}</Typography>
         <IconButton onClick={toggleInstructions}>
           <InfoIcon />
         </IconButton>
@@ -40,7 +41,7 @@ export default function InstructionCard({ title, content }) {
               </IconButton>
             </Box>
             {content.map((paragraph, index) => (
-              <Typography key={index} variant="body2">
+              <Typography key={index} variant="body1" component="body1">
                 {paragraph}
               </Typography>
             ))}

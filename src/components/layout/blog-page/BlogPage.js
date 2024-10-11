@@ -86,7 +86,7 @@ const BlogPage = () => {
       {/* Video Section */}
       <Box className="video-section">
         <motion.div initial="hidden" animate="visible" variants={titleAnimation}>
-          <Typography variant="h2" className="title" gutterBottom>
+          <Typography variant="h2" component="h2" className="title" gutterBottom>
             Learn More About Telehealth
           </Typography>
         </motion.div>

@@ -12,7 +12,7 @@ export default function SectionFeature({ images }) {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#f5f5f5',
-        padding: '40px 20px', // Added padding for better spacing
+        padding: '40px 20px', 
       }}
     >
       {/* Image and Video Row */}
@@ -25,19 +25,17 @@ export default function SectionFeature({ images }) {
           alignItems: 'center',
           width: '100%',
           // maxWidth: '1200px', // Set a max-width for better responsiveness
-          gap: '20px', // Adds space between images/videos
+          gap: '20px',
         }}
       >
         {images.map((image, index) => (
           <Box
             key={index}
-            // width={'40%'}
-            // height={'100%'}
             position={'relative'}
             sx={{
               overflow: 'hidden',
-                  // boxShadow: '0px 1px 7px 0px #e58a81',
-
+              boxShadow: '0px 0px 30px 1px black',
+              borderRadius:2
 
             }}
           >
@@ -57,12 +55,8 @@ export default function SectionFeature({ images }) {
               <Box 
                 sx={{
                   maxWidth:450,
-                  // height:400,
                   transform: 'scale(1.02)',
                   borderRadius:5,
-                //   display:'flex',
-                //   justifyContent:'center' ,alignItems:'center',
-                //   boxShadow: '0px 1px 7px 0px #black'
                 }} 
                 >
                 <Video
@@ -72,7 +66,6 @@ export default function SectionFeature({ images }) {
                   autoPlay={true}
                   loop
                   muted
-                  // style={{boxShadow: '0px 1px 7px 0px #e58a81'}}
                
                 />
                  {/* <iframe
@@ -115,27 +108,26 @@ export default function SectionFeature({ images }) {
       <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
         <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🩺</Box>
           <Typography variant="h6" component="div" gutterBottom>
-           
             Receive professional consultations 
           </Typography>
         </Box>
         <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
           <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>💊 </Box>
           <Typography variant="h6" component="div" gutterBottom>
-            tailored treatment plans
+            Tailored treatment plans
           </Typography>
         </Box>
         <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
           <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>📦</Box>
           <Typography variant="h6" component="div" gutterBottom>
-            discreet delivery safely
+            Discreet delivery safely
           </Typography>
          
         </Box>
         <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
           <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🏡</Box>
           <Typography variant="h6" component="div" gutterBottom>
-           all from the comfort of your homee.
+           All from the comfort of your homee.
           </Typography>
         </Box>
       </Box>

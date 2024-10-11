@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Typography, Chip, Box, CardMedia, IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
-import AppButton from '../appbutton/AppButton'; // Custom button component
+import AppButton from '../appbutton/AppButton'; 
 import ImageWithSpinner from '../image/ImageWithSpinner';
-import InfoIcon from '@mui/icons-material/Info'; // Icon for toggle
+import InfoIcon from '@mui/icons-material/Info'; 
 
 const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effective weight loss solution.", safety, href }) => {
   const [expanded, setExpanded] = useState(false);
@@ -16,13 +16,13 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
   return (
     <Card
       component={motion.div}
-      animate={{ width: 300, height: 'auto' }} // Keep card dimensions constant
+      animate={{ width: 300, height: 'auto' }} 
       transition={{ duration: 0.5 }}
       sx={{
-        borderRadius: '16px',
+        borderRadius: 2,
         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
         overflow: 'hidden',
-        position: 'relative', // Necessary for absolute positioning
+        position: 'relative',
         backgroundColor: '#f8f9fa',
       }}
     >
@@ -63,26 +63,17 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
       <CardContent>
 
       {/* Product Title */}
-        <Typography textAlign='center'
-          variant="h4"
-          sx={{
-            fontWeight: 600,
-            color: '#2E384D',
-          }}
-        >
-          {name}{' '}
+          <Typography textAlign='center' variant="h4"component="h4"> {name}{' '}
           <Typography
             component="span"
             sx={{
-              fontSize: '1rem',
               verticalAlign: 'super',
               color: '#7D879C',
-              fontWeight: 400,
             }}
           > 
-            Rx
+              Rx
           </Typography>
-        </Typography>
+          </Typography>
         {/* Stock Status */}
         <Box sx={{display:'flex',justifyContent:'center',alignItems:'center' ,gap:1, flexDirection:'column'}}>
         <Chip
@@ -98,44 +89,21 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
           }}
         />
 
-      <Typography variant="h4" component='h4' textAlign='center'> {price} </Typography>
+      <Typography variant="h5" component='h5' textAlign='center'> {price} </Typography>
 
         </Box>
-        
-
-
       </CardContent>
 
       {/* Action Buttons */}
       <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, paddingBottom: '16px' }}>
         <AppButton
           title="start now"
-          sx={{
-            backgroundColor: '#001D4A',
-            color: '#fff',
-            padding: '10px 20px',
-            fontWeight: 600,
-            borderRadius: '8px',
-            '&:hover': {
-              backgroundColor: '#2E384D',
-            },
-          }}
+          color='white'
         />
         <AppButton
           title="Learn More"
           color="secondary"
           href={href}
-          sx={{
-            backgroundColor: '#f8f9fa',
-            color: '#001D4A',
-            padding: '10px 20px',
-            fontWeight: 600,
-            borderRadius: '8px',
-            boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.05)',
-            '&:hover': {
-              backgroundColor: '#e1e2e4',
-            },
-          }}
         />
       </Box>
 

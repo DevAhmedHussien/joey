@@ -54,7 +54,7 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
             {title}
           </Typography>
 
-          <Typography variant="h4" componenet='h4'  className='description' mt={1} mb={1}>
+          <Typography variant="h3" componenet='h3'  className='description' mt={1} mb={1}>
             {description}
 
           </Typography>
@@ -71,10 +71,10 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
 
       <Slide direction="up" in={showContent} mountOnEnter unmountOnExit>
         <Box className='additionalContent'>
-          <Typography variant="h2" component="h2">
+          <Typography variant="h3" component="h3">
             Additional Information
           </Typography>
-          <Typography variant="p" component="p" mt={1}>
+          <Typography variant="h6" component="h6" mt={1}>
             {additionalInformation}
           </Typography>
         </Box>
