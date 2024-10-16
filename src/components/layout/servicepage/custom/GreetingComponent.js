@@ -21,11 +21,11 @@ export default function GreetingComponent({ title, description }) {
       initial="hidden"
       animate="visible"
       variants={cardVariantsSmall}
-      style={{ width: '100%' }}
+      // style={{ width: '100%' }}
     >
       <Box
         sx={{
-          width: '100%',
+          // width: '100%',
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',

@@ -58,7 +58,7 @@ export default function weightLoss() {
         <SectionFeature images={imagesSexualHomePage}/>
 
         <Box >
-          <WeightLossComponent />
+          {/* <WeightLossComponent /> */}
         </Box>
 
         <Box>

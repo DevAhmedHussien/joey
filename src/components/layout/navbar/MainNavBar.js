@@ -48,29 +48,25 @@ function MainNavBar() {
 
     return (
         <>
-         <AppBar position="sticky" sx={{ 
+         <AppBar sx={{ position:'sticky',
             background: mode == 'dark' ? 'linear-gradient(#e48a81, #0f133c)'  : colors.primary[100],
             boxShadow:  mode == 'dark' ? '-1px 0px 15px #cce0e7' : ''
             }}>
             <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        className="responsive-appbar-title"
-                    >
-                        <Image
-                            quality={100}
-                            src={imgLogo}
-                            // width={120}
-                            height={60}
-                            	loading="lazy"
-                            alt="Joeymed logo"
-                            style={{ width: '100%', transform: 'scale(1.1)', transformOrigin: 'center' }}
-                        />
-                    </Typography>
+                <Toolbar disableGutters> 
+                    <Link href='/'>
+                        <Typography className="responsive-appbar-title">
+                            <Image
+                                quality={100}
+                                src={imgLogo}
+                                // width={120}
+                                height={60}
+                                    loading="lazy"
+                                alt="Joeymed logo"
+                                style={{ width: '100%', transform: 'scale(1.3)', transformOrigin: 'center' }}
+                            />
+                        </Typography>
+                    </Link>
                     <Box className="responsive-appbar-nav-icon">
                         <MotionBar/>
                     
@@ -102,16 +98,18 @@ function MainNavBar() {
                                 onMouseEnter={() => handleMouseEnter(page)}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <Button
-                                    className='responsive-appbar-button'
-                                    href={(page == 'about-us' || page == 'contact-us' ||  page == 'blogs')? `/${page}` : null }
-                                    sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 16 }}
-                                >
-                                    {page.replace('-', ' ')}
-                                </Button>
+                               <Link href={page === 'about-us' || page === 'contact-us' || page === 'blogs' ? `/${page}` : ""}>
+                                    <Button
+                                        className="responsive-appbar-button"
+                                        sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 16 }}
+                                    >
+                                        {page.replace('-', ' ')}
+                                    </Button>
+                                </Link>
+                               
                                 {hoveredCategory === page && subCategories && (
                                     <Box
-                                        sx={{ width: '100%', background: colors.primary[100], padding: '20px' ,
+                                        sx={{ background: colors.primary[100], padding: '20px' ,
                                             boxShadow:  mode == 'dark' ? '-1px 0px 15px #cce0e7' : ''
 
                                         }}

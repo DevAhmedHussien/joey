@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
 
@@ -83,10 +83,10 @@ export const themeSettings = (mode) => {
       h1: {
         fontFamily: 'Italiana, serif',
         fontWeight: 500,
-        fontSize: '3rem', // Responsive size for h1
-        lineHeight: 1.1,  // Compact line height
+        fontSize: '3rem', 
+        lineHeight: 1.1,  
         letterSpacing: '0.02em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '2.2rem',
         },
       },
@@ -96,7 +96,7 @@ export const themeSettings = (mode) => {
         fontSize: '2.5rem',
         lineHeight: 1.15,
         letterSpacing: '0.02em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '1.7rem',
         },
       },
@@ -106,7 +106,7 @@ export const themeSettings = (mode) => {
         fontSize: '2rem',
         lineHeight: 1.2,
         letterSpacing: '0.01em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': {
           fontSize: '1.5rem',
         },
       },
@@ -116,7 +116,7 @@ export const themeSettings = (mode) => {
         fontSize: '1.5rem',
         lineHeight: 1.25,
         letterSpacing: '0.01em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '1.3rem',
         },
       },
@@ -126,7 +126,7 @@ export const themeSettings = (mode) => {
         fontSize: '1.25rem',
         lineHeight: 1.3,
         letterSpacing: '0.01em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '1.2rem',
         },
       },
@@ -136,16 +136,16 @@ export const themeSettings = (mode) => {
         fontSize: '1.1rem',
         lineHeight: 1.35,
         letterSpacing: '0.01em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '1rem',
         },
       },
       body1: {
         fontFamily: 'Italiana, serif',
         fontSize: '1rem',
-        lineHeight: 1.5,  // Compact line height for body text
+        lineHeight: 1.5, 
         letterSpacing: '0.02em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '0.9rem',
         },
       },
@@ -154,7 +154,7 @@ export const themeSettings = (mode) => {
         fontSize: '0.875rem',
         lineHeight: 1.45,
         letterSpacing: '0.02em',
-        '@media (max-width:600px)': { // Mobile adjustments
+        '@media (max-width:600px)': { 
           fontSize: '0.8rem',
         },
       },

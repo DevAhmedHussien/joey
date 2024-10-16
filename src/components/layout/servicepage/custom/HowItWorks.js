@@ -4,17 +4,17 @@ import Image from "next/image";
 
 const steps = [
   {
-    imgSrc: "/path/to/image1.jpg", // Replace with actual image paths
+    imgSrc: "/images/men.jpg",
     stepNumber: "01",
     description: "Place under the tongue",
   },
   {
-    imgSrc: "/path/to/image2.jpg",
+    imgSrc: "/images/men.jpg",
     stepNumber: "02",
     description: "Let it dissolve fully",
   },
   {
-    imgSrc: "/path/to/image3.jpg",
+    imgSrc: "/images/men.jpg",
     stepNumber: "03",
     description: "Get hard in 15 minutes on average*",
   },

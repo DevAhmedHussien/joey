@@ -53,6 +53,8 @@ export default function SectionFeature({ images }) {
               />
             ) : (
               <Box 
+                width={400}
+                height={400}
                 sx={{
                   maxWidth:450,
                   transform: 'scale(1.02)',
