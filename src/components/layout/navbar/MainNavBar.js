@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AppBar, Box, Toolbar, Typography, Container, Button } from '@mui/material';
 import Link from 'next/link';
 import './responsiveAppBar.scss'; 
@@ -44,17 +42,15 @@ function MainNavBar() {
                             <Image
                                 quality={100}
                                 src={imgLogo}
-                                // width={120}
                                 height={60}
-                                    loading="lazy"
-                                alt="Joeymed logo"
-                                style={{ width: '100%', transform: 'scale(1.4)', transformOrigin: 'center' }}
+                                loading="lazy"
+                                alt="Joey med - logo"
+                                style={{  transform: 'scale(1.4)'}}
                             />
                         </Typography>
                     </Link>
                     <Box className="responsive-appbar-nav-icon">
                         <MotionBar/>
-                    
                     </Box>
 
                     {/* for big scree */}
@@ -67,10 +63,7 @@ function MainNavBar() {
                                 onMouseLeave={handleMouseLeave}
                             >
                                <Link href={page === 'about-us' || page === 'contact-us' || page === 'blogs' ? `/${page}` : ""}>
-                                    <Button
-                                        className="responsive-appbar-button"
-                                        sx={{ textTransform: 'capitalize', fontWeight: 500, fontSize: 16 }}
-                                    >
+                                    <Button className="responsive-appbar-button">
                                         {page.replace('-', ' ')}
                                     </Button>
                                 </Link>
@@ -81,9 +74,7 @@ function MainNavBar() {
                                         onMouseEnter={() => setHoveredCategory(page)}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <Button className="responsive-appbar-button" component={Link} href={`/${page}`}
-                                          sx={{ textTransform: 'capitalize', fontWeight: 500, fontSize: 16}}
->
+                                        <Button className="responsive-appbar-button" component={Link} href={`/${page}`}>
                                             See all {page.replace('-', ' ')}
                                         </Button>
                                         {Object.keys(subCategories).map((subCategoryKey) => (
@@ -91,23 +82,21 @@ function MainNavBar() {
                                                 <Typography variant="h5" component="h5" sx={{ textTransform: 'capitalize', padding: '10px 5px' }}>
                                                     {subCategoryKey.replace('-', ' ')}
                                                 </Typography>
-                                                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start' }}>
+                                                <Box className='handling-products'>
                                                     {subCategories[subCategoryKey].map((product) => (
                                                         <Button
                                                             key={product.SKU}
                                                             className="responsive-appbar-button"
                                                             component={Link}
                                                             href={`/${page}/${product.referenceHandle}`}
-                                                            sx={{ textTransform: 'capitalize', fontWeight: 400, fontSize: 15}}
                                                         >
                                                             {product.itemName}
                                                         </Button>
                                                     ))}
                                                 </Box>
-                                                <span className="heartbeat-line"></span>
                                             </Box>
                                         ))}
-                                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
+                                        <Box  className='handling-Images'>
                                             {page == 'sexual-health'
                                                 ? <Image
                                                 quality={100}
@@ -115,30 +104,27 @@ function MainNavBar() {
                                                     alt="Fertility"
                                                     width={100}
                                                     height={130}
-                                                    style={{ borderRadius: 8 }}
-                                                    	loading="lazy"
+                                                    loading="lazy"
                                                 />
                                                 : page == 'weight-loss'
                                                     ? <Image
                                                     quality={100}
-                                                        src={weighImg}
-                                                        alt="Fertility"
-                                                        width={100}
-                                                        height={130}
-                                                        style={{ borderRadius: 8 }}
-                                                        	loading="lazy"
+                                                    src={weighImg}
+                                                    alt="Fertility"
+                                                    width={100}
+                                                    height={130}
+                                                    loading="lazy"
                                                     />
-                                                    : page == 'hair-growth'
-                                                        ? <Image
-                                                        quality={100}
-                                                            src={hairImg}
-                                                            alt="Fertility"
-                                                            width={100}
-                                                            height={130}
-                                                            style={{ borderRadius: 8 }}
-                                                            	loading="lazy"
-                                                        />
-                                                        : null
+                                                : page == 'hair-growth'
+                                                    ? <Image
+                                                    quality={100}
+                                                    src={hairImg}
+                                                    alt="Fertility"
+                                                    width={100}
+                                                    height={130}
+                                                    loading="lazy"
+                                                    />
+                                                    : null
                                             }
 
                                             <AppButton title='start now' color='black'  href={`/form/${page}`} />
@@ -155,26 +141,12 @@ function MainNavBar() {
                                 <SearchIconSVG width={30} height={30}  />
                             </Box>
                         </Link>
-                        <Link 
-                        // href={'/sign-in'}
-                            href={'https://joeymed.intakeq.com/portal'}
-                        >
+                        <Link  href={'https://joeymed.intakeq.com/portal'}>
                             <Box>
                                 <CustomPersonIconSVG width={35} height={35}  />
                             </Box>
                         </Link>
                     </Box>
-
-                    {/* once admin log in 
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <IconButton sx={{ ml: 3 }}>
-                        <PersonPinCircleOutlined/>
-                        </IconButton>
-                        <Box sx={{ ml: 1 }}>
-                        <Typography variant="body2">Harendra Kumar</Typography>
-                        <Typography variant="caption">superadmin</Typography>
-                        </Box>
-                     </Box> */}
                 </Toolbar>
             </Container>
          </AppBar>

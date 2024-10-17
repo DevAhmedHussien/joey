@@ -4,12 +4,12 @@
     text-align: center;
   
     .section-title {
-      color: #001D4A;
+      color:var(--primary-color);
       margin-bottom: 40px;
     }
   
     .reason-card {
-      background-color: #f5f5f5;
+      background-color:var(--primary-background2);
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -21,18 +21,18 @@
       }
   
       .icon {
-        font-size: 48px;
-        color: #e48a81;
+        font-size: 40px;
+        color: var(--primary-icon);
         margin-bottom: 20px;
       }
   
       .reason-title {
-        color: #001D4A;
+        color:var(--primary-color);
         margin-bottom: 10px;
       }
   
       .reason-description {
-        color: #001D4A;
+        color:var(--primary-color);
       }
     }
   }

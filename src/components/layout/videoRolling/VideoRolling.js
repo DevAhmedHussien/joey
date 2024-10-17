@@ -50,7 +50,7 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
 
         {/* Content Overlay */}
         <Box className='overlayContent'>
-          <Typography variant="h1" componenet='h1' className='title'>
+          <Typography variant="h2" componenet='h2' className='title'>
             {title}
           </Typography>
 
@@ -74,7 +74,7 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
           <Typography variant="h3" component="h3">
             Additional Information
           </Typography>
-          <Typography variant="h6" component="h6" mt={1}>
+          <Typography variant="p" component="p" mt={1}>
             {additionalInformation}
           </Typography>
         </Box>

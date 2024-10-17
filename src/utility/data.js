@@ -64,7 +64,7 @@ export const productCategories = {
                       answer: 'Consult your doctor before combining it with other weight loss medications.'
                     }
                   ],
-                href:'weight-loss/semaglutide-pills',
+                href:'/weight-loss/semaglutide-pills',
                 safety:'Use under medical supervision, especially if you have underlying health conditions.'
             },
             {
@@ -126,7 +126,7 @@ export const productCategories = {
                       answer: 'Weight regain is possible without maintaining lifestyle changes like a healthy diet and exercise.'
                     }
                 ],
-                href:'weight-loss/tirzepatide-pills',
+                href:'/weight-loss/tirzepatide-pills',
                 safety:' Always consult a healthcare provider before use, especially if you have a history of thyroid cancer or other medical conditions.'
 
             },
@@ -193,7 +193,7 @@ export const productCategories = {
                     "/images/homePage/weight.png",
                     "/images/homePage/man.png",
                   ],
-                href:'weight-loss/semaglutide-injection',
+                href:'/weight-loss/semaglutide-injection',
                 safety:'Consult a healthcare provider before using Semaglutide. Common side effects include nausea, vomiting, and dizziness.'
 
             },
@@ -260,7 +260,7 @@ export const productCategories = {
                       answer: 'Lifestyle changes are important to maintain weight loss after stopping Tirzepatide.'
                     }
                   ],
-                href:'weight-loss/tirzepatide-injection',
+                href:'/weight-loss/tirzepatide-injection',
                 safety:"Tirzepatide may cause nausea and vomiting. Seek medical advice if side effects persist."
             },
         ],
@@ -314,7 +314,7 @@ export const productCategories = {
               },
             ],
             safety:'Not suitable for individuals with heart conditions or those taking nitrates',
-            href:'sexual-health/Sildenafil-Pill'
+            href:'/sexual-health/Sildenafil-Pill'
           },
           {
             referenceHandle: "Tadalafil-Pill",
@@ -362,7 +362,7 @@ export const productCategories = {
               },
             ],
             safety:'Not suitable for individuals taking nitrates or with severe heart conditions.',
-            href:'sexual-health/Tadalafil-Pill'
+            href:'/sexual-health/Tadalafil-Pill'
           },
           {
             referenceHandle: "Vitality-Max",
@@ -417,7 +417,7 @@ export const productCategories = {
                 answer: ' Effects can last up to 36 hours, depending on the dosage.'
               }],
             safety:'Avoid use with nitrates or heart condition treatments.',
-            href:'sexual-health/Vitality-Max'
+            href:'/sexual-health/Vitality-Max'
           }],
           Capsules :
           [{
@@ -477,7 +477,7 @@ export const productCategories = {
                 }
               ],
               safety:'Not suitable for individuals with heart conditions or those taking nitrates',
-              href:'sexual-health/Sildenafil-Pill'
+              href:'/sexual-health/Sildenafil-Pill'
           }],
           Creams :[{
               referenceHandle: "Estro-Balance",
@@ -523,7 +523,7 @@ export const productCategories = {
                   question:'Are there side effects?',
                   answer:'Side effects may include mild skin irritation or hormonal imbalances if overused.'
                 }],
-              href:'sexual-health/Estro-Balance',
+              href:'/sexual-health/Estro-Balance',
               safety:' Not suitable for individuals taking nitrates or with severe heart conditions.'
           }]
     },
@@ -587,7 +587,7 @@ export const productCategories = {
                       answer: 'Yes, hair loss may resume after stopping the medication.'
                     }
                 ],
-                href:'hair-growth/maxhair-men',
+                href:'/hair-growth/maxhair-men',
                 safety:' Avoid use if allergic to Dutasteride. Consult a healthcare provider before '
             },
             {
@@ -652,7 +652,7 @@ export const productCategories = {
                   answer: 'Consult a healthcare provider before combining treatments.'
                 }
               ],
-              href:'hair-growth/maxhair-foam',
+              href:'/hair-growth/maxhair-foam',
               safety:'  Avoid use if allergic to Minoxidil or Dutasteride. Side effects may include scalp irritation.'
             },
             {
@@ -713,7 +713,7 @@ export const productCategories = {
                       answer: 'No, it is designed to treat scalp conditions, not promote hair growth.'
                     }
                 ],
-                href:'hair-growth/scalpsoothe-package',
+                href:'/hair-growth/scalpsoothe-package',
                 safety:' Avoid prolonged use. If symptoms persist, discontinue use and consult a doctor.'
             },
         ],
@@ -779,7 +779,7 @@ export const productCategories = {
                     answer: 'Yes, stopping the treatment may cause hair loss to resume.'
                   }
                 ],
-                href:'hair-growth/YouthLocks-women',
+                href:'/hair-growth/YouthLocks-women',
                 safety:'Consult your healthcare provider before use, especially if taking other medications.'
 
             },
@@ -844,7 +844,7 @@ export const productCategories = {
                     answer:'Yes, but wait at least 24 hours after applying the foam.'
                   },
                 ],
-                href:'hair-growth/hairrenew-women-1mg',
+                href:'/hair-growth/hairrenew-women-1mg',
                 safety:'Avoid contact with eyes. Consult a healthcare professional if irritation persists.'
             },
            

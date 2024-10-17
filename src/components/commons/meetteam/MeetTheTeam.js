@@ -31,7 +31,7 @@ const teamMembers = [
     title: 'Head of Patient Services',
     image: '/images/amer.png',
     description: 'Karim ensures that our patients receive the highest level of care, guiding them through every step of their telehealth journey.',
-    university:"Yale Medical Group's Board of Directors",
+    university:"University of Pennsylvania",
     src:'/images/american-board.png',
     alt:'Yale M'
     

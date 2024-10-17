@@ -1,45 +1,46 @@
-/* Import fonts from Google Fonts or other sources */
-/* @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap'); */
-
-/* Apply global styles */
- /* body {
-  font-family: 'Myriad Pro', 'Roboto', 'sans-serif';
-
-} */
+// @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@100;200;300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@100;200;300;400;500;600;700&display=swap');
 
 
-
-// Inside globals.scss
-// @import 'variables';
-// @import 'mixins';
-// @import 'base';
-
-:root {
-  --primary-background: #ffffff;      /* Background */
-  --primary-color: #001d4a;      /* Text for greeting */
-  --primary-icon: #e48a81;     /* Accent color */
-  --primary-icon2: #3399ff;      /* One blue word */
-  --primary-background2: #eee;         /* General light background */
-  --primary-color2: #1F2A40;      /* Dark color */
-  --primary-background3: #727681;      /* Muted gray */
-  --primary-linear: linear-gradient(silver, white); /* Gradient background */
-}
-
-body {
-  background-color: var(--primary-background); 
-  color: var(--primary-color); 
+* {
+  // font-family: 'Barlow', sans-serif; /* Apply Barlow font site-wide */
+  font-family: 'PT Serif', serif !important;
+  // font-family: 'Crimson Text', serif !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Define color variables */
+:root {
+  --primary-background: #ffffff;      /* Background */
+  --primary-color: #001d4a;           /* Text for greeting */
+  --primary-icon: #e48a81;            /* Accent color */
+  --primary-icon2: #3399ff;           /* One blue word */
+  --primary-background2: #eee;        /* General light background */
+  --primary-color2: #1F2A40;          /* Dark color */
+  --primary-background3: #727681;     /* Muted gray */
+  --primary-linear: linear-gradient(silver, white); /* Gradient background */
+}
+
+body {
+  // font-family: 'Barlow', sans-serif ;
+  font-family: 'PT Serif', serif;
+  // font-family: 'Crimson Text', serif !important;
+  background-color: var(--primary-background); 
+  color: var(--primary-color); 
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Barlow', sans-serif ;
+  // font-family: 'PT Serif', serif ;
+  // font-family: 'Crimson Text', serif !important;
   color: var(--primary-color);
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 500 !important;;
   font-size: 3rem !important; /* Responsive size for h1 */
   line-height: 1.1!important; /* Compact line height */
   letter-spacing: 0.02em!important;
@@ -50,10 +51,10 @@ h1 {
 }
 
 h2 {
-  font-weight: 400!important;
-  font-size: 2.5rem!important;
-  line-height: 1.15!important;
-  letter-spacing: 0.02em!important;
+  font-weight: 400 !important;
+  font-size: 2.5rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0.02em !important;
   
   @media (max-width: 600px) {
     font-size: 1.7rem!important;
@@ -64,7 +65,7 @@ h3 {
   font-weight: 300 !important;
   font-size: 2rem!important;
   line-height: 1.2!important;
-  letter-spacing: 0.02em!important;
+  letter-spacing: 0.015em!important;
 
   @media (max-width: 600px) {
     font-size: 1.5rem!important;
@@ -91,8 +92,12 @@ h6 {
   line-height: 1.35 !important;
   letter-spacing: 0.01em !important;
 }
-
-
+p {
+  font-weight: 100 !important;
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.02em !important;
+}
 
 
   button,

@@ -26,7 +26,6 @@
     }
   
     .subHeading {
-      font-size: 1.5rem;
       color: #e48a81; // Coral color for subheadings
       margin-bottom: 1rem;
       display: flex;
@@ -56,14 +55,5 @@
       }
     }
   
-    @media (max-width: 768px) {
-      .subHeading {
-        font-size: 1.3rem;
-      }
-  
-      .section {
-        margin-bottom: 1.5rem;
-      }
-    }
   }
   

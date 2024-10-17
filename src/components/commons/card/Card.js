@@ -17,10 +17,9 @@ const Card = ({ title, size, src, alt, href, video = false }) => {
   return (
     <Box className='card'>
       <Typography
-        variant="h3"
-        component="h3"
+        variant="h4"
+        component="h4"
         className='card-title'
-        color={colors.primary[200]} 
       >
         {title}
       </Typography>
@@ -47,7 +46,7 @@ const Card = ({ title, size, src, alt, href, video = false }) => {
 
       <Box className='card-button'>
         {size ? (
-          <AppButton title="start now" color="black" href={href} />
+          <AppButton title="start now"  href={href} />
         ) : (
           <NavigationButton href={href} />
         )}

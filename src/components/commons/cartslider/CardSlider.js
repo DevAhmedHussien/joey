@@ -10,13 +10,12 @@ export default function CardSlider({cards = [], type}) {
 return (
     <Box className="slider-container">
         <Box className="slider-track">
-          <div>
             <ul className = 'scrollList'>
             {cards.map((card, index) => (
-              <div key={index} sx={{marginLeft:4}}>
+              <div key={index} >
                   {type == 'product' 
                   ? <ProductCard name={card.itemName} description={card.description} safety={card.safety}
-                  image={card.images[0]} href={card.href} price={card.price}/>  
+                  image={card.images[0]} href={card.href} price={card.price} />  
                   : type == 'blog'  
                   ? <CardBlog   imageSrc={card.image} imageAlt={card.title} title={card.title} readTime={'Read 5 min ago'} />
                   : type == 'appear' 
@@ -26,7 +25,6 @@ return (
               </div>
           ))}
             </ul>
-        </div>
       </Box>
     </Box>
 );

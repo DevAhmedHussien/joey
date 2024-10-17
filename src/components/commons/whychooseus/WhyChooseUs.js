@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: <LocalPharmacyOutlinedIcon className="icon" />,
     title: 'Online Pharmacy',
-    description: 'A user-friendly online pharmacy with fast, discreet shipping to your doorstep.',
+    description: 'A user-friendly online pharmacy with fast discreet shipping',
   },
   {
     icon: <SupportAgentOutlinedIcon className="icon" />,
@@ -37,8 +37,8 @@ const WhyChooseUs = () => {
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Box className="reason-card">
               {reason.icon}
-              <Typography variant="h4" className="reason-title">{reason.title}</Typography>
-              <Typography variant="body1" className="reason-description">{reason.description}</Typography>
+              <Typography variant="h5" component='h5' className="reason-title">{reason.title}</Typography>
+              <Typography variant="p" component='p' className="reason-description">{reason.description}</Typography>
             </Box>
           </Grid>
         ))}

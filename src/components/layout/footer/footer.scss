@@ -10,21 +10,4 @@
   }
 }
 
-.footer-heading {
-  @media (max-width: 690px) {
-    font-size: 1.2rem;
-  }
-}
 
-.footer-bottom {
-  @media (max-width: 690px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    h1 {
-      font-size: 2rem; /* Adjust as needed */
-      margin-bottom: 10px;
-    }
-  }
-}

@@ -3,7 +3,6 @@
 .responsive-appbar-icon-large {
   display: none;
 
-
   @media (min-width: 960px) {
     display: flex;
     margin-right: 1rem;
@@ -78,6 +77,9 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  text-transform: capitalize; 
+  font-weight: 400; 
+  font-size: 15px;
   
   &::after {
     content: "";
@@ -106,7 +108,7 @@
   position: fixed;
   top: 52px; 
   left: 0;
-  width: 90%;
+  width: 100%;
   max-height: 0;
   padding: 0 1rem; 
   overflow: hidden; 
@@ -163,7 +165,23 @@
   align-items: center;
   gap: 5px;
 }
-
+.handling-products{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: start;
+}
+.handling-Images{
+  img{
+    border-radius:10px;
+  }
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; 
+  gap: 10px;
+}
 .container{
 	margin: 0 auto;
 	text-align: center;
@@ -244,8 +262,6 @@ background: white; // rgba(0, 0, 0, 1);
 }
 
 .buttonIcon {
-  // outline: none;
-  // border: none;
   cursor: pointer;
   background: none;
     border: none;
@@ -256,9 +272,6 @@ background: white; // rgba(0, 0, 0, 1);
   left: 0;
   width: 40px;
   height: 40px;
-  // border-radius: 50%;
-  // background: transparent;
- 
 }
 
 .motionUl {
@@ -285,12 +298,8 @@ background: white; // rgba(0, 0, 0, 1);
   align-items: center;
   cursor: pointer;
 }
-  .css-15s59wr {
-    // background: transparent !important; 
-  }
-    
   li::marker{
-    color: rgb(236 180 173) !important;
+    // color: rgb(236 180 173) !important;
   }
 
 

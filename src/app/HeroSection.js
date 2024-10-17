@@ -1,7 +1,5 @@
 'use client';
-
 import { Box, Grid, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import InfoList from '@/components/layout/infolist/InfoList';
 import { tokens } from '@/theme/theme';
@@ -27,36 +25,26 @@ export default function HeroSection() {
           return texts[nextIndex];
         });
         setFadeOut(false);
-      }, 500); // Delay between fading out and fading in
-    }, 2000); // Change text every 2 seconds
+      }, 500); 
+    }, 2000); 
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
     <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
       <Grid item xs={12} md={6}>
-        {/* <motion.article
-          initial="hidden"
-          animate="visible"
-          exit={{ opacity: 0, transition: { duration: 1 } }}
-          variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        > */}
-          {/* <motion.div> */}
             <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]}>
               Welcome to <span style={{ color: colors.primary[200], fontWeight: 500 }}>joey med</span>
             </Typography>
-          {/* </motion.div> */}
-          {/* <motion.div> */}
+          
             <Typography variant="h2" component="h2" gutterBottom color={colors.primary[200]}>
               We got you
             </Typography>
-          {/* </motion.div> */}
-        {/* </motion.article> */}
         <Box sx={{ position: 'relative', overflow: 'hidden', height: '60px' }}>
           <Typography
-            variant="h1"
-            component="h1"
+            variant="h2"
+            component="h2"
             sx={{
               mt: '10px',
               position: 'absolute',
@@ -65,7 +53,6 @@ export default function HeroSection() {
               opacity: fadeOut ? 0 : 1,
               top: 0,
               color: colors.primary[1600],
-              fontWeight: 300,
             }}
           >
             {currentText}

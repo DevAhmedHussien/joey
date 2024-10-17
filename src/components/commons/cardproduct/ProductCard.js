@@ -6,7 +6,7 @@ import AppButton from '../appbutton/AppButton';
 import ImageWithSpinner from '../image/ImageWithSpinner';
 import InfoIcon from '@mui/icons-material/Info'; 
 
-const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effective weight loss solution.", safety, href }) => {
+const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effective weight loss solution.", safety, href ='/' }) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -15,24 +15,24 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
 
   return (
     <Card
-      component={motion.div}
-      animate={{ width: 300, height: 'auto' }} 
-      transition={{ duration: 0.5 }}
+      // component={motion.div}
+      // animate={{ width: 300, height: 'auto' }} 
+      // transition={{ duration: 0.5 }}
       sx={{
         borderRadius: 2,
         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
         overflow: 'hidden',
         position: 'relative',
-        backgroundColor: '#f8f9fa',
+        backgroundColor: 'var(--primary-background)',
       }}
     >
       <CardMedia>
         <Box
-          component={motion.div}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
+          // component={motion.div}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // whileHover={{ scale: 1.05 }}
+          // transition={{ duration: 0.4 }}
           sx={{ height: 200, position: 'relative' }}
         >
           <ImageWithSpinner
@@ -44,18 +44,16 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
           <IconButton
             onClick={toggleExpand}
             sx={{
+              cursorL:'pointer',
               position: 'absolute',
-              top: 8,
+              top: 3,
               right: 8,
-              color: '#fff',
-              // zIndex: 10, // Ensure it stays above the expanding section
-              backgroundColor: '#001D4A',
               '&:hover': {
                 backgroundColor: '#003366',
               },
             }}
           >
-            <InfoIcon />
+            <InfoIcon sx={{color:'var(--primary-background3)'}} />
           </IconButton>
         </Box>
       </CardMedia>
@@ -63,7 +61,7 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
       <CardContent>
 
       {/* Product Title */}
-          <Typography textAlign='center' variant="h4"component="h4"> {name}{' '}
+          <Typography textAlign='center' variant="h5"component="h5"> {name}{' '}
           <Typography
             component="span"
             sx={{
@@ -89,7 +87,7 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
           }}
         />
 
-      <Typography variant="h5" component='h5' textAlign='center'> {price} </Typography>
+      <Typography variant="h6" component='h6' textAlign='center'> {price} </Typography>
 
         </Box>
       </CardContent>
@@ -120,21 +118,19 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
           right: 0, 
           backgroundColor: '#f1f1f1', 
           borderRadius: '16px', 
-          zIndex: 5, // Ensure it's below the icon
-          // pointerEvents: expanded ? 'auto' : 'auto', // Allow interaction only when expanded
+          zIndex: 5, 
         }}
       >
         <Box
         sx={{
           padding: '16px',
-          color: '#555',
           height: '100%',
         }}
       >
-            <Typography variant="h5" component='h5' textAlign='center'> Description: </Typography>
-            <Typography variant="h6" component='h6'textAlign='center'> {description}</Typography>
-            <Typography variant="h5" component='h5'textAlign='center'  mt={2}>Safety Information: </Typography>
-            <Typography variant="h6" component='h6' textAlign='center'> {safety } </Typography>
+            <Typography variant="h6" component='h6' textAlign='center'> Description: </Typography>
+            <Typography variant="p" component="p" textAlign='center'> {description}</Typography>
+            <Typography variant="h6" component="h6" textAlign='center'  mt={2}>Safety Information: </Typography>
+            <Typography variant="p" component="p" textAlign='center'> {safety } </Typography>
       </Box>
 
       </motion.div>

@@ -31,21 +31,13 @@
     margin-top: 10px;
   }
   
-  .medwork-step-label {
-    // font-size: 23px;
-  }
-  
   .medwork-step-content {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     justify-content: space-around;
     align-items: center;
-    // background: linear-gradient(
-    //   to top right,
-    //   rgba(235, 245, 255, 0.3) 40%,
-    //   rgba(243, 246, 249, 0.2) 100%
-    // );
+  
     transition: 170ms;
     border: 1px solid #e5eaf299;
     // border-radius: 20px;

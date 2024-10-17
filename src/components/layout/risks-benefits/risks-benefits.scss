@@ -26,7 +26,6 @@
     }
   
     .subHeading {
-      font-size: 1.5rem;
       color: #e48a81; 
       display: flex;
       align-items: center;
@@ -55,14 +54,6 @@
       }
     }
   
-    @media (max-width: 768px) {
-      .subHeading {
-        font-size: 1.3rem;
-      }
-  
-      .section {
-        margin-bottom: 1.5rem;
-      }
-    }
+
   }
   
