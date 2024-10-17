@@ -1,9 +1,11 @@
 import TermsAndConditions from '@/components/layout/tems-condition/TermsAndConditions';
+import { Description } from '@mui/icons-material';
 import { Box } from '@mui/material';
 import Head from 'next/head';
 
 export const metadata = {
   title: "Terms & Conditions",
+  description:"Review the terms and conditions for using joey med, a telehealth service providing weight loss, sexual health, and hair growth treatments."
 };
 
 const Terms = () => {

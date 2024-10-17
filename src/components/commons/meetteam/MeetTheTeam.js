@@ -90,8 +90,6 @@ const MeetTheTeam = () => {
                       />
                       <Typography variant="body2" component="body2" >{member.university}</Typography>
                     </Box>
-                   
-
                   </Box>
                 </Grid>
               ))}

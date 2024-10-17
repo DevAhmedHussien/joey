@@ -27,14 +27,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </Head> */}
-      <body>
-      
+      <body className={inter.className}>
           <ResponsiveAppBar/>
-            <main className={inter.className} > 
+            <main> 
              {children}
             </main>
             <Footer/>
-         
       </body>
     </html>
   );

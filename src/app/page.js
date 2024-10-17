@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 
 //** Third part Mui */
@@ -15,8 +14,7 @@ import ServicesSection from './ServicesSection';
 // ** data 
 import { stepsHomePage, productCategories,questions, homeCards, blogCards } from '@/utility/data';
 
-
-// ** animation
+// ** Resuble component
 import HeroSection from './HeroSection';
 import MeetTheTeam from '@/components/commons/meetteam/MeetTheTeam';
 import WhyChooseUs from '@/components/commons/whychooseus/WhyChooseUs';
@@ -60,7 +58,7 @@ export default function Home() {
       </Head>
       <div maxWidth="lg"  >
         <HeroSection/>
-       
+        
        {/* Services Section */}
         <ServicesSection  homeCards={homeCards}/>
 

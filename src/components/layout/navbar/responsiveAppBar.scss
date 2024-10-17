@@ -15,9 +15,6 @@
 
   @media (min-width: 960px) {
     display: flex;
-    font-weight: 700;
-    color: inherit;
-    text-decoration: none;
   }
 }
 
@@ -32,10 +29,6 @@
 
 .responsive-appbar-menu {
   display: block;
-
-  @media (min-width: 960px) {
-    // display: none;
-  }
 }
 
 .responsive-appbar-icon-small {
@@ -85,9 +78,6 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
-  // padding-bottom: 5px;
-
-
   
   &::after {
     content: "";
@@ -116,7 +106,7 @@
   position: fixed;
   top: 52px; 
   left: 0;
-  width:90%;
+  width: 90%;
   max-height: 0;
   padding: 0 1rem; 
   overflow: hidden; 

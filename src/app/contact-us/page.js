@@ -63,7 +63,7 @@ const ContactUs = () => {
             left: 0,
             width: '100%',
             height: '100%',
-            background: `linear-gradient(120deg, ${colors.primary[100]} 50%, transparent 50%)`,
+            background: `linear-gradient(120deg, #ffffff 50%, transparent 50%)`,
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
             zIndex: -1,
           }}

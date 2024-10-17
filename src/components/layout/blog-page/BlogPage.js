@@ -1,7 +1,4 @@
-import React from 'react';
 import { Box, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import { motion } from 'framer-motion';
 import Questions from '@/components/layout/frequentlyquestions/Questions';
 import { titleAnimation, cardVariantsSmall } from '@/utility/animationSyles';
 import ImageWithSpinner from '@/components/commons/image/ImageWithSpinner';
@@ -68,7 +65,7 @@ const blogPosts = [
 ];
 
 const BlogPage = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <>
@@ -85,12 +82,12 @@ const BlogPage = () => {
 
       {/* Video Section */}
       <Box className="video-section">
-        <motion.div initial="hidden" animate="visible" variants={titleAnimation}>
+        {/* <motion.div initial="hidden" animate="visible" variants={titleAnimation}> */}
           <Typography variant="h2" component="h2" className="title" gutterBottom>
             Learn More About Telehealth
           </Typography>
-        </motion.div>
-        <motion.div initial="hidden" animate="visible" variants={cardVariantsSmall}>
+        {/* </motion.div> */}
+        {/* <motion.div initial="hidden" animate="visible" variants={cardVariantsSmall}> */}
           <Box className="video-container">
             <iframe
               width="100%"
@@ -102,7 +99,7 @@ const BlogPage = () => {
               allowFullScreen
             ></iframe>
           </Box>
-        </motion.div>
+        {/* </motion.div> */}
       </Box>
 
       {/* Frequently Asked Questions */}

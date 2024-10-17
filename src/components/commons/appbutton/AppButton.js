@@ -5,9 +5,6 @@ import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import { motion } from 'framer-motion'; // Importing motion from framer-motion
 import './appButton.scss'; // Custom styles here
 import Link from 'next/link';
-//** Theme part */
-import { tokens } from '../../../theme/theme';
-import { useTheme } from '@mui/material';
 
 // Define motion variants for the button
 const buttonVariants = {
@@ -17,8 +14,6 @@ const buttonVariants = {
 };
 
 const AppButton = ({ title, color = 'white', href = '' }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   return (
     <motion.div
@@ -45,28 +40,27 @@ const AppButton = ({ title, color = 'white', href = '' }) => {
             justifyContent: 'center',
             borderRadius: '20px',
             padding: '10px 20px',
-            color: colors.primary[200],
-            backgroundColor: colors.primary[1500],
+            backgroundColor: 'var(--primary-background) !important',
             boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
             transition:' all 1s ease-out',
             '&:hover': {
-              backgroundColor: colors.primary[200],
+              color:'white !important',
+              backgroundColor: 'var(--primary-color) !important',
               boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.2)',
-              color: colors.primary[100]
             },
             '&:hover .main': {
               transform: 'scale(1.6)',
               paddingLeft:'5px',
               // color:'#ecb4ad',
-              color: colors.primary[100],
+              color: 'var(--primary-background) !important',
               opacity:1,
             },
           }}
         >
-          <Typography variant="p" sx={{ fontWeight: 'bold', marginRight: '8px', textTransform: 'capitalize', whiteSpace: 'nowrap' }}>
+          <Typography variant="p" sx={{ fontWeight: 400, marginRight: '8px', textTransform: 'capitalize', whiteSpace: 'nowrap' }}>
             {title}
           </Typography>
-          {(title === 'start now') && <EastOutlinedIcon className= "main" sx={{fontSize:20 ,  color: colors.primary[200],transition:' all 1s ease-out'}}/>}
+          {(title === 'start now') && <EastOutlinedIcon className= "main" sx={{fontSize:20 ,transition:' all 1s ease-out'}}/>}
         </Button>
       </motion.div>
     {/* </Link> */}

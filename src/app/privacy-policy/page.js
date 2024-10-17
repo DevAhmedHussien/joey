@@ -4,10 +4,10 @@ import Head from 'next/head';
 
 export const metadata = {
   title: "Privacy & Policy",
+  description:"Learn how joey med collects, uses, and protects your personal and health information through our HIPAA-compliant telehealth platform."
 };
 
 const Privacy = () => {
-
 
   return (
     <>

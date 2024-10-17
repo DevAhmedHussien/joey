@@ -1,11 +1,11 @@
 // pages/blog.js
-'use client'
-import React from 'react';
 import Head from 'next/head';
-
-// ** Animation styles
 import BlogPage from '@/components/layout/blog-page/BlogPage';
 
+export const metadata = {
+  title: "Blog joey med ",
+  description:"Read the latest blog posts from Joey Med. Explore topics on telehealth services, online pharmacy tips, healthcare advice, and how to get quality healthcare without insurance."
+};
 
 
 const Blog = () => {

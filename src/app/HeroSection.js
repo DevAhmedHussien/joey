@@ -34,25 +34,25 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <Grid container mt={3} spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
+    <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
       <Grid item xs={12} md={6}>
-        <motion.article
+        {/* <motion.article
           initial="hidden"
           animate="visible"
           exit={{ opacity: 0, transition: { duration: 1 } }}
           variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        >
-          <motion.div>
+        > */}
+          {/* <motion.div> */}
             <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]}>
               Welcome to <span style={{ color: colors.primary[200], fontWeight: 500 }}>joey med</span>
             </Typography>
-          </motion.div>
-          <motion.div>
+          {/* </motion.div> */}
+          {/* <motion.div> */}
             <Typography variant="h2" component="h2" gutterBottom color={colors.primary[200]}>
               We got you
             </Typography>
-          </motion.div>
-        </motion.article>
+          {/* </motion.div> */}
+        {/* </motion.article> */}
         <Box sx={{ position: 'relative', overflow: 'hidden', height: '60px' }}>
           <Typography
             variant="h1"

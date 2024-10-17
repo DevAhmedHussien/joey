@@ -36,11 +36,8 @@ function MainNavBar() {
 
     return (
         <>
-         <AppBar sx={{
-                position:'-webkit-sticky',
-                backgroundColor:'#ffffff'
-            }}>
-            <Container maxWidth="xl">
+         <AppBar position='sticky' sx={{ backgroundColor: '#ffffff' }}>
+            <Container maxWidth="xl" >
                 <Toolbar disableGutters> 
                     <Link href='/'>
                         <Typography className="responsive-appbar-title">
@@ -80,20 +77,18 @@ function MainNavBar() {
                                
                                 {hoveredCategory === page && subCategories && (
                                     <Box
-                                        // sx={{ background: colors.primary[100], padding: '20px' ,
-                                        //     boxShadow:  mode == 'dark' ? '-1px 0px 15px #cce0e7' : ''
-                                        // }}
                                         className={`responsive-appbar-product-box ${hoveredCategory === page ? 'open' : 'close'}`}
                                         onMouseEnter={() => setHoveredCategory(page)}
                                         onMouseLeave={handleMouseLeave}
                                     >
                                         <Button className="responsive-appbar-button" component={Link} href={`/${page}`}
-                                            sx={{ textTransform: 'capitalize'}} >
+                                          sx={{ textTransform: 'capitalize', fontWeight: 500, fontSize: 16}}
+>
                                             See all {page.replace('-', ' ')}
                                         </Button>
                                         {Object.keys(subCategories).map((subCategoryKey) => (
                                             <Box key={subCategoryKey} className='type-of-products'>
-                                                <Typography variant="h5" component="h5"  sx={{  textTransform: 'capitalize', padding: '10px 5px' }}>
+                                                <Typography variant="h5" component="h5" sx={{ textTransform: 'capitalize', padding: '10px 5px' }}>
                                                     {subCategoryKey.replace('-', ' ')}
                                                 </Typography>
                                                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start' }}>

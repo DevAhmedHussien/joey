@@ -4,11 +4,10 @@ import RisksBenefits from '@/components/layout/risks-benefits/RisksBenefits';
 
 export const metadata = {
     title: "Risks & Benefits ",
+    description:"Review the risks and benefits of using joey med's treatments, including important information about medication storage, usage, and potential side effects."
   };
   
 const Risk = () => {
-
-  
   
   return (
     <>

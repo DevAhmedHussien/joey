@@ -13,8 +13,7 @@ import { cardVariantsSmall } from '@/utility/animationSyles';
 import ImageWithSpinner from '@/components/commons/image/ImageWithSpinner';
 
 export default function GreetingComponent({ title, description }) {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+
 
   return (
     <motion.div 
@@ -34,10 +33,10 @@ export default function GreetingComponent({ title, description }) {
         }}
       >
         <Box>
-          <Typography variant="h2" component="h2" color={colors.primary[200]} >
+          <Typography variant="h2" component="h2"  >
             {title}
           </Typography>
-          <Typography variant="h5" component="h5" color={colors.primary[200]}  mt={2} >
+          <Typography variant="h5" component="h5"   mt={2} >
             {description}
           </Typography>
         </Box>

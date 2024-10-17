@@ -1,13 +1,9 @@
-'use client'
+'use client';
 import React, { useEffect, useState } from 'react';
 import { Box, Grid, Typography, Drawer } from '@mui/material';
 import './testimonials.scss';
 import { PlayButtonIcon } from '@/components/commons/icons/Icons';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-
-//** Theme part */
-import { tokens } from '../../../theme/theme';
-import { useTheme } from '@mui/material';
 import Video from '@/components/commons/video/Video';
 
 const TestimonialsSection = () => {
@@ -15,29 +11,27 @@ const TestimonialsSection = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(null);
   const [currentText, setCurrentText] = useState({
-    words:"'Weight loss' For years, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
-    persone:"Karim"
+    words: "'Weight loss' For years, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
+    persone: "Karim"
   });
   const [fadeOut, setFadeOut] = useState(false);
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   // Array of texts to cycle through
   const texts = [{
-    words:"'Weight loss' For years, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
-    persone:"Karim"
+    words: "'Weight loss' For years, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
+    persone: "Karim"
   },
   {
-    words:" For month, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
-    persone:"Amer"
+    words: " For month, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
+    persone: "Amer"
   },
   {
-    words:" For hamada, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
-    persone:"Mina"
+    words: " For hamada, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
+    persone: "Mina"
   },
   {
-    words:" For banika, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
-    persone:"Ahmed"
+    words: " For banika, I didn't wear jeans because they didn't fit.  Now I wear jeans every single day!'",
+    persone: "Ahmed"
   }];
 
   // Array of video paths
@@ -98,31 +92,28 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <Grid container sx={{ padding:5 ,display:'flex',flexWrap:'wrap' }}>
+    <Grid container sx={{ padding: 5, display: 'flex', flexWrap: 'wrap' }}>
 
       {/* Left Side */}
-      <Grid item xs={12} md={6} sx={{ p: {sm:2, md:4} }}>
+      <Grid item xs={12} md={6} sx={{ p: { sm: 2, md: 4 } }}>
         <Box>
-          <Typography variant="h5" component='h5' mb={3} color={colors.primary[1600]}>
+          <Typography variant="h5" component='h5' mb={3} color="#000">
             95% love their experience
           </Typography>
-          <Typography variant="h2" component="h2" color={colors.primary[200]}>
+          <Typography variant="h2" component="h2" color="#000">
             2,000,000+ members and counting
           </Typography>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               position: 'relative',
-              mt: 5, 
-              overflow: 'hidden', 
-              // height: {sm:'200px',md:'500px'} 
+              mt: 5,
+              overflow: 'hidden',
             }}
           >
-            <Typography 
-              variant="h2" 
-              component="h2" 
-              color={colors.primary[200]}
+            <Typography
+              variant="h2"
+              component="h2"
               sx={{
-                // position: 'absolute',
                 transition: 'transform 0.5s ease, opacity 0.5s ease',
                 transform: fadeOut ? 'translateY(-30px)' : 'translateY(0)',
                 opacity: fadeOut ? 0 : 1,
@@ -131,10 +122,9 @@ const TestimonialsSection = () => {
             >
               {currentText.words}
             </Typography>
-            <Typography variant="h6" component="h6" color={colors.primary[1600]}
-              sx={{ 
+            <Typography variant="h6" component="h6"
+              sx={{
                 mt: 5,
-                // position: 'absolute',
                 transition: 'transform 0.5s ease, opacity 0.5s ease',
                 transform: fadeOut ? 'translateX(-60px)' : 'translateX(0)',
                 opacity: fadeOut ? 0 : 1,
@@ -147,7 +137,7 @@ const TestimonialsSection = () => {
       </Grid>
 
       {/* Right Side */}
-      <Grid item xs={12} md={6} sx={{mt:3, height:'400px', background:colors.primary[200], overflow: 'hidden'}}>
+      <Grid item xs={12} md={6} sx={{ mt: 3, height: '400px', background: '#ffffff', overflow: 'hidden' }}>
         <Grid container spacing={0} sx={{ height: '100%' }}>
           {videoPaths.map((videoSrc, colIndex) => (
             <Grid
@@ -160,21 +150,20 @@ const TestimonialsSection = () => {
               onMouseLeave={handleMouseLeave}
             >
               <Box className="video-wrapper"
-               sx={{ transform: 'translateY(0%)' }}>
+                sx={{ transform: 'translateY(0%)' }}>
                 {videoPaths.map((src, index) => (
-                  <Box key={index} sx={{ position: 'relative' , height:300 , mt:1 }}>
-                      <Video
+                  <Box key={index} sx={{ position: 'relative', height: 300, mt: 1 }}>
+                    <Video
                       className="x"
-                       src={src}
-                       type="video/mp4"
-                        alt="A description of the video content"
-                        onClick={() => handleVideoClick(src)}
-                        autoPlay={false}
-                        loop
-                      />
-                   
-                    <Box onClick={() => handleVideoClick(src)}> 
-                      <PlayButtonIcon/>
+                      src={src}
+                      type="video/mp4"
+                      alt="A description of the video content"
+                      onClick={() => handleVideoClick(src)}
+                      autoPlay={false}
+                      loop
+                    />
+                    <Box onClick={() => handleVideoClick(src)}>
+                      <PlayButtonIcon />
                     </Box>
                   </Box>
                 ))}
@@ -189,19 +178,17 @@ const TestimonialsSection = () => {
         anchor="bottom"
         open={openDrawer}
         onClose={closeDrawer}
-        PaperProps={{ sx: { backgroundColor: colors.primary[200], height:'100vh'} }}
+        PaperProps={{ sx: { backgroundColor: '#ffffff', height: '100vh' } }}
       >
-        <CloseOutlinedIcon onClick={closeDrawer} style={{color:colors.primary[1600],cursor :'pointer'}}/>
-        {/* <span >Close</span> */}
+        <CloseOutlinedIcon onClick={closeDrawer} style={{ cursor: 'pointer' }} />
         <Video
-            // className="video-thumbnail"
-            src={currentVideo} 
-            type="video/mp4"
-            alt="A description of the video content"
-            controls
-            autoPlay={false}
-            loop
-          />
+          src={currentVideo}
+          type="video/mp4"
+          alt="A description of the video content"
+          controls
+          autoPlay={false}
+          loop
+        />
       </Drawer>
     </Grid>
   );

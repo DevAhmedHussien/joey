@@ -5,6 +5,7 @@ import Head from 'next/head';
 
 export const metadata = {
   title: "Telehealth Consent",
+  description:"Review the telehealth consent agreement for joey med's telehealth services. Learn more about the risks, benefits, and informed consent for remote healthcare services."
 };
 
 const Consent = () => {
