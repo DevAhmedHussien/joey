@@ -15,10 +15,8 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
 
   return (
     <Card
-      // component={motion.div}
-      // animate={{ width: 300, height: 'auto' }} 
-      // transition={{ duration: 0.5 }}
       sx={{
+        width:"310px !important",
         borderRadius: 2,
         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
         overflow: 'hidden',
@@ -27,14 +25,8 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
       }}
     >
       <CardMedia>
-        <Box
-          // component={motion.div}
-          // initial={{ opacity: 0, y: 20 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // whileHover={{ scale: 1.05 }}
-          // transition={{ duration: 0.4 }}
-          sx={{ height: 200, position: 'relative' }}
-        >
+              
+              <Box sx={{ height: 200, position: 'relative' }}>
           <ImageWithSpinner
             src="/images/navbar/sexual.png"
             alt={name}
@@ -44,16 +36,15 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
           <IconButton
             onClick={toggleExpand}
             sx={{
-              cursorL:'pointer',
+              cursor:'pointer', 
               position: 'absolute',
+              zIndex:20,
               top: 3,
               right: 8,
-              '&:hover': {
-                backgroundColor: '#003366',
-              },
+              background:'var(--primary-background)'
             }}
           >
-            <InfoIcon sx={{color:'var(--primary-background3)'}} />
+            <InfoIcon sx={{color:'var(--primary-color)'}} />
           </IconButton>
         </Box>
       </CardMedia>

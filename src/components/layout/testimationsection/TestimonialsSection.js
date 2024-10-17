@@ -97,10 +97,10 @@ const TestimonialsSection = () => {
       {/* Left Side */}
       <Grid item xs={12} md={6} sx={{ p: { sm: 2, md: 4 } }}>
         <Box>
-          <Typography variant="h5" component='h5' mb={3} color="#000">
+          <Typography variant="h5" component='h5' mb={3} color="var(--primary-icon)">
             95% love their experience
           </Typography>
-          <Typography variant="h2" component="h2" color="#000">
+          <Typography variant="h3" component="h3" color="#000">
             2,000,000+ members and counting
           </Typography>
           <Box
@@ -122,15 +122,16 @@ const TestimonialsSection = () => {
             >
               {currentText.words}
             </Typography>
-            <Typography variant="h6" component="h6"
+            <Typography variant="h5" component="h5" 
               sx={{
                 mt: 5,
                 transition: 'transform 0.5s ease, opacity 0.5s ease',
                 transform: fadeOut ? 'translateX(-60px)' : 'translateX(0)',
                 opacity: fadeOut ? 0 : 1,
                 top: 0,
+              
               }}>
-              <strong>{currentText.persone}</strong> Joey Med member
+              Joey Med member <strong style={{color:'var(--primary-icon)'}}>{currentText.persone}</strong> 
             </Typography>
           </Box>
         </Box>

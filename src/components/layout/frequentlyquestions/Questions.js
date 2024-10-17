@@ -8,21 +8,19 @@ import { tokens } from '../../../theme/theme';
 import { useTheme } from '@mui/material';
 
 export default function Questions({ questions=[] }) {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
 
     return (
         <Box variant='div'
             sx={{
                 mt: 5
             }}>
-            <Typography variant='h2' sx={{ textAlign: 'center'}} color={colors.primary[200]}>
+            <Typography variant='h2' sx={{ textAlign: 'center'}} >
                 Frequently Asked 
                 <span> Questions</span> 
             </Typography>
-            <Typography variant='h5' sx={{ textAlign: 'center', mt: 1 }} color={colors.primary[200]}>
+            <Typography variant='h5' sx={{ textAlign: 'center', mt: 1 }}>
                 More questions and answers on 
-                <span color={colors.primary[1600]}> our FAQ page</span>
+                <span> our FAQ page</span>
             </Typography>
             <Box variant='div'
                 sx={{

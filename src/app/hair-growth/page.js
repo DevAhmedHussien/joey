@@ -14,6 +14,12 @@ import Head from 'next/head';
 // ** data 
 import { stepsHomePage, productCategories, questions ,imagesSexualHomePage,cardData } from '@/utility/data';
 
+
+export const metadata = {
+  title: "Hair growth",
+  description:"Explore Joey Med's hair growth services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers."
+};
+
 const cards2 = [...productCategories['hair-growth'].men,...productCategories['hair-growth'].women]
 
 export default function HairGrowth() {

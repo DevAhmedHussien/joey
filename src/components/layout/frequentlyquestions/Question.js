@@ -6,13 +6,10 @@ import Typography from '@mui/material/Typography';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Box from '@mui/material/Box';
 import GppGoodIcon from '@mui/icons-material/GppGood';
-import { useTheme } from '@mui/material';
-import { tokens } from '../../../theme/theme';
 import { motion } from 'framer-motion';
 
 export default function Question({ ques, ans }) {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+   
     const [expanded, setExpanded] = useState(false);
 
     const handleChange = () => {
@@ -36,12 +33,12 @@ export default function Question({ ques, ans }) {
 
     return (
         <Accordion 
-            sx={{ background: colors.primary[100], borderRadius: '8px', marginBottom: '10px' }}
+            sx={{  borderRadius: '8px', marginBottom: '10px' }}
             expanded={expanded}
             onChange={handleChange}
         >
             <AccordionSummary
-                expandIcon={<ArrowDropDownIcon sx={{ color: colors.primary[1600] }} />}
+                expandIcon={<ArrowDropDownIcon sx={{ color: 'var(--primary-icon)'}} />}
                 aria-controls="panel2-content"
                 id="panel2-header"
                 sx={{
@@ -54,17 +51,17 @@ export default function Question({ ques, ans }) {
                 }}
             >
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <GppGoodIcon sx={{ fontSize: '20px', color: colors.primary[1600] }} />
-                    <Typography variant='h4' component='h4' sx={{ color: colors.primary[200]}}>{ques}</Typography>
+                    <GppGoodIcon sx={{ fontSize: '20px', color: 'var(--primary-icon)' }} />
+                    <Typography variant='h5' component='h5' >{ques}</Typography>
                 </Box>
             </AccordionSummary>
-            <AccordionDetails sx={{ backgroundColor: colors.primary[100], padding: '0px 20px' }}>
+            <AccordionDetails sx={{  padding: '0px 20px' }}>
                 <motion.div
                     initial="hidden"
                     animate={expanded ? "visible" : "hidden"}
                     variants={variants}
                 >
-                    <Typography sx={{ color: colors.primary[200], fontSize: '16px', lineHeight: '1.5', padding: '15px 0' }}>
+                    <Typography  variant='p' component='p' sx={{  fontSize: '16px', lineHeight: '1.5', padding: '15px 0' }}>
                         {ans}
                     </Typography>
                 </motion.div>

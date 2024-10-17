@@ -3,10 +3,6 @@
 import AppButton from '@/components/commons/appbutton/AppButton';
 import { Box, Typography } from '@mui/material';
 
-// ** theme 
-import { tokens } from '../../../../theme/theme';
-import { useTheme } from '@mui/material';
-
 // ** Animation 
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
 import { cardVariantsSmall } from '@/utility/animationSyles';
@@ -20,15 +16,15 @@ export default function GreetingComponent({ title, description }) {
       initial="hidden"
       animate="visible"
       variants={cardVariantsSmall}
-      style={{ width: '100%' }}
     >
       <Box
         sx={{
-          width: '100%',
           display: 'flex',
           flexWrap: 'wrap',
-          alignItems: 'center',
+          flexDirection:'column',
+          alignItems: 'start',
           justifyContent: 'space-between',
+          gap:1,
           p: { xs: 2, md: 4 },
         }}
       >

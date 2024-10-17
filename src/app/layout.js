@@ -6,9 +6,9 @@ import Footer from '@/components/layout/footer/Footer';
 export const metadata = {
   title: {
     default: "Joey Med - Telehealth Platform",
-    template: "%s - Online pharmacy"
+    template: "%s - Joey Med - Telehealth Platform"
   },
-  description: 'Telehealth Platform',
+  description: 'JoeyMed provides convenient, online telehealth services for weight loss, sexual health, hair growth, and more. Access personalized treatment plans, chat with providers, and manage your health goals from anywhere.',
   twitter: {
     card: 'summary_large_image'
   }

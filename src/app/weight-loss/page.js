@@ -14,6 +14,10 @@ import Head from 'next/head';
 import { stepsHomePage, productCategories, questions, imagesSexualHomePage, cardData} from '@/utility/data';
 import InstructionComponent from '@/components/layout/instruction-component/InstructionComponent';
 
+export const metadata = {
+  title: "Weight loss",
+  description:"Explore Joey Med's weight loss services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers."
+};
 
 export default function weightLoss() {
   const cards2 = [...productCategories['weight-loss'].pills,...productCategories['weight-loss'].injections]

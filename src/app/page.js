@@ -102,9 +102,9 @@ export default function Home() {
         </Box>
         <MeetTheTeam/>
         
-        <Box sx={{p:3}}>
+        <Box sx={{}}>
           {/* <Typography variant="h1" paddingTop={5}>joey med Online 100%</Typography> */}
-          <Typography variant="h2"paddingTop={3} >Health guide</Typography>
+          <Typography variant="h2" p={3} >Health guide</Typography>
           <CardSlider cards={blogCards} type='blog'/>
         </Box>
 
