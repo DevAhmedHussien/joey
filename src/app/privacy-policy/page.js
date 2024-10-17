@@ -2,6 +2,9 @@ import PrivacyPolicy from '@/components/layout/privacy-policy/PrivacyPolicy';
 import { Box } from '@mui/material';
 import Head from 'next/head';
 
+export const metadata = {
+  title: "Privacy & Policy",
+};
 
 const Privacy = () => {
 

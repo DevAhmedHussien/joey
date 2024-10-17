@@ -15,6 +15,7 @@ import ServicesSection from './ServicesSection';
 // ** data 
 import { stepsHomePage, productCategories,questions, homeCards, blogCards } from '@/utility/data';
 
+
 // ** animation
 import HeroSection from './HeroSection';
 import MeetTheTeam from '@/components/commons/meetteam/MeetTheTeam';
@@ -99,7 +100,7 @@ export default function Home() {
         <TestimonialsSection/>
         
         <Box mt={5}>
-          <MedWork steps={stepsHomePage}/>
+          {/* <MedWork steps={stepsHomePage}/> */}
         </Box>
         <MeetTheTeam/>
         

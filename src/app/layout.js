@@ -1,17 +1,22 @@
-import dynamic from 'next/dynamic';
 import '../styles/globals.scss';
-import CssBaseline from '@mui/material/CssBaseline';
-import ThemeProviderWrapper from "../theme/ThemeProviderWrapper";
 import "./globals.scss";
 import Head from 'next/head';
+import { Inter } from 'next/font/google';
+import ResponsiveAppBar from '@/components/layout/navbar/Navbar';
+import Footer from '@/components/layout/footer/Footer';
 
 export const metadata = {
-  title: 'joey med',
+  title:{
+    default: "joey med - Telehealth Platform",
+    template: "%s - Online pharmacy"
+  },
   description: 'Telehealth Platform',
+  twitter:{
+    card:'summary_large_image'
+  }
 };
 
-// Dynamically import the Client Component
-const ConditionalNavbarAndFooter = dynamic(() => import('../components/layout/conditional-navbar-footer/ConditionalNavbarAndFooter'), { ssr: false });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   return (
@@ -23,15 +28,13 @@ export default function RootLayout({ children }) {
         />
       </Head> */}
       <body>
-        <ThemeProviderWrapper>
-          <CssBaseline />
-          <ConditionalNavbarAndFooter>
-            <main //className={inter.className}
-            > 
+      
+          <ResponsiveAppBar/>
+            <main className={inter.className} > 
              {children}
             </main>
-          </ConditionalNavbarAndFooter>
-        </ThemeProviderWrapper>
+            <Footer/>
+         
       </body>
     </html>
   );

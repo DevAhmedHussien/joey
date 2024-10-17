@@ -34,7 +34,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
+    <Grid container mt={3} spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
       <Grid item xs={12} md={6}>
         <motion.article
           initial="hidden"

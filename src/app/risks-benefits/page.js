@@ -2,10 +2,14 @@ import { Box } from '@mui/material';
 import Head from 'next/head';
 import RisksBenefits from '@/components/layout/risks-benefits/RisksBenefits';
 
-
+export const metadata = {
+    title: "Risks & Benefits ",
+  };
+  
 const Risk = () => {
 
-
+  
+  
   return (
     <>
     <Head>

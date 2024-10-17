@@ -3,8 +3,11 @@ import TelehealthConsent from '@/components/layout/telehealth-consent/Telehealth
 import { Box } from '@mui/material';
 import Head from 'next/head';
 
+export const metadata = {
+  title: "Telehealth Consent",
+};
 
-const Privacy = () => {
+const Consent = () => {
 
 
   return (
@@ -27,4 +30,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default Consent;

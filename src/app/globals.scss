@@ -20,7 +20,101 @@
 // @import 'mixins';
 // @import 'base';
 
+// logo font family is Myriad Pro
+h1 {
+  // font-family: Italiana, serif !important;
+  // font-family: 'Poppins', sans-serif;
+  color: #001d4a;
+
+  font-weight: 500;
+  font-size: 3rem!important; /* Responsive size for h1 */
+  line-height: 1.1!important; /* Compact line height */
+  letter-spacing: 0.02em!important;
+  
+  @media (max-width: 600px) { /* Mobile adjustments */
+    font-size: 2.2rem!important;
+  }
+}
+
+h2 {
+  // font-family: Italiana, serif!important;
+  // font-family: 'Poppins', sans-serif;
+  color: #001d4a ;
+  font-weight: 400!important;
+  font-size: 2.5rem!important;
+  line-height: 1.15!important;
+  letter-spacing: 0.02em!important;
+  
+  @media (max-width: 600px) {
+    font-size: 1.7rem!important;
+  }
+}
+
+h3 {
+  color: #001d4a ;
+  // font-family: Italiana, serif!important;
+  // font-family: 'Poppins', sans-serif;
+  font-weight: 300!important;
+  font-size: 2rem!important;
+  line-height: 1.2!important;
+  letter-spacing: 0.02em!important;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem!important;
+  }
+}
+
+h4 {
+  // font-family: Italiana, serif !important;
+  // font-family: 'Poppins', sans-serif;
+  color: #001d4a ;
+  font-weight: 200!important;
+  font-size: 1.5rem!important;
+  line-height: 1.25!important;
+  letter-spacing: 0.01em!important;
+}
+
+h5 {
+  // font-family: Italiana, serif!important;
+  // font-family: 'Poppins', sans-serif;
+  color: #001d4a ;
+  font-weight: 100!important;
+  font-size: 1.25rem!important;
+  line-height: 1.3!important;
+  letter-spacing: 0.01em!important;
+}
+
+h6 {
+  // font-family: Italiana, serif!important;
+  color: #001d4a ;
+  // font-family: 'Poppins', sans-serif;
+  font-weight: 100!important;
+  font-size: 1.1rem!important;
+  line-height: 1.35!important;
+  letter-spacing: 0.01em!important;
+}
+
+body {
+  // font-family: Italiana, serif!important;
+  color: #001d4a ;
+  // font-family: 'Poppins', sans-serif;
+  font-weight: 100!important;
+  font-size: 1rem!important;
+  line-height: 1.5!important;
+  letter-spacing: 0.02em!important;
+}
+
+// body2: {
+//   fontFamily: 'Italiana, serif',
+//   fontSize: '0.875rem',
+//   lineHeight: 1.45,
+//   letterSpacing: '0.02em',
+//   '@media (max-width:600px)': { // Mobile adjustments
+//     fontSize: '0.8rem',
+//   },
+// },
 :root{
+  // font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -30,13 +124,15 @@
   button,
   a{
     text-decoration: none;
+    color: #001d4a !important;
+
   }
-  .css-pcphf9-MuiContainer-root {
-    width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    /* margin: -20px; */
-  }
+  // .css-pcphf9-MuiContainer-root {
+  //   width: 100% !important;
+  //   padding-left: 0 !important;
+  //   padding-right: 0 !important;
+  //   /* margin: -20px; */
+  // }
 
   .element {
     position: relative;

@@ -2,6 +2,9 @@ import TermsAndConditions from '@/components/layout/tems-condition/TermsAndCondi
 import { Box } from '@mui/material';
 import Head from 'next/head';
 
+export const metadata = {
+  title: "Terms & Conditions",
+};
 
 const Terms = () => {
 
