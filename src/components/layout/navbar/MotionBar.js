@@ -2,9 +2,7 @@
 import * as React from "react";
 import { useRef ,useState} from "react";
 import { motion, useCycle } from "framer-motion";
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button } from '@mui/material';
-import { ColorModeContext, tokens } from '../../../theme/theme';
-import { useTheme } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import Link from 'next/link';
 import Image from "next/image";
 import { productCategories } from '@/utility/data';
@@ -40,7 +38,7 @@ export const useDimensions = (ref) => {
       clipPath: `circle(${height * 10 + 200}px at 40px 40px)`,
       transition: {
         type: "spring",
-        stiffness: 20,
+        stiffness: 30,
         restDelta: 2,
       },
     }),
@@ -87,15 +85,15 @@ export const useDimensions = (ref) => {
       <svg width="23" height="23" viewBox="0 0 24 24">
         <Path
           strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
-          stroke= {!isOpen ? "currentColor" :"#ecb4ad" }// Set the stroke color to current text color or customize
+          stroke="currentColor" // Set the stroke color to current text color or customize
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
             open: { d: "M 3 16.5 L 17 2.5" }
           }}
         />
         <Path
-          strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
-          stroke="currentColor" //"#ecb4ad"
+          strokeWidth="1.5" 
+          stroke="currentColor" 
           d="M 2 9.423 L 20 9.423"
           variants={{
             closed: { opacity: 1 },
@@ -105,7 +103,7 @@ export const useDimensions = (ref) => {
         />
         <Path
           strokeWidth="1.5" // Set the stroke width to 1 for thinner lines
-          stroke= {!isOpen ? "currentColor" :"#ecb4ad" }
+          stroke= "currentColor" 
           variants={{
             closed: { d: "M 2 16.346 L 20 16.346" },
             open: { d: "M 3 2.5 L 17 16.346" }
@@ -118,10 +116,6 @@ export const useDimensions = (ref) => {
 // Navigation component
 const Navigation = ({ isOpen, close }) => {
   const pages = ['sexual-health', 'weight-loss', 'hair-growth', 'blogs',  'about-us', 'contact-us'];
-
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);  
-
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [subCategories, setSubCategories] = useState([]);
   const handleMouseEnter = (page) => {
@@ -148,124 +142,110 @@ const Navigation = ({ isOpen, close }) => {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
-        style={{background:colors.primary[100]}}
       >
         <Link href='/'>
           <Image
             quality={100}
             src={imgLogo}
-            // width={100}
             height={70}
             alt="Joeymed logo"
             loading="lazy"
-            style={{scale:1.2 , margin :'5px auto'}}
+            style={{scale:1.5 , margin :'5px auto'}}
             onClick={handleClose}
           />
         </Link>
+        {/* <span style={{ color:'red', position:'relative', right:10, }}> { hoveredCategory === null ? <p> no </p> : <p> yes </p> } </span> */}
         
         {pages.map((page) => (
             <Box
                 key={page}
-                className="responsive-appbar-link"
-                onMouseEnter={() => handleMouseEnter(page)}
-                onMouseLeave={handleMouseLeave}
-                sx={{background: colors.primary[100],  display: 'flex', flexDirection: 'column'}}>
+                // className="responsive-appbar-link"
+                onClick={() => { 
+                  if(hoveredCategory == null) {
+                    handleMouseEnter(page)
+                  }else {
+                    handleMouseLeave()
+                  }
+                  }}
+                // onMouseLeave={handleMouseLeave}
+              >
               <motion.li
-                  variants={variants}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                    <Button
-                    className='responsive-appbar-button'
-                    href={(page == 'about-us' || page == 'contact-us' ||  page == 'blogs')? `/${page}` : null }
-                    sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 20 }}
-                >
-                   {page.replace('-', ' ')} 
-                </Button>
-                </motion.li>
-             
+                style={{padding:4}}
+                    variants={variants}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }} >
+                  <Link href={page === 'about-us' || page === 'contact-us' || page === 'blogs' ? `/${page}` : ""}>
+                    <Button className='responsive-appbar-button'>
+                      {page.replace('-', ' ')} 
+                    </Button>
+                  </Link>
+              </motion.li>
                 {hoveredCategory === page && subCategories && (
-                    <Box
-                        sx={{  padding: '20px', width: '100%',//height: '100%' ,
-                             display:'flex',
-                             flexDirection:'column',
-                              justifyContent:'center',
-                              alignItems:'center',
-                                    }}
-                                className={`${hoveredCategory === page ? 'open' : 'close'}`}
-                                onMouseEnter={() => setHoveredCategory(page)}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <Button className="responsive-appbar-button" 
-                                component={Link} href={`/${page}`}
-                                onClick={handleClose}
-                                    sx={{ color: colors.primary[200], textTransform: 'capitalize', fontSize: 15 }} >
-                                    See all {page.replace('-', ' ')}
-                                </Button> 
-                                {Object.keys(subCategories).map((subCategoryKey) => (
-                                    <Box key={subCategoryKey} className='type-of-products'>
-                                        <Typography variant="h3" component='h3' textAlign='center' sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 900, fontSize: 20, padding: '10px 5px' }}>
-                                            {subCategoryKey.replace('-', ' ')}
-                                        </Typography>
-                                        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                                            {subCategories[subCategoryKey].map((product) => (
-                                                <motion.li key={product.SKU}
-                                                variants={variants}
-                                                whileHover={{ scale: 1.1 }}
-                                                whileTap={{ scale: 0.95 }}
-                                              >
-                                               <Button
-                                                    // key={product.SKU}
-                                                    className="responsive-appbar-button"
-                                                    component={Link}
-                                                    onClick={handleClose}
-                                                    href={`/${page}/${product.referenceHandle}`}
-                                                    sx={{ color: colors.primary[200], textTransform: 'capitalize', fontWeight: 500, fontSize: 15 }}
-                                                >
-                                                    {product.itemName}
-                                                </Button>
-                                    </motion.li>
-                                  ))}
-                              </Box>
-                              <span className="heartbeat-line"></span>
-                                      </Box>
-                                  ))}
-                                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
-                                      {page == 'sexual-health'
-                                          ? <Image
-                                              src={sexualImg}
-                                              alt="Fertility"
-                                              width={100}
-                                              quality={100}
-                                              height={130}
-                                              style={{ borderRadius: 8 }}
-                                                loading="lazy"
-                                          />
-                                          : page == 'weight-loss'
-                                              ? <Image
-                                                  src={weighImg}
-                                                  alt="Fertility"
-                                                  quality={100}
-                                                  width={100}
-                                                  height={130}
-                                                    loading="lazy"
-                                                  style={{ borderRadius: 8 }}
-                                              />
-                                              : page == 'hair-growth'
-                                                  ? <Image
-                                                      src={hairImg}
-                                                      quality={100}
-                                                      alt="Fertility"
-                                                      width={100}
-                                                      height={130}
-                                                        loading="lazy"
-                                                      style={{ borderRadius: 8 }}
-                                                  />
-                                                  : null
-                                      }
-
-                                                  <AppButton title='start now' color='black' href={`/form/${page}`} />
-                                              </Box>
+                    <Box p={2} className={`${hoveredCategory === page ? 'open' : 'close'}`}
+                        onClick={() => setHoveredCategory(page)}// onMouseLeave={handleMouseLeave}
+                        >
+                        <Button className="responsive-appbar-button" 
+                          component={Link} href={`/${page}`}
+                          onClick={handleClose}>
+                            See all {page.replace('-', ' ')}
+                        </Button> 
+                        {Object.keys(subCategories).map((subCategoryKey) => (
+                            <Box key={subCategoryKey} className='type-of-products'>
+                                <Typography variant="h5" component="h5" textAlign='center' sx={{ textTransform: 'capitalize', padding: '10px 5px' }}>
+                                    {subCategoryKey.replace('-', ' ')}
+                                </Typography>
+                                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                                    {subCategories[subCategoryKey].map((product) => (
+                                        <motion.li key={product.SKU}
+                                          variants={variants}
+                                          whileHover={{ scale: 1.1 }}
+                                          whileTap={{ scale: 0.95 }}>
+                                       <Button
+                                            key={product.SKU}
+                                            className="responsive-appbar-button"
+                                            component={Link}
+                                            onClick={handleClose}
+                                            href={`/${page}/${product.referenceHandle}`}>
+                                            {product.itemName}
+                                        </Button>
+                            </motion.li>
+                          ))}
+                  </Box>
+                          </Box>
+                      ))}
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
+                          {page == 'sexual-health'
+                              ? <Image
+                                  src={sexualImg}
+                                  alt="Fertility"
+                                  width={100}
+                                  quality={100}
+                                  height={130}
+                                  loading="lazy"
+                              />
+                              : page == 'weight-loss'
+                              ? <Image
+                                  src={weighImg}
+                                  alt="Fertility"
+                                  quality={100}
+                                  width={100}
+                                  height={130}
+                                  loading="lazy"
+                              />
+                              : page == 'hair-growth'
+                                  ? <Image
+                                      src={hairImg}
+                                      quality={100}
+                                      alt="Fertility"
+                                      width={100}
+                                      height={130}
+                                      loading="lazy"
+                                      style={{ borderRadius: 8 }}
+                              />
+                              : null
+                    }
+                   <AppButton title='start now' color='black' href={`/form/${page}`} />
+                   </Box>
                     </Box>
                 )}
                 </Box>
@@ -280,11 +260,6 @@ const MotionBar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);  
-
-
   return (
     <motion.nav
       initial={false}
@@ -303,11 +278,10 @@ const MotionBar = () => {
         className="background"
         style={{
           position: "absolute",
-          // left:-17 ,//'-21px',
-          top :isOpen ? 0: '-10px' ,//'-10px',
+          top :isOpen ? 0: '-10px' ,
           width: "100%",
 
-          background:colors.primary[100],
+          background:'var(--primary-background)',
           boxShadow: '1px 1px 8px 2px #bdbdbd'
         }}
         variants={sidebarVariants}
