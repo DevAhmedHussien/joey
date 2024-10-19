@@ -89,15 +89,26 @@ const BlogPage = () => {
         {/* </motion.div> */}
         {/* <motion.div initial="hidden" animate="visible" variants={cardVariantsSmall}> */}
           <Box className="video-container">
-            <iframe
-              width="100%"
-              height="450"
-              src="https://www.youtube.com/watch?v=SI1EhswdgR8"
-              title="Telehealth Insights"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1920/1080' }}>
+              <iframe 
+                src="https://share.synthesia.io/embeds/videos/845ce7a9-ae4e-4541-83ac-b0667a75e986" 
+                loading="lazy" 
+                title="Synthesia video player - Joey Med Process" 
+                allowFullScreen 
+                allow="encrypted-media; fullscreen;" 
+                style={{
+                  position: 'absolute', 
+                  width: '100%', 
+                  height: '100%', 
+                  top: 0, 
+                  left: 0, 
+                  border: 'none', 
+                  padding: 0, 
+                  margin: 0, 
+                  overflow: 'hidden'
+                }}>
+              </iframe>
+          </div>
           </Box>
         {/* </motion.div> */}
       </Box>

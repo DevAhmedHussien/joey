@@ -7,6 +7,7 @@ import ProductComponent from "@/components/layout/servicepage/custom/ProductComp
 import VideoRolling from "@/components/layout/videoRolling/VideoRolling";
 import { productCategories } from "@/utility/data";
 import { Box, Typography } from "@mui/material";
+import { cardData } from "@/utility/data";
 import Head from "next/head";
 
 const cards = [
@@ -40,33 +41,6 @@ const cards = [
         image: '/images/treatment-plans.png',
         description: 'Get a treatment plan tailored to your needs.',
     },
-];
-
-const cardData = [
-    {
-      title: 'Which GLP-1 is right for you?',
-      content: [
-        'There are a number of GLP-1 medications on the market, but they all work by slowing down gastric emptying, making you feel full faster and longer.',
-        'Selecting a GLP-1 that’s right for you depends on a few factors, including your health history and insurance coverage (if you’re using insurance).',
-        'If you qualify for the Body Program, your provider will help determine which GLP-1 is the best fit for you.'
-      ],
-    },
-    {
-      title: 'How GLP-1 Medications Work',
-      content: [
-        'GLP-1 medications mimic the effects of a naturally occurring hormone that slows down how quickly your stomach empties food.',
-        'This can help you feel full sooner and longer after eating, which can lead to weight loss.',
-        'These medications are usually taken as a once-weekly injection.'
-      ],
-    },
-    {
-      title: 'Benefits of GLP-1 Medications',
-      content: [
-        'GLP-1 medications have been shown to help people lose weight and improve blood sugar levels.',
-        'They can also reduce the risk of heart attack and stroke in people with type 2 diabetes.',
-        'Your provider will work with you to determine the best medication and dosage for your needs.'
-      ],
-    }
 ];
 
 export default function ProductsPage(props) {

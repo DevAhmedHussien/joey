@@ -107,26 +107,26 @@ export default function SectionFeature({ images }) {
       >
       <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
         <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🩺</Box>
-          <Typography variant="h6" component="div" gutterBottom>
+          <Typography variant="p" component="p" gutterBottom>
             Receive professional consultations 
           </Typography>
         </Box>
-        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
+        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection:'row',alignItems:'center',gap:1}}>
           <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>💊 </Box>
-          <Typography variant="h6" component="div" gutterBottom>
+          <Typography variant="p" component="p" gutterBottom>
             Tailored treatment plans
           </Typography>
         </Box>
         <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
           <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>📦</Box>
-          <Typography variant="h6" component="div" gutterBottom>
+          <Typography variant="p" component="p" gutterBottom>
             Discreet delivery safely
           </Typography>
          
         </Box>
         <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
           <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🏡</Box>
-          <Typography variant="h6" component="div" gutterBottom>
+          <Typography variant="p" component="p" gutterBottom>
            All from the comfort of your homee.
           </Typography>
         </Box>

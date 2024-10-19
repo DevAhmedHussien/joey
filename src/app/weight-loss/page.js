@@ -1,33 +1,37 @@
-import GreetingComponent from '@/components/layout/servicepage/custom/GreetingComponent';
+import dynamic from 'next/dynamic';
 import { Container, Typography, Box } from '@mui/material';
-import WeightLossComponent from '@/components/layout/servicepage/weightLoss/WeightLossComponent';
-import CardSlider from '@/components/commons/cartslider/CardSlider';
-import SectionFeature from '@/components/layout/servicepage/custom/SectionFeature';
-import MedWork from '@/components/layout/medWorkStepper/MedWork';
-import VideoRolling from '@/components/layout/videoRolling/VideoRolling';
-import Questions from '@/components/layout/frequentlyquestions/Questions';
-import TestimonialsSection from '@/components/layout/testimationsection/TestimonialsSection';
-
 import Head from 'next/head';
+import HeartBeats from '@/components/layout/navbar/HeartBeats';
 
-// ** data 
-import { stepsHomePage, productCategories, questions, imagesSexualHomePage, cardData} from '@/utility/data';
-import InstructionComponent from '@/components/layout/instruction-component/InstructionComponent';
+// Dynamically imported components
+const GreetingComponent = dynamic(() => import('@/components/layout/servicepage/custom/GreetingComponent'), { loading: () => <HeartBeats/>});
+const WeightLossComponent = dynamic(() => import('@/components/layout/servicepage/weightLoss/WeightLossComponent'), { loading: () => <HeartBeats/>});
+const CardSlider = dynamic(() => import('@/components/commons/cartslider/CardSlider'), { loading: () => <HeartBeats/>});
+const SectionFeature = dynamic(() => import('@/components/layout/servicepage/custom/SectionFeature'), { loading: () => <HeartBeats/>});
+const MedWork = dynamic(() => import('@/components/layout/medWorkStepper/MedWork'), { loading: () => <HeartBeats/>});
+const VideoRolling = dynamic(() => import('@/components/layout/videoRolling/VideoRolling'), { loading: () => <HeartBeats/>});
+const Questions = dynamic(() => import('@/components/layout/frequentlyquestions/Questions'), { loading: () => <HeartBeats/>});
+const TestimonialsSection = dynamic(() => import('@/components/layout/testimationsection/TestimonialsSection'), { loading: () => <HeartBeats/>});
+const InstructionComponent = dynamic(() => import('@/components/layout/instruction-component/InstructionComponent'), { loading: () => <HeartBeats/>});
+
+// ** Data
+import { stepsHomePage, productCategories, questions, imagesSexualHomePage, cardData } from '@/utility/data';
 
 export const metadata = {
   title: "Weight loss",
-  description:"Explore Joey Med's weight loss services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers."
+  description: "Explore Joey Med's weight loss services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers."
 };
 
 export default function weightLoss() {
-  const cards2 = [...productCategories['weight-loss'].pills,...productCategories['weight-loss'].injections]
+  const cards2 = [...productCategories['weight-loss'].pills, ...productCategories['weight-loss'].injections];
+
   return (
     <>
       <Head>
-        <title>weight loss - Joey Med | Personalized Online Treatment</title>
+        <title>Weight Loss - Joey Med | Personalized Online Treatment</title>
         <meta name="description" content="Explore Joey Med's weight loss services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers." />
         <link rel="canonical" href="https://www.joeymed.com/weight-loss" />
-        <meta property="og:title" content="weight loss - Joey Med" />
+        <meta property="og:title" content="Weight Loss - Joey Med" />
         <meta property="og:description" content="Joey Med offers online telehealth services for weight loss, including personalized treatment plans and discreet shipping." />
         <meta property="og:url" content="https://www.joeymed.com/weight-loss" />
         <meta property="og:type" content="website" />
@@ -39,7 +43,7 @@ export default function weightLoss() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Service",
-              "name": "weight loss Services",
+              "name": "Weight Loss Services",
               "provider": {
                 "@type": "Organization",
                 "name": "Joey Med",
@@ -55,19 +59,24 @@ export default function weightLoss() {
         />
       </Head>
 
-      <Container maxWidth="xl" sx={{padding:' 0 !important'}}>
+      <Container maxWidth="xl" sx={{ padding: '0 !important' }}>
         <GreetingComponent 
           title="Achieve Lasting Weight Loss with Proven Treatments" 
-          description="Start your journey toward a healthier you with expert guidance and tailored weight loss programs — all from the comfort of your home." />
-        <SectionFeature images={imagesSexualHomePage}/>
+          description="Start your journey toward a healthier you with expert guidance and tailored weight loss programs — all from the comfort of your home." 
+        />
+        <SectionFeature images={imagesSexualHomePage} />
 
-        <Box >
+        <Box>
           <WeightLossComponent />
         </Box>
 
         <Box>
-          <VideoRolling title='weigh lossand keep it off with weigh loss' description='Keep it off with GLp1' src="/videos/weightVideo.mp4"/>
-          <CardSlider cards={cards2} type='product'/>
+          <VideoRolling 
+            title='Weight Loss and Keep it Off' 
+            description='Keep it off with GLP-1 treatments' 
+            src="/videos/weightVideo.mp4" 
+          />
+          <CardSlider cards={cards2} type='product' />
         </Box>
        
         <Box>
@@ -81,16 +90,17 @@ export default function weightLoss() {
         </Box>
 
         <InstructionComponent 
-            title='Explanation about Our Products '
-            description='Here you can see Instructions'
-            instructions={cardData.weightLoss}/>
+          title='Explanation about Our Products'
+          description='Here you can see Instructions'
+          instructions={cardData.weightLoss}
+        />
 
         <Box mt={5}>
           <TestimonialsSection />
         </Box>
 
         <Box>
-          <Questions questions={questions}/>
+          <Questions questions={questions} />
         </Box>
       </Container>
     </>

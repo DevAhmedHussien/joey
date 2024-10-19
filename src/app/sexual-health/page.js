@@ -1,39 +1,45 @@
-import GreetingComponent from '@/components/layout/servicepage/custom/GreetingComponent';
+import dynamic from 'next/dynamic';
 import { Container, Typography, Box } from '@mui/material';
-import CardSlider from '@/components/commons/cartslider/CardSlider';
-import SectionFeature from '@/components/layout/servicepage/custom/SectionFeature';
-import MedWork from '@/components/layout/medWorkStepper/MedWork';
-import VideoRolling from '@/components/layout/videoRolling/VideoRolling';
-import Questions from '@/components/layout/frequentlyquestions/Questions';
-import TestimonialsSection from '@/components/layout/testimationsection/TestimonialsSection';
+import HeartBeats from '@/components/layout/navbar/HeartBeats';
 
+// Dynamic Imports
+const GreetingComponent = dynamic(() => import('@/components/layout/servicepage/custom/GreetingComponent'));
+const CardSlider = dynamic(() => import('@/components/commons/cartslider/CardSlider'), { loading: () => <HeartBeats/>});
+const SectionFeature = dynamic(() => import('@/components/layout/servicepage/custom/SectionFeature'), { loading: () => <HeartBeats/>});
+const MedWork = dynamic(() => import('@/components/layout/medWorkStepper/MedWork'), { loading: () => <HeartBeats/>});
+const VideoRolling = dynamic(() => import('@/components/layout/videoRolling/VideoRolling'), { loading: () => <HeartBeats/>});
+const Questions = dynamic(() => import('@/components/layout/frequentlyquestions/Questions'));
+const InstructionComponent = dynamic(() => import('@/components/layout/instruction-component/InstructionComponent'), { loading: () => <HeartBeats/>});
+// const TestimonialsSection = dynamic(() => import('@/components/layout/testimationsection/TestimonialsSection'));
 
-// ** data 
+// ** Data
 import { stepsHomePage, productCategories, questions, cardData, imagesSexualHomePage } from '@/utility/data';
-import InstructionComponent from '@/components/layout/instruction-component/InstructionComponent';
 
 export default function SexualHealth() {
-  const cards2 = [...productCategories['sexual-health'].pills,...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams]
+  const cards2 = [...productCategories['sexual-health'].pills, ...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams];
+
   return (
     <>
-      <Container maxWidth="xl" sx={{padding:' 0 !important'}}>
+      <Container maxWidth="xl" sx={{ padding: '0 !important' }}>
         <GreetingComponent 
           title="Confidential and Convenient Sexual Health Care at Your Fingertips" 
-          description="Take control of your sexual health with personalized telehealth services from licensed medical providers." />
+          description="Take control of your sexual health with personalized telehealth services from licensed medical providers." 
+        />
         <SectionFeature images={imagesSexualHomePage} />
+
         <Box margin='20px 0 20px'>
           {/* <WeightLossComponent /> */}
         </Box>
 
         <Box className="sexualHealth">
           <VideoRolling 
-          title='Enhance your vitality and boost your confidence ' 
-          description='with our range of sexual health treatments' 
-          src="/videos/sexualVideo.mp4" 
-          alt='Keep it off with GLP-1s'
-          additionalInformation="Explore how our platform can support your sexual health goals. With personalized treatments and expert advice, we're committed to helping you achieve lasting improvements. Enjoy greater confidence, vitality, and well-being with our comprehensive solutions."
+            title='Enhance your vitality and boost your confidence ' 
+            description='with our range of sexual health treatments' 
+            src="/videos/sexualVideo.mp4" 
+            alt='Keep it off with GLP-1s'
+            additionalInformation="Explore how our platform can support your sexual health goals. With personalized treatments and expert advice, we're committed to helping you achieve lasting improvements. Enjoy greater confidence, vitality, and well-being with our comprehensive solutions."
           />
-          <CardSlider cards={cards2} type='product'/>
+          <CardSlider cards={cards2} type='product' />
         </Box>
 
         <Box>
@@ -43,10 +49,11 @@ export default function SexualHealth() {
         </Box>
 
         <InstructionComponent 
-            title='Explanation about Our Products '
-            description='Here you can see Instructions'
-            instructions={cardData.sexualHealth}/>
-        
+          title='Explanation about Our Products '
+          description='Here you can see Instructions'
+          instructions={cardData.sexualHealth} 
+        />
+
         <Box sx={{ mt: 4, background: 'white' }}>
           <MedWork steps={stepsHomePage} /> 
         </Box>

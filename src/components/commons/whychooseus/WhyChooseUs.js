@@ -43,6 +43,7 @@ const WhyChooseUs = () => {
           </Grid>
         ))}
       </Grid>
+   
     </Box>
   );
 };

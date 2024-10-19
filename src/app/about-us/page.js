@@ -1,18 +1,23 @@
-import React from 'react';
+import HeartBeats from '@/components/layout/navbar/HeartBeats';
+import { questions } from '@/utility/data';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import Questions from '@/components/layout/frequentlyquestions/Questions';
-import { questions } from '@/utility/data';
+// Dynamically import the components
+const Questions = dynamic(() => import('@/components/layout/frequentlyquestions/Questions'), {
+  loading: () => <HeartBeats/>,
+});
 
-import AboutPage from '@/components/layout/about-page/AboutPage';
+const AboutPage = dynamic(() => import('@/components/layout/about-page/AboutPage'), {
+  loading: () =>  <HeartBeats/> ,
+});
 
 export const metadata = {
-  title: "About joey med ",
-  description:"Learn about Joey Med, a leading telehealth and online pharmacy service based in Tampa, Florida. No insurance required. Accessible and affordable healthcare from the comfort of your home."
+  title: "About Joey Med",
+  description: "Learn about Joey Med, a leading telehealth and online pharmacy service based in Tampa, Florida. No insurance required. Accessible and affordable healthcare from the comfort of your home."
 };
 
 const AboutUs = () => {
-
   return (
     <>
       <Head>
@@ -25,9 +30,8 @@ const AboutUs = () => {
       </Head>
 
       {/* Top Image Section */}
-      <AboutPage/>
-        <Questions questions={questions} />
-
+      <AboutPage />
+      <Questions questions={questions} />
     </>
   );
 };
