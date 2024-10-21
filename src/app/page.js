@@ -2,18 +2,33 @@ import dynamic from 'next/dynamic';
 import { Typography, Box } from '@mui/material';
 import Head from 'next/head';
 
-// Dynamically import components
-const HeroSection = dynamic(() => import('./HeroSection'), { loading: () => <HeartBeats/>});
-const VideoRolling = dynamic(() => import('@/components/layout/videoRolling/VideoRolling'), { loading: () => <HeartBeats/>});
-const CardSlider = dynamic(() => import('@/components/commons/cartslider/CardSlider'), { loading: () => <HeartBeats/>});
-const TestimonialsSection = dynamic(() => import('@/components/layout/testimationsection/TestimonialsSection'), { ssr: false });
-const MeetTheTeam = dynamic(() => import('@/components/commons/meetteam/MeetTheTeam'), { loading: () => <HeartBeats/>});
-const WhyChooseUs = dynamic(() => import('@/components/commons/whychooseus/WhyChooseUs'), { loading: () => <HeartBeats/>});
-const Questions = dynamic(() => import('@/components/layout/frequentlyquestions/Questions'), { loading: () => <HeartBeats/>});
-const ServicesSection = dynamic(() => import('./ServicesSection'), { loading: () => <HeartBeats/>});
-
 // ** Data
 import { productCategories, questions, homeCards, blogCards } from '@/utility/data';
+import HeartBeats from '@/components/layout/navbar/HeartBeats';
+// import HeroSection from './HeroSection';
+
+// Dynamically import components
+const HeroSection = dynamic(() => import('./HeroSection'),
+ { loading: () => <HeartBeats/>}
+);
+const VideoRolling = dynamic(() => import('@/components/layout/videoRolling/VideoRolling'),
+ { loading: () => <HeartBeats/>}
+);
+const CardSlider = dynamic(() => import('@/components/commons/cartslider/CardSlider'),
+ { loading: () => <HeartBeats/>}
+);
+const TestimonialsSection = dynamic(() => import('@/components/layout/testimationsection/TestimonialsSection'));
+const MeetTheTeam = dynamic(() => import('@/components/commons/meetteam/MeetTheTeam'),
+ { loading: () => <HeartBeats/>}
+);
+const WhyChooseUs = dynamic(() => import('@/components/commons/whychooseus/WhyChooseUs'),
+ { loading: () => <HeartBeats/>}
+);
+const Questions = dynamic(() => import('@/components/layout/frequentlyquestions/Questions'),
+ { loading: () => <HeartBeats/>}
+);
+const ServicesSection = dynamic(() => import('./ServicesSection'), { loading: () => <HeartBeats/>});
+
 
 export default function Home() {
   const cards1 = [...productCategories['weight-loss'].pills, ...productCategories['weight-loss'].injections];
@@ -35,9 +50,9 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <div maxWidth="lg">
+      <div >
         {/* Hero Section */}
-        <HeroSection />
+        <HeroSection/>
 
         {/* Services Section */}
         <ServicesSection homeCards={homeCards} />

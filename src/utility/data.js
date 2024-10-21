@@ -1134,3 +1134,4 @@ export const blogCards = [
     description: 'Get a treatment plan tailored to your needs.',
   },
 ];
+

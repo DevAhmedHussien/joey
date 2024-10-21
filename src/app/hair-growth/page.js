@@ -27,52 +27,21 @@ const cards2 = [...productCategories['hair-growth'].men, ...productCategories['h
 export default function HairGrowth() {
   return (
     <>
-      <Head>
-        <title>Hair Growth - Joey Med | Personalized Online Treatment</title>
-        <meta name="description" content="Explore Joey Med's hair growth services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers." />
-        <link rel="canonical" href="https://www.joeymed.com/hair-growth" />
-        <meta property="og:title" content="Hair Growth - Joey Med" />
-        <meta property="og:description" content="Joey Med offers online telehealth services for hair growth, including personalized treatment plans and discreet shipping." />
-        <meta property="og:url" content="https://www.joeymed.com/hair-growth" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/hair-growth-og-image.jpg" />
-        <meta name="robots" content="index, follow" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Hair Growth Services",
-              "provider": {
-                "@type": "Organization",
-                "name": "Joey Med",
-                "url": "https://www.joeymed.com/",
-                "logo": "https://www.joeymed.com/logo.png",
-              },
-              "description": "Joey Med offers personalized telehealth services for hair growth, including 24/7 provider support, clinically proven treatments, and discreet shipping.",
-              "url": "https://www.joeymed.com/hair-growth",
-              "image": "https://www.joeymed.com/images/hair-growth-og-image.jpg",
-              "areaServed": "US",
-            }),
-          }}
-        />
-      </Head>
-
       <Container maxWidth="xl" sx={{ padding: '0 !important' }}>
         <GreetingComponent 
           title="Restore and Revitalize Your Hair with Effective Treatments" 
           description="Experience the power of science-backed treatments designed to combat hair loss and promote fuller, healthier hair." 
         />
         <SectionFeature images={imagesSexualHomePage} />
-
-        <Box>
+        <Box className="Hair Growth">
           <VideoRolling 
-            title="Enhance Your Hair Health" 
-            description="Learn more about our proven hair growth treatments." 
-            src="/videos/weightVideo.mp4" 
+            title='Say goodbye to thinning and hello to vibrant' 
+            description='with our powerful hair growth solutions.' 
+            src="/videos/ss.mp4" 
+            alt='Keep it off'
+            additionalInformation="Learn more about how our personalized hair growth treatments can help you achieve lasting results. With expert guidance and customized plans, we’re here to support your journey to healthier, fuller hair. Discover the confidence that comes with a revitalized look!"
           />
-          <CardSlider cards={cards2} type="product" />
+          <CardSlider cards={cards2} type='product' />
         </Box>
 
         <Box>
@@ -81,7 +50,7 @@ export default function HairGrowth() {
           </Typography>
         </Box>
 
-        <Box sx={{ mt: 4, background: 'white' }}>
+        <Box>
           <MedWork steps={stepsHomePage} />
         </Box>
 

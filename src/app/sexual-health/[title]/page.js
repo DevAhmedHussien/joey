@@ -1,130 +1,135 @@
 import CardSlider from "@/components/commons/cartslider/CardSlider";
-import InstructionCard from "@/components/commons/instructioncard/InstructionsCard";
 import Questions from "@/components/layout/frequentlyquestions/Questions";
-import MedWork from "@/components/layout/medWorkStepper/MedWork";
 import HowItWorks from "@/components/layout/servicepage/custom/HowItWorks";
 import ProductComponent from "@/components/layout/servicepage/custom/ProductComponenet";
-import VideoRolling from "@/components/layout/videoRolling/VideoRolling";
-import { productCategories } from "@/utility/data";
 import { Box, Typography } from "@mui/material";
-import Head from "next/head";
 
-import { cardData, questions, stepsHomePage } from "@/utility/data";
+import { cardData, questions, blogCards, productCategories } from "@/utility/data";
+import InstructionComponent from "@/components/layout/instruction-component/InstructionComponent";
+import { notFound } from "next/navigation";
 
-const cards = [
-    {
-        title: 'Chat with a provider 24/7',
-        image: '/images/chat-provider.png',
-        description: 'Get real-time support from our providers anytime, anywhere.',
-    },
-    {
-        title: 'Manage goals in one place',
-        image: '/images/manage-goals.png',
-        description: 'Track your progress and make adjustments easily.',
-    },
-    {
-        title: 'Clinically proven ingredients',
-        image: '/images/clinically-proven.png',
-        description: 'Access treatments that are FDA-approved and proven to work.',
-    },
-    {
-        title: 'Fast, discreet shipping',
-        image: '/images/discreet-shipping.png',
-        description: 'Receive your treatment quickly and privately.',
-    },
-    {
-        title: 'Convenient online care',
-        image: '/images/online-care.png',
-        description: 'Experience healthcare at your fingertips.',
-    },
-    {
-        title: 'Personalized treatment plans',
-        image: '/images/treatment-plans.png',
-        description: 'Get a treatment plan tailored to your needs.',
-    },
-];
+export async function generateStaticParams() {
+  // Combine all products from the sexual_health category into a single array
+  let allSexualHealthProducts = [
+    ...productCategories["sexual-health"].pills,
+    ...productCategories["sexual-health"].Capsules,
+    ...productCategories["sexual-health"].Creams,
+  ];
 
+  return allSexualHealthProducts.map(({ referenceHandle }) => ({
+    title: referenceHandle,
+  }));
+}
 
-export default function ProductsPage(props) {
+// Metadata generation function
+export async function generateMetadata({ params }) {
+  const { title } = params;
 
   // Combine all products from the sexual_health category into a single array
   let allSexualHealthProducts = [
-    ...productCategories['sexual-health'].pills,
-    ...productCategories['sexual-health'].Capsules,
-    ...productCategories['sexual-health'].Creams
+    ...productCategories["sexual-health"].pills,
+    ...productCategories["sexual-health"].Capsules,
+    ...productCategories["sexual-health"].Creams,
   ];
 
-  // Filter the specific product based on the referenceHandle
-  let specificProduct = allSexualHealthProducts.filter(
-    (p) => props.params.title === p.referenceHandle
+  // Find the specific product based on the referenceHandle
+  let specificProduct = allSexualHealthProducts.find(
+    (p) => p.referenceHandle === title
   );
 
+  if (!specificProduct) {
+    return {
+      title: "Product Not Found | Joey Med",
+      description: "The product you are looking for does not exist.",
+    };
+  }
+
+  return {
+    title: `${specificProduct.itemName} - Sexual Health Product | Joey Med`,
+    description: `${specificProduct.description}. Learn more about ${specificProduct.itemName} and how it can benefit your sexual health.`,
+    canonical: `https://www.joeymed.com/sexual-health/${title}`,
+    // openGraph: {
+    //   title: `${specificProduct.itemName} - Joey Med`,
+    //   description: specificProduct.description,
+    //   url: `https://www.joeymed.com/sexual-health/${title}`,
+    //   type: "product",
+    //   images: [
+    //     {
+    //       url: specificProduct.image || "/images/default-product-image.jpg",
+    //       alt: `${specificProduct.itemName} Image`,
+    //     },
+    //   ],
+    // },
+    // robots: "index, follow",
+    // jsonLd: {
+    //   "@context": "https://schema.org",
+    //   "@type": "Product",
+    //   name: specificProduct.itemName,
+    //   description: specificProduct.description,
+    //   image: specificProduct.image || "/images/default-product-image.jpg",
+    //   brand: "Joey Med",
+    //   offers: {
+    //     "@type": "Offer",
+    //     url: `https://www.joeymed.com/sexual-health/${title}`,
+    //     priceCurrency: "USD",
+    //     price: specificProduct.price || "Check on the website",
+    //     availability: "https://schema.org/InStock",
+    //   },
+    // },
+  };
+}
+
+export default function ProductsPage({ params }) {
+  const { title } = params;
+
+  // Combine all products from the sexual_health category into a single array
+  let allSexualHealthProducts = [
+    ...productCategories["sexual-health"].pills,
+    ...productCategories["sexual-health"].Capsules,
+    ...productCategories["sexual-health"].Creams,
+  ];
+
+  // Find the specific product based on the referenceHandle
+  let specificProduct = allSexualHealthProducts.find(
+    (p) => p.referenceHandle === title
+  );
+  
+  if(!specificProduct) return notFound()
   return (
     <>
-      <Head>
-        <title>{specificProduct[0]?.itemName} - Sexual Health Product | Joey Med</title>
-        <meta name="description" content={`${specificProduct[0]?.description} Find out more about ${specificProduct[0]?.itemName} and how it can benefit your sexual health.`} />
-        <link rel="canonical" href={`https://www.joeymed.com/sexual-health/${props.params.title}`} />
-        <meta property="og:title" content={`${specificProduct[0]?.itemName} - Joey Med`} />
-        <meta property="og:description" content={`${specificProduct[0]?.description}. Learn more about ${specificProduct[0]?.itemName} and its benefits.`} />
-        <meta property="og:url" content={`https://www.joeymed.com/sexual-health/${props.params.title}`} />
-        <meta property="og:type" content="product" />
-        <meta property="og:image" content={specificProduct[0]?.image || "/images/default-product-image.jpg"} />
-        <meta name="robots" content="index, follow" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              "name": specificProduct[0]?.itemName,
-              "description": specificProduct[0]?.description,
-              "image": specificProduct[0]?.image || "/images/default-product-image.jpg",
-              "brand": "Joey Med",
-              "offers": {
-                "@type": "Offer",
-                "url": `https://www.joeymed.com/sexual-health/${props.params.title}`,
-                "priceCurrency": "USD",
-                "price": specificProduct[0]?.price || "Check on the website",
-                "availability": "https://schema.org/InStock",
-              }
-            }),
-          }}
-        />
-      </Head>
       <div>
-        <ProductComponent 
-          name={specificProduct[0]?.itemName} 
-          description={specificProduct[0]?.description} 
-          images={specificProduct[0]?.images}
-          questions={specificProduct[0]?.questions}
-          productDescription={specificProduct[0]?.ProductDescription}
-          benefit={specificProduct[0]?.Benefits}
-          ingredient={specificProduct[0]?.ingredient}
-          safety={specificProduct[0]?.safety}
+        <ProductComponent
+          name={specificProduct.itemName}
+          description={specificProduct.description}
+          images={specificProduct.images}
+          questions={specificProduct.questions}
+          productDescription={specificProduct.ProductDescription}
+          benefit={specificProduct.Benefits}
+          ingredient={specificProduct.ingredient}
+          safety={specificProduct.safety}
         />
+
         <Box mt={15}>
-          <Typography variant='h3' sx={{textAlign:'center'}} >
+          <Typography variant="h3" sx={{ textAlign: "center" }}>
             Ro Body Program members taking branded GLP-1 medications were paid for their testimonials.
           </Typography>
-          <Box sx={{mt:2, display:'flex', justifyContent:'center', alignItems:'center', gap:1, flexWrap:'wrap'}}>
-            {cardData.sexualHealth.map((card, index) => (
-              <InstructionCard key={index} title={card.title} content={card.content} />
-            ))}
-          </Box>
+          <InstructionComponent
+            title="Explanation about Our Products"
+            description="Here you can see Instructions"
+            instructions={cardData.sexualHealth}
+          />
         </Box>
-   
+
         <HowItWorks />
 
         <Box>
-          {/* <VideoRolling title='Sexual health and keeping it with Cialis' description='Explore the benefits of using Cialis for sexual health.' /> */}
-          <Typography variant="h2" textAlign='start' padding={3}>Patient reviews</Typography>
-          <CardSlider cards={cards} type='blog'/>
+          <Typography variant="h2" textAlign="start" padding={3}>
+            Patient reviews
+          </Typography>
+          <CardSlider cards={blogCards} type="blog" />
         </Box>
-        
-        <MedWork steps={stepsHomePage} /> 
 
-        <Questions questions={questions}/>
+        <Questions questions={questions} />
       </div>
     </>
   );

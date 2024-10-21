@@ -7,7 +7,7 @@ function ResponsiveAppBar() {
     const [showHeartBeats, setShowHeartBeats] = useState(true); // Initially show HeartBeats
 
     useEffect(() => {
-        const heartBeatRoutes = ['/', '/sexual-health', '/weight-loss', '/hair-growth', '/contact-us', '/about-us', '/blogs'];
+        const heartBeatRoutes = ['/', '/sexual-health', '/weight-loss', '/hair-growth', '/contact-us', '/about-us', '/blogs','not-found'];
 
         const currentPath = window.location.pathname;
 

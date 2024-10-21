@@ -2,12 +2,8 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import InfoList from '@/components/layout/infolist/InfoList';
-import { tokens } from '@/theme/theme';
-import { useTheme } from '@mui/material';
 
 export default function HeroSection() {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const [currentText, setCurrentText] = useState('Weight Loss');
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -34,11 +30,11 @@ export default function HeroSection() {
   return (
     <Grid container spacing={4} sx={{ p: { xs: 2, md: 5 } }}>
       <Grid item xs={12} md={6}>
-            <Typography variant="h1" component="h1" gutterBottom color={colors.primary[200]}>
-              Welcome to <span style={{ color: colors.primary[200], fontWeight: 500 }}>joey med</span>
+            <Typography variant="h1" component="h1" gutterBottom >
+              Welcome to <span style={{fontWeight:600 }}>joey med</span>
             </Typography>
           
-            <Typography variant="h2" component="h2" gutterBottom color={colors.primary[200]}>
+            <Typography variant="h2" component="h2" gutterBottom >
               We got you
             </Typography>
         <Box sx={{ position: 'relative', overflow: 'hidden', height: '60px' }}>
@@ -52,7 +48,7 @@ export default function HeroSection() {
               transform: fadeOut ? 'translateY(-30px)' : 'translateY(0)',
               opacity: fadeOut ? 0 : 1,
               top: 0,
-              color: colors.primary[1600],
+              color: 'var(--primary-icon)',
             }}
           >
             {currentText}

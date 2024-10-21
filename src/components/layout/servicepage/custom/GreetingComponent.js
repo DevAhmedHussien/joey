@@ -32,7 +32,7 @@ export default function GreetingComponent({ title, description }) {
           <Typography variant="h2" component="h2"  >
             {title}
           </Typography>
-          <Typography variant="h5" component="h5"   mt={2} >
+          <Typography variant="h6" component="h6"   mt={2} >
             {description}
           </Typography>
         </Box>

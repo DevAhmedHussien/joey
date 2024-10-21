@@ -66,19 +66,19 @@ export default function weightLoss() {
         />
         <SectionFeature images={imagesSexualHomePage} />
 
-        <Box>
-          <WeightLossComponent />
-        </Box>
-
-        <Box>
+        <Box className="weightloss">
           <VideoRolling 
-            title='Weight Loss and Keep it Off' 
-            description='Keep it off with GLP-1 treatments' 
+            title='Take control of your weight loss journey' 
+            description='with the help of GLP-1 medications' 
             src="/videos/weightVideo.mp4" 
+            alt='Keep it off with GLP-1s'
+            additionalInformation='Discover how our platform can help you achieve your health goals with personalized weight loss plans, tailored specifically to your needs. We provide expert guidance, ongoing support, and resources designed to ensure lasting results. Start your journey towards a healthier you today!'
           />
           <CardSlider cards={cards2} type='product' />
         </Box>
-       
+        <Box>
+          <WeightLossComponent />
+        </Box>
         <Box>
           <Typography variant="body2" component='p' sx={{ marginTop: '40px', textAlign: 'center', color: 'gray' }}>
             As an alternative to FDA-approved branded products, where appropriate, a provider may prescribe a compounded drug, which is prepared by a state-licensed sterile compounding pharmacy partner. Although compounded drugs are permitted to be prescribed under federal law, they are not FDA-approved and do not undergo safety, effectiveness, or manufacturing review. Products like Viagra and Cialis are FDA-approved for treating erectile dysfunction. Your provider may also offer personalized recommendations.
