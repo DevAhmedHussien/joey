@@ -1074,16 +1074,17 @@ export const imagesSexualHomePage = [
   { src: "/images/homePage/products.png", alt: "Image 3" , type:'img'}
 ];
 
-export const homeCards=[{
+export const homeCards=[
+  {
   animate:cardVariantsRight,
   title:'Weight Loss',
-  src:'/videos/Bottle.mp4',
+  src:'/videos/tablet.gif',
   alt:'Weight Loss',
   size:true,
-  video:true,
+  video:false,
   href:'/form/weight-loss'
-
-},{
+}
+,{
   animate:cardVariantsSmall,
   title:'Sexual health',
   src:'/videos/Bottle.mp4',

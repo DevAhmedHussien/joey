@@ -99,14 +99,20 @@ p {
   letter-spacing: 0.02em !important;
 }
 
-
-  button,
-  a{
-    text-decoration: none;
-    text-transform: capitalize !important;
-    color: #001d4a !important;
-  }
-
+button,
+a{
+  text-decoration: none;
+  text-transform: capitalize !important;
+  color: #001d4a !important;
+}
+img, 
+video {
+  display: block; 
+  margin: 0;      
+  padding: 0;     
+  border: none;   
+}
+  
 
   .element {
     position: relative;
@@ -152,14 +158,7 @@ p {
     animation-delay: 0.4s;
   }
 
-  img, 
-  video {
-    display: block; 
-    margin: 0;      
-    padding: 0;     
-    border: none;   
-  }
-  
+
   @keyframes spinner-spin {
     100% { transform: rotate(360deg)}
   }

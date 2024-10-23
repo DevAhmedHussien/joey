@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+'use client'
+
+import { useState } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -26,7 +28,7 @@ export default function Question({ ques, ans }) {
                 stiffness: 100, 
                 damping: 20,
                 duration: 0.5, 
-                delay: 0.1 // slight delay for smoother transition
+                delay: 0.1
             } 
         }
     };
@@ -38,15 +40,16 @@ export default function Question({ ques, ans }) {
             onChange={handleChange}
         >
             <AccordionSummary
-                expandIcon={<ArrowDropDownIcon sx={{ color: 'var(--primary-icon)'}} />}
+                expandIcon={ <ArrowDropDownIcon sx={{ color: 'var(--primary-icon)'}} />}
                 aria-controls="panel2-content"
                 id="panel2-header"
                 sx={{
+                    transition: 'background-color 0.3s ease-in-out',
                     '& .MuiAccordionSummary-content': {
                         alignItems: 'center',
                     },
                     '&:hover': {
-                        backgroundColor: '#f5f5f5',
+                        backgroundColor: 'var(--primary-background2)',
                     },
                 }}
             >

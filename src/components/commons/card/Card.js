@@ -1,18 +1,16 @@
 'use client';
 
-import React from 'react';
 import { Box, Typography } from '@mui/material';
 import AppButton from '../appbutton/AppButton';
 import NavigationButton from '../navigatiobutton/NavigationButton';
-import { tokens } from '../../../theme/theme';
-import { useTheme } from '@mui/material';
 import ImageWithSpinner from '../image/ImageWithSpinner';
 import Video from '../video/Video';
 import './card.scss';
+import Image from 'next/image';
+// import Image from 'next/image';
 
 const Card = ({ title, size, src, alt, href, video = false }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+
 
   return (
     <Box className='card'>
@@ -23,7 +21,6 @@ const Card = ({ title, size, src, alt, href, video = false }) => {
       >
         {title}
       </Typography>
-
       <Box className='card-media'>
         {video ? (
           <Video
@@ -36,9 +33,14 @@ const Card = ({ title, size, src, alt, href, video = false }) => {
             className='media-content'
           />
         ) : (
-          <ImageWithSpinner
-            src={src}
-            alt={alt}
+          <Image
+            objectFit="cover"
+            loading="lazy"
+            quality={100}
+            width={320}
+            height={300}
+              src={src}
+              alt={alt}
             className='media-content'
           />
         )}

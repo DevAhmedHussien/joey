@@ -24,6 +24,7 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
         src={src}
         alt={alt}
         layout="fill"
+        
         objectFit="cover"
         loading="lazy"
         quality={100}

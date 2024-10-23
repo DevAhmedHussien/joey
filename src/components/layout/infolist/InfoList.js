@@ -56,11 +56,6 @@ import { Box, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { interpolate } from 'flubber';
 
-
-// //** Theme part */
-import { tokens } from '../../../theme/theme';
-import { useTheme } from '@mui/material';
-
 // Relevant SVG Path Variants related to titles
 const icons = [
   {
@@ -89,8 +84,6 @@ const icons = [
 ];
 
 const InfoList = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   const [currentIcon, setCurrentIcon] = useState(0);
   const [currentPath, setCurrentPath] = useState(icons[0].path);
@@ -131,7 +124,7 @@ const InfoList = () => {
         animate={{ opacity: labelVisible ? 1 : 0, x: labelVisible ? 0 : 50 }}
         transition={{ duration: 0.5 }}
       >
-        <Typography variant="h3"component='h3' align="center"  sx={{ mt: 2 ,color:colors.primary[200]}}>
+        <Typography variant="h3"component='h3' align="center"  sx={{ mt: 2 }}>
           {icons[currentIcon].label}
         </Typography>
       </motion.div>

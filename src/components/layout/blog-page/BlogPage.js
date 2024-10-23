@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
 import Questions from '@/components/layout/frequentlyquestions/Questions';
-import { titleAnimation, cardVariantsSmall } from '@/utility/animationSyles';
 import ImageWithSpinner from '@/components/commons/image/ImageWithSpinner';
 import GreetingComponent from '../servicepage/custom/GreetingComponent';
 import CardSlider from '@/components/commons/cartslider/CardSlider';
@@ -65,7 +64,6 @@ const blogPosts = [
 ];
 
 const BlogPage = () => {
-  // const theme = useTheme();
 
   return (
     <>

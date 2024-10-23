@@ -1,11 +1,9 @@
 import dynamic from 'next/dynamic';
 import { Typography, Box } from '@mui/material';
-import Head from 'next/head';
 
 // ** Data
 import { productCategories, questions, homeCards, blogCards } from '@/utility/data';
 import HeartBeats from '@/components/layout/navbar/HeartBeats';
-// import HeroSection from './HeroSection';
 
 // Dynamically import components
 const HeroSection = dynamic(() => import('./HeroSection'),
@@ -31,25 +29,13 @@ const ServicesSection = dynamic(() => import('./ServicesSection'), { loading: ()
 
 
 export default function Home() {
+  
   const cards1 = [...productCategories['weight-loss'].pills, ...productCategories['weight-loss'].injections];
   const cards2 = [...productCategories['sexual-health'].pills, ...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams];
   const cards3 = [...productCategories['hair-growth'].men, ...productCategories['hair-growth'].women];
 
   return (
     <>
-      <Head>
-        <title>Joey Med - Telehealth Services for Weight Loss, Sexual Health, Hair Growth, and More</title>
-        <meta name="description" content="JoeyMed provides convenient, online telehealth services for weight loss, sexual health, hair growth, and more. Access personalized treatment plans, chat with providers, and manage your health goals from anywhere." />
-        <link rel="canonical" href="https://www.joeymed.com/" />
-        <meta property="og:title" content="JoeyMed - Online Telehealth Services" />
-        <meta property="og:description" content="Access telehealth services for weight loss, sexual health, and hair growth with JoeyMed. Personalized care at your fingertips." />
-        <meta property="og:url" content="https://www.joeymed.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/joeymed-og-image.jpg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="robots" content="index, follow" />
-      </Head>
-
       <div >
         {/* Hero Section */}
         <HeroSection/>

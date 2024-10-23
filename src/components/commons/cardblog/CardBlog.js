@@ -10,8 +10,8 @@ import { useTheme } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close'; // Icon for closing the drawer
 
 const BlogCard = ({
-  width = 300, 
-  height = 350,
+  width = 340, 
+  height = 400,
   imageSrc = '/images/homePage/products.png',
   profilePicSrc = '/images/homePage/products.png',
   imageAlt = 'Blog Image',
