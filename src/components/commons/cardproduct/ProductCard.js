@@ -114,14 +114,14 @@ const ProductCard = ({ name = "Tirzepatide Pills",price , description = "Effecti
       >
         <Box
         sx={{
-          padding: '16px',
+          padding: '30px',
           height: '100%',
         }}
       >
-            <Typography variant="h6" component='h6' textAlign='center'> Description: </Typography>
-            <Typography variant="p" component="p" textAlign='center'> {description}</Typography>
-            <Typography variant="h6" component="h6" textAlign='center'  mt={2}>Safety Information: </Typography>
-            <Typography variant="p" component="p" textAlign='center'> {safety } </Typography>
+            <Typography variant="h5" component='h5' textAlign='left'> Description: </Typography>
+            <Typography variant="p" component="p" textAlign='left' color={'#727681'} p={1} > {description}</Typography>
+            <Typography variant="h5" component="h5" textAlign='left' mt={2} >Safety Information: </Typography>
+            <Typography variant="p" component="p" textAlign='left'  color={'#727681'} p={1}> {safety } </Typography>
       </Box>
 
       </motion.div>

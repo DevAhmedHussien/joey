@@ -13,7 +13,7 @@ const AboutPage = dynamic(() => import('@/components/layout/about-page/AboutPage
 });
 
 export const metadata = {
-  title: "About Joey Med",
+  title: "About us",
   description: "Learn about Joey Med, a leading telehealth and online pharmacy service based in Tampa, Florida. No insurance required. Accessible and affordable healthcare from the comfort of your home."
 };
 

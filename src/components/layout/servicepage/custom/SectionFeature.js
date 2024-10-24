@@ -12,31 +12,31 @@ export default function SectionFeature({ images }) {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#f5f5f5',
-        padding: '40px 20px', 
+        padding: { xs: '20px 10px', sm: '40px 20px' },
       }}
     >
       {/* Image and Video Row */}
       <Box
         sx={{
-          position: 'relative',
           display: 'flex',
-          flexWrap:"wrap",
+          flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
-          // maxWidth: '1200px', // Set a max-width for better responsiveness
           gap: '20px',
         }}
       >
         {images.map((image, index) => (
           <Box
             key={index}
-            position={'relative'}
             sx={{
+              position: 'relative',
               overflow: 'hidden',
-              boxShadow: '0px 0px 30px 1px black',
-              borderRadius:2
-
+              boxShadow: '0px 0px 20px 2px rgba(0,0,0,0.1)',
+              borderRadius: 2,
+              maxWidth: { xs: '100%', sm: '45%', md: '30%' }, 
+              flex: '1 1 calc(100% / 2)', 
+              minWidth: '280px', //
             }}
           >
             {image.type === 'img' ? (
@@ -44,44 +44,31 @@ export default function SectionFeature({ images }) {
                 src={image.src}
                 alt={image.alt}
                 layout="responsive"
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 objectFit="cover"
                 quality={100}
                 loading="lazy"
-                style={{ width: '100%', height: '100%'}}
+                style={{
+                  borderRadius: '8px', // Round corners for images
+                }}
               />
             ) : (
-              <Box 
+              <Box
                 sx={{
-                  maxWidth:450,
                   transform: 'scale(1.02)',
-                  borderRadius:5,
-                }} 
-                >
+                  borderRadius: 5,
+                  width: '100%',
+                  height: 'auto',
+                }}
+              >
                 <Video
                   src={image.src}
                   type="video/mp4"
-                  alt="A description of the video content"
-                  autoPlay={true}
+                  autoPlay
                   loop
                   muted
-               
                 />
-                 {/* <iframe
-                style={{height:400, scale:1}}
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/11FQ66MuLF8?controls=0&autoplay=1&loop=1&playlist=11FQ66MuLF8"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  controls={0}
-                  autoplay= {1}
-                  loop={1}
-                  muted
-                ></iframe> */}
               </Box>
             )}
           </Box>
@@ -93,43 +80,44 @@ export default function SectionFeature({ images }) {
         sx={{
           marginTop: '40px',
           display: 'flex',
-          justifyContent:  {xs:'start', md:'space-between'},
-          flexDirection: {xs:'column', md:'row'},
-          alignItems: 'start',
+          flexDirection: { xs: 'column', md: 'row' }, // Stack vertically on small screens
+          justifyContent: 'space-between',
+          alignItems: 'center',
           width: '100%',
           maxWidth: '1200px',
           backgroundColor: '#fff',
           padding: '20px',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           borderRadius: '8px',
-          gap: {xs:1, md:10},
+          gap: { xs: 3, md: 5 }, // Adjust gap based on screen size
         }}
       >
-      <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
-        <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🩺</Box>
-          <Typography variant="p" component="p" gutterBottom>
-            Receive professional consultations 
-          </Typography>
-        </Box>
-        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection:'row',alignItems:'center',gap:1}}>
-          <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>💊 </Box>
-          <Typography variant="p" component="p" gutterBottom>
-            Tailored treatment plans
-          </Typography>
-        </Box>
-        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
-          <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>📦</Box>
-          <Typography variant="p" component="p" gutterBottom>
-            Discreet delivery safely
-          </Typography>
-         
-        </Box>
-        <Box sx={{ textAlign: 'center',  display: 'flex', justifyContent: 'center', flexDirection: 'row',alignItems:'center',gap:1}}>
-          <Box component="span" sx={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🏡</Box>
-          <Typography variant="p" component="p" gutterBottom>
-           All from the comfort of your homee.
-          </Typography>
-        </Box>
+        {[
+          { icon: '🩺', text: 'Receive professional consultations' },
+          { icon: '💊', text: 'Tailored treatment plans' },
+          { icon: '📦', text: 'Discreet delivery safely' },
+          { icon: '🏡', text: 'All from the comfort of your home.' },
+        ].map((feature, index) => (
+          <Box
+            key={index}
+            sx={{
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 1,
+              width: { xs: '100%', sm: '45%', md: 'auto' }, // Adjust width based on screen size
+            }}
+          >
+            <Box component="span" sx={{ fontSize: '2rem' }}>
+              {feature.icon}
+            </Box>
+            <Typography variant="p" component="p" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
+              {feature.text}
+            </Typography>
+          </Box>
+        ))}
       </Box>
     </Box>
   );

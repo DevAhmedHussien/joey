@@ -13,7 +13,7 @@ const buttonVariants = {
   pressed: { scale: 0.95 }
 };
 
-const AppButton = ({ title, color = 'white', href = '' }) => {
+const AppButton = ({ title, color = 'white', href = '' ,type=''}) => {
 
   return (
     <motion.div
@@ -33,6 +33,7 @@ const AppButton = ({ title, color = 'white', href = '' }) => {
       >
         <Button
           variant="contained"
+          type={type}
           sx={{
             height: '35px',
             display: 'flex',

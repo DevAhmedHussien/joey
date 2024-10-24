@@ -33,7 +33,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4); 
+      background-color: rgba(0, 0, 0, 0.2); 
       z-index: -1;
     }
   
@@ -54,7 +54,7 @@
     align-items: center;
     width: 100%;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #e48a81;
   }
   
   .instructions-content {
@@ -68,7 +68,7 @@
     color: #fff;
     z-index: 10;
     border-radius: 12px;
-    margin-top: 15px;
+    margin-top: 20px;
     transition: max-height 0.3s ease;
   
     .instructions-header {

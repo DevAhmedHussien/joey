@@ -8,7 +8,7 @@ export default function Questions({ questions=[] }) {
 
     return (
         <>
-         <Typography variant='h2' component='h2' sx={{ textAlign: 'center'}} >
+         <Typography variant='h2' component='h2' mt={2} sx={{ textAlign: 'center'}} >
                 Frequently Asked  Questions
             </Typography>
             <Box p={5}>

@@ -1096,7 +1096,7 @@ export const homeCards=[
 },{
   animate:cardVariantsLeft,
   title:'Hair growth',
-  src:'/videos/Bottle.mp4',
+  src:'/videos/hairGrowthFoa.mp4',
   alt:'Hair growth',
   size:true,
   video:true,

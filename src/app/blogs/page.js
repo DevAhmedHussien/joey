@@ -8,22 +8,13 @@ const BlogPage = dynamic(() => import('@/components/layout/blog-page/BlogPage'),
 });
 
 export const metadata = {
-  title: "Blog Joey Med",
+  title: "Blogs",
   description: "Read the latest blog posts from Joey Med. Explore topics on telehealth services, online pharmacy tips, healthcare advice, and how to get quality healthcare without insurance."
 };
 
 const Blog = () => {
   return (
     <>
-      <Head>
-        <title>Joey Med Blog | Telehealth & Online Pharmacy Insights</title>
-        <meta
-          name="description"
-          content="Read the latest blog posts from Joey Med. Explore topics on telehealth services, online pharmacy tips, healthcare advice, and how to get quality healthcare without insurance."
-        />
-        <meta name="keywords" content="Joey Med blog, telehealth tips, online pharmacy advice, healthcare without insurance, Tampa Florida, telemedicine, healthcare articles" />
-      </Head>
-
       <BlogPage />
     </>
   );

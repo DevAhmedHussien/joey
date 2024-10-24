@@ -35,7 +35,7 @@ const BlogCard = ({
     <>
       {/* Blog Card */}
       <Box className="blog-card" onClick={toggleDrawer(true)}>
-        <Box className="image-container">
+        <Box className="image-container-blog">
         <Image
           src="/images/homePage/appear.jpg" 
           alt={imageAlt}

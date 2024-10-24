@@ -3,8 +3,8 @@ import Questions from '@/components/layout/frequentlyquestions/Questions';
 import ImageWithSpinner from '@/components/commons/image/ImageWithSpinner';
 import GreetingComponent from '../servicepage/custom/GreetingComponent';
 import CardSlider from '@/components/commons/cartslider/CardSlider';
-import './blogPage.scss';
 import { questions } from '@/utility/data';
+import VideoMedWork from '@/components/commons/videoexplantion/VideoMedWork';
 
 const blogPosts = [
   {
@@ -78,38 +78,7 @@ const BlogPage = () => {
         <CardSlider cards={blogPosts} type="blog" />
       </Box>
 
-      {/* Video Section */}
-      <Box className="video-section">
-        {/* <motion.div initial="hidden" animate="visible" variants={titleAnimation}> */}
-          <Typography variant="h2" component="h2" className="title" gutterBottom>
-            Learn More About Telehealth
-          </Typography>
-        {/* </motion.div> */}
-        {/* <motion.div initial="hidden" animate="visible" variants={cardVariantsSmall}> */}
-          <Box className="video-container">
-          <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1920/1080' }}>
-              <iframe 
-                src="https://share.synthesia.io/embeds/videos/845ce7a9-ae4e-4541-83ac-b0667a75e986" 
-                loading="lazy" 
-                title="Synthesia video player - Joey Med Process" 
-                allowFullScreen 
-                allow="encrypted-media; fullscreen;" 
-                style={{
-                  position: 'absolute', 
-                  width: '100%', 
-                  height: '100%', 
-                  top: 0, 
-                  left: 0, 
-                  border: 'none', 
-                  padding: 0, 
-                  margin: 0, 
-                  overflow: 'hidden'
-                }}>
-              </iframe>
-          </div>
-          </Box>
-        {/* </motion.div> */}
-      </Box>
+      <VideoMedWork/>    
 
       {/* Frequently Asked Questions */}
       <Box className="faq-section">

@@ -24,24 +24,24 @@ const Card = ({ title, size, src, alt, href, video = false }) => {
       <Box className='card-media'>
         {video ? (
           <Video
+            className='media-content'
             src={src}
             type="video/mp4"
             alt="A description of the video content"
             controls={false}
             autoPlay={true}
             loop
-            className='media-content'
           />
         ) : (
           <Image
+            className='media-content'
             objectFit="cover"
             loading="lazy"
             quality={100}
             width={320}
             height={300}
-              src={src}
-              alt={alt}
-            className='media-content'
+            src={src}
+            alt={alt}
           />
         )}
       </Box>

@@ -4,6 +4,7 @@ import { Typography, Box } from '@mui/material';
 // ** Data
 import { productCategories, questions, homeCards, blogCards } from '@/utility/data';
 import HeartBeats from '@/components/layout/navbar/HeartBeats';
+import VideoMedWork from '@/components/commons/videoexplantion/VideoMedWork';
 
 // Dynamically import components
 const HeroSection = dynamic(() => import('./HeroSection'),
@@ -82,6 +83,7 @@ export default function Home() {
         {/* Why Choose Us Section */}
         <WhyChooseUs />
 
+        <VideoMedWork/>
         {/* Testimonials Section */}
         <TestimonialsSection />
 

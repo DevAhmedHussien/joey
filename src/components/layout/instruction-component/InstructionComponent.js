@@ -18,11 +18,11 @@ const InstructionComponent = ({ title, description, instructions }) => {
       {/* Instruction Cards Section */}
       <Box
         sx={{
-          mt: 2,
+          mt: 4,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: { xs: 3, md: 7 }, // Responsive gap for smaller and larger screens
+          gap: { xs: 3, md: 7 },
           flexWrap: 'wrap',
         }}
       >

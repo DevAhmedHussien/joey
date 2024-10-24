@@ -1,15 +1,12 @@
-import React from 'react';
+"use client"
 import { useForm } from 'react-hook-form';
 import { Box, Button, Typography } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import { motion } from 'framer-motion';
 import CustomTextField from '../../components/commons/cutomfield/CustomField';
-
-import { useTheme } from '@mui/material';
-import { tokens } from '../../theme/theme';
+import AppButton from '../commons/appbutton/AppButton';
 const ContactForm = () => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+   
    
   const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -26,14 +23,13 @@ const ContactForm = () => {
     >
       <Box
         sx={{
-          backgroundColor: colors.primary[1000],
-          padding: 3,
+          padding: 2,
           borderRadius: 2,
           boxShadow: 3,
-          backdropFilter: 'blur(10px)'
+          background:'var(--primary-background2)'
         }}
       >
-        <Typography variant="h3" component='h3' gutterBottom color={colors.primary[200]}>
+        <Typography variant="h3" component='h3' gutterBottom>
           Send Us a Message
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -68,7 +64,7 @@ const ContactForm = () => {
             error={!!errors.message}
             helperText={errors.message?.message}
           />
-          <Button
+          {/* <Button
             variant="contained"
             color="primary"
             type="submit"
@@ -76,7 +72,11 @@ const ContactForm = () => {
             sx={{ marginTop: 2 }}
           >
             Send Message
-          </Button>
+          </Button> */}
+          <Box width={'10%'}>
+            <AppButton title={'Send'} type="submit"/>
+
+          </Box>
         </form>
       </Box>
     </motion.div>

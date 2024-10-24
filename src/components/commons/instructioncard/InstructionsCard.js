@@ -20,12 +20,12 @@ export default function InstructionCard({ title, content }) {
       <Box className="card-header">
         <Typography variant="h5" component="h5">{title}</Typography>
         <IconButton onClick={toggleInstructions}>
-          <InfoIcon />
+          <InfoIcon/>
         </IconButton>
       </Box>
 
       {/* Framer Motion Animation */}
-      <AnimatePresence>
+      <AnimatePresence >
         {showInstructions && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -35,13 +35,13 @@ export default function InstructionCard({ title, content }) {
             className="instructions-content"
           >
             <Box className="instructions-header">
-              <Typography variant="subtitle1">Instructions</Typography>
+              <Typography variant="h5" component="h5" color={'#fff'}>Instructions</Typography>
               <IconButton onClick={toggleInstructions}>
-                <CloseIcon />
+                <CloseIcon className='icon-app' />
               </IconButton>
             </Box>
             {content.map((paragraph, index) => (
-              <Typography key={index} variant="body1" component="body1">
+              <Typography key={index} variant="p" component="p">
                 {paragraph}
               </Typography>
             ))}

@@ -14,6 +14,7 @@ const InstructionComponent = dynamic(() => import('@/components/layout/instructi
 
 // ** Data
 import { stepsHomePage, productCategories, questions, cardData, imagesSexualHomePage } from '@/utility/data';
+import VideoMedWork from '@/components/commons/videoexplantion/VideoMedWork';
 
 export default function SexualHealth() {
   const cards2 = [...productCategories['sexual-health'].pills, ...productCategories['sexual-health'].Capsules, ...productCategories['sexual-health'].Creams];
@@ -55,14 +56,17 @@ export default function SexualHealth() {
         />
 
         <Box sx={{ mt: 4, background: 'white' }}>
-          <MedWork steps={stepsHomePage} /> 
+          {/* <MedWork steps={stepsHomePage} /> 
+           */}
+      <VideoMedWork/>    
+
         </Box>
 
         <Box>
           {/* <TestimonialsSection /> */}
         </Box>
 
-        <Box>
+        <Box >
           <Questions questions={questions} />
         </Box>
       </Container>
