@@ -72,7 +72,7 @@ const RisksBenefits = () => {
           >
             Risks & Benefits
           </Typography>
-          <Typography variant="body2" className={'lastUpdated'}>
+          <Typography variant="p" component="p" className={'lastUpdated'}>
             Last Updated: [Insert Date]
           </Typography>
 

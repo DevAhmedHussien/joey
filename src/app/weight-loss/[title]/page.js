@@ -96,24 +96,22 @@ export default function ProductsPage({ params }) {
           safety={specificProduct.safety}
         />
 
-        <InstructionComponent
-          title="Explanation about Our Products"
-          description="Here you can see Instructions"
-          instructions={cardData.weightLoss}
-        />
+       <Box mt={2}>
+          <InstructionComponent
+            title="Explanation about Our Products"
+            description="Here you can see Instructions"
+            instructions={cardData.sexualHealth}
+          />
+        </Box>
+
+        <HowItWorks />
 
         <Box>
-          <VideoRolling
-            title="Weight Loss and how it works"
-            description="Explore the benefits of using our weight loss products."
-          />
           <Typography variant="h2" textAlign="start" padding={3}>
             Patient reviews
           </Typography>
           <CardSlider cards={blogCards} type="blog" />
-        </Box>
-
-        <Questions questions={questions}/>
+        </Box>  
       </div>
     </>
   );

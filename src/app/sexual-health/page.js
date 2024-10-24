@@ -13,7 +13,7 @@ const InstructionComponent = dynamic(() => import('@/components/layout/instructi
 // const TestimonialsSection = dynamic(() => import('@/components/layout/testimationsection/TestimonialsSection'));
 
 // ** Data
-import { stepsHomePage, productCategories, questions, cardData, imagesSexualHomePage } from '@/utility/data';
+import { stepsHomePage, productCategories, questions, cardData, imagesSexualHomePage, blogCards } from '@/utility/data';
 import VideoMedWork from '@/components/commons/videoexplantion/VideoMedWork';
 
 export default function SexualHealth() {
@@ -44,7 +44,7 @@ export default function SexualHealth() {
         </Box>
 
         <Box>
-          <Typography variant="body2" component='p' sx={{ marginTop: '40px', textAlign: 'center', color: 'gray' }}>
+          <Typography variant="p" component='p' sx={{ marginTop: '40px', textAlign: 'center', color: 'gray' }}>
             As an alternative to FDA-approved branded products, where appropriate, a provider may prescribe a compounded drug, which is prepared by a state-licensed sterile compounding pharmacy partner. Although compounded drugs are permitted to be prescribed under federal law, they are not FDA-approved and do not undergo safety, effectiveness, or manufacturing review. Products like Viagra and Cialis are FDA-approved for treating erectile dysfunction. Your provider may also offer personalized recommendations.
           </Typography>
         </Box>
@@ -58,10 +58,14 @@ export default function SexualHealth() {
         <Box sx={{ mt: 4, background: 'white' }}>
           {/* <MedWork steps={stepsHomePage} /> 
            */}
-      <VideoMedWork/>    
-
+            <VideoMedWork/>    
         </Box>
-
+        <Box>
+          <Typography variant="h2" component="h2" textAlign="start" padding={3}>
+            Patient reviews
+          </Typography>
+          <CardSlider cards={blogCards} type="blog" />
+        </Box>
         <Box>
           {/* <TestimonialsSection /> */}
         </Box>

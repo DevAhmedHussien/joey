@@ -115,7 +115,7 @@ const TermsAndConditions = () => {
           >
             Terms & Conditions
           </Typography>
-          <Typography variant="body2" className={'updatedDate'}>
+          <Typography variant="p" component="p"  className={'updatedDate'}>
             Last Updated: [Date]
           </Typography>
 

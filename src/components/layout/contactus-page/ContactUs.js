@@ -11,6 +11,7 @@ import ContactForm from '@/components/Auth/ContactForm';
 import "./contactUs.scss"
 
 const ContactUsPage = () => {
+  
 //   // Title Animation
 //   const titleAnimation = {
 //     hidden: { opacity: 0, y: -50 },

@@ -99,7 +99,11 @@ function MainNavBar() {
                                         <Box  className='handling-Images'>
                                             {page == 'sexual-health'
                                                 ? <Image
-                                                quality={100}
+                                                    quality={100}
+                                                    sizes="(max-width: 768px) 100vw, 
+                                                    (max-width: 1200px) 50vw, 
+                                                    33vw"
+                                                    style={{ objectFit: 'cover' }}
                                                     src={sexualImg}
                                                     alt="Fertility"
                                                     width={100}
@@ -109,6 +113,10 @@ function MainNavBar() {
                                                 : page == 'weight-loss'
                                                     ? <Image
                                                     quality={100}
+                                                    sizes="(max-width: 768px) 100vw, 
+                                                    (max-width: 1200px) 50vw, 
+                                                    33vw"
+                                                    style={{ objectFit: 'cover' }}
                                                     src={weighImg}
                                                     alt="Fertility"
                                                     width={100}
@@ -118,6 +126,10 @@ function MainNavBar() {
                                                 : page == 'hair-growth'
                                                     ? <Image
                                                     quality={100}
+                                                    sizes="(max-width: 768px) 100vw, 
+                                                    (max-width: 1200px) 50vw, 
+                                                    33vw"
+                                                    style={{ objectFit: 'cover' }}
                                                     src={hairImg}
                                                     alt="Fertility"
                                                     width={100}

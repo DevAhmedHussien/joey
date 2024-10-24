@@ -67,7 +67,7 @@ export default function Footer() {
             </IconButton>
           </Link>
         </Box>
-        <Typography variant="body2" color={ colors.primary[200]} mt={1}>2024 © All rights reserved, Joey Med</Typography>
+        <Typography variant="p" component="p" color={ colors.primary[200]} mt={1}>2024 © All rights reserved, Joey Med</Typography>
       </Box>
 
       <Box sx={{ mt:5, display: 'flex', justifyContent: 'space-between', alignItems: 'start', flexWrap: 'wrap' }}>
@@ -154,13 +154,13 @@ export default function Footer() {
       <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer} sx={{width:'30%'}}>
         <Box sx={{ width:'100%', p: 3 }}>
           <Typography variant="h6" gutterBottom>Your Privacy Choices</Typography>
-          <Typography variant="body2">
+          <Typography variant="p" component="p" >
             You can use the toggles below to manage your privacy preferences. By clicking "Opt in to all" you consent to Joey Med's processing of your personal data, including limited information about the products and services in which you express an interest, for all of the purposes below. You can change your privacy preferences at any time by clicking the "My Privacy Choices" link in our website footer or by visiting the “Privacy settings” page in your Joey Med account. View our Privacy Policy to learn more about our data practices.
           </Typography>
 
           <Box sx={{ mt: 2 }}>
-            <Typography variant="body1">Manage preferences</Typography>
-            <Typography variant="body2">
+            <Typography variant="p" component="p" >Manage preferences</Typography>
+            <Typography  variant="p" component="p" >
               To opt out of the sale and sharing of your information via online cookies, pixels, and similar tools, please select the state below.
             </Typography>
             <select style={{ width: '100%', padding: '8px', margin: '10px 0' }}>

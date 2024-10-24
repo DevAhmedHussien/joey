@@ -43,6 +43,7 @@ const MeetTheTeam = () => {
   return (
     <Box className="meet-the-team">
       <Grid container>
+        
         {/* Left Side Content */}
         <Grid item xs={12} md={5} className="team-content">
            <Typography variant="h1" component="h1" className="section-title">
@@ -77,10 +78,14 @@ const MeetTheTeam = () => {
                     </Box>
                     <Typography variant="h5" component="h5" className="member-name">{member.name}</Typography>
                     <Typography variant="h6" component="h6"  className="member-title">{member.title}</Typography>
-                    <Typography variant="body2" component="body2"   className="member-description">{member.description}</Typography>
+                    <Typography variant="p" component="p"   className="member-description">{member.description}</Typography>
                     <br/>
                     <Box className="uni"> 
                       <Image 
+                        sizes="(max-width: 768px) 100vw, 
+                        (max-width: 1200px) 50vw, 
+                        33vw"
+                        style={{ objectFit: 'cover' }}
                         src={member.src} 
                         alt={member.alt} 
                         width={20} 
@@ -88,7 +93,7 @@ const MeetTheTeam = () => {
                         quality={100}
                         loading="lazy" 
                       />
-                      <Typography variant="body2" component="body2" >{member.university}</Typography>
+                      <Typography variant="p" component="p" >{member.university}</Typography>
                     </Box>
                   </Box>
                 </Grid>

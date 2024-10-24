@@ -35,8 +35,9 @@ const Card = ({ title, size, src, alt, href, video = false }) => {
         ) : (
           <Image
             className='media-content'
-            objectFit="cover"
-            loading="lazy"
+            style={{ objectFit: 'cover' }}
+            priority
+            // loading="lazy"
             quality={100}
             width={320}
             height={300}

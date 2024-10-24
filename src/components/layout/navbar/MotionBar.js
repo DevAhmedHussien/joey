@@ -148,8 +148,8 @@ const Navigation = ({ isOpen, close }) => {
             quality={100}
             src={imgLogo}
             height={70}
+            priority 
             alt="Joeymed logo"
-            loading="lazy"
             style={{scale:1.5 , margin :'5px auto'}}
             onClick={handleClose}
           />
@@ -216,10 +216,14 @@ const Navigation = ({ isOpen, close }) => {
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center', alignItems: 'center' }}>
                           {page == 'sexual-health'
                               ? <Image
+                                  quality={100}
+                                  sizes="(max-width: 768px) 100vw, 
+                                  (max-width: 1200px) 50vw, 
+                                  33vw"
+                                  style={{ objectFit: 'cover' }}
                                   src={sexualImg}
                                   alt="Fertility"
                                   width={100}
-                                  quality={100}
                                   height={130}
                                   loading="lazy"
                               />
@@ -228,6 +232,10 @@ const Navigation = ({ isOpen, close }) => {
                                   src={weighImg}
                                   alt="Fertility"
                                   quality={100}
+                                  sizes="(max-width: 768px) 100vw, 
+                                  (max-width: 1200px) 50vw, 
+                                  33vw"
+                                  style={{ objectFit: 'cover' }}
                                   width={100}
                                   height={130}
                                   loading="lazy"
@@ -236,11 +244,14 @@ const Navigation = ({ isOpen, close }) => {
                                   ? <Image
                                       src={hairImg}
                                       quality={100}
+                                      sizes="(max-width: 768px) 100vw, 
+                                      (max-width: 1200px) 50vw, 
+                                      33vw"
+                                      style={{ objectFit: 'cover',  borderRadius: 8}}
                                       alt="Fertility"
                                       width={100}
                                       height={130}
                                       loading="lazy"
-                                      style={{ borderRadius: 8 }}
                               />
                               : null
                     }

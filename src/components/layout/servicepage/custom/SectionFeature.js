@@ -46,11 +46,11 @@ export default function SectionFeature({ images }) {
                 layout="responsive"
                 width={300}
                 height={300}
-                objectFit="cover"
                 quality={100}
                 loading="lazy"
                 style={{
                   borderRadius: '8px', // Round corners for images
+                  objectFit: 'cover' 
                 }}
               />
             ) : (

@@ -48,7 +48,7 @@ function WeightLossComponent() {
           </Typography>
         </Box>
 
-        <Typography variant="body2" className="disclaimer">
+        <Typography variant="p" component="p" className="disclaimer">
           *In a 68- and 72-week clinical trial studying Wegovy (2.4 mg) and Zepbound (15 mg) in patients without diabetes 
           and with BMI ≥30, or BMI ≥27 with a weight-related condition, the average weight loss was 15% and 20%, when 
           paired with diet and exercise changes (compared to 2.4% and 3.1%, respectively, with diet and exercise alone).

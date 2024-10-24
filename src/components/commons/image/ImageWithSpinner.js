@@ -23,16 +23,14 @@ const ImageWithSpinner = ({ src, alt, ...props }) => {
       <Image
         src={src}
         alt={alt}
-        layout="fill"
-        
-        objectFit="cover"
+        fill
         loading="lazy"
         quality={100}
         onLoad={handleImageLoad}
         style={{
           borderRadius: 2,
           transition: 'transform 0.3s ease-in-out',
-          opacity: loading ? 0 : 1, 
+          opacity: loading ? 0 : 1, objectFit: 'cover' 
         }}
         {...props}
       />

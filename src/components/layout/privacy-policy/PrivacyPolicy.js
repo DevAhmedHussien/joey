@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
           >
             Privacy & Policy
           </Typography>
-          <Typography variant="body2" className={'effectiveDate'}>
+          <Typography variant="p" component="p" className={'effectiveDate'}>
             Effective Date: [Insert Date]
           </Typography>
 

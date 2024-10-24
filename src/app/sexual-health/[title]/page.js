@@ -109,10 +109,7 @@ export default function ProductsPage({ params }) {
           safety={specificProduct.safety}
         />
 
-        <Box mt={15}>
-          <Typography variant="h3" sx={{ textAlign: "center" }}>
-            Ro Body Program members taking branded GLP-1 medications were paid for their testimonials.
-          </Typography>
+        <Box mt={2}>
           <InstructionComponent
             title="Explanation about Our Products"
             description="Here you can see Instructions"

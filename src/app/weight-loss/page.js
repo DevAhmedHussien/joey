@@ -27,38 +27,6 @@ export default function weightLoss() {
 
   return (
     <>
-      <Head>
-        <title>Weight Loss - Joey Med | Personalized Online Treatment</title>
-        <meta name="description" content="Explore Joey Med's weight loss services. Get personalized treatment plans, discreet shipping, and 24/7 support from our healthcare providers." />
-        <link rel="canonical" href="https://www.joeymed.com/weight-loss" />
-        <meta property="og:title" content="Weight Loss - Joey Med" />
-        <meta property="og:description" content="Joey Med offers online telehealth services for weight loss, including personalized treatment plans and discreet shipping." />
-        <meta property="og:url" content="https://www.joeymed.com/weight-loss" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/weight-loss-og-image.jpg" />
-        <meta name="robots" content="index, follow" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Weight Loss Services",
-              "provider": {
-                "@type": "Organization",
-                "name": "Joey Med",
-                "url": "https://www.joeymed.com/",
-                "logo": "https://www.joeymed.com/logo.png",
-              },
-              "description": "Joey Med offers personalized telehealth services for weight loss, including 24/7 provider support, clinically proven treatments, and discreet shipping.",
-              "url": "https://www.joeymed.com/weight-loss",
-              "image": "https://www.joeymed.com/images/weight-loss-og-image.jpg",
-              "areaServed": "US",
-            }),
-          }}
-        />
-      </Head>
-
       <Container maxWidth="xl" sx={{ padding: '0 !important' }}>
         <GreetingComponent 
           title="Achieve Lasting Weight Loss with Proven Treatments" 
@@ -80,7 +48,7 @@ export default function weightLoss() {
           <WeightLossComponent />
         </Box>
         <Box>
-          <Typography variant="body2" component='p' sx={{ marginTop: '40px', textAlign: 'center', color: 'gray' }}>
+          <Typography variant="p" component='p' sx={{ marginTop: '40px', textAlign: 'center', color: 'gray' }}>
             As an alternative to FDA-approved branded products, where appropriate, a provider may prescribe a compounded drug, which is prepared by a state-licensed sterile compounding pharmacy partner. Although compounded drugs are permitted to be prescribed under federal law, they are not FDA-approved and do not undergo safety, effectiveness, or manufacturing review. Products like Viagra and Cialis are FDA-approved for treating erectile dysfunction. Your provider may also offer personalized recommendations.
           </Typography>
         </Box>

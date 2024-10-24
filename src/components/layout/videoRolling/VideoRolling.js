@@ -32,7 +32,8 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
       <Box
         className='videoContainer'
         sx={{
-          height: { xs: showContent ? '40vh' : '60vh', md: showContent ? '40vh' : '60vh' },
+          height: '50vh'
+          // height: { xs: showContent ? '40vh' : '60vh', md: showContent ? '40vh' : '60vh' },
         }}
       >
         {/* Background Video */}
@@ -69,7 +70,7 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
 
       {/* Additional content that appears after scrolling */}
 
-      <Slide direction="up" in={showContent} mountOnEnter unmountOnExit>
+      {/* <Slide direction="up" in={showContent} mountOnEnter unmountOnExit>
         <Box className='additionalContent'>
           <Typography variant="h3" component="h3">
             Additional Information
@@ -78,7 +79,7 @@ const VideoRolling = ({ title, description, src, alt, additionalInformation = ''
             {additionalInformation}
           </Typography>
         </Box>
-      </Slide>
+      </Slide> */}
     </>
   );
 };

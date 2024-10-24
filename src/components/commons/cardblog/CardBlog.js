@@ -20,7 +20,7 @@ const BlogCard = ({
   comments = "Sample comments here",
   size
 }) => {
-  const theme = useTheme();
+  const theme = useTheme(); 
   const colors = tokens(theme.palette.mode);
 
   // State to manage Drawer open/close
@@ -36,11 +36,11 @@ const BlogCard = ({
       {/* Blog Card */}
       <Box className="blog-card" onClick={toggleDrawer(true)}>
         <Box className="image-container-blog">
-        <Image
+        <Image  
           src="/images/homePage/appear.jpg" 
           alt={imageAlt}
-          layout="fill"
-          objectFit="cover"  
+          fill
+          style={{ objectFit: 'cover' }}
           quality={100}
         />
         </Box>
@@ -57,14 +57,14 @@ const BlogCard = ({
               <Typography variant="h6" component="h6" className="profile-name">
                 ahmed
               </Typography>
-              <Typography variant="body2" className="profile-role">
+              <Typography variant="p" component="p" className="profile-role">
                 Joey Member
               </Typography>
             </Box>
           </Box>
 
           <Box className="blog-footer">
-            <Typography variant="body2" className="comments">
+            <Typography variant="p" component="p" className="comments">
               "{comments}"
             </Typography>
             <Box className="button-wrapper" >
@@ -103,7 +103,7 @@ const BlogCard = ({
           <Typography variant="h6" component="h6" className="profile-name">
             ahmed
           </Typography>
-          <Typography variant="body2" className="profile-role">
+          <Typography variant="p" component="p" className="profile-role">
             Joey Member
           </Typography>
         </Box>
@@ -114,7 +114,7 @@ const BlogCard = ({
       <Typography variant="body1" paragraph>
         Read time: {readTime}
       </Typography>
-      <Typography variant="body2" paragraph>
+      <Typography variant="p" component="p" paragraph>
         Comments: {comments}
       </Typography>
     </Box>

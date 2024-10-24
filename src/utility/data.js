@@ -1078,10 +1078,11 @@ export const homeCards=[
   {
   animate:cardVariantsRight,
   title:'Weight Loss',
-  src:'/videos/tablet.gif',
+  src:'/videos/Bottle.mp4', 
+  // src:'/videos/tablet.gif',
   alt:'Weight Loss',
   size:true,
-  video:false,
+  video:true,
   href:'/form/weight-loss'
 }
 ,{

@@ -92,30 +92,26 @@ export default function ProductsPage({ params }) {
   );
   return (
     <>
-      {/* Dynamically populate the <Head> component */}
-      <div>
-        <ProductComponent 
-            name={specificProduct.itemName} 
-            description={specificProduct.description} 
-            images={specificProduct.images}
-            questions={specificProduct.questions}
-            productDescription={specificProduct.ProductDescription}
-            benefit={specificProduct.Benefits}
-            ingredient={specificProduct.ingredient}
-            safety={specificProduct.safety}
+     <div>
+        <ProductComponent
+          name={specificProduct.itemName}
+          description={specificProduct.description}
+          images={specificProduct.images}
+          questions={specificProduct.questions}
+          productDescription={specificProduct.ProductDescription}
+          benefit={specificProduct.Benefits}
+          ingredient={specificProduct.ingredient}
+          safety={specificProduct.safety}
         />
 
-        <Box mt={6}>
-          <Typography variant="h3" sx={{ textAlign: "center", fontWeight: "500" }}>
-            Ro Body Program members taking branded GLP-1 medications were paid for their testimonials.
-          </Typography>
+       <Box mt={2}>
           <InstructionComponent
             title="Explanation about Our Products"
             description="Here you can see Instructions"
-            instructions={cardData.hairGrowth}
+            instructions={cardData.sexualHealth}
           />
         </Box>
-   
+
         <HowItWorks />
 
         <Box>
@@ -123,10 +119,7 @@ export default function ProductsPage({ params }) {
             Patient reviews
           </Typography>
           <CardSlider cards={blogCards} type="blog" />
-        </Box>
-
-        {/* <MedWork steps={[]} />  */}
-        <Questions questions={questions}/>
+        </Box>  
       </div>
     </>
   );
